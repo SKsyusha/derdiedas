@@ -1,8 +1,37 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
+import { Drawer, Button, Radio, Checkbox, Select, Space, Divider, Typography } from 'antd';
+import { SettingOutlined } from '@ant-design/icons';
+import { Word, TrainingSettings, SessionStats, Case, Level, Article, Language, Topic } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
+
+const { Title, Text } = Typography;
+
+const allTopics: Topic[] = [
+  'Food',
+  'Drinks',
+  'Tableware / Cutlery',
+  'Kitchen',
+  'Furniture',
+  'Rooms',
+  'Clothes',
+  'Family',
+  'People & Professions',
+  'Animals',
+  'Nature',
+  'City',
+  'Transport',
+  'School',
+  'Work',
+  'Countries & Languages',
+  'Numbers & Letters',
+  'Months and Days of the Week',
+  'Time & Dates',
+  'Holidays',
+];
+
+const allLanguages: Language[] = ['Russian', 'English', 'German', 'French', 'Spanish'];
 
 export default function Trainer() {
   const [settings, setSettings] = useState<TrainingSettings>({
@@ -11,6 +40,8 @@ export default function Trainer() {
     cases: ['nominativ'],
     usePronouns: false,
     enabledDictionaries: ['A1'],
+    language: 'Russian',
+    topics: [],
   });
 
   const [userDictionaries, setUserDictionaries] = useState<Array<{ id: string; name: string; words: Word[]; enabled: boolean }>>([]);
@@ -38,9 +69,11 @@ export default function Trainer() {
     settings.enabledDictionaries.forEach((dictId) => {
       if (builtInDictionaries[dictId as Level]) {
         const levelWords = builtInDictionaries[dictId as Level];
-        const filteredWords = levelWords.filter((w) => 
-          !settings.level.length || settings.level.includes(w.level || 'A1')
-        );
+        const filteredWords = levelWords.filter((w) => {
+          const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
+          const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
+          return levelMatch && topicMatch;
+        });
         words.push(...filteredWords);
       }
     });
@@ -48,7 +81,11 @@ export default function Trainer() {
     // Add user dictionary words
     userDictionaries.forEach((dict) => {
       if (settings.enabledDictionaries.includes(dict.id)) {
-        words.push(...dict.words);
+        const filteredWords = dict.words.filter((w) => {
+          const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
+          return topicMatch;
+        });
+        words.push(...filteredWords);
       }
     });
 
@@ -187,182 +224,32 @@ export default function Trainer() {
     : currentWord.article;
 
   return (
-    <div className="min-h-screen p-4 max-w-4xl mx-auto">
-      <div className="mb-6 flex justify-between items-center">
-        <h1 className="text-3xl font-bold">DerDieDas Trainer</h1>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setShowUserDict(!showUserDict)}
-            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
-          >
-            Мой словарь
-          </button>
-          <button
-            onClick={() => setShowSettings(!showSettings)}
-            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
-          >
-            Настройки
-          </button>
-        </div>
-      </div>
-
-      {/* Settings Panel */}
-      {showSettings && (
-        <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-          <h2 className="text-xl font-bold mb-4">Настройки</h2>
-          
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Режим тренировки:</label>
-            <div className="flex gap-4">
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  checked={settings.mode === 'noun-only'}
-                  onChange={() => setSettings({ ...settings, mode: 'noun-only' })}
-                />
-                Только существительное
-              </label>
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  checked={settings.mode === 'sentence'}
-                  onChange={() => setSettings({ ...settings, mode: 'sentence' })}
-                />
-                В предложении
-              </label>
-            </div>
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Уровень:</label>
-            <div className="flex gap-4">
-              {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
-                <label key={level} className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={settings.level.includes(level)}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setSettings({
-                          ...settings,
-                          level: [...settings.level, level],
-                          enabledDictionaries: [...new Set([...settings.enabledDictionaries, level])],
-                        });
-                      } else {
-                        setSettings({
-                          ...settings,
-                          level: settings.level.filter((l) => l !== level),
-                          enabledDictionaries: settings.enabledDictionaries.filter((d) => d !== level),
-                        });
-                      }
-                    }}
-                  />
-                  {level}
-                </label>
-              ))}
-            </div>
-          </div>
-
-          {settings.mode === 'sentence' && (
-            <>
-              <div className="mb-4">
-                <label className="block mb-2 font-semibold">Падежи:</label>
-                <div className="flex gap-4 flex-wrap">
-                  {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
-                    <label key={case_} className="flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        checked={settings.cases.includes(case_)}
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setSettings({ ...settings, cases: [...settings.cases, case_] });
-                          } else {
-                            setSettings({
-                              ...settings,
-                              cases: settings.cases.filter((c) => c !== case_),
-                            });
-                          }
-                        }}
-                      />
-                      {case_.charAt(0).toUpperCase() + case_.slice(1)}
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <label className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={settings.usePronouns}
-                    onChange={(e) => setSettings({ ...settings, usePronouns: e.target.checked })}
-                  />
-                  Использовать местоимения
-                </label>
-              </div>
-            </>
-          )}
-
-          <div className="mb-4">
-            <label className="block mb-2 font-semibold">Словари:</label>
-            <div className="flex gap-4 flex-wrap">
-              {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
-                <label key={level} className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={settings.enabledDictionaries.includes(level)}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setSettings({
-                          ...settings,
-                          enabledDictionaries: [...settings.enabledDictionaries, level],
-                        });
-                      } else {
-                        setSettings({
-                          ...settings,
-                          enabledDictionaries: settings.enabledDictionaries.filter((d) => d !== level),
-                        });
-                      }
-                    }}
-                  />
-                  Встроенный {level}
-                </label>
-              ))}
-              {userDictionaries.map((dict) => (
-                <label key={dict.id} className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={dict.enabled && settings.enabledDictionaries.includes(dict.id)}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setSettings({
-                          ...settings,
-                          enabledDictionaries: [...settings.enabledDictionaries, dict.id],
-                        });
-                        setUserDictionaries((prev) =>
-                          prev.map((d) => (d.id === dict.id ? { ...d, enabled: true } : d))
-                        );
-                      } else {
-                        setSettings({
-                          ...settings,
-                          enabledDictionaries: settings.enabledDictionaries.filter((d) => d !== dict.id),
-                        });
-                        setUserDictionaries((prev) =>
-                          prev.map((d) => (d.id === dict.id ? { ...d, enabled: false } : d))
-                        );
-                      }
-                    }}
-                  />
-                  {dict.name}
-                </label>
-              ))}
-            </div>
+    <div className="min-h-screen p-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-6 flex justify-between items-center">
+          <h1 className="text-3xl font-bold">DerDieDas Trainer</h1>
+          <div className="flex gap-2">
+            <Button
+              onClick={() => setShowUserDict(!showUserDict)}
+            >
+              Мой словарь
+            </Button>
+            <Button
+              type="primary"
+              icon={<SettingOutlined />}
+              onClick={() => setShowSettings(!showSettings)}
+            >
+              Настройки
+            </Button>
           </div>
         </div>
-      )}
 
-      {/* User Dictionary Panel */}
-      {showUserDict && (
+        <div className="flex gap-6">
+          {/* Main Content Area */}
+          <div className="flex-1">
+
+            {/* User Dictionary Panel */}
+            {showUserDict && (
         <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <h2 className="text-xl font-bold mb-4">Мой словарь</h2>
           
@@ -426,12 +313,12 @@ export default function Trainer() {
                 ))}
               </div>
             </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
 
-      {/* Training Area */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-6">
+            {/* Training Area */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-6">
         <div className="text-center mb-8">
           {settings.mode === 'sentence' && currentSentence ? (
             <div className="text-2xl mb-6">
@@ -504,10 +391,10 @@ export default function Trainer() {
             Перевод: {currentWord.translation}
           </div>
         )}
-      </div>
+            </div>
 
-      {/* Stats */}
-      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+            {/* Stats */}
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
         <h2 className="text-xl font-bold mb-4">Статистика сессии</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div>
@@ -535,7 +422,201 @@ export default function Trainer() {
             </div>
           </div>
         </div>
+            </div>
+          </div>
+
+          {/* Right Sidebar - Additional Settings */}
+          <div className="w-80 flex-shrink-0">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+              <h2 className="text-xl font-bold mb-4">ADD TO THE LESSON</h2>
+              
+              {/* Language Dropdown */}
+              <div className="mb-6">
+                <label className="block mb-2 font-semibold text-sm">Language</label>
+                <select
+                  value={settings.language}
+                  onChange={(e) => setSettings({ ...settings, language: e.target.value as Language })}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {allLanguages.map((lang) => (
+                    <option key={lang} value={lang}>
+                      {lang}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Topics Dropdown */}
+              <div className="mb-6">
+                <label className="block mb-2 font-semibold text-sm">Topic</label>
+                <select
+                  value=""
+                  onChange={(e) => {
+                    const topic = e.target.value as Topic;
+                    if (topic && !settings.topics.includes(topic)) {
+                      setSettings({ ...settings, topics: [...settings.topics, topic] });
+                    }
+                  }}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">Select a topic...</option>
+                  {allTopics.map((topic) => (
+                    <option key={topic} value={topic}>
+                      {topic}
+                    </option>
+                  ))}
+                </select>
+                
+                {/* Selected Topics */}
+                {settings.topics.length > 0 && (
+                  <div className="mt-3 space-y-2">
+                    {settings.topics.map((topic) => (
+                      <div
+                        key={topic}
+                        className="flex items-center justify-between px-3 py-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg"
+                      >
+                        <span className="text-sm">{topic}</span>
+                        <button
+                          onClick={() => {
+                            setSettings({
+                              ...settings,
+                              topics: settings.topics.filter((t) => t !== topic),
+                            });
+                          }}
+                          className="text-red-600 hover:text-red-800 text-sm"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Settings Drawer */}
+      <Drawer
+        title="Настройки"
+        placement="right"
+        onClose={() => setShowSettings(false)}
+        open={showSettings}
+        width={400}
+      >
+        <Space direction="vertical" size="large" style={{ width: '100%' }}>
+          <div>
+            <Title level={5}>Режим тренировки</Title>
+            <Radio.Group
+              value={settings.mode}
+              onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
+              style={{ width: '100%' }}
+            >
+              <Space direction="vertical">
+                <Radio value="noun-only">Только существительное</Radio>
+                <Radio value="sentence">В предложении</Radio>
+              </Space>
+            </Radio.Group>
+          </div>
+
+          <Divider />
+
+          <div>
+            <Title level={5}>Уровень</Title>
+            <Checkbox.Group
+              value={settings.level}
+              onChange={(checkedValues) => {
+                const levels = checkedValues as Level[];
+                setSettings({
+                  ...settings,
+                  level: levels,
+                  enabledDictionaries: [
+                    ...settings.enabledDictionaries.filter((d) => !['A1', 'A2', 'B1'].includes(d)),
+                    ...levels,
+                  ],
+                });
+              }}
+            >
+              <Space direction="vertical">
+                {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
+                  <Checkbox key={level} value={level}>
+                    {level}
+                  </Checkbox>
+                ))}
+              </Space>
+            </Checkbox.Group>
+          </div>
+
+          {settings.mode === 'sentence' && (
+            <>
+              <Divider />
+              <div>
+                <Title level={5}>Падежи</Title>
+                <Checkbox.Group
+                  value={settings.cases}
+                  onChange={(checkedValues) => {
+                    setSettings({
+                      ...settings,
+                      cases: checkedValues as Case[],
+                    });
+                  }}
+                >
+                  <Space direction="vertical">
+                    {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
+                      <Checkbox key={case_} value={case_}>
+                        {case_.charAt(0).toUpperCase() + case_.slice(1)}
+                      </Checkbox>
+                    ))}
+                  </Space>
+                </Checkbox.Group>
+              </div>
+
+              <div>
+                <Checkbox
+                  checked={settings.usePronouns}
+                  onChange={(e) => setSettings({ ...settings, usePronouns: e.target.checked })}
+                >
+                  Использовать местоимения
+                </Checkbox>
+              </div>
+            </>
+          )}
+
+          <Divider />
+
+          <div>
+            <Title level={5}>Словари</Title>
+            <Checkbox.Group
+              value={settings.enabledDictionaries}
+              onChange={(checkedValues) => {
+                setSettings({
+                  ...settings,
+                  enabledDictionaries: checkedValues as string[],
+                });
+                // Update user dictionaries enabled state
+                const enabledIds = checkedValues as string[];
+                setUserDictionaries((prev) =>
+                  prev.map((d) => ({ ...d, enabled: enabledIds.includes(d.id) }))
+                );
+              }}
+            >
+              <Space direction="vertical">
+                {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
+                  <Checkbox key={level} value={level}>
+                    Встроенный {level}
+                  </Checkbox>
+                ))}
+                {userDictionaries.map((dict) => (
+                  <Checkbox key={dict.id} value={dict.id}>
+                    {dict.name}
+                  </Checkbox>
+                ))}
+              </Space>
+            </Checkbox.Group>
+          </div>
+        </Space>
+      </Drawer>
     </div>
   );
 }
