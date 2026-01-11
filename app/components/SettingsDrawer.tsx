@@ -26,8 +26,8 @@ const allTopics: Topic[] = [
   'Countries & Languages',
   'Numbers & Letters',
   'Months and Days of the Week',
-  'Time & Dates',
-  'Holidays',
+  'Time',
+  'Home',
 ];
 
 const allLanguages: Language[] = ['Russian', 'English'];

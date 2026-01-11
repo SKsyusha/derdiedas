@@ -31,8 +31,8 @@ export type Topic =
   | 'Countries & Languages'
   | 'Numbers & Letters'
   | 'Months and Days of the Week'
-  | 'Time & Dates'
-  | 'Holidays';
+  | 'Time'
+  | 'Home';
 
 export interface Word {
   noun: string;

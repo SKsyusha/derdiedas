@@ -43,7 +43,8 @@
     "incorrect": "Неправильно",
     "accuracy": "Точность",
     "streak": "Серия",
-    "bestStreak": "лучшая"
+    "bestStreak": "лучшая",
+    "topicProgress": "Прогресс по топикам: {{learned}} / {{total}} слов"
   },
   "userDictionary": {
     "title": "Мой словарь",
@@ -81,7 +82,7 @@
     "Countries & Languages": "Countries & Languages",
     "Numbers & Letters": "Numbers & Letters",
     "Months and Days of the Week": "Months and Days of the Week",
-    "Time & Dates": "Time & Dates",
-    "Holidays": "Holidays"
+    "Time": "Time",
+    "Home": "Home"
   }
 }

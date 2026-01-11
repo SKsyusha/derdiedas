@@ -43,7 +43,8 @@
     "incorrect": "Incorrect",
     "accuracy": "Accuracy",
     "streak": "Streak",
-    "bestStreak": "best"
+    "bestStreak": "best",
+    "topicProgress": "Topic progress: {{learned}} / {{total}} words"
   },
   "userDictionary": {
     "title": "My Dictionary",
@@ -81,7 +82,7 @@
     "Countries & Languages": "Countries & Languages",
     "Numbers & Letters": "Numbers & Letters",
     "Months and Days of the Week": "Months and Days of the Week",
-    "Time & Dates": "Time & Dates",
-    "Holidays": "Holidays"
+    "Time": "Time",
+    "Home": "Home"
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { Button, Card, Input, Space, Select, Typography, Spin } from 'antd';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { Button, Card, Input, Space, Select, Typography, Spin, Progress } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
@@ -41,6 +41,7 @@ export default function Trainer() {
     streak: 0,
     bestStreak: 0,
   });
+  const [learnedWords, setLearnedWords] = useState<Set<string>>(new Set());
   const [showSettings, setShowSettings] = useState(false);
   const [showUserDict, setShowUserDict] = useState(false);
   const [drawerSize] = useState(400);
@@ -131,6 +132,60 @@ export default function Trainer() {
       inputRef.current?.focus();
     }, 50);
   }, [settings, getEnabledWords]);
+
+  // Получение всех слов из выбранных топиков (без фильтрации по level)
+  const getAllWordsInTopics = useCallback((): Word[] => {
+    const words: Word[] = [];
+    
+    if (settings.dictionaryType === 'default') {
+      settings.enabledDictionaries.forEach((dictId) => {
+        if (dictId === 'A1' && builtInDictionaries.A1) {
+          const levelWords = builtInDictionaries.A1;
+          const topicWords = levelWords.filter((w: Word) => 
+            w.topic && settings.topics.includes(w.topic)
+          );
+          words.push(...topicWords);
+        }
+      });
+    } else {
+      const enabledDictIds = settings.enabledDictionaries.length > 0 
+        ? settings.enabledDictionaries 
+        : userDictionaries.map(d => d.id);
+      
+      userDictionaries.forEach((dict) => {
+        if (enabledDictIds.includes(dict.id)) {
+          const topicWords = dict.words.filter((w) => 
+            w.topic && settings.topics.includes(w.topic)
+          );
+          words.push(...topicWords);
+        }
+      });
+    }
+    
+    return words;
+  }, [settings.topics, settings.dictionaryType, settings.enabledDictionaries, userDictionaries]);
+
+  // Расчет прогресса по топикам
+  const topicProgress = useMemo(() => {
+    if (settings.topics.length === 0) return null;
+
+    const topicWords = getAllWordsInTopics();
+    const totalWords = topicWords.length;
+    
+    if (totalWords === 0) return null;
+
+    const learnedCount = topicWords.filter(w => 
+      learnedWords.has(`${w.topic}-${w.noun}`)
+    ).length;
+
+    const percentage = Math.round((learnedCount / totalWords) * 100);
+    
+    return {
+      learned: learnedCount,
+      total: totalWords,
+      percentage,
+    };
+  }, [settings.topics, learnedWords, getAllWordsInTopics]);
 
   // Initialize first word
   useEffect(() => {
@@ -224,6 +279,11 @@ export default function Trainer() {
       };
       return newStats;
     });
+
+    // Отслеживаем изученные слова для прогресс-бара
+    if (isCorrect && currentWord.topic && settings.topics.includes(currentWord.topic)) {
+      setLearnedWords((prev) => new Set([...prev, `${currentWord.topic}-${currentWord.noun}`]));
+    }
 
     setFeedback(isCorrect ? 'correct' : 'incorrect');
 
@@ -365,6 +425,26 @@ export default function Trainer() {
         <div>
           {/* Main Content Area */}
           <div className="max-w-4xl mx-auto">
+            {topicProgress && (
+              <Card className="mb-6 mt-4" style={{ backgroundColor: '#f8f9fa' }}>
+                <div className="mb-2">
+                  <Text strong style={{ fontSize: '14px' }}>
+                    {t('trainer.topicProgress', { 
+                      learned: topicProgress.learned, 
+                      total: topicProgress.total 
+                    })}
+                  </Text>
+                </div>
+                <Progress 
+                  percent={topicProgress.percentage} 
+                  strokeColor={{
+                    '0%': '#8b5cf6',
+                    '100%': '#6366f1',
+                  }}
+                  showInfo={true}
+                />
+              </Card>
+            )}
 
             {/* Training Area */}
             <Card className="shadow-md" style={{ marginTop: showUserDict ? '32px' : '0', marginBottom: '24px' }}>
