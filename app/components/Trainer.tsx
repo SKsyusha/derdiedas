@@ -47,6 +47,7 @@ export default function Trainer() {
   const [drawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
   const [isLoading, setIsLoading] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -194,8 +195,14 @@ export default function Trainer() {
     };
   }, [settings.topics, learnedWords, getAllWordsInTopics, getEnabledWords]);
 
+  // Mark component as mounted (client-side only)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Sync translation language with UI language on mount
   useEffect(() => {
+    if (!isMounted) return;
     const translationLanguage: Language = i18n.language === 'ru' ? 'Russian' : 'English';
     setSettings((prev) => {
       if (prev.language !== translationLanguage) {
@@ -203,12 +210,13 @@ export default function Trainer() {
       }
       return prev;
     });
-  }, []); // Only run on mount
+  }, [isMounted]); // Only run after mount
 
-  // Initialize first word
+  // Initialize first word only after component has mounted (client-side)
   useEffect(() => {
+    if (!isMounted) return;
     getNextWord();
-  }, [getNextWord]);
+  }, [getNextWord, isMounted]);
 
   // Очистка таймера при размонтировании компонента
   useEffect(() => {
@@ -324,6 +332,11 @@ export default function Trainer() {
   };
 
 
+
+  // Don't render content until mounted to avoid hydration mismatch
+  if (!isMounted) {
+    return null;
+  }
 
   if (!currentWord && !isLoading) {
     return (
