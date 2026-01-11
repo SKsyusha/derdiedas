@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Drawer, Button, Radio, Checkbox, Select, Space, Divider, Typography, Card, Input, Tag } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
-import { Word, TrainingSettings, SessionStats, Case, Level, Article, Language, Topic } from '../types';
+import { Word, TrainingSettings, SessionStats, Case, Level, Article, Language, Topic, ArticleType, PronounType } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
 
 const { Title, Text } = Typography;
@@ -42,6 +42,8 @@ export default function Trainer() {
     enabledDictionaries: ['A1'],
     language: 'Russian',
     topics: [],
+    articleType: 'definite',
+    pronounType: 'none',
   });
 
   const [userDictionaries, setUserDictionaries] = useState<Array<{ id: string; name: string; words: Word[]; enabled: boolean }>>([]);
@@ -250,9 +252,9 @@ export default function Trainer() {
           </div>
         </div>
 
-        <div className="flex gap-6">
+        <div>
           {/* Main Content Area */}
-          <div className="flex-1">
+          <div className="max-w-4xl mx-auto">
 
             {/* User Dictionary Panel */}
             {showUserDict && (
@@ -453,70 +455,6 @@ export default function Trainer() {
             </Card>
           </div>
 
-          {/* Right Sidebar - Additional Settings */}
-          <div className="w-48 flex-shrink-0">
-            <Card className="shadow-md" styles={{ body: { padding: '16px' } }}>
-              <Title level={5} className="mb-3" style={{ fontSize: '14px', fontWeight: 600 }}>
-                ADD TO THE LESSON
-              </Title>
-              
-              {/* Language Dropdown */}
-              <div className="mb-4">
-                <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Language</Text>
-                <Select
-                  value={settings.language}
-                  onChange={(value) => setSettings({ ...settings, language: value as Language })}
-                  style={{ width: '100%' }}
-                  size="small"
-                  options={allLanguages.map((lang) => ({ label: lang, value: lang }))}
-                />
-              </div>
-
-              {/* Topics Dropdown */}
-              <div className="mb-4">
-                <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Topic</Text>
-                <Select
-                  placeholder="Select a topic..."
-                  style={{ width: '100%' }}
-                  size="small"
-                  onChange={(value) => {
-                    const topic = value as Topic;
-                    if (topic && !settings.topics.includes(topic)) {
-                      setSettings({ ...settings, topics: [...settings.topics, topic] });
-                    }
-                  }}
-                  options={allTopics.map((topic) => ({ label: topic, value: topic }))}
-                />
-                
-                {/* Selected Topics */}
-                {settings.topics.length > 0 && (
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {settings.topics.map((topic) => (
-                      <Tag
-                        key={topic}
-                        closable
-                        onClose={() => {
-                          setSettings({
-                            ...settings,
-                            topics: settings.topics.filter((t) => t !== topic),
-                          });
-                        }}
-                        color="purple"
-                        style={{ 
-                          margin: 0,
-                          fontSize: '11px',
-                          padding: '2px 6px',
-                          lineHeight: '1.4'
-                        }}
-                      >
-                        {topic}
-                      </Tag>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </Card>
-          </div>
         </div>
       </div>
 
@@ -613,35 +551,124 @@ export default function Trainer() {
 
           <Divider />
 
+          {/* ADD TO THE LESSON Section */}
           <div>
-            <Title level={5}>Словари</Title>
-            <Checkbox.Group
-              value={settings.enabledDictionaries}
-              onChange={(checkedValues) => {
-                setSettings({
-                  ...settings,
-                  enabledDictionaries: checkedValues as string[],
-                });
-                // Update user dictionaries enabled state
-                const enabledIds = checkedValues as string[];
-                setUserDictionaries((prev) =>
-                  prev.map((d) => ({ ...d, enabled: enabledIds.includes(d.id) }))
-                );
-              }}
-            >
-              <Space orientation="vertical">
-                {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
-                  <Checkbox key={level} value={level}>
-                    Встроенный {level}
-                  </Checkbox>
-                ))}
-                {userDictionaries.map((dict) => (
-                  <Checkbox key={dict.id} value={dict.id}>
-                    {dict.name}
-                  </Checkbox>
-                ))}
-              </Space>
-            </Checkbox.Group>
+            <Title level={5}>ADD TO THE LESSON</Title>
+            
+            {/* Language Dropdown */}
+            <div className="mb-4">
+              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Language</Text>
+              <Select
+                value={settings.language}
+                onChange={(value) => setSettings({ ...settings, language: value as Language })}
+                style={{ width: '100%' }}
+                size="small"
+                options={allLanguages.map((lang) => ({ label: lang, value: lang }))}
+              />
+            </div>
+
+            {/* Topics Dropdown */}
+            <div className="mb-4">
+              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Topic</Text>
+              <Select
+                placeholder="Select a topic..."
+                style={{ width: '100%' }}
+                size="small"
+                onChange={(value) => {
+                  const topic = value as Topic;
+                  if (topic && !settings.topics.includes(topic)) {
+                    setSettings({ ...settings, topics: [...settings.topics, topic] });
+                  }
+                }}
+                options={allTopics.map((topic) => ({ label: topic, value: topic }))}
+              />
+              
+              {/* Selected Topics */}
+              {settings.topics.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {settings.topics.map((topic) => (
+                    <Tag
+                      key={topic}
+                      closable
+                      onClose={() => {
+                        setSettings({
+                          ...settings,
+                          topics: settings.topics.filter((t) => t !== topic),
+                        });
+                      }}
+                      color="purple"
+                      style={{ 
+                        margin: 0,
+                        fontSize: '11px',
+                        padding: '2px 6px',
+                        lineHeight: '1.4'
+                      }}
+                    >
+                      {topic}
+                    </Tag>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Divider style={{ margin: '12px 0' }} />
+
+            {/* Article Type */}
+            <div className="mb-4">
+              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Артикль</Text>
+              <Radio.Group
+                value={settings.articleType}
+                onChange={(e) => setSettings({ ...settings, articleType: e.target.value })}
+                size="small"
+              >
+                <Space orientation="vertical" size="small" style={{ width: '100%' }}>
+                  <Radio value="definite">Определенный (der/die/das)</Radio>
+                  <Radio value="indefinite">Неопределенный (ein/eine)</Radio>
+                </Space>
+              </Radio.Group>
+            </div>
+
+            <Divider style={{ margin: '12px 0' }} />
+
+            {/* Cases */}
+            <div className="mb-4">
+              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Падежи</Text>
+              <Checkbox.Group
+                value={settings.cases}
+                onChange={(checkedValues) => {
+                  setSettings({
+                    ...settings,
+                    cases: checkedValues as Case[],
+                  });
+                }}
+              >
+                <Space orientation="vertical" size="small" style={{ width: '100%' }}>
+                  <Checkbox value="nominativ">Nominativ</Checkbox>
+                  <Checkbox value="akkusativ">Akkusativ</Checkbox>
+                  <Checkbox value="dativ">Dativ</Checkbox>
+                  <Checkbox value="genitiv">Genitiv</Checkbox>
+                </Space>
+              </Checkbox.Group>
+            </div>
+
+            <Divider style={{ margin: '12px 0' }} />
+
+            {/* Pronoun Type */}
+            <div className="mb-4">
+              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Местоимения</Text>
+              <Radio.Group
+                value={settings.pronounType}
+                onChange={(e) => setSettings({ ...settings, pronounType: e.target.value, usePronouns: e.target.value !== 'none' })}
+                size="small"
+              >
+                <Space orientation="vertical" size="small" style={{ width: '100%' }}>
+                  <Radio value="none">Без местоимений</Radio>
+                  <Radio value="personal">Личные (ich, du, er...)</Radio>
+                  <Radio value="possessive">Притяжательные (mein, dein...)</Radio>
+                  <Radio value="demonstrative">Указательные (dieser, jener...)</Radio>
+                </Space>
+              </Radio.Group>
+            </div>
           </div>
         </Space>
       </Drawer>
