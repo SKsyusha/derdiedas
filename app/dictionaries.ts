@@ -7,29 +7,55 @@ export const builtInDictionaries: Record<Level, Word[]> = {
   A2: A2Words as Word[],
 };
 
-// Helper function to get article declension based on case
-export function getArticleByCase(article: string, case_: string): string {
-  const declensions: Record<string, Record<string, string>> = {
-    der: {
-      nominativ: 'der',
-      akkusativ: 'den',
-      dativ: 'dem',
-      genitiv: 'des',
-    },
-    die: {
-      nominativ: 'die',
-      akkusativ: 'die',
-      dativ: 'der',
-      genitiv: 'der',
-    },
-    das: {
-      nominativ: 'das',
-      akkusativ: 'das',
-      dativ: 'dem',
-      genitiv: 'des',
-    },
-  };
-  return declensions[article]?.[case_] || article;
+// Helper function to get article declension based on case and article type
+export function getArticleByCase(article: string, case_: string, articleType: 'definite' | 'indefinite' = 'definite'): string {
+  if (articleType === 'indefinite') {
+    // Indefinite articles (ein/eine)
+    const indefiniteDeclensions: Record<string, Record<string, string>> = {
+      der: { // masculine -> ein
+        nominativ: 'ein',
+        akkusativ: 'einen',
+        dativ: 'einem',
+        genitiv: 'eines',
+      },
+      die: { // feminine -> eine
+        nominativ: 'eine',
+        akkusativ: 'eine',
+        dativ: 'einer',
+        genitiv: 'einer',
+      },
+      das: { // neuter -> ein
+        nominativ: 'ein',
+        akkusativ: 'ein',
+        dativ: 'einem',
+        genitiv: 'eines',
+      },
+    };
+    return indefiniteDeclensions[article]?.[case_] || (article === 'der' ? 'ein' : article === 'die' ? 'eine' : 'ein');
+  } else {
+    // Definite articles (der/die/das)
+    const declensions: Record<string, Record<string, string>> = {
+      der: {
+        nominativ: 'der',
+        akkusativ: 'den',
+        dativ: 'dem',
+        genitiv: 'des',
+      },
+      die: {
+        nominativ: 'die',
+        akkusativ: 'die',
+        dativ: 'der',
+        genitiv: 'der',
+      },
+      das: {
+        nominativ: 'das',
+        akkusativ: 'das',
+        dativ: 'dem',
+        genitiv: 'des',
+      },
+    };
+    return declensions[article]?.[case_] || article;
+  }
 }
 
 // Generate sentence templates

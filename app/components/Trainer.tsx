@@ -158,9 +158,14 @@ export default function Trainer() {
 
     let correctAnswer: string;
     if (settings.mode === 'sentence' && currentSentence) {
-      correctAnswer = getArticleByCase(currentWord.article, currentCase);
+      correctAnswer = getArticleByCase(currentWord.article, currentCase, settings.articleType);
     } else {
-      correctAnswer = currentWord.article;
+      // For noun-only mode, return ein/eine based on articleType
+      if (settings.articleType === 'indefinite') {
+        correctAnswer = currentWord.article === 'der' ? 'ein' : currentWord.article === 'die' ? 'eine' : 'ein';
+      } else {
+        correctAnswer = currentWord.article;
+      }
     }
 
     const isCorrect = userInput === correctAnswer;
@@ -251,7 +256,9 @@ export default function Trainer() {
   }
 
   const correctAnswer = settings.mode === 'sentence' && currentSentence
-    ? getArticleByCase(currentWord.article, currentCase)
+    ? getArticleByCase(currentWord.article, currentCase, settings.articleType)
+    : settings.articleType === 'indefinite'
+    ? (currentWord.article === 'der' ? 'ein' : currentWord.article === 'die' ? 'eine' : 'ein')
     : currentWord.article;
 
   // Получаем правильный перевод в зависимости от выбранного языка

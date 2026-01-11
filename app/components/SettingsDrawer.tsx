@@ -235,7 +235,7 @@ export default function SettingsDrawer({
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Артикль</Title>
           <Radio.Group
             value={settings.articleType}
-            onChange={(e) => setSettings({ ...settings, articleType: e.target.value })}
+            onChange={(e) => setSettings({ ...settings, articleType: e.target.value as ArticleType })}
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
