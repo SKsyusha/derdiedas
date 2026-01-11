@@ -1,12 +1,10 @@
 import { Word, Level } from './types';
 import A1Words from './data/dictionaries/A1.json';
 import A2Words from './data/dictionaries/A2.json';
-import B1Words from './data/dictionaries/B1.json';
 
 export const builtInDictionaries: Record<Level, Word[]> = {
   A1: A1Words as Word[],
   A2: A2Words as Word[],
-  B1: B1Words as Word[],
 };
 
 // Helper function to get article declension based on case

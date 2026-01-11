@@ -2,7 +2,7 @@ export type Article = 'der' | 'die' | 'das';
 
 export type Case = 'nominativ' | 'akkusativ' | 'dativ' | 'genitiv';
 
-export type Level = 'A1' | 'A2' | 'B1';
+export type Level = 'A1' | 'A2';
 
 export type TrainingMode = 'noun-only' | 'sentence';
 

@@ -89,14 +89,14 @@ export default function SettingsDrawer({
                 ...settings,
                 level: levels,
                 enabledDictionaries: [
-                  ...settings.enabledDictionaries.filter((d) => !['A1', 'A2', 'B1'].includes(d)),
+                  ...settings.enabledDictionaries.filter((d) => !['A1', 'A2'].includes(d)),
                   ...levels,
                 ],
               });
             }}
           >
             <Space orientation="vertical" size="small">
-              {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
+              {(['A1', 'A2'] as Level[]).map((level) => (
                 <Checkbox key={level} value={level}>
                   {level}
                 </Checkbox>
