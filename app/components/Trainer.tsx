@@ -371,7 +371,7 @@ export default function Trainer() {
             )}
 
             {/* Training Area */}
-            <Card className="mb-6 shadow-md">
+            <Card className="shadow-md" style={{ marginBottom: '24px' }}>
               <div className="text-center mb-8">
                 {settings.mode === 'sentence' && currentSentence ? (
                   <div className="text-2xl mb-6 text-gray-900">
