@@ -6,6 +6,7 @@ import { SettingOutlined } from '@ant-design/icons';
 import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
 import SettingsDrawer from './SettingsDrawer';
+import UserDictionaryDrawer from './UserDictionaryDrawer';
 
 const { Title, Text } = Typography;
 
@@ -21,6 +22,7 @@ export default function Trainer() {
     articleType: 'definite',
     pronounType: 'none',
     showTranslation: true,
+    dictionaryType: 'default',
   });
 
   const [userDictionaries, setUserDictionaries] = useState<Array<{ id: string; name: string; words: Word[]; enabled: boolean }>>([]);
@@ -50,29 +52,36 @@ export default function Trainer() {
   const getEnabledWords = useCallback((): Word[] => {
     const words: Word[] = [];
     
-    // Add built-in dictionary words
-    settings.enabledDictionaries.forEach((dictId) => {
-      if (builtInDictionaries[dictId as Level]) {
-        const levelWords = builtInDictionaries[dictId as Level];
-        const filteredWords = levelWords.filter((w) => {
-          const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
-          const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
-          return levelMatch && topicMatch;
-        });
-        words.push(...filteredWords);
-      }
-    });
-
-    // Add user dictionary words
-    userDictionaries.forEach((dict) => {
-      if (settings.enabledDictionaries.includes(dict.id)) {
-        const filteredWords = dict.words.filter((w) => {
-          const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
-          return topicMatch;
-        });
-        words.push(...filteredWords);
-      }
-    });
+    if (settings.dictionaryType === 'default') {
+      // Add built-in dictionary words
+      settings.enabledDictionaries.forEach((dictId) => {
+        if (builtInDictionaries[dictId as Level]) {
+          const levelWords = builtInDictionaries[dictId as Level];
+          const filteredWords = levelWords.filter((w) => {
+            const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
+            const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
+            return levelMatch && topicMatch;
+          });
+          words.push(...filteredWords);
+        }
+      });
+    } else {
+      // Add user dictionary words
+      // Если нет enabledDictionaries для user, используем все доступные user dictionaries
+      const enabledDictIds = settings.enabledDictionaries.length > 0 
+        ? settings.enabledDictionaries 
+        : userDictionaries.map(d => d.id);
+      
+      userDictionaries.forEach((dict) => {
+        if (enabledDictIds.includes(dict.id)) {
+          const filteredWords = dict.words.filter((w) => {
+            const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
+            return topicMatch;
+          });
+          words.push(...filteredWords);
+        }
+      });
+    }
 
     return words;
   }, [settings, userDictionaries]);
@@ -241,55 +250,57 @@ export default function Trainer() {
   };
 
 
-  // Add user word
-  const addUserWord = () => {
-    if (!newWord.noun || !newWord.article) return;
-
-    const word: Word = {
-      noun: newWord.noun,
-      article: newWord.article,
-      translation: newWord.translation || undefined,
-    };
-
-    // Add to first user dictionary or create one
-    if (userDictionaries.length === 0) {
-      setUserDictionaries([{
-        id: 'user-1',
-        name: 'Мой словарь',
-        words: [word],
-        enabled: true,
-      }]);
-    } else {
-      setUserDictionaries((prev) => {
-        const updated = [...prev];
-        updated[0].words.push(word);
-        return updated;
-      });
-    }
-
-    setNewWord({ noun: '', article: 'der', translation: '' });
-  };
 
   if (!currentWord && !isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Нет доступных слов</h2>
-          <p className="text-gray-600 mb-4">Включите хотя бы один словарь в настройках</p>
-          <Button
-            type="primary"
-            size="large"
-            onClick={() => setShowSettings(true)}
-            style={{ 
-              backgroundColor: '#8b5cf6', 
-              borderColor: '#8b5cf6',
-              color: '#ffffff'
-            }}
-          >
-            Открыть настройки
-          </Button>
+      <>
+        <div className="min-h-screen flex items-center justify-center p-4">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Нет доступных слов</h2>
+            <p className="text-gray-600 mb-4">Включите хотя бы один словарь в настройках</p>
+            <Button
+              type="primary"
+              size="large"
+              onClick={() => setShowSettings(true)}
+              style={{ 
+                backgroundColor: '#8b5cf6', 
+                borderColor: '#8b5cf6',
+                color: '#ffffff'
+              }}
+            >
+              Открыть настройки
+            </Button>
+          </div>
         </div>
-      </div>
+        {/* Settings Drawer - должен рендериться всегда */}
+        <SettingsDrawer
+          open={showSettings}
+          onClose={() => setShowSettings(false)}
+          settings={settings}
+          setSettings={setSettings}
+          drawerSize={drawerSize}
+          userDictionaries={userDictionaries}
+          setUserDictionaries={setUserDictionaries}
+        />
+        {/* User Dictionary Drawer */}
+        <UserDictionaryDrawer
+          open={showUserDict}
+          onClose={() => setShowUserDict(false)}
+          userDictionaries={userDictionaries}
+          setUserDictionaries={setUserDictionaries}
+          newWord={newWord}
+          setNewWord={setNewWord}
+          onDictionaryCreated={(dictId) => {
+            // Автоматически добавляем созданный словарь в enabledDictionaries если выбран тип "user"
+            if (settings.dictionaryType === 'user' && !settings.enabledDictionaries.includes(dictId)) {
+              setSettings({
+                ...settings,
+                enabledDictionaries: [...settings.enabledDictionaries, dictId],
+              });
+            }
+          }}
+        />
+      </>
     );
   }
 
@@ -319,7 +330,7 @@ export default function Trainer() {
           <h1 className="text-3xl font-bold text-gray-900">DerDieDas Trainer</h1>
           <div className="flex gap-2">
             <Button
-              onClick={() => setShowUserDict(!showUserDict)}
+              onClick={() => setShowUserDict(true)}
             >
               Мой словарь
             </Button>
@@ -341,81 +352,6 @@ export default function Trainer() {
         <div>
           {/* Main Content Area */}
           <div className="max-w-4xl mx-auto">
-
-            {/* User Dictionary Panel */}
-            {showUserDict && (
-              <Card style={{ marginBottom: '32px' }}>
-                <Title level={4} className="mb-4">Мой словарь</Title>
-                
-                <Space.Compact style={{ width: '100%', marginBottom: '16px' }}>
-                  <Input
-                    placeholder="Существительное"
-                    value={newWord.noun}
-                    onChange={(e) => setNewWord({ ...newWord, noun: e.target.value })}
-                    style={{ flex: 1 }}
-                  />
-                  <Select
-                    value={newWord.article}
-                    onChange={(value) => setNewWord({ ...newWord, article: value as Article })}
-                    style={{ width: 100 }}
-                    options={[
-                      { label: 'der', value: 'der' },
-                      { label: 'die', value: 'die' },
-                      { label: 'das', value: 'das' },
-                    ]}
-                  />
-                  <Input
-                    placeholder="Перевод (опционально)"
-                    value={newWord.translation}
-                    onChange={(e) => setNewWord({ ...newWord, translation: e.target.value })}
-                    style={{ flex: 1 }}
-                  />
-                  <Button
-                    type="primary"
-                    onClick={addUserWord}
-                    style={{ 
-                      backgroundColor: '#8b5cf6', 
-                      borderColor: '#8b5cf6',
-                      color: '#ffffff'
-                    }}
-                  >
-                    Добавить
-                  </Button>
-                </Space.Compact>
-
-                {userDictionaries.map((dict) => (
-                  <div key={dict.id} className="mb-4">
-                    <Text strong className="block mb-2">{dict.name}</Text>
-                    <div className="space-y-1">
-                      {dict.words.map((word, idx) => (
-                        <div key={idx} className="flex justify-between items-center p-2 bg-gray-50 rounded-lg mb-2">
-                          <span className="text-gray-900">
-                            <strong>{word.article}</strong> {word.noun}
-                            {word.translation && ` - ${word.translation}`}
-                          </span>
-                          <Button
-                            type="text"
-                            danger
-                            size="small"
-                            onClick={() => {
-                              setUserDictionaries((prev) =>
-                                prev.map((d) =>
-                                  d.id === dict.id
-                                    ? { ...d, words: d.words.filter((_, i) => i !== idx) }
-                                    : d
-                                )
-                              );
-                            }}
-                          >
-                            Удалить
-                          </Button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </Card>
-            )}
 
             {/* Training Area */}
             <Card className="shadow-md" style={{ marginTop: showUserDict ? '32px' : '0', marginBottom: '24px' }}>
@@ -582,6 +518,25 @@ export default function Trainer() {
         drawerSize={drawerSize}
         userDictionaries={userDictionaries}
         setUserDictionaries={setUserDictionaries}
+      />
+
+      {/* User Dictionary Drawer */}
+      <UserDictionaryDrawer
+        open={showUserDict}
+        onClose={() => setShowUserDict(false)}
+        userDictionaries={userDictionaries}
+        setUserDictionaries={setUserDictionaries}
+        newWord={newWord}
+        setNewWord={setNewWord}
+        onDictionaryCreated={(dictId) => {
+          // Автоматически добавляем созданный словарь в enabledDictionaries если выбран тип "user"
+          if (settings.dictionaryType === 'user' && !settings.enabledDictionaries.includes(dictId)) {
+            setSettings({
+              ...settings,
+              enabledDictionaries: [...settings.enabledDictionaries, dictId],
+            });
+          }
+        }}
       />
     </div>
   );

@@ -52,6 +52,8 @@ export interface Dictionary {
   enabled: boolean;
 }
 
+export type DictionaryType = 'default' | 'user'; // дефолтный или свой словарь
+
 export interface TrainingSettings {
   mode: TrainingMode;
   level: Level[];
@@ -63,6 +65,7 @@ export interface TrainingSettings {
   articleType: ArticleType;
   pronounType: PronounType;
   showTranslation: boolean;
+  dictionaryType: DictionaryType;
 }
 
 export interface SessionStats {

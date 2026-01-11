@@ -1,7 +1,7 @@
 'use client';
 
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
-import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word } from '../types';
+import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
 import topicStats from '../data/dictionaries/topic_stats.json';
 
 const { Title, Text } = Typography;
@@ -47,6 +47,7 @@ export default function SettingsDrawer({
   settings,
   setSettings,
   drawerSize = 378,
+  userDictionaries = [],
 }: SettingsDrawerProps) {
   // Функция для получения количества слов в топике для выбранных уровней
   const getTopicCount = (topic: Topic): number => {
@@ -78,6 +79,49 @@ export default function SettingsDrawer({
             <Flex orientation="vertical" gap="small">
               <Radio value="noun-only">Только существительное</Radio>
               <Radio value="sentence">В предложении</Radio>
+            </Flex>
+          </Radio.Group>
+        </div>
+
+        <Divider style={{ margin: '4px 0' }} />
+
+        <div>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Словарь</Title>
+          <Radio.Group
+            value={settings.dictionaryType}
+            onChange={(e) => {
+              const newType = e.target.value as DictionaryType;
+              let newEnabledDictionaries = [...settings.enabledDictionaries];
+              
+              if (newType === 'user') {
+                // При переключении на "мой словарь", добавляем user dictionaries в enabledDictionaries
+                if (userDictionaries && userDictionaries.length > 0) {
+                  const userDictIds = userDictionaries.map(d => d.id);
+                  // Убираем дефолтные словари и добавляем пользовательские
+                  newEnabledDictionaries = userDictIds.filter(id => !['A1', 'A2'].includes(id));
+                  if (newEnabledDictionaries.length === 0 && userDictIds.length > 0) {
+                    newEnabledDictionaries = [userDictIds[0]];
+                  }
+                }
+              } else {
+                // При переключении на "дефолтный", убираем user dictionaries и добавляем дефолтные
+                newEnabledDictionaries = settings.enabledDictionaries.filter(id => ['A1', 'A2'].includes(id));
+                if (newEnabledDictionaries.length === 0) {
+                  newEnabledDictionaries = ['A1'];
+                }
+              }
+              
+              setSettings({ 
+                ...settings, 
+                dictionaryType: newType,
+                enabledDictionaries: newEnabledDictionaries
+              });
+            }}
+            style={{ width: '100%' }}
+          >
+            <Flex orientation="vertical" gap="small">
+              <Radio value="default">Дефолтный</Radio>
+              <Radio value="user">Свой</Radio>
             </Flex>
           </Radio.Group>
         </div>
