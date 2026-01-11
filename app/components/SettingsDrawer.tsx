@@ -67,7 +67,7 @@ export default function SettingsDrawer({
       placement="right"
       onClose={onClose}
       open={open}
-      size={drawerSize}
+      width={drawerSize}
       resizable={{
         onResize: (newSize: number) => {
           setDrawerSize(newSize);
