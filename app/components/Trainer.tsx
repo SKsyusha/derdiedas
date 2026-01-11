@@ -134,8 +134,18 @@ export default function Trainer() {
 
   // Check answer
   const checkAnswer = () => {
+    if (!currentWord) return;
+
+    // Если поле пустое, просто переключаем на следующее слово
+    if (!userInput || userInput.trim() === '') {
+      if (!isProcessingRef.current) {
+        getNextWord();
+      }
+      return;
+    }
+
     // Блокируем повторные вызовы во время обработки
-    if (isProcessingRef.current || !currentWord || !userInput) return;
+    if (isProcessingRef.current) return;
 
     // Устанавливаем флаг обработки
     isProcessingRef.current = true;
