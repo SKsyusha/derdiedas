@@ -1,6 +1,7 @@
 'use client';
 
 import { Drawer, Input, Space, Select, Button, Typography, Empty } from 'antd';
+import { useTranslation } from 'react-i18next';
 import { Word, Article } from '../types';
 
 const { Text } = Typography;
@@ -24,6 +25,8 @@ export default function UserDictionaryDrawer({
   setNewWord,
   onDictionaryCreated,
 }: UserDictionaryDrawerProps) {
+  const { t } = useTranslation();
+  
   const addUserWord = () => {
     if (!newWord.noun || !newWord.article) return;
 
@@ -37,7 +40,7 @@ export default function UserDictionaryDrawer({
     if (userDictionaries.length === 0) {
       const newDict = {
         id: 'user-1',
-        name: 'Мой словарь',
+        name: t('userDictionary.myDictionaryName'),
         words: [word],
         enabled: true,
       };
@@ -59,7 +62,7 @@ export default function UserDictionaryDrawer({
 
   return (
     <Drawer
-      title="Мой словарь"
+      title={t('userDictionary.title')}
       placement="right"
       onClose={onClose}
       open={open}
@@ -68,7 +71,7 @@ export default function UserDictionaryDrawer({
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <Space.Compact style={{ width: '100%' }}>
           <Input
-            placeholder="Существительное"
+            placeholder={t('userDictionary.noun')}
             value={newWord.noun}
             onChange={(e) => setNewWord({ ...newWord, noun: e.target.value })}
             style={{ flex: 1 }}
@@ -84,7 +87,7 @@ export default function UserDictionaryDrawer({
             ]}
           />
           <Input
-            placeholder="Перевод (опционально)"
+            placeholder={t('userDictionary.translationOptional')}
             value={newWord.translation}
             onChange={(e) => setNewWord({ ...newWord, translation: e.target.value })}
             style={{ flex: 1 }}
@@ -98,18 +101,18 @@ export default function UserDictionaryDrawer({
               color: '#ffffff'
             }}
           >
-            Добавить
+            {t('userDictionary.add')}
           </Button>
         </Space.Compact>
 
         {userDictionaries.length === 0 || userDictionaries.every(dict => dict.words.length === 0) ? (
           <Empty
-            description="Словарь пуст"
+            description={t('userDictionary.empty')}
             image={Empty.PRESENTED_IMAGE_SIMPLE}
             style={{ marginTop: '40px' }}
           >
             <Text type="secondary" style={{ fontSize: '14px' }}>
-              Добавьте слова, используя форму выше
+              {t('userDictionary.addWordsHint')}
             </Text>
           </Empty>
         ) : (
@@ -118,7 +121,7 @@ export default function UserDictionaryDrawer({
               <Text strong className="block mb-2">{dict.name}</Text>
               {dict.words.length === 0 ? (
                 <Empty
-                  description="В этом словаре пока нет слов"
+                  description={t('userDictionary.noWordsInDict')}
                   image={Empty.PRESENTED_IMAGE_SIMPLE}
                   style={{ marginTop: '20px' }}
                 />
@@ -144,7 +147,7 @@ export default function UserDictionaryDrawer({
                           );
                         }}
                       >
-                        Удалить
+                        {t('userDictionary.delete')}
                       </Button>
                     </div>
                   ))}

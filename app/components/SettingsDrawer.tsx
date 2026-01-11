@@ -1,6 +1,7 @@
 'use client';
 
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
+import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
 import topicStats from '../data/dictionaries/topic_stats.json';
 
@@ -49,6 +50,8 @@ export default function SettingsDrawer({
   drawerSize = 378,
   userDictionaries = [],
 }: SettingsDrawerProps) {
+  const { t } = useTranslation();
+  
   // Функция для получения количества слов в топике для выбранных уровней
   const getTopicCount = (topic: Topic): number => {
     let count = 0;
@@ -62,7 +65,7 @@ export default function SettingsDrawer({
   };
   return (
     <Drawer
-      title="Настройки"
+      title={t('settings.title')}
       placement="right"
       onClose={onClose}
       open={open}
@@ -70,7 +73,7 @@ export default function SettingsDrawer({
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Словарь</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.dictionary')}</Title>
           <Radio.Group
             value={settings.dictionaryType}
             onChange={(e) => {
@@ -104,8 +107,8 @@ export default function SettingsDrawer({
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
-              <Radio value="user">Свой</Radio>
-              <Radio value="default">Дефолтный</Radio>
+              <Radio value="user">{t('settings.custom')}</Radio>
+              <Radio value="default">{t('settings.default')}</Radio>
             </Flex>
           </Radio.Group>
         </div>
@@ -113,15 +116,15 @@ export default function SettingsDrawer({
         <Divider style={{ margin: '4px 0' }} />
 
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Режим тренировки</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.trainingMode')}</Title>
           <Radio.Group
             value={settings.mode}
             onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
-              <Radio value="sentence">В предложении</Radio>
-              <Radio value="noun-only">Только существительное</Radio>
+              <Radio value="sentence">{t('settings.inSentence')}</Radio>
+              <Radio value="noun-only">{t('settings.nounOnly')}</Radio>
             </Flex>
           </Radio.Group>
         </div>
@@ -130,7 +133,7 @@ export default function SettingsDrawer({
           <>
             <Divider style={{ margin: '4px 0' }} />
             <div>
-              <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Падежи</Title>
+              <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.cases')}</Title>
               <Checkbox.Group
                 value={settings.cases}
                 onChange={(checkedValues) => {
@@ -143,7 +146,7 @@ export default function SettingsDrawer({
                 <Flex orientation="vertical" gap="small">
                   {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
                     <Checkbox key={case_} value={case_}>
-                      {case_.charAt(0).toUpperCase() + case_.slice(1)}
+                      {t(`cases.${case_}`)}
                     </Checkbox>
                   ))}
                 </Flex>
@@ -155,7 +158,7 @@ export default function SettingsDrawer({
                 checked={settings.usePronouns}
                 onChange={(e) => setSettings({ ...settings, usePronouns: e.target.checked })}
               >
-                Использовать местоимения
+                {t('settings.usePronouns')}
               </Checkbox>
             </div>
           </>
@@ -168,7 +171,7 @@ export default function SettingsDrawer({
             checked={settings.showTranslation}
             onChange={(e) => setSettings({ ...settings, showTranslation: e.target.checked })}
           >
-            Показывать перевод
+            {t('settings.showTranslation')}
           </Checkbox>
         </div>
 
@@ -176,11 +179,11 @@ export default function SettingsDrawer({
 
         {/* ADD TO THE LESSON Section */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>ADD TO THE LESSON</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.addToLesson')}</Title>
           
           {/* Language Dropdown */}
           <div style={{ marginBottom: '8px' }}>
-            <Text strong className="block mb-1" style={{ fontSize: '12px' }}>Language</Text>
+            <Text strong className="block mb-1" style={{ fontSize: '12px' }}>{t('settings.language')}</Text>
             <Select
               value={settings.language}
               onChange={(value) => setSettings({ ...settings, language: value as Language })}
@@ -192,9 +195,9 @@ export default function SettingsDrawer({
 
           {/* Topics Dropdown */}
           <div style={{ marginBottom: '8px' }}>
-            <Text strong className="block mb-1" style={{ fontSize: '12px' }}>Topic</Text>
+            <Text strong className="block mb-1" style={{ fontSize: '12px' }}>{t('settings.topic')}</Text>
             <Select
-              placeholder="Select a topic..."
+              placeholder={t('settings.selectTopic')}
               style={{ width: '100%' }}
               size="small"
               onChange={(value) => {
@@ -205,8 +208,9 @@ export default function SettingsDrawer({
               }}
               options={allTopics.map((topic) => {
                 const count = getTopicCount(topic);
+                const topicLabel = t(`topics.${topic}`);
                 return { 
-                  label: count > 0 ? `${topic} (${count})` : topic, 
+                  label: count > 0 ? `${topicLabel} (${count})` : topicLabel, 
                   value: topic 
                 };
               })}
@@ -217,6 +221,7 @@ export default function SettingsDrawer({
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {settings.topics.map((topic) => {
                   const count = getTopicCount(topic);
+                  const topicLabel = t(`topics.${topic}`);
                   return (
                     <Tag
                       key={topic}
@@ -235,7 +240,7 @@ export default function SettingsDrawer({
                         lineHeight: '1.4'
                       }}
                     >
-                      {topic} {count > 0 && `(${count})`}
+                      {topicLabel} {count > 0 && `(${count})`}
                     </Tag>
                   );
                 })}
@@ -248,15 +253,15 @@ export default function SettingsDrawer({
 
         {/* Article Type */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Артикль</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.article')}</Title>
           <Radio.Group
             value={settings.articleType}
             onChange={(e) => setSettings({ ...settings, articleType: e.target.value as ArticleType })}
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
-              <Radio value="definite">Определенный (der/die/das)</Radio>
-              <Radio value="indefinite">Неопределенный (ein/eine)</Radio>
+              <Radio value="definite">{t('settings.definite')}</Radio>
+              <Radio value="indefinite">{t('settings.indefinite')}</Radio>
             </Flex>
           </Radio.Group>
         </div>
@@ -265,7 +270,7 @@ export default function SettingsDrawer({
 
         {/* Cases */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Падежи</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.cases')}</Title>
           <Checkbox.Group
             value={settings.cases}
             onChange={(checkedValues) => {
@@ -276,10 +281,10 @@ export default function SettingsDrawer({
             }}
           >
             <Flex orientation="vertical" gap="small">
-              <Checkbox value="nominativ">Nominativ</Checkbox>
-              <Checkbox value="akkusativ">Akkusativ</Checkbox>
-              <Checkbox value="dativ">Dativ</Checkbox>
-              <Checkbox value="genitiv">Genitiv</Checkbox>
+              <Checkbox value="nominativ">{t('cases.nominativ')}</Checkbox>
+              <Checkbox value="akkusativ">{t('cases.akkusativ')}</Checkbox>
+              <Checkbox value="dativ">{t('cases.dativ')}</Checkbox>
+              <Checkbox value="genitiv">{t('cases.genitiv')}</Checkbox>
             </Flex>
           </Checkbox.Group>
         </div>
@@ -288,17 +293,17 @@ export default function SettingsDrawer({
 
         {/* Pronoun Type */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Местоимения</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.pronouns')}</Title>
           <Radio.Group
             value={settings.pronounType}
             onChange={(e) => setSettings({ ...settings, pronounType: e.target.value, usePronouns: e.target.value !== 'none' })}
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
-              <Radio value="none">Без местоимений</Radio>
-              <Radio value="personal">Личные (ich, du, er...)</Radio>
-              <Radio value="possessive">Притяжательные (mein, dein...)</Radio>
-              <Radio value="demonstrative">Указательные (dieser, jener...)</Radio>
+              <Radio value="none">{t('settings.noPronouns')}</Radio>
+              <Radio value="personal">{t('settings.personal')}</Radio>
+              <Radio value="possessive">{t('settings.possessive')}</Radio>
+              <Radio value="demonstrative">{t('settings.demonstrative')}</Radio>
             </Flex>
           </Radio.Group>
         </div>

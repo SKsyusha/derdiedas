@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
 import "./globals.css";
+import I18nProvider from "./components/I18nProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,7 +65,9 @@ export default function RootLayout({
             },
           }}
         >
-          {children}
+          <I18nProvider>
+            {children}
+          </I18nProvider>
         </ConfigProvider>
       </body>
     </html>

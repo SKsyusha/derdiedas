@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Button, Card, Input, Space, Select, Typography, Spin } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
 import SettingsDrawer from './SettingsDrawer';
@@ -11,6 +13,7 @@ import UserDictionaryDrawer from './UserDictionaryDrawer';
 const { Title, Text } = Typography;
 
 export default function Trainer() {
+  const { t } = useTranslation();
   const [settings, setSettings] = useState<TrainingSettings>({
     mode: 'noun-only',
     level: ['A1'],
@@ -256,8 +259,8 @@ export default function Trainer() {
       <>
         <div className="min-h-screen flex items-center justify-center p-4">
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Нет доступных слов</h2>
-            <p className="text-gray-600 mb-4">Включите хотя бы один словарь в настройках</p>
+            <h2 className="text-2xl font-bold mb-4">{t('trainer.noWordsAvailable')}</h2>
+            <p className="text-gray-600 mb-4">{t('trainer.enableDictionary')}</p>
             <Button
               type="primary"
               size="large"
@@ -268,7 +271,7 @@ export default function Trainer() {
                 color: '#ffffff'
               }}
             >
-              Открыть настройки
+              {t('trainer.openSettings')}
             </Button>
           </div>
         </div>
@@ -327,12 +330,22 @@ export default function Trainer() {
     <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gray-900">DerDieDas Trainer</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('trainer.title')}</h1>
           <div className="flex gap-2">
+            <Select
+              value={i18n.language}
+              onChange={(value) => i18n.changeLanguage(value)}
+              style={{ width: 120 }}
+              size="large"
+              options={[
+                { label: t('trainer.russian'), value: 'ru' },
+                { label: t('trainer.english'), value: 'en' },
+              ]}
+            />
             <Button
               onClick={() => setShowUserDict(true)}
             >
-              Мой словарь
+              {t('trainer.myDictionary')}
             </Button>
             <Button
               type="primary"
@@ -344,7 +357,7 @@ export default function Trainer() {
                 color: '#ffffff'
               }}
             >
-              Настройки
+              {t('trainer.settings')}
             </Button>
           </div>
         </div>
@@ -358,7 +371,7 @@ export default function Trainer() {
               {isLoading ? (
                 <div className="text-center py-12">
                   <Spin size="large" />
-                  <p className="mt-4 text-gray-600">Загрузка...</p>
+                  <p className="mt-4 text-gray-600">{t('trainer.loading')}</p>
                 </div>
               ) : currentWord ? (
               <div className="text-center mb-8">
@@ -424,7 +437,7 @@ export default function Trainer() {
                     value={userInput}
                     onChange={(e) => handleInput(e.target.value)}
                     onPressEnter={checkAnswer}
-                    placeholder="Введите артикль..."
+                    placeholder={t('trainer.enterArticle')}
                     className={`text-2xl ${
                       feedback === 'correct'
                         ? 'border-green-500'
@@ -457,7 +470,7 @@ export default function Trainer() {
                       paddingRight: '32px',
                     }}
                   >
-                    Проверить
+                    {t('trainer.check')}
                   </Button>
 
                   {feedback === 'incorrect' && (
@@ -466,7 +479,7 @@ export default function Trainer() {
                       onClick={getNextWord}
                       style={{ height: '48px' }}
                     >
-                      Следующее слово
+                      {t('trainer.nextWord')}
                     </Button>
                   )}
                 </Space>
@@ -476,30 +489,30 @@ export default function Trainer() {
 
             {/* Stats */}
             <Card style={{ marginTop: '32px' }} className="mb-6">
-              <Title level={4} className="mb-4">Статистика сессии</Title>
+              <Title level={4} className="mb-4">{t('trainer.sessionStats')}</Title>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 <div>
                   <div className="text-2xl font-bold text-gray-900">{stats.total}</div>
-                  <div className="text-sm text-gray-600">Всего</div>
+                  <div className="text-sm text-gray-600">{t('trainer.total')}</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-green-600">{stats.correct}</div>
-                  <div className="text-sm text-gray-600">Правильно</div>
+                  <div className="text-sm text-gray-600">{t('trainer.correct')}</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-red-600">{stats.incorrect}</div>
-                  <div className="text-sm text-gray-600">Неправильно</div>
+                  <div className="text-sm text-gray-600">{t('trainer.incorrect')}</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-gray-900">
                     {stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%
                   </div>
-                  <div className="text-sm text-gray-600">Точность</div>
+                  <div className="text-sm text-gray-600">{t('trainer.accuracy')}</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-purple-600">{stats.streak}</div>
                   <div className="text-sm text-gray-600">
-                    Серия (лучшая: {stats.bestStreak})
+                    {t('trainer.streak')} ({t('trainer.bestStreak')}: {stats.bestStreak})
                   </div>
                 </div>
               </div>
