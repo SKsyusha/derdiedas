@@ -68,11 +68,6 @@ export default function SettingsDrawer({
       onClose={onClose}
       open={open}
       width={drawerSize}
-      resizable={{
-        onResize: (newSize: number) => {
-          setDrawerSize(newSize);
-        },
-      }}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div>
