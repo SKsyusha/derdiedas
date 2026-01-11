@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Drawer, Button, Radio, Checkbox, Select, Space, Divider, Typography } from 'antd';
+import { Drawer, Button, Radio, Checkbox, Select, Space, Divider, Typography, Card, Input, Tag } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
 import { Word, TrainingSettings, SessionStats, Case, Level, Article, Language, Topic } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
@@ -224,10 +224,10 @@ export default function Trainer() {
     : currentWord.article;
 
   return (
-    <div className="min-h-screen p-4">
+    <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 flex justify-between items-center">
-          <h1 className="text-3xl font-bold">DerDieDas Trainer</h1>
+          <h1 className="text-3xl font-bold text-gray-900">DerDieDas Trainer</h1>
           <div className="flex gap-2">
             <Button
               onClick={() => setShowUserDict(!showUserDict)}
@@ -238,6 +238,11 @@ export default function Trainer() {
               type="primary"
               icon={<SettingOutlined />}
               onClick={() => setShowSettings(!showSettings)}
+              style={{ 
+                backgroundColor: '#8b5cf6', 
+                borderColor: '#8b5cf6',
+                color: '#ffffff'
+              }}
             >
               Настройки
             </Button>
@@ -250,249 +255,257 @@ export default function Trainer() {
 
             {/* User Dictionary Panel */}
             {showUserDict && (
-        <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-          <h2 className="text-xl font-bold mb-4">Мой словарь</h2>
-          
-          <div className="mb-4 flex gap-2">
-            <input
-              type="text"
-              placeholder="Существительное"
-              value={newWord.noun}
-              onChange={(e) => setNewWord({ ...newWord, noun: e.target.value })}
-              className="px-3 py-2 border rounded flex-1"
-            />
-            <select
-              value={newWord.article}
-              onChange={(e) => setNewWord({ ...newWord, article: e.target.value as Article })}
-              className="px-3 py-2 border rounded"
-            >
-              <option value="der">der</option>
-              <option value="die">die</option>
-              <option value="das">das</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Перевод (опционально)"
-              value={newWord.translation}
-              onChange={(e) => setNewWord({ ...newWord, translation: e.target.value })}
-              className="px-3 py-2 border rounded flex-1"
-            />
-            <button
-              onClick={addUserWord}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Добавить
-            </button>
-          </div>
+              <Card className="mb-6">
+                <Title level={4} className="mb-4">Мой словарь</Title>
+                
+                <Space.Compact style={{ width: '100%', marginBottom: '16px' }}>
+                  <Input
+                    placeholder="Существительное"
+                    value={newWord.noun}
+                    onChange={(e) => setNewWord({ ...newWord, noun: e.target.value })}
+                    style={{ flex: 1 }}
+                  />
+                  <Select
+                    value={newWord.article}
+                    onChange={(value) => setNewWord({ ...newWord, article: value as Article })}
+                    style={{ width: 100 }}
+                    options={[
+                      { label: 'der', value: 'der' },
+                      { label: 'die', value: 'die' },
+                      { label: 'das', value: 'das' },
+                    ]}
+                  />
+                  <Input
+                    placeholder="Перевод (опционально)"
+                    value={newWord.translation}
+                    onChange={(e) => setNewWord({ ...newWord, translation: e.target.value })}
+                    style={{ flex: 1 }}
+                  />
+                  <Button
+                    type="primary"
+                    onClick={addUserWord}
+                    style={{ 
+                      backgroundColor: '#8b5cf6', 
+                      borderColor: '#8b5cf6',
+                      color: '#ffffff'
+                    }}
+                  >
+                    Добавить
+                  </Button>
+                </Space.Compact>
 
-          {userDictionaries.map((dict) => (
-            <div key={dict.id} className="mb-4">
-              <h3 className="font-semibold mb-2">{dict.name}</h3>
-              <div className="space-y-1">
-                {dict.words.map((word, idx) => (
-                  <div key={idx} className="flex justify-between items-center p-2 bg-white dark:bg-gray-700 rounded">
-                    <span>
-                      <strong>{word.article}</strong> {word.noun}
-                      {word.translation && ` - ${word.translation}`}
-                    </span>
-                    <button
-                      onClick={() => {
-                        setUserDictionaries((prev) =>
-                          prev.map((d) =>
-                            d.id === dict.id
-                              ? { ...d, words: d.words.filter((_, i) => i !== idx) }
-                              : d
-                          )
-                        );
-                      }}
-                      className="text-red-600 hover:text-red-800"
-                    >
-                      Удалить
-                    </button>
+                {userDictionaries.map((dict) => (
+                  <div key={dict.id} className="mb-4">
+                    <Text strong className="block mb-2">{dict.name}</Text>
+                    <div className="space-y-1">
+                      {dict.words.map((word, idx) => (
+                        <div key={idx} className="flex justify-between items-center p-2 bg-gray-50 rounded-lg mb-2">
+                          <span className="text-gray-900">
+                            <strong>{word.article}</strong> {word.noun}
+                            {word.translation && ` - ${word.translation}`}
+                          </span>
+                          <Button
+                            type="text"
+                            danger
+                            size="small"
+                            onClick={() => {
+                              setUserDictionaries((prev) =>
+                                prev.map((d) =>
+                                  d.id === dict.id
+                                    ? { ...d, words: d.words.filter((_, i) => i !== idx) }
+                                    : d
+                                )
+                              );
+                            }}
+                          >
+                            Удалить
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
-              </div>
-            </div>
-            ))}
-          </div>
-        )}
+              </Card>
+            )}
 
             {/* Training Area */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-6">
-        <div className="text-center mb-8">
-          {settings.mode === 'sentence' && currentSentence ? (
-            <div className="text-2xl mb-6">
-              {currentSentence.split('___').map((part, idx, arr) => (
-                <span key={idx}>
-                  {part}
-                  {idx < arr.length - 1 && (
-                    <span className="inline-block w-24 border-b-2 border-blue-500 mx-2" />
+            <Card className="mb-6 shadow-md">
+              <div className="text-center mb-8">
+                {settings.mode === 'sentence' && currentSentence ? (
+                  <div className="text-2xl mb-6 text-gray-900">
+                    {currentSentence.split('___').map((part, idx, arr) => (
+                      <span key={idx}>
+                        {part}
+                        {idx < arr.length - 1 && (
+                          <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
+                        )}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-3xl mb-6 text-gray-900">
+                    <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
+                    {currentWord.noun}
+                  </div>
+                )}
+
+                <div className="mb-4">
+                  <Input
+                    size="large"
+                    value={userInput}
+                    onChange={(e) => handleInput(e.target.value)}
+                    onPressEnter={checkAnswer}
+                    placeholder="Введите артикль..."
+                    className={`text-2xl text-center ${
+                      feedback === 'correct'
+                        ? 'border-green-500'
+                        : feedback === 'incorrect'
+                        ? 'border-red-500'
+                        : ''
+                    }`}
+                    style={{
+                      fontSize: '1.5rem',
+                      height: '60px',
+                    }}
+                    autoFocus
+                  />
+                </div>
+
+                {feedback === 'incorrect' && (
+                  <div className="text-red-600 mb-2">
+                    Неправильно! Правильный ответ: <strong>{correctAnswer}</strong>
+                  </div>
+                )}
+
+                {feedback === 'correct' && (
+                  <div className="text-green-600 mb-2">
+                    Правильно! ✓
+                  </div>
+                )}
+
+                <Space>
+                  <Button
+                    type="primary"
+                    size="large"
+                    onClick={checkAnswer}
+                    disabled={!userInput}
+                    style={{
+                      backgroundColor: '#8b5cf6',
+                      borderColor: '#8b5cf6',
+                      color: '#ffffff',
+                      height: '48px',
+                      paddingLeft: '32px',
+                      paddingRight: '32px',
+                    }}
+                  >
+                    Проверить
+                  </Button>
+
+                  {feedback === 'incorrect' && (
+                    <Button
+                      size="large"
+                      onClick={getNextWord}
+                      style={{ height: '48px' }}
+                    >
+                      Следующее слово
+                    </Button>
                   )}
-                </span>
-              ))}
-            </div>
-          ) : (
-            <div className="text-3xl mb-6">
-              <span className="inline-block w-24 border-b-2 border-blue-500 mx-2" />
-              {currentWord.noun}
-            </div>
-          )}
+                </Space>
+              </div>
 
-          <div className="mb-4">
-            <input
-              type="text"
-              value={userInput}
-              onChange={(e) => handleInput(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && checkAnswer()}
-              placeholder="Введите артикль..."
-              className={`text-2xl text-center px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 ${
-                feedback === 'correct'
-                  ? 'border-green-500 bg-green-50 dark:bg-green-900'
-                  : feedback === 'incorrect'
-                  ? 'border-red-500 bg-red-50 dark:bg-red-900'
-                  : 'border-gray-300 dark:border-gray-600'
-              }`}
-              autoFocus
-            />
-          </div>
-
-          {feedback === 'incorrect' && (
-            <div className="text-red-600 dark:text-red-400 mb-2">
-              Неправильно! Правильный ответ: <strong>{correctAnswer}</strong>
-            </div>
-          )}
-
-          {feedback === 'correct' && (
-            <div className="text-green-600 dark:text-green-400 mb-2">
-              Правильно! ✓
-            </div>
-          )}
-
-          <button
-            onClick={checkAnswer}
-            disabled={!userInput}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-          >
-            Проверить
-          </button>
-
-          {feedback === 'incorrect' && (
-            <button
-              onClick={getNextWord}
-              className="ml-4 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700"
-            >
-              Следующее слово
-            </button>
-          )}
-        </div>
-
-        {currentWord.translation && (
-          <div className="text-center text-gray-600 dark:text-gray-400 text-sm">
-            Перевод: {currentWord.translation}
-          </div>
-        )}
-            </div>
+              {currentWord.translation && (
+                <div className="text-center text-gray-600 text-sm">
+                  Перевод: {currentWord.translation}
+                </div>
+              )}
+            </Card>
 
             {/* Stats */}
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-        <h2 className="text-xl font-bold mb-4">Статистика сессии</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <div>
-            <div className="text-2xl font-bold">{stats.total}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Всего</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-green-600">{stats.correct}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Правильно</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-red-600">{stats.incorrect}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Неправильно</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold">
-              {stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Точность</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold">{stats.streak}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">
-              Серия (лучшая: {stats.bestStreak})
-            </div>
-          </div>
-        </div>
-            </div>
+            <Card className="mb-6">
+              <Title level={4} className="mb-4">Статистика сессии</Title>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">{stats.total}</div>
+                  <div className="text-sm text-gray-600">Всего</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-green-600">{stats.correct}</div>
+                  <div className="text-sm text-gray-600">Правильно</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-red-600">{stats.incorrect}</div>
+                  <div className="text-sm text-gray-600">Неправильно</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%
+                  </div>
+                  <div className="text-sm text-gray-600">Точность</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-purple-600">{stats.streak}</div>
+                  <div className="text-sm text-gray-600">
+                    Серия (лучшая: {stats.bestStreak})
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
 
           {/* Right Sidebar - Additional Settings */}
           <div className="w-80 flex-shrink-0">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
-              <h2 className="text-xl font-bold mb-4">ADD TO THE LESSON</h2>
+            <Card className="shadow-md">
+              <Title level={4} className="mb-4">ADD TO THE LESSON</Title>
               
               {/* Language Dropdown */}
               <div className="mb-6">
-                <label className="block mb-2 font-semibold text-sm">Language</label>
-                <select
+                <Text strong className="block mb-2">Language</Text>
+                <Select
                   value={settings.language}
-                  onChange={(e) => setSettings({ ...settings, language: e.target.value as Language })}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  {allLanguages.map((lang) => (
-                    <option key={lang} value={lang}>
-                      {lang}
-                    </option>
-                  ))}
-                </select>
+                  onChange={(value) => setSettings({ ...settings, language: value as Language })}
+                  style={{ width: '100%' }}
+                  options={allLanguages.map((lang) => ({ label: lang, value: lang }))}
+                />
               </div>
 
               {/* Topics Dropdown */}
               <div className="mb-6">
-                <label className="block mb-2 font-semibold text-sm">Topic</label>
-                <select
-                  value=""
-                  onChange={(e) => {
-                    const topic = e.target.value as Topic;
+                <Text strong className="block mb-2">Topic</Text>
+                <Select
+                  placeholder="Select a topic..."
+                  style={{ width: '100%' }}
+                  onChange={(value) => {
+                    const topic = value as Topic;
                     if (topic && !settings.topics.includes(topic)) {
                       setSettings({ ...settings, topics: [...settings.topics, topic] });
                     }
                   }}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select a topic...</option>
-                  {allTopics.map((topic) => (
-                    <option key={topic} value={topic}>
-                      {topic}
-                    </option>
-                  ))}
-                </select>
+                  options={allTopics.map((topic) => ({ label: topic, value: topic }))}
+                />
                 
                 {/* Selected Topics */}
                 {settings.topics.length > 0 && (
                   <div className="mt-3 space-y-2">
                     {settings.topics.map((topic) => (
-                      <div
+                      <Tag
                         key={topic}
-                        className="flex items-center justify-between px-3 py-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg"
+                        closable
+                        onClose={() => {
+                          setSettings({
+                            ...settings,
+                            topics: settings.topics.filter((t) => t !== topic),
+                          });
+                        }}
+                        color="purple"
+                        style={{ marginBottom: '8px', padding: '4px 8px' }}
                       >
-                        <span className="text-sm">{topic}</span>
-                        <button
-                          onClick={() => {
-                            setSettings({
-                              ...settings,
-                              topics: settings.topics.filter((t) => t !== topic),
-                            });
-                          }}
-                          className="text-red-600 hover:text-red-800 text-sm"
-                        >
-                          ×
-                        </button>
-                      </div>
+                        {topic}
+                      </Tag>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
@@ -503,7 +516,7 @@ export default function Trainer() {
         placement="right"
         onClose={() => setShowSettings(false)}
         open={showSettings}
-        width={400}
+        size="large"
       >
         <Space direction="vertical" size="large" style={{ width: '100%' }}>
           <div>

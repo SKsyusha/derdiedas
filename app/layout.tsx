@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ConfigProvider } from "antd";
+import { ConfigProvider, theme } from "antd";
 import "antd/dist/reset.css";
 import "./globals.css";
 
@@ -29,7 +29,41 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ConfigProvider>
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: '#8b5cf6', // Purple/violet primary color
+              colorBgContainer: '#ffffff',
+              colorBgElevated: '#ffffff',
+              borderRadius: 12,
+              colorBorder: '#e5e7eb',
+              colorText: '#171717',
+            },
+            components: {
+              Button: {
+                borderRadius: 8,
+                controlHeight: 40,
+                primaryColor: '#ffffff',
+              },
+              Card: {
+                borderRadius: 16,
+                paddingLG: 24,
+              },
+              Drawer: {
+                colorBgElevated: '#ffffff',
+              },
+              Input: {
+                borderRadius: 8,
+                controlHeight: 40,
+                colorBorder: '#e5e7eb',
+              },
+              Select: {
+                borderRadius: 8,
+                controlHeight: 40,
+              },
+            },
+          }}
+        >
           {children}
         </ConfigProvider>
       </body>
