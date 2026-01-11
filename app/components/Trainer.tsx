@@ -28,7 +28,6 @@ export default function Trainer() {
   const [currentSentence, setCurrentSentence] = useState<string>('');
   const [currentCase, setCurrentCase] = useState<Case>('nominativ');
   const [userInput, setUserInput] = useState<string>('');
-  const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [stats, setStats] = useState<SessionStats>({
     total: 0,
@@ -136,10 +135,20 @@ export default function Trainer() {
   }, []);
 
   // Handle input
-  const handleInput = (value: string) => {
+  const handleInput = useCallback((value: string) => {
+    // Если есть feedback и пользователь начинает вводить, переключаем на новое слово
+    if (feedback && value.length > 0) {
+      getNextWord();
+      // После переключения оставляем только последний введенный символ
+      setTimeout(() => {
+        const lastChar = value[value.length - 1].toLowerCase();
+        setUserInput(lastChar);
+      }, 0);
+      return;
+    }
     const trimmedValue = value.toLowerCase().trim();
     setUserInput(trimmedValue);
-  };
+  }, [feedback, getNextWord]);
 
   // Check answer
   const checkAnswer = () => {
@@ -474,17 +483,13 @@ export default function Trainer() {
 
                 <div className="mb-4">
                   <Input
-                    key={userInput.length > 0 ? 'has-value' : 'empty'}
                     ref={inputRef}
                     size="large"
                     value={userInput}
                     onChange={(e) => handleInput(e.target.value)}
-                    onFocus={() => setIsInputFocused(true)}
-                    onBlur={() => setIsInputFocused(false)}
                     onPressEnter={checkAnswer}
-                    placeholder={userInput.length > 0 ? undefined : 'Введите артикль...'}
-                    data-has-value={userInput.length > 0 ? 'true' : 'false'}
-                    className={`text-2xl hide-placeholder-when-filled ${
+                    placeholder="Введите артикль..."
+                    className={`text-2xl ${
                       feedback === 'correct'
                         ? 'border-green-500'
                         : feedback === 'incorrect'

@@ -23,31 +23,6 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Скрываем placeholder когда input имеет значение - для Ant Design Input */
-.hide-placeholder-when-filled[data-has-value="true"] input::placeholder,
-.hide-placeholder-when-filled[data-has-value="true"] .ant-input::placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-.hide-placeholder-when-filled[data-has-value="true"] input::-webkit-input-placeholder,
-.hide-placeholder-when-filled[data-has-value="true"] .ant-input::-webkit-input-placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-.hide-placeholder-when-filled[data-has-value="true"] input::-moz-placeholder,
-.hide-placeholder-when-filled[data-has-value="true"] .ant-input::-moz-placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-.hide-placeholder-when-filled[data-has-value="true"] input:-ms-input-placeholder,
-.hide-placeholder-when-filled[data-has-value="true"] .ant-input:-ms-input-placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
 /* Скрываем placeholder когда input в фокусе */
 input.ant-input:focus::placeholder,
 .ant-input:focus::placeholder {
@@ -69,31 +44,6 @@ input.ant-input:focus::-moz-placeholder,
 
 input.ant-input:focus:-ms-input-placeholder,
 .ant-input:focus:-ms-input-placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-/* Альтернативный способ через :not(:placeholder-shown) */
-input.ant-input:not(:placeholder-shown)::placeholder,
-.ant-input:not(:placeholder-shown)::placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-input.ant-input:not(:placeholder-shown)::-webkit-input-placeholder,
-.ant-input:not(:placeholder-shown)::-webkit-input-placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-input.ant-input:not(:placeholder-shown)::-moz-placeholder,
-.ant-input:not(:placeholder-shown)::-moz-placeholder {
-  opacity: 0 !important;
-  color: transparent !important;
-}
-
-input.ant-input:not(:placeholder-shown):-ms-input-placeholder,
-.ant-input:not(:placeholder-shown):-ms-input-placeholder {
   opacity: 0 !important;
   color: transparent !important;
 }
