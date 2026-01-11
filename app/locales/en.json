@@ -44,7 +44,8 @@
     "accuracy": "Accuracy",
     "streak": "Streak",
     "bestStreak": "best",
-    "topicProgress": "Topic progress: {{learned}} / {{total}} words"
+    "topicProgress": "Topic progress: {{learned}} / {{total}} words",
+    "allWordsProgress": "Progress: {{learned}} / {{total}} words"
   },
   "userDictionary": {
     "title": "My Dictionary",
@@ -83,6 +84,8 @@
     "Numbers & Letters": "Numbers & Letters",
     "Months and Days of the Week": "Months and Days of the Week",
     "Time": "Time",
-    "Home": "Home"
+    "Home": "Home",
+    "Communication": "Communication",
+    "Health": "Health"
   }
 }

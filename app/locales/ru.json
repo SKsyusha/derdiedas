@@ -44,7 +44,8 @@
     "accuracy": "Точность",
     "streak": "Серия",
     "bestStreak": "лучшая",
-    "topicProgress": "Прогресс по топикам: {{learned}} / {{total}} слов"
+    "topicProgress": "Прогресс по топикам: {{learned}} / {{total}} слов",
+    "allWordsProgress": "Прогресс: {{learned}} / {{total}} слов"
   },
   "userDictionary": {
     "title": "Мой словарь",
@@ -83,6 +84,8 @@
     "Numbers & Letters": "Numbers & Letters",
     "Months and Days of the Week": "Months and Days of the Week",
     "Time": "Time",
-    "Home": "Home"
+    "Home": "Home",
+    "Communication": "Communication",
+    "Health": "Health"
   }
 }

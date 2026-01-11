@@ -6,11 +6,13 @@ import { Word, Article } from '../types';
 
 const { Text } = Typography;
 
+type UserDictionary = { id: string; name: string; words: Word[]; enabled: boolean };
+
 interface UserDictionaryDrawerProps {
   open: boolean;
   onClose: () => void;
-  userDictionaries: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>;
-  setUserDictionaries: (dicts: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>) => void;
+  userDictionaries: UserDictionary[];
+  setUserDictionaries: React.Dispatch<React.SetStateAction<UserDictionary[]>>;
   newWord: { noun: string; article: Article; translation: string };
   setNewWord: (word: { noun: string; article: Article; translation: string }) => void;
   onDictionaryCreated?: (dictId: string) => void;

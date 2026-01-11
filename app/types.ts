@@ -32,7 +32,9 @@ export type Topic =
   | 'Numbers & Letters'
   | 'Months and Days of the Week'
   | 'Time'
-  | 'Home';
+  | 'Home'
+  | 'Communication'
+  | 'Health';
 
 export interface Word {
   noun: string;

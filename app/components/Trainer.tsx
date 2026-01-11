@@ -165,17 +165,24 @@ export default function Trainer() {
     return words;
   }, [settings.topics, settings.dictionaryType, settings.enabledDictionaries, userDictionaries]);
 
-  // Расчет прогресса по топикам
+  // Расчет прогресса по топикам или всем словам
   const topicProgress = useMemo(() => {
-    if (settings.topics.length === 0) return null;
-
-    const topicWords = getAllWordsInTopics();
-    const totalWords = topicWords.length;
+    let wordsToCheck: Word[];
+    
+    if (settings.topics.length === 0) {
+      // Если топики не выбраны, показываем прогресс по всем словам
+      wordsToCheck = getEnabledWords();
+    } else {
+      // Если топики выбраны, показываем прогресс по выбранным топикам
+      wordsToCheck = getAllWordsInTopics();
+    }
+    
+    const totalWords = wordsToCheck.length;
     
     if (totalWords === 0) return null;
 
-    const learnedCount = topicWords.filter(w => 
-      learnedWords.has(`${w.topic}-${w.noun}`)
+    const learnedCount = wordsToCheck.filter(w => 
+      learnedWords.has(`${w.topic || 'all'}-${w.noun}`)
     ).length;
 
     const percentage = Math.round((learnedCount / totalWords) * 100);
@@ -185,7 +192,7 @@ export default function Trainer() {
       total: totalWords,
       percentage,
     };
-  }, [settings.topics, learnedWords, getAllWordsInTopics]);
+  }, [settings.topics, learnedWords, getAllWordsInTopics, getEnabledWords]);
 
   // Initialize first word
   useEffect(() => {
@@ -281,8 +288,11 @@ export default function Trainer() {
     });
 
     // Отслеживаем изученные слова для прогресс-бара
-    if (isCorrect && currentWord.topic && settings.topics.includes(currentWord.topic)) {
-      setLearnedWords((prev) => new Set([...prev, `${currentWord.topic}-${currentWord.noun}`]));
+    if (isCorrect) {
+      const key = currentWord.topic 
+        ? `${currentWord.topic}-${currentWord.noun}` 
+        : `all-${currentWord.noun}`;
+      setLearnedWords((prev) => new Set([...prev, key]));
     }
 
     setFeedback(isCorrect ? 'correct' : 'incorrect');
@@ -429,10 +439,16 @@ export default function Trainer() {
               <Card className="mb-6 mt-4" style={{ backgroundColor: '#f8f9fa' }}>
                 <div className="mb-2">
                   <Text strong style={{ fontSize: '14px' }}>
-                    {t('trainer.topicProgress', { 
-                      learned: topicProgress.learned, 
-                      total: topicProgress.total 
-                    })}
+                    {settings.topics.length === 0
+                      ? t('trainer.allWordsProgress', { 
+                          learned: topicProgress.learned, 
+                          total: topicProgress.total 
+                        })
+                      : t('trainer.topicProgress', { 
+                          learned: topicProgress.learned, 
+                          total: topicProgress.total 
+                        })
+                    }
                   </Text>
                 </div>
                 <Progress 

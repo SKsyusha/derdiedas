@@ -3,7 +3,7 @@
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
-import topicStats from '../data/dictionaries/topic_stats.json';
+import { builtInDictionaries } from '../dictionaries';
 
 const { Title, Text } = Typography;
 
@@ -28,6 +28,8 @@ const allTopics: Topic[] = [
   'Months and Days of the Week',
   'Time',
   'Home',
+  'Communication',
+  'Health',
 ];
 
 const allLanguages: Language[] = ['Russian', 'English'];
@@ -52,15 +54,36 @@ export default function SettingsDrawer({
 }: SettingsDrawerProps) {
   const { t } = useTranslation();
   
-  // Функция для получения количества слов в топике для выбранных уровней
+  // Функция для получения количества слов в топике напрямую из A1.json
   const getTopicCount = (topic: Topic): number => {
     let count = 0;
-    settings.level.forEach((level) => {
-      const levelStats = topicStats[level as keyof typeof topicStats] as Record<string, number> | undefined;
-      if (levelStats && typeof levelStats === 'object' && topic in levelStats) {
-        count += levelStats[topic] || 0;
-      }
-    });
+    
+    if (settings.dictionaryType === 'default') {
+      // Считаем из встроенных словарей
+      settings.enabledDictionaries.forEach((dictId) => {
+        if (dictId === 'A1' && builtInDictionaries.A1) {
+          const wordsInTopic = builtInDictionaries.A1.filter((w: Word) => {
+            const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
+            const topicMatch = w.topic === topic;
+            return levelMatch && topicMatch;
+          });
+          count += wordsInTopic.length;
+        }
+      });
+    } else {
+      // Считаем из пользовательских словарей
+      const enabledDictIds = settings.enabledDictionaries.length > 0 
+        ? settings.enabledDictionaries 
+        : userDictionaries.map(d => d.id);
+      
+      userDictionaries.forEach((dict) => {
+        if (enabledDictIds.includes(dict.id)) {
+          const wordsInTopic = dict.words.filter((w) => w.topic === topic);
+          count += wordsInTopic.length;
+        }
+      });
+    }
+    
     return count;
   };
   return (
