@@ -5,7 +5,7 @@ import { Button, Card, Input, Space, Select, Typography, Spin, Progress } from '
 import { SettingOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
-import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
+import { Word, TrainingSettings, SessionStats, Case, Article, Language } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
 import SettingsDrawer from './SettingsDrawer';
 import UserDictionaryDrawer from './UserDictionaryDrawer';

@@ -4,6 +4,7 @@ import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
 import "./globals.css";
 import I18nProvider from "./components/I18nProvider";
+import BuyMeACoffee from "./components/BuyMeACoffee";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,6 +70,7 @@ export default function RootLayout({
             {children}
           </I18nProvider>
         </ConfigProvider>
+        <BuyMeACoffee />
       </body>
     </html>
   );
