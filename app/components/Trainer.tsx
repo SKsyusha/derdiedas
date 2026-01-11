@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Button, Card, Input, Space, Select, Typography } from 'antd';
+import { Button, Card, Input, Space, Select, Typography, Spin } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
 import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
@@ -40,6 +40,7 @@ export default function Trainer() {
   const [showUserDict, setShowUserDict] = useState(false);
   const [drawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
+  const [isLoading, setIsLoading] = useState(true);
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -84,33 +85,40 @@ export default function Trainer() {
     }
     isProcessingRef.current = false;
 
-    const words = getEnabledWords();
-    if (words.length === 0) {
-      setCurrentWord(null);
-      setCurrentSentence('');
-      return;
-    }
-
-    const randomWord = words[Math.floor(Math.random() * words.length)];
-    setCurrentWord(randomWord);
-
-    if (settings.mode === 'sentence' && settings.cases.length > 0) {
-      const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
-      setCurrentCase(randomCase);
-      const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
-      setCurrentSentence(sentence);
-    } else {
-      setCurrentSentence('');
-      setCurrentCase('nominativ');
-    }
-
-    setUserInput('');
-    setFeedback(null);
+    setIsLoading(true);
     
-    // Сохраняем фокус после загрузки нового слова
+    // Небольшая задержка для показа лоадинга
     setTimeout(() => {
-      inputRef.current?.focus();
-    }, 50);
+      const words = getEnabledWords();
+      if (words.length === 0) {
+        setCurrentWord(null);
+        setCurrentSentence('');
+        setIsLoading(false);
+        return;
+      }
+
+      const randomWord = words[Math.floor(Math.random() * words.length)];
+      setCurrentWord(randomWord);
+
+      if (settings.mode === 'sentence' && settings.cases.length > 0) {
+        const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
+        setCurrentCase(randomCase);
+        const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
+        setCurrentSentence(sentence);
+      } else {
+        setCurrentSentence('');
+        setCurrentCase('nominativ');
+      }
+
+      setUserInput('');
+      setFeedback(null);
+      setIsLoading(false);
+      
+      // Сохраняем фокус после загрузки нового слова
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 50);
+    }, 300);
   }, [settings, getEnabledWords]);
 
   // Initialize first word
@@ -238,28 +246,28 @@ export default function Trainer() {
     setNewWord({ noun: '', article: 'der', translation: '' });
   };
 
-  if (!currentWord) {
+  if (!currentWord && !isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Нет доступных слов</h2>
           <p className="text-gray-600 mb-4">Включите хотя бы один словарь в настройках</p>
-          <button
+          <Button
+            type="primary"
+            size="large"
             onClick={() => setShowSettings(true)}
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            style={{ 
+              backgroundColor: '#8b5cf6', 
+              borderColor: '#8b5cf6',
+              color: '#ffffff'
+            }}
           >
             Открыть настройки
-          </button>
+          </Button>
         </div>
       </div>
     );
   }
-
-  const correctAnswer = settings.mode === 'sentence' && currentSentence
-    ? getArticleByCase(currentWord.article, currentCase, settings.articleType)
-    : settings.articleType === 'indefinite'
-    ? (currentWord.article === 'der' ? 'ein' : currentWord.article === 'die' ? 'eine' : 'ein')
-    : currentWord.article;
 
   // Получаем правильный перевод в зависимости от выбранного языка
   const getTranslation = (word: Word): string | undefined => {
@@ -270,7 +278,15 @@ export default function Trainer() {
     }
   };
 
-  const currentTranslation = getTranslation(currentWord);
+  const correctAnswer = currentWord
+    ? (settings.mode === 'sentence' && currentSentence
+      ? getArticleByCase(currentWord.article, currentCase, settings.articleType)
+      : settings.articleType === 'indefinite'
+      ? (currentWord.article === 'der' ? 'ein' : currentWord.article === 'die' ? 'eine' : 'ein')
+      : currentWord.article)
+    : '';
+
+  const currentTranslation = currentWord ? getTranslation(currentWord) : undefined;
 
   return (
     <div className="min-h-screen bg-white p-4">
@@ -304,7 +320,7 @@ export default function Trainer() {
 
             {/* User Dictionary Panel */}
             {showUserDict && (
-              <Card className="mb-6">
+              <Card style={{ marginBottom: '32px' }}>
                 <Title level={4} className="mb-4">Мой словарь</Title>
                 
                 <Space.Compact style={{ width: '100%', marginBottom: '16px' }}>
@@ -378,7 +394,13 @@ export default function Trainer() {
             )}
 
             {/* Training Area */}
-            <Card className="shadow-md" style={{ marginBottom: '24px' }}>
+            <Card className="shadow-md" style={{ marginTop: showUserDict ? '32px' : '0', marginBottom: '24px' }}>
+              {isLoading ? (
+                <div className="text-center py-12">
+                  <Spin size="large" />
+                  <p className="mt-4 text-gray-600">Загрузка...</p>
+                </div>
+              ) : currentWord ? (
               <div className="text-center mb-8">
                 {settings.mode === 'sentence' && currentSentence ? (
                   <div className="text-2xl mb-6 text-gray-900">
@@ -489,7 +511,7 @@ export default function Trainer() {
                   )}
                 </Space>
               </div>
-
+              ) : null}
             </Card>
 
             {/* Stats */}
