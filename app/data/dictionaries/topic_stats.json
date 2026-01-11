@@ -1,0 +1,35 @@
+{
+  "A1": {
+    "People & Professions": 27,
+    "Family": 12,
+    "Work": 11,
+    "City": 25,
+    "Numbers & Letters": 4,
+    "Clothes": 15,
+    "Rooms": 14,
+    "Furniture": 13,
+    "Time": 8,
+    "Kitchen": 3,
+    "Home": 3,
+    "Food": 23,
+    "Drinks": 6,
+    "Tableware / Cutlery": 7,
+    "Transport": 8,
+    "School": 14,
+    "Countries & Languages": 3,
+    "Months and Days of the Week": 19,
+    "Nature": 7,
+    "Animals": 3
+  },
+  "A2": {
+    "City": 1,
+    "School": 4,
+    "People & Professions": 2,
+    "Food": 1,
+    "Drinks": 1,
+    "Work": 5,
+    "Time & Dates": 3,
+    "Family": 2,
+    "Holidays": 1
+  }
+}

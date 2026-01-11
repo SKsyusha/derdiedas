@@ -2,6 +2,7 @@
 
 import { Drawer, Radio, Checkbox, Select, Space, Divider, Typography, Tag } from 'antd';
 import { TrainingSettings, Case, Level, Language, Topic, ArticleType, PronounType, Word } from '../types';
+import topicStats from '../data/dictionaries/topic_stats.json';
 
 const { Title, Text } = Typography;
 
@@ -49,6 +50,17 @@ export default function SettingsDrawer({
   drawerSize,
   setDrawerSize,
 }: SettingsDrawerProps) {
+  // Функция для получения количества слов в топике для выбранных уровней
+  const getTopicCount = (topic: Topic): number => {
+    let count = 0;
+    settings.level.forEach((level) => {
+      const levelStats = topicStats[level as keyof typeof topicStats] as Record<string, number> | undefined;
+      if (levelStats && typeof levelStats === 'object' && topic in levelStats) {
+        count += levelStats[topic] || 0;
+      }
+    });
+    return count;
+  };
   return (
     <Drawer
       title="Настройки"
@@ -182,33 +194,42 @@ export default function SettingsDrawer({
                   setSettings({ ...settings, topics: [...settings.topics, topic] });
                 }
               }}
-              options={allTopics.map((topic) => ({ label: topic, value: topic }))}
+              options={allTopics.map((topic) => {
+                const count = getTopicCount(topic);
+                return { 
+                  label: count > 0 ? `${topic} (${count})` : topic, 
+                  value: topic 
+                };
+              })}
             />
             
             {/* Selected Topics */}
             {settings.topics.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-1.5">
-                {settings.topics.map((topic) => (
-                  <Tag
-                    key={topic}
-                    closable
-                    onClose={() => {
-                      setSettings({
-                        ...settings,
-                        topics: settings.topics.filter((t) => t !== topic),
-                      });
-                    }}
-                    color="purple"
-                    style={{ 
-                      margin: 0,
-                      fontSize: '11px',
-                      padding: '2px 6px',
-                      lineHeight: '1.4'
-                    }}
-                  >
-                    {topic}
-                  </Tag>
-                ))}
+                {settings.topics.map((topic) => {
+                  const count = getTopicCount(topic);
+                  return (
+                    <Tag
+                      key={topic}
+                      closable
+                      onClose={() => {
+                        setSettings({
+                          ...settings,
+                          topics: settings.topics.filter((t) => t !== topic),
+                        });
+                      }}
+                      color="purple"
+                      style={{ 
+                        margin: 0,
+                        fontSize: '11px',
+                        padding: '2px 6px',
+                        lineHeight: '1.4'
+                      }}
+                    >
+                      {topic} {count > 0 && `(${count})`}
+                    </Tag>
+                  );
+                })}
               </div>
             )}
           </div>
