@@ -9,6 +9,7 @@ import { Word, TrainingSettings, SessionStats, Case, Article, Language } from '.
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
 import SettingsDrawer from './SettingsDrawer';
 import UserDictionaryDrawer from './UserDictionaryDrawer';
+import Logo from './Logo';
 
 const { Title, Text } = Typography;
 
@@ -414,7 +415,7 @@ export default function Trainer() {
     <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gray-900">{t('trainer.title')}</h1>
+          <Logo size="large" />
           <div className="flex gap-2">
             <Select
               value={i18n.language}
