@@ -6,9 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
 import { builtInDictionaries } from '../dictionaries';
 
-const { Title, Text } = Typography;
-
-const allLanguages: Language[] = ['Russian', 'English'];
+const { Title } = Typography;
 
 interface SettingsDrawerProps {
   open: boolean;
@@ -202,76 +200,59 @@ export default function SettingsDrawer({
 
         <Divider style={{ margin: '4px 0' }} />
 
-        {/* ADD TO THE LESSON Section */}
+        {/* Topics Section */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.addToLesson')}</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.topic')}</Title>
+          <Select
+            placeholder={t('settings.selectTopic')}
+            style={{ width: '100%' }}
+            size="small"
+            onChange={(value) => {
+              const topic = value as Topic;
+              if (topic && !settings.topics.includes(topic)) {
+                setSettings({ ...settings, topics: [...settings.topics, topic] });
+              }
+            }}
+            options={allTopics.map((topic) => {
+              const count = getTopicCount(topic);
+              const topicLabel = t(`topics.${topic}`);
+              return { 
+                label: count > 0 ? `${topicLabel} (${count})` : topicLabel, 
+                value: topic 
+              };
+            })}
+          />
           
-          {/* Language Dropdown */}
-          <div style={{ marginBottom: '8px' }}>
-            <Text strong className="block mb-1" style={{ fontSize: '12px' }}>{t('settings.language')}</Text>
-            <Select
-              value={settings.language}
-              onChange={(value) => setSettings({ ...settings, language: value as Language })}
-              style={{ width: '100%' }}
-              size="small"
-              options={allLanguages.map((lang) => ({ label: lang, value: lang }))}
-            />
-          </div>
-
-          {/* Topics Dropdown */}
-          <div style={{ marginBottom: '8px' }}>
-            <Text strong className="block mb-1" style={{ fontSize: '12px' }}>{t('settings.topic')}</Text>
-            <Select
-              placeholder={t('settings.selectTopic')}
-              style={{ width: '100%' }}
-              size="small"
-              onChange={(value) => {
-                const topic = value as Topic;
-                if (topic && !settings.topics.includes(topic)) {
-                  setSettings({ ...settings, topics: [...settings.topics, topic] });
-                }
-              }}
-              options={allTopics.map((topic) => {
+          {/* Selected Topics */}
+          {settings.topics.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              {settings.topics.map((topic) => {
                 const count = getTopicCount(topic);
                 const topicLabel = t(`topics.${topic}`);
-                return { 
-                  label: count > 0 ? `${topicLabel} (${count})` : topicLabel, 
-                  value: topic 
-                };
+                return (
+                  <Tag
+                    key={topic}
+                    closable
+                    onClose={() => {
+                      setSettings({
+                        ...settings,
+                        topics: settings.topics.filter((t) => t !== topic),
+                      });
+                    }}
+                    color="purple"
+                    style={{ 
+                      margin: 0,
+                      fontSize: '11px',
+                      padding: '2px 6px',
+                      lineHeight: '1.4'
+                    }}
+                  >
+                    {topicLabel} {count > 0 && `(${count})`}
+                  </Tag>
+                );
               })}
-            />
-            
-            {/* Selected Topics */}
-            {settings.topics.length > 0 && (
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {settings.topics.map((topic) => {
-                  const count = getTopicCount(topic);
-                  const topicLabel = t(`topics.${topic}`);
-                  return (
-                    <Tag
-                      key={topic}
-                      closable
-                      onClose={() => {
-                        setSettings({
-                          ...settings,
-                          topics: settings.topics.filter((t) => t !== topic),
-                        });
-                      }}
-                      color="purple"
-                      style={{ 
-                        margin: 0,
-                        fontSize: '11px',
-                        padding: '2px 6px',
-                        lineHeight: '1.4'
-                      }}
-                    >
-                      {topicLabel} {count > 0 && `(${count})`}
-                    </Tag>
-                  );
-                })}
-              </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         <Divider style={{ margin: '4px 0' }} />

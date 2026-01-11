@@ -194,6 +194,17 @@ export default function Trainer() {
     };
   }, [settings.topics, learnedWords, getAllWordsInTopics, getEnabledWords]);
 
+  // Sync translation language with UI language on mount
+  useEffect(() => {
+    const translationLanguage: Language = i18n.language === 'ru' ? 'Russian' : 'English';
+    setSettings((prev) => {
+      if (prev.language !== translationLanguage) {
+        return { ...prev, language: translationLanguage };
+      }
+      return prev;
+    });
+  }, []); // Only run on mount
+
   // Initialize first word
   useEffect(() => {
     getNextWord();
@@ -394,7 +405,12 @@ export default function Trainer() {
           <div className="flex gap-2">
             <Select
               value={i18n.language}
-              onChange={(value) => i18n.changeLanguage(value)}
+              onChange={(value) => {
+                i18n.changeLanguage(value);
+                // Sync translation language with UI language
+                const translationLanguage: Language = value === 'ru' ? 'Russian' : 'English';
+                setSettings((prev) => ({ ...prev, language: translationLanguage }));
+              }}
               style={{ width: 120 }}
               size="large"
               options={[
