@@ -60,6 +60,7 @@ export interface TrainingSettings {
   topics: Topic[];
   articleType: ArticleType;
   pronounType: PronounType;
+  showTranslation: boolean;
 }
 
 export interface SessionStats {

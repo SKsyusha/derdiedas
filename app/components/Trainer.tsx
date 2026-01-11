@@ -20,6 +20,7 @@ export default function Trainer() {
     topics: [],
     articleType: 'definite',
     pronounType: 'none',
+    showTranslation: true,
   });
 
   const [userDictionaries, setUserDictionaries] = useState<Array<{ id: string; name: string; words: Word[]; enabled: boolean }>>([]);
@@ -160,17 +161,6 @@ export default function Trainer() {
     }
   };
 
-  // Handle key press
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && userInput) {
-        checkAnswer();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [userInput, currentWord, currentSentence, settings]);
 
   // Add user word
   const addUserWord = () => {
@@ -356,15 +346,30 @@ export default function Trainer() {
                     {feedback === 'correct' ? (
                       <div className="text-green-700">
                         {correctAnswer} {currentWord.noun}
+                        {settings.showTranslation && currentWord.translation && (
+                          <span className="text-gray-500 text-2xl ml-2">
+                            ({currentWord.translation})
+                          </span>
+                        )}
                       </div>
                     ) : feedback === 'incorrect' ? (
                       <div className="text-red-700">
                         {correctAnswer} {currentWord.noun}
+                        {settings.showTranslation && currentWord.translation && (
+                          <span className="text-gray-500 text-2xl ml-2">
+                            ({currentWord.translation})
+                          </span>
+                        )}
                       </div>
                     ) : (
                       <>
                         <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
                         {currentWord.noun}
+                        {settings.showTranslation && currentWord.translation && (
+                          <span className="text-gray-500 text-2xl ml-2">
+                            ({currentWord.translation})
+                          </span>
+                        )}
                       </>
                     )}
                   </div>

@@ -142,6 +142,17 @@ export default function SettingsDrawer({
 
         <Divider style={{ margin: '4px 0' }} />
 
+        <div>
+          <Checkbox
+            checked={settings.showTranslation}
+            onChange={(e) => setSettings({ ...settings, showTranslation: e.target.checked })}
+          >
+            Показывать перевод
+          </Checkbox>
+        </div>
+
+        <Divider style={{ margin: '4px 0' }} />
+
         {/* ADD TO THE LESSON Section */}
         <div>
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>ADD TO THE LESSON</Title>
