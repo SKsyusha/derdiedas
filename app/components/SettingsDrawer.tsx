@@ -70,22 +70,6 @@ export default function SettingsDrawer({
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Режим тренировки</Title>
-          <Radio.Group
-            value={settings.mode}
-            onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
-            style={{ width: '100%' }}
-          >
-            <Flex orientation="vertical" gap="small">
-              <Radio value="noun-only">Только существительное</Radio>
-              <Radio value="sentence">В предложении</Radio>
-            </Flex>
-          </Radio.Group>
-        </div>
-
-        <Divider style={{ margin: '4px 0' }} />
-
-        <div>
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Словарь</Title>
           <Radio.Group
             value={settings.dictionaryType}
@@ -120,8 +104,24 @@ export default function SettingsDrawer({
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
-              <Radio value="default">Дефолтный</Radio>
               <Radio value="user">Свой</Radio>
+              <Radio value="default">Дефолтный</Radio>
+            </Flex>
+          </Radio.Group>
+        </div>
+
+        <Divider style={{ margin: '4px 0' }} />
+
+        <div>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Режим тренировки</Title>
+          <Radio.Group
+            value={settings.mode}
+            onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
+            style={{ width: '100%' }}
+          >
+            <Flex orientation="vertical" gap="small">
+              <Radio value="sentence">В предложении</Radio>
+              <Radio value="noun-only">Только существительное</Radio>
             </Flex>
           </Radio.Group>
         </div>
