@@ -40,10 +40,11 @@ export default function Trainer() {
   const [showUserDict, setShowUserDict] = useState(false);
   const [drawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const hasLoadedWordRef = useRef<boolean>(false);
 
   // Get all enabled words
   const getEnabledWords = useCallback((): Word[] => {
@@ -85,40 +86,38 @@ export default function Trainer() {
     }
     isProcessingRef.current = false;
 
-    setIsLoading(true);
-    
-    // Небольшая задержка для показа лоадинга
-    setTimeout(() => {
-      const words = getEnabledWords();
-      if (words.length === 0) {
-        setCurrentWord(null);
-        setCurrentSentence('');
-        setIsLoading(false);
-        return;
-      }
-
-      const randomWord = words[Math.floor(Math.random() * words.length)];
-      setCurrentWord(randomWord);
-
-      if (settings.mode === 'sentence' && settings.cases.length > 0) {
-        const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
-        setCurrentCase(randomCase);
-        const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
-        setCurrentSentence(sentence);
-      } else {
-        setCurrentSentence('');
-        setCurrentCase('nominativ');
-      }
-
-      setUserInput('');
-      setFeedback(null);
+    const words = getEnabledWords();
+    if (words.length === 0) {
+      setCurrentWord(null);
+      setCurrentSentence('');
       setIsLoading(false);
-      
-      // Сохраняем фокус после загрузки нового слова
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 50);
-    }, 300);
+      hasLoadedWordRef.current = false;
+      return;
+    }
+
+    // Загружаем слово сразу без задержки и без показа спиннера
+    const randomWord = words[Math.floor(Math.random() * words.length)];
+    setCurrentWord(randomWord);
+    hasLoadedWordRef.current = true;
+
+    if (settings.mode === 'sentence' && settings.cases.length > 0) {
+      const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
+      setCurrentCase(randomCase);
+      const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
+      setCurrentSentence(sentence);
+    } else {
+      setCurrentSentence('');
+      setCurrentCase('nominativ');
+    }
+
+    setUserInput('');
+    setFeedback(null);
+    setIsLoading(false);
+    
+    // Сохраняем фокус после загрузки нового слова
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 50);
   }, [settings, getEnabledWords]);
 
   // Initialize first word
@@ -143,6 +142,20 @@ export default function Trainer() {
   // Check answer
   const checkAnswer = () => {
     if (!currentWord) return;
+
+    // Если есть активный таймер (ожидание после правильного ответа), сразу переходим к следующему слову
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      setUserInput('');
+      setFeedback(null);
+      getNextWord();
+      isProcessingRef.current = false;
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 100);
+      return;
+    }
 
     // Если поле пустое, просто переключаем на следующее слово
     if (!userInput || userInput.trim() === '') {

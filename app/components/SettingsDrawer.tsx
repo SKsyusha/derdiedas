@@ -1,7 +1,7 @@
 'use client';
 
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
-import { TrainingSettings, Case, Level, Language, Topic, ArticleType, PronounType, Word } from '../types';
+import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word } from '../types';
 import topicStats from '../data/dictionaries/topic_stats.json';
 
 const { Title, Text } = Typography;
@@ -80,34 +80,6 @@ export default function SettingsDrawer({
               <Radio value="sentence">В предложении</Radio>
             </Flex>
           </Radio.Group>
-        </div>
-
-        <Divider style={{ margin: '4px 0' }} />
-
-        <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>Уровень</Title>
-          <Checkbox.Group
-            value={settings.level}
-            onChange={(checkedValues) => {
-              const levels = checkedValues as Level[];
-              setSettings({
-                ...settings,
-                level: levels,
-                enabledDictionaries: [
-                  ...settings.enabledDictionaries.filter((d) => !['A1', 'A2'].includes(d)),
-                  ...levels,
-                ],
-              });
-            }}
-          >
-            <Flex orientation="vertical" gap="small">
-              {(['A1', 'A2'] as Level[]).map((level) => (
-                <Checkbox key={level} value={level}>
-                  {level}
-                </Checkbox>
-              ))}
-            </Flex>
-          </Checkbox.Group>
         </div>
 
         {settings.mode === 'sentence' && (
