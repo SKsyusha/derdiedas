@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Button, Card, Input, Space, Select, Typography } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
 import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
@@ -39,6 +39,7 @@ export default function Trainer() {
   const [showUserDict, setShowUserDict] = useState(false);
   const [drawerSize, setDrawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
+  const inputRef = useRef<any>(null);
 
   // Get all enabled words
   const getEnabledWords = useCallback((): Word[] => {
@@ -95,6 +96,11 @@ export default function Trainer() {
 
     setUserInput('');
     setFeedback(null);
+    
+    // Сохраняем фокус после загрузки нового слова
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 50);
   }, [settings, getEnabledWords]);
 
   // Initialize first word
@@ -134,9 +140,23 @@ export default function Trainer() {
     setFeedback(isCorrect ? 'correct' : 'incorrect');
 
     if (isCorrect) {
+      // Автоматически переходим к следующему слову с задержкой
       setTimeout(() => {
+        setUserInput('');
+        setFeedback(null);
         getNextWord();
-      }, 1000);
+        // Сохраняем фокус после перехода к следующему слову
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }, 1500);
+    } else {
+      // Очищаем поле ввода при неправильном ответе, чтобы можно было ввести новый ответ
+      setUserInput('');
+      // Сохраняем фокус
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 100);
     }
   };
 
@@ -352,6 +372,7 @@ export default function Trainer() {
 
                 <div className="mb-4">
                   <Input
+                    ref={inputRef}
                     size="large"
                     value={userInput}
                     onChange={(e) => handleInput(e.target.value)}
