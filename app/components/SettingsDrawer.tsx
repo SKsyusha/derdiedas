@@ -85,14 +85,14 @@ export default function SettingsDrawer({
                 if (userDictionaries && userDictionaries.length > 0) {
                   const userDictIds = userDictionaries.map(d => d.id);
                   // Убираем дефолтные словари и добавляем пользовательские
-                  newEnabledDictionaries = userDictIds.filter(id => !['A1', 'A2'].includes(id));
+                  newEnabledDictionaries = userDictIds.filter(id => id !== 'A1');
                   if (newEnabledDictionaries.length === 0 && userDictIds.length > 0) {
                     newEnabledDictionaries = [userDictIds[0]];
                   }
                 }
               } else {
                 // При переключении на "дефолтный", убираем user dictionaries и добавляем дефолтные
-                newEnabledDictionaries = settings.enabledDictionaries.filter(id => ['A1', 'A2'].includes(id));
+                newEnabledDictionaries = settings.enabledDictionaries.filter(id => id === 'A1');
                 if (newEnabledDictionaries.length === 0) {
                   newEnabledDictionaries = ['A1'];
                 }

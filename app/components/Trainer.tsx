@@ -58,9 +58,9 @@ export default function Trainer() {
     if (settings.dictionaryType === 'default') {
       // Add built-in dictionary words
       settings.enabledDictionaries.forEach((dictId) => {
-        if (builtInDictionaries[dictId as Level]) {
-          const levelWords = builtInDictionaries[dictId as Level];
-          const filteredWords = levelWords.filter((w) => {
+        if (dictId === 'A1' && builtInDictionaries.A1) {
+          const levelWords = builtInDictionaries.A1;
+          const filteredWords = levelWords.filter((w: Word) => {
             const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
             const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
             return levelMatch && topicMatch;
