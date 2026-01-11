@@ -1,36 +1,12 @@
 'use client';
 
+import { useMemo } from 'react';
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
 import { builtInDictionaries } from '../dictionaries';
 
 const { Title, Text } = Typography;
-
-const allTopics: Topic[] = [
-  'Food',
-  'Drinks',
-  'Tableware / Cutlery',
-  'Kitchen',
-  'Furniture',
-  'Rooms',
-  'Clothes',
-  'Family',
-  'People & Professions',
-  'Animals',
-  'Nature',
-  'City',
-  'Transport',
-  'School',
-  'Work',
-  'Countries & Languages',
-  'Numbers & Letters',
-  'Months and Days of the Week',
-  'Time',
-  'Home',
-  'Communication',
-  'Health',
-];
 
 const allLanguages: Language[] = ['Russian', 'English'];
 
@@ -53,6 +29,32 @@ export default function SettingsDrawer({
   userDictionaries = [],
 }: SettingsDrawerProps) {
   const { t } = useTranslation();
+  
+  // Extract unique topics from all available dictionaries dynamically
+  const allTopics = useMemo(() => {
+    const topicsSet = new Set<Topic>();
+    
+    // Extract from built-in dictionaries (A1)
+    if (builtInDictionaries.A1) {
+      builtInDictionaries.A1.forEach((word: Word) => {
+        if (word.topic) {
+          topicsSet.add(word.topic);
+        }
+      });
+    }
+    
+    // Extract from user dictionaries
+    userDictionaries.forEach((dict) => {
+      dict.words.forEach((word) => {
+        if (word.topic) {
+          topicsSet.add(word.topic);
+        }
+      });
+    });
+    
+    // Convert to sorted array
+    return Array.from(topicsSet).sort();
+  }, [userDictionaries]);
   
   // Функция для получения количества слов в топике напрямую из A1.json
   const getTopicCount = (topic: Topic): number => {

@@ -12,29 +12,7 @@ export type PronounType = 'none' | 'personal' | 'possessive' | 'demonstrative'; 
 
 export type Language = 'Russian' | 'English';
 
-export type Topic = 
-  | 'Food'
-  | 'Drinks'
-  | 'Tableware / Cutlery'
-  | 'Kitchen'
-  | 'Furniture'
-  | 'Rooms'
-  | 'Clothes'
-  | 'Family'
-  | 'People & Professions'
-  | 'Animals'
-  | 'Nature'
-  | 'City'
-  | 'Transport'
-  | 'School'
-  | 'Work'
-  | 'Countries & Languages'
-  | 'Numbers & Letters'
-  | 'Months and Days of the Week'
-  | 'Time'
-  | 'Home'
-  | 'Communication'
-  | 'Health';
+export type Topic = string;
 
 export interface Word {
   noun: string;
