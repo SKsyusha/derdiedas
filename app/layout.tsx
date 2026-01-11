@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ConfigProvider, theme } from "antd";
+import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
 import "./globals.css";
 
