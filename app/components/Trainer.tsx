@@ -1,37 +1,13 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Drawer, Button, Radio, Checkbox, Select, Space, Divider, Typography, Card, Input, Tag } from 'antd';
+import { Button, Card, Input, Space, Select, Typography } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
-import { Word, TrainingSettings, SessionStats, Case, Level, Article, Language, Topic, ArticleType, PronounType } from '../types';
+import { Word, TrainingSettings, SessionStats, Case, Level, Article } from '../types';
 import { builtInDictionaries, generateSentence, getArticleByCase } from '../dictionaries';
+import SettingsDrawer from './SettingsDrawer';
 
 const { Title, Text } = Typography;
-
-const allTopics: Topic[] = [
-  'Food',
-  'Drinks',
-  'Tableware / Cutlery',
-  'Kitchen',
-  'Furniture',
-  'Rooms',
-  'Clothes',
-  'Family',
-  'People & Professions',
-  'Animals',
-  'Nature',
-  'City',
-  'Transport',
-  'School',
-  'Work',
-  'Countries & Languages',
-  'Numbers & Letters',
-  'Months and Days of the Week',
-  'Time & Dates',
-  'Holidays',
-];
-
-const allLanguages: Language[] = ['Russian', 'English'];
 
 export default function Trainer() {
   const [settings, setSettings] = useState<TrainingSettings>({
@@ -459,219 +435,16 @@ export default function Trainer() {
       </div>
 
       {/* Settings Drawer */}
-      <Drawer
-        title="Настройки"
-        placement="right"
-        onClose={() => setShowSettings(false)}
+      <SettingsDrawer
         open={showSettings}
-        size={drawerSize}
-        resizable={{
-          onResize: (newSize: number) => {
-            setDrawerSize(newSize);
-          },
-        }}
-      >
-        <Space orientation="vertical" size="large" style={{ width: '100%' }}>
-          <div>
-            <Title level={5}>Режим тренировки</Title>
-            <Radio.Group
-              value={settings.mode}
-              onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
-              style={{ width: '100%' }}
-            >
-              <Space orientation="vertical">
-                <Radio value="noun-only">Только существительное</Radio>
-                <Radio value="sentence">В предложении</Radio>
-              </Space>
-            </Radio.Group>
-          </div>
-
-          <Divider />
-
-          <div>
-            <Title level={5}>Уровень</Title>
-            <Checkbox.Group
-              value={settings.level}
-              onChange={(checkedValues) => {
-                const levels = checkedValues as Level[];
-                setSettings({
-                  ...settings,
-                  level: levels,
-                  enabledDictionaries: [
-                    ...settings.enabledDictionaries.filter((d) => !['A1', 'A2', 'B1'].includes(d)),
-                    ...levels,
-                  ],
-                });
-              }}
-            >
-              <Space orientation="vertical">
-                {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
-                  <Checkbox key={level} value={level}>
-                    {level}
-                  </Checkbox>
-                ))}
-              </Space>
-            </Checkbox.Group>
-          </div>
-
-          {settings.mode === 'sentence' && (
-            <>
-              <Divider />
-              <div>
-                <Title level={5}>Падежи</Title>
-                <Checkbox.Group
-                  value={settings.cases}
-                  onChange={(checkedValues) => {
-                    setSettings({
-                      ...settings,
-                      cases: checkedValues as Case[],
-                    });
-                  }}
-                >
-                  <Space orientation="vertical">
-                    {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
-                      <Checkbox key={case_} value={case_}>
-                        {case_.charAt(0).toUpperCase() + case_.slice(1)}
-                      </Checkbox>
-                    ))}
-                  </Space>
-                </Checkbox.Group>
-              </div>
-
-              <div>
-                <Checkbox
-                  checked={settings.usePronouns}
-                  onChange={(e) => setSettings({ ...settings, usePronouns: e.target.checked })}
-                >
-                  Использовать местоимения
-                </Checkbox>
-              </div>
-            </>
-          )}
-
-          <Divider />
-
-          {/* ADD TO THE LESSON Section */}
-          <div>
-            <Title level={5}>ADD TO THE LESSON</Title>
-            
-            {/* Language Dropdown */}
-            <div className="mb-4">
-              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Language</Text>
-              <Select
-                value={settings.language}
-                onChange={(value) => setSettings({ ...settings, language: value as Language })}
-                style={{ width: '100%' }}
-                size="small"
-                options={allLanguages.map((lang) => ({ label: lang, value: lang }))}
-              />
-            </div>
-
-            {/* Topics Dropdown */}
-            <div className="mb-4">
-              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Topic</Text>
-              <Select
-                placeholder="Select a topic..."
-                style={{ width: '100%' }}
-                size="small"
-                onChange={(value) => {
-                  const topic = value as Topic;
-                  if (topic && !settings.topics.includes(topic)) {
-                    setSettings({ ...settings, topics: [...settings.topics, topic] });
-                  }
-                }}
-                options={allTopics.map((topic) => ({ label: topic, value: topic }))}
-              />
-              
-              {/* Selected Topics */}
-              {settings.topics.length > 0 && (
-                <div className="mt-2 flex flex-wrap gap-1.5">
-                  {settings.topics.map((topic) => (
-                    <Tag
-                      key={topic}
-                      closable
-                      onClose={() => {
-                        setSettings({
-                          ...settings,
-                          topics: settings.topics.filter((t) => t !== topic),
-                        });
-                      }}
-                      color="purple"
-                      style={{ 
-                        margin: 0,
-                        fontSize: '11px',
-                        padding: '2px 6px',
-                        lineHeight: '1.4'
-                      }}
-                    >
-                      {topic}
-                    </Tag>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Divider style={{ margin: '12px 0' }} />
-
-            {/* Article Type */}
-            <div className="mb-4">
-              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Артикль</Text>
-              <Radio.Group
-                value={settings.articleType}
-                onChange={(e) => setSettings({ ...settings, articleType: e.target.value })}
-                size="small"
-              >
-                <Space orientation="vertical" size="small" style={{ width: '100%' }}>
-                  <Radio value="definite">Определенный (der/die/das)</Radio>
-                  <Radio value="indefinite">Неопределенный (ein/eine)</Radio>
-                </Space>
-              </Radio.Group>
-            </div>
-
-            <Divider style={{ margin: '12px 0' }} />
-
-            {/* Cases */}
-            <div className="mb-4">
-              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Падежи</Text>
-              <Checkbox.Group
-                value={settings.cases}
-                onChange={(checkedValues) => {
-                  setSettings({
-                    ...settings,
-                    cases: checkedValues as Case[],
-                  });
-                }}
-              >
-                <Space orientation="vertical" size="small" style={{ width: '100%' }}>
-                  <Checkbox value="nominativ">Nominativ</Checkbox>
-                  <Checkbox value="akkusativ">Akkusativ</Checkbox>
-                  <Checkbox value="dativ">Dativ</Checkbox>
-                  <Checkbox value="genitiv">Genitiv</Checkbox>
-                </Space>
-              </Checkbox.Group>
-            </div>
-
-            <Divider style={{ margin: '12px 0' }} />
-
-            {/* Pronoun Type */}
-            <div className="mb-4">
-              <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Местоимения</Text>
-              <Radio.Group
-                value={settings.pronounType}
-                onChange={(e) => setSettings({ ...settings, pronounType: e.target.value, usePronouns: e.target.value !== 'none' })}
-                size="small"
-              >
-                <Space orientation="vertical" size="small" style={{ width: '100%' }}>
-                  <Radio value="none">Без местоимений</Radio>
-                  <Radio value="personal">Личные (ich, du, er...)</Radio>
-                  <Radio value="possessive">Притяжательные (mein, dein...)</Radio>
-                  <Radio value="demonstrative">Указательные (dieser, jener...)</Radio>
-                </Space>
-              </Radio.Group>
-            </div>
-          </div>
-        </Space>
-      </Drawer>
+        onClose={() => setShowSettings(false)}
+        settings={settings}
+        setSettings={setSettings}
+        drawerSize={drawerSize}
+        setDrawerSize={setDrawerSize}
+        userDictionaries={userDictionaries}
+        setUserDictionaries={setUserDictionaries}
+      />
     </div>
   );
 }
