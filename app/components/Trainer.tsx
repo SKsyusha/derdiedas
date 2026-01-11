@@ -312,19 +312,41 @@ export default function Trainer() {
               <div className="text-center mb-8">
                 {settings.mode === 'sentence' && currentSentence ? (
                   <div className="text-2xl mb-6 text-gray-900">
-                    {currentSentence.split('___').map((part, idx, arr) => (
-                      <span key={idx}>
-                        {part}
-                        {idx < arr.length - 1 && (
-                          <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
-                        )}
-                      </span>
-                    ))}
+                    {feedback === 'correct' ? (
+                      <div className="text-green-700">
+                        {currentSentence.replace('___', correctAnswer)}
+                      </div>
+                    ) : feedback === 'incorrect' ? (
+                      <div className="text-red-700">
+                        {currentSentence.replace('___', correctAnswer)}
+                      </div>
+                    ) : (
+                      currentSentence.split('___').map((part, idx, arr) => (
+                        <span key={idx}>
+                          {part}
+                          {idx < arr.length - 1 && (
+                            <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
+                          )}
+                        </span>
+                      ))
+                    )}
                   </div>
                 ) : (
                   <div className="text-3xl mb-6 text-gray-900">
-                    <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
-                    {currentWord.noun}
+                    {feedback === 'correct' ? (
+                      <div className="text-green-700">
+                        {correctAnswer} {currentWord.noun}
+                      </div>
+                    ) : feedback === 'incorrect' ? (
+                      <div className="text-red-700">
+                        {correctAnswer} {currentWord.noun}
+                      </div>
+                    ) : (
+                      <>
+                        <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
+                        {currentWord.noun}
+                      </>
+                    )}
                   </div>
                 )}
 
@@ -350,17 +372,7 @@ export default function Trainer() {
                   />
                 </div>
 
-                {feedback === 'incorrect' && (
-                  <div className="text-red-600 mb-2">
-                    Неправильно! Правильный ответ: <strong>{correctAnswer}</strong>
-                  </div>
-                )}
 
-                {feedback === 'correct' && (
-                  <div className="text-green-600 mb-2">
-                    Правильно! ✓
-                  </div>
-                )}
 
                 <Space>
                   <Button
@@ -392,11 +404,6 @@ export default function Trainer() {
                 </Space>
               </div>
 
-              {currentWord.translation && (
-                <div className="text-center text-gray-600 text-sm">
-                  Перевод: {currentWord.translation}
-                </div>
-              )}
             </Card>
 
             {/* Stats */}
