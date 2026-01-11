@@ -37,7 +37,9 @@ export type Topic =
 export interface Word {
   noun: string;
   article: Article;
-  translation?: string;
+  translation?: string; // для обратной совместимости
+  translation_ru?: string;
+  translation_en?: string;
   exampleSentence?: string;
   level?: Level;
   topic?: Topic;

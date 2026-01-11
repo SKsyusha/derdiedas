@@ -212,6 +212,17 @@ export default function Trainer() {
     ? getArticleByCase(currentWord.article, currentCase)
     : currentWord.article;
 
+  // Получаем правильный перевод в зависимости от выбранного языка
+  const getTranslation = (word: Word): string | undefined => {
+    if (settings.language === 'English') {
+      return word.translation_en || word.translation;
+    } else {
+      return word.translation_ru || word.translation;
+    }
+  };
+
+  const currentTranslation = getTranslation(currentWord);
+
   return (
     <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto">
@@ -346,18 +357,18 @@ export default function Trainer() {
                     {feedback === 'correct' ? (
                       <div className="text-green-700">
                         {correctAnswer} {currentWord.noun}
-                        {settings.showTranslation && currentWord.translation && (
+                        {settings.showTranslation && currentTranslation && (
                           <span className="text-gray-500 text-2xl ml-2">
-                            ({currentWord.translation})
+                            ({currentTranslation})
                           </span>
                         )}
                       </div>
                     ) : feedback === 'incorrect' ? (
                       <div className="text-red-700">
                         {correctAnswer} {currentWord.noun}
-                        {settings.showTranslation && currentWord.translation && (
+                        {settings.showTranslation && currentTranslation && (
                           <span className="text-gray-500 text-2xl ml-2">
-                            ({currentWord.translation})
+                            ({currentTranslation})
                           </span>
                         )}
                       </div>
@@ -365,9 +376,9 @@ export default function Trainer() {
                       <>
                         <span className="inline-block w-24 border-b-2 border-purple-500 mx-2" />
                         {currentWord.noun}
-                        {settings.showTranslation && currentWord.translation && (
+                        {settings.showTranslation && currentTranslation && (
                           <span className="text-gray-500 text-2xl ml-2">
-                            ({currentWord.translation})
+                            ({currentTranslation})
                           </span>
                         )}
                       </>
