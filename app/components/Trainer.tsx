@@ -486,7 +486,7 @@ export default function Trainer() {
             </Card>
 
             {/* Stats */}
-            <Card className="mt-8 mb-6">
+            <Card style={{ marginTop: '32px' }} className="mb-6">
               <Title level={4} className="mb-4">Статистика сессии</Title>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 <div>
