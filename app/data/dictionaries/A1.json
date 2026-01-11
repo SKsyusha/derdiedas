@@ -1,0 +1,22 @@
+[
+  { "noun": "Haus", "article": "das", "translation": "дом", "level": "A1", "topic": "Rooms" },
+  { "noun": "Tisch", "article": "der", "translation": "стол", "level": "A1", "topic": "Furniture" },
+  { "noun": "Frau", "article": "die", "translation": "женщина", "level": "A1", "topic": "People & Professions" },
+  { "noun": "Mann", "article": "der", "translation": "мужчина", "level": "A1", "topic": "People & Professions" },
+  { "noun": "Kind", "article": "das", "translation": "ребенок", "level": "A1", "topic": "Family" },
+  { "noun": "Buch", "article": "das", "translation": "книга", "level": "A1", "topic": "School" },
+  { "noun": "Stuhl", "article": "der", "translation": "стул", "level": "A1", "topic": "Furniture" },
+  { "noun": "Tür", "article": "die", "translation": "дверь", "level": "A1", "topic": "Rooms" },
+  { "noun": "Fenster", "article": "das", "translation": "окно", "level": "A1", "topic": "Rooms" },
+  { "noun": "Auto", "article": "das", "translation": "машина", "level": "A1", "topic": "Transport" },
+  { "noun": "Katze", "article": "die", "translation": "кошка", "level": "A1", "topic": "Animals" },
+  { "noun": "Hund", "article": "der", "translation": "собака", "level": "A1", "topic": "Animals" },
+  { "noun": "Wasser", "article": "das", "translation": "вода", "level": "A1", "topic": "Drinks" },
+  { "noun": "Brot", "article": "das", "translation": "хлеб", "level": "A1", "topic": "Food" },
+  { "noun": "Milch", "article": "die", "translation": "молоко", "level": "A1", "topic": "Drinks" },
+  { "noun": "Apfel", "article": "der", "translation": "яблоко", "level": "A1", "topic": "Food" },
+  { "noun": "Schule", "article": "die", "translation": "школа", "level": "A1", "topic": "School" },
+  { "noun": "Stadt", "article": "die", "translation": "город", "level": "A1", "topic": "City" },
+  { "noun": "Land", "article": "das", "translation": "страна", "level": "A1", "topic": "Countries & Languages" },
+  { "noun": "Hand", "article": "die", "translation": "рука", "level": "A1", "topic": "People & Professions" }
+]

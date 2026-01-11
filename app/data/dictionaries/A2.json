@@ -1,0 +1,22 @@
+[
+  { "noun": "Gebäude", "article": "das", "translation": "здание", "level": "A2", "topic": "City" },
+  { "noun": "Universität", "article": "die", "translation": "университет", "level": "A2", "topic": "School" },
+  { "noun": "Professor", "article": "der", "translation": "профессор", "level": "A2", "topic": "People & Professions" },
+  { "noun": "Student", "article": "der", "translation": "студент", "level": "A2", "topic": "People & Professions" },
+  { "noun": "Bibliothek", "article": "die", "translation": "библиотека", "level": "A2", "topic": "School" },
+  { "noun": "Restaurant", "article": "das", "translation": "ресторан", "level": "A2", "topic": "Food" },
+  { "noun": "Kaffee", "article": "der", "translation": "кофе", "level": "A2", "topic": "Drinks" },
+  { "noun": "Zeitung", "article": "die", "translation": "газета", "level": "A2", "topic": "Work" },
+  { "noun": "Computer", "article": "der", "translation": "компьютер", "level": "A2", "topic": "Work" },
+  { "noun": "Telefon", "article": "das", "translation": "телефон", "level": "A2", "topic": "Work" },
+  { "noun": "Problem", "article": "das", "translation": "проблема", "level": "A2", "topic": "Work" },
+  { "noun": "Lösung", "article": "die", "translation": "решение", "level": "A2", "topic": "Work" },
+  { "noun": "Frage", "article": "die", "translation": "вопрос", "level": "A2", "topic": "School" },
+  { "noun": "Antwort", "article": "die", "translation": "ответ", "level": "A2", "topic": "School" },
+  { "noun": "Woche", "article": "die", "translation": "неделя", "level": "A2", "topic": "Time & Dates" },
+  { "noun": "Monat", "article": "der", "translation": "месяц", "level": "A2", "topic": "Time & Dates" },
+  { "noun": "Jahr", "article": "das", "translation": "год", "level": "A2", "topic": "Time & Dates" },
+  { "noun": "Freund", "article": "der", "translation": "друг", "level": "A2", "topic": "Family" },
+  { "noun": "Freundin", "article": "die", "translation": "подруга", "level": "A2", "topic": "Family" },
+  { "noun": "Geschenk", "article": "das", "translation": "подарок", "level": "A2", "topic": "Holidays" }
+]
