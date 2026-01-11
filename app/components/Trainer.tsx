@@ -38,7 +38,7 @@ export default function Trainer() {
   });
   const [showSettings, setShowSettings] = useState(false);
   const [showUserDict, setShowUserDict] = useState(false);
-  const [drawerSize, setDrawerSize] = useState(400);
+  const [drawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
@@ -486,7 +486,7 @@ export default function Trainer() {
             </Card>
 
             {/* Stats */}
-            <Card className="mb-6">
+            <Card className="mt-8 mb-6">
               <Title level={4} className="mb-4">Статистика сессии</Title>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 <div>
@@ -527,7 +527,6 @@ export default function Trainer() {
         settings={settings}
         setSettings={setSettings}
         drawerSize={drawerSize}
-        setDrawerSize={setDrawerSize}
         userDictionaries={userDictionaries}
         setUserDictionaries={setUserDictionaries}
       />

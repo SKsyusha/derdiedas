@@ -1,6 +1,6 @@
 'use client';
 
-import { Drawer, Radio, Checkbox, Select, Space, Divider, Typography, Tag } from 'antd';
+import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { TrainingSettings, Case, Level, Language, Topic, ArticleType, PronounType, Word } from '../types';
 import topicStats from '../data/dictionaries/topic_stats.json';
 
@@ -36,10 +36,9 @@ interface SettingsDrawerProps {
   onClose: () => void;
   settings: TrainingSettings;
   setSettings: (settings: TrainingSettings) => void;
-  drawerSize: number;
-  setDrawerSize: (size: number) => void;
-  userDictionaries: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>;
-  setUserDictionaries: (dicts: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>) => void;
+  drawerSize?: number | 'default' | 'large';
+  userDictionaries?: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>;
+  setUserDictionaries?: (dicts: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>) => void;
 }
 
 export default function SettingsDrawer({
@@ -47,8 +46,7 @@ export default function SettingsDrawer({
   onClose,
   settings,
   setSettings,
-  drawerSize,
-  setDrawerSize,
+  drawerSize = 378,
 }: SettingsDrawerProps) {
   // Функция для получения количества слов в топике для выбранных уровней
   const getTopicCount = (topic: Topic): number => {
@@ -67,7 +65,7 @@ export default function SettingsDrawer({
       placement="right"
       onClose={onClose}
       open={open}
-      width={drawerSize}
+      size={drawerSize}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div>
@@ -77,10 +75,10 @@ export default function SettingsDrawer({
             onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
             style={{ width: '100%' }}
           >
-            <Space orientation="vertical" size="small">
+            <Flex orientation="vertical" gap="small">
               <Radio value="noun-only">Только существительное</Radio>
               <Radio value="sentence">В предложении</Radio>
-            </Space>
+            </Flex>
           </Radio.Group>
         </div>
 
@@ -102,13 +100,13 @@ export default function SettingsDrawer({
               });
             }}
           >
-            <Space orientation="vertical" size="small">
+            <Flex orientation="vertical" gap="small">
               {(['A1', 'A2'] as Level[]).map((level) => (
                 <Checkbox key={level} value={level}>
                   {level}
                 </Checkbox>
               ))}
-            </Space>
+            </Flex>
           </Checkbox.Group>
         </div>
 
@@ -126,13 +124,13 @@ export default function SettingsDrawer({
                   });
                 }}
               >
-                <Space orientation="vertical" size="small">
+                <Flex orientation="vertical" gap="small">
                   {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
                     <Checkbox key={case_} value={case_}>
                       {case_.charAt(0).toUpperCase() + case_.slice(1)}
                     </Checkbox>
                   ))}
-                </Space>
+                </Flex>
               </Checkbox.Group>
             </div>
 
@@ -240,10 +238,10 @@ export default function SettingsDrawer({
             onChange={(e) => setSettings({ ...settings, articleType: e.target.value })}
             style={{ width: '100%' }}
           >
-            <Space orientation="vertical" size="small">
+            <Flex orientation="vertical" gap="small">
               <Radio value="definite">Определенный (der/die/das)</Radio>
               <Radio value="indefinite">Неопределенный (ein/eine)</Radio>
-            </Space>
+            </Flex>
           </Radio.Group>
         </div>
 
@@ -261,12 +259,12 @@ export default function SettingsDrawer({
               });
             }}
           >
-            <Space orientation="vertical" size="small">
+            <Flex orientation="vertical" gap="small">
               <Checkbox value="nominativ">Nominativ</Checkbox>
               <Checkbox value="akkusativ">Akkusativ</Checkbox>
               <Checkbox value="dativ">Dativ</Checkbox>
               <Checkbox value="genitiv">Genitiv</Checkbox>
-            </Space>
+            </Flex>
           </Checkbox.Group>
         </div>
 
@@ -280,12 +278,12 @@ export default function SettingsDrawer({
             onChange={(e) => setSettings({ ...settings, pronounType: e.target.value, usePronouns: e.target.value !== 'none' })}
             style={{ width: '100%' }}
           >
-            <Space orientation="vertical" size="small">
+            <Flex orientation="vertical" gap="small">
               <Radio value="none">Без местоимений</Radio>
               <Radio value="personal">Личные (ich, du, er...)</Radio>
               <Radio value="possessive">Притяжательные (mein, dein...)</Radio>
               <Radio value="demonstrative">Указательные (dieser, jener...)</Radio>
-            </Space>
+            </Flex>
           </Radio.Group>
         </div>
       </div>
