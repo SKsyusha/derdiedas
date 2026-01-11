@@ -210,19 +210,9 @@ export default function Trainer() {
 
   // Handle input
   const handleInput = useCallback((value: string) => {
-    // Если есть feedback и пользователь начинает вводить, переключаем на новое слово
-    if (feedback && value.length > 0) {
-      getNextWord();
-      // После переключения оставляем только последний введенный символ
-      setTimeout(() => {
-        const lastChar = value[value.length - 1].toLowerCase();
-        setUserInput(lastChar);
-      }, 0);
-      return;
-    }
     const trimmedValue = value.toLowerCase().trim();
     setUserInput(trimmedValue);
-  }, [feedback, getNextWord]);
+  }, []);
 
   // Check answer
   const checkAnswer = () => {
@@ -436,7 +426,7 @@ export default function Trainer() {
           {/* Main Content Area */}
           <div className="max-w-4xl mx-auto">
             {topicProgress && (
-              <Card className="mb-6 mt-4" style={{ backgroundColor: '#f8f9fa' }}>
+              <div className="mt-4" style={{ marginBottom: '32px' }}>
                 <div className="mb-2">
                   <Text strong style={{ fontSize: '14px' }}>
                     {settings.topics.length === 0
@@ -459,7 +449,7 @@ export default function Trainer() {
                   }}
                   showInfo={true}
                 />
-              </Card>
+              </div>
             )}
 
             {/* Training Area */}
