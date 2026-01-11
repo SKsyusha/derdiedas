@@ -6,7 +6,7 @@ export type Level = 'A1' | 'A2' | 'B1';
 
 export type TrainingMode = 'noun-only' | 'sentence';
 
-export type Language = 'Russian' | 'English' | 'German' | 'French' | 'Spanish';
+export type Language = 'Russian' | 'English';
 
 export type Topic = 
   | 'Food'

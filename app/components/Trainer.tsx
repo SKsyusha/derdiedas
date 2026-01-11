@@ -31,7 +31,7 @@ const allTopics: Topic[] = [
   'Holidays',
 ];
 
-const allLanguages: Language[] = ['Russian', 'English', 'German', 'French', 'Spanish'];
+const allLanguages: Language[] = ['Russian', 'English'];
 
 export default function Trainer() {
   const [settings, setSettings] = useState<TrainingSettings>({
@@ -59,6 +59,7 @@ export default function Trainer() {
   });
   const [showSettings, setShowSettings] = useState(false);
   const [showUserDict, setShowUserDict] = useState(false);
+  const [drawerSize, setDrawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
 
   // Get all enabled words
@@ -453,27 +454,31 @@ export default function Trainer() {
           </div>
 
           {/* Right Sidebar - Additional Settings */}
-          <div className="w-80 flex-shrink-0">
-            <Card className="shadow-md">
-              <Title level={4} className="mb-4">ADD TO THE LESSON</Title>
+          <div className="w-48 flex-shrink-0">
+            <Card className="shadow-md" styles={{ body: { padding: '16px' } }}>
+              <Title level={5} className="mb-3" style={{ fontSize: '14px', fontWeight: 600 }}>
+                ADD TO THE LESSON
+              </Title>
               
               {/* Language Dropdown */}
-              <div className="mb-6">
-                <Text strong className="block mb-2">Language</Text>
+              <div className="mb-4">
+                <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Language</Text>
                 <Select
                   value={settings.language}
                   onChange={(value) => setSettings({ ...settings, language: value as Language })}
                   style={{ width: '100%' }}
+                  size="small"
                   options={allLanguages.map((lang) => ({ label: lang, value: lang }))}
                 />
               </div>
 
               {/* Topics Dropdown */}
-              <div className="mb-6">
-                <Text strong className="block mb-2">Topic</Text>
+              <div className="mb-4">
+                <Text strong className="block mb-1.5" style={{ fontSize: '12px' }}>Topic</Text>
                 <Select
                   placeholder="Select a topic..."
                   style={{ width: '100%' }}
+                  size="small"
                   onChange={(value) => {
                     const topic = value as Topic;
                     if (topic && !settings.topics.includes(topic)) {
@@ -485,7 +490,7 @@ export default function Trainer() {
                 
                 {/* Selected Topics */}
                 {settings.topics.length > 0 && (
-                  <div className="mt-3 space-y-2">
+                  <div className="mt-2 flex flex-wrap gap-1.5">
                     {settings.topics.map((topic) => (
                       <Tag
                         key={topic}
@@ -497,7 +502,12 @@ export default function Trainer() {
                           });
                         }}
                         color="purple"
-                        style={{ marginBottom: '8px', padding: '4px 8px' }}
+                        style={{ 
+                          margin: 0,
+                          fontSize: '11px',
+                          padding: '2px 6px',
+                          lineHeight: '1.4'
+                        }}
                       >
                         {topic}
                       </Tag>
@@ -516,9 +526,14 @@ export default function Trainer() {
         placement="right"
         onClose={() => setShowSettings(false)}
         open={showSettings}
-        size="large"
+        size={drawerSize}
+        resizable={{
+          onResize: (newSize: number) => {
+            setDrawerSize(newSize);
+          },
+        }}
       >
-        <Space direction="vertical" size="large" style={{ width: '100%' }}>
+        <Space orientation="vertical" size="large" style={{ width: '100%' }}>
           <div>
             <Title level={5}>Режим тренировки</Title>
             <Radio.Group
@@ -526,7 +541,7 @@ export default function Trainer() {
               onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
               style={{ width: '100%' }}
             >
-              <Space direction="vertical">
+              <Space orientation="vertical">
                 <Radio value="noun-only">Только существительное</Radio>
                 <Radio value="sentence">В предложении</Radio>
               </Space>
@@ -551,7 +566,7 @@ export default function Trainer() {
                 });
               }}
             >
-              <Space direction="vertical">
+              <Space orientation="vertical">
                 {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
                   <Checkbox key={level} value={level}>
                     {level}
@@ -575,7 +590,7 @@ export default function Trainer() {
                     });
                   }}
                 >
-                  <Space direction="vertical">
+                  <Space orientation="vertical">
                     {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
                       <Checkbox key={case_} value={case_}>
                         {case_.charAt(0).toUpperCase() + case_.slice(1)}
@@ -614,7 +629,7 @@ export default function Trainer() {
                 );
               }}
             >
-              <Space direction="vertical">
+              <Space orientation="vertical">
                 {(['A1', 'A2', 'B1'] as Level[]).map((level) => (
                   <Checkbox key={level} value={level}>
                     Встроенный {level}
