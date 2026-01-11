@@ -41,6 +41,8 @@ export default function Trainer() {
   const [drawerSize, setDrawerSize] = useState(400);
   const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
   const inputRef = useRef<any>(null);
+  const isProcessingRef = useRef<boolean>(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Get all enabled words
   const getEnabledWords = useCallback((): Word[] => {
@@ -75,6 +77,13 @@ export default function Trainer() {
 
   // Get next word
   const getNextWord = useCallback(() => {
+    // Очищаем таймер и сбрасываем флаг обработки при переходе к новому слову
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    isProcessingRef.current = false;
+
     const words = getEnabledWords();
     if (words.length === 0) {
       setCurrentWord(null);
@@ -109,6 +118,15 @@ export default function Trainer() {
     getNextWord();
   }, [getNextWord]);
 
+  // Очистка таймера при размонтировании компонента
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   // Handle input
   const handleInput = (value: string) => {
     setUserInput(value.toLowerCase().trim());
@@ -116,7 +134,17 @@ export default function Trainer() {
 
   // Check answer
   const checkAnswer = () => {
-    if (!currentWord || !userInput) return;
+    // Блокируем повторные вызовы во время обработки
+    if (isProcessingRef.current || !currentWord || !userInput) return;
+
+    // Устанавливаем флаг обработки
+    isProcessingRef.current = true;
+
+    // Очищаем предыдущий таймер, если он существует
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
 
     let correctAnswer: string;
     if (settings.mode === 'sentence' && currentSentence) {
@@ -142,10 +170,12 @@ export default function Trainer() {
 
     if (isCorrect) {
       // Автоматически переходим к следующему слову с задержкой
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setUserInput('');
         setFeedback(null);
         getNextWord();
+        // Сбрасываем флаг обработки после перехода к следующему слову
+        isProcessingRef.current = false;
         // Сохраняем фокус после перехода к следующему слову
         setTimeout(() => {
           inputRef.current?.focus();
@@ -154,6 +184,8 @@ export default function Trainer() {
     } else {
       // Очищаем поле ввода при неправильном ответе, чтобы можно было ввести новый ответ
       setUserInput('');
+      // Сбрасываем флаг обработки
+      isProcessingRef.current = false;
       // Сохраняем фокус
       setTimeout(() => {
         inputRef.current?.focus();
