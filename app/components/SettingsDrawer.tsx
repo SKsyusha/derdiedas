@@ -216,7 +216,7 @@ export default function SettingsDrawer({
           <Select
             placeholder={t('settings.selectTopic')}
             style={{ width: '100%' }}
-            size="small"
+            size="middle"
             onChange={(value) => {
               const topic = value as Topic;
               if (topic && !settings.topics.includes(topic)) {
