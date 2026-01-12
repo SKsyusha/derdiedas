@@ -230,7 +230,38 @@ export default function Trainer() {
   useEffect(() => {
     if (!isMounted) return;
     if (hasLoadedWordRef.current) return; // Don't reload word on settings change
-    getNextWord();
+    
+    // Call getNextWord only once on mount
+    const words = getEnabledWords();
+    if (words.length === 0) {
+      setCurrentWord(null);
+      setCurrentSentence('');
+      setIsLoading(false);
+      hasLoadedWordRef.current = false;
+      return;
+    }
+
+    const randomWord = words[Math.floor(Math.random() * words.length)];
+    setCurrentWord(randomWord);
+    hasLoadedWordRef.current = true;
+
+    if (settings.mode === 'sentence' && settings.cases.length > 0) {
+      const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
+      setCurrentCase(randomCase);
+      const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
+      setCurrentSentence(sentence);
+    } else {
+      setCurrentSentence('');
+      setCurrentCase('nominativ');
+    }
+
+    setUserInput('');
+    setFeedback(null);
+    setIsLoading(false);
+    
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 50);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted]);
 
