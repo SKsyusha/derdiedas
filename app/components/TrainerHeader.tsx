@@ -1,0 +1,74 @@
+'use client';
+
+import { Button, Dropdown } from 'antd';
+import type { MenuProps } from 'antd';
+import { SettingOutlined, BookOutlined, GlobalOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
+import { Language } from '../types';
+import Logo from './Logo';
+
+interface TrainerHeaderProps {
+  isMobile: boolean;
+  onSettingsClick: () => void;
+  onDictionaryClick: () => void;
+  onLanguageChange: (language: Language) => void;
+}
+
+export default function TrainerHeader({
+  isMobile,
+  onSettingsClick,
+  onDictionaryClick,
+  onLanguageChange,
+}: TrainerHeaderProps) {
+  const { t } = useTranslation();
+
+  return (
+    <div className="mb-4 sm:mb-6 flex flex-row sm:flex-row justify-between items-center gap-3 sm:gap-0">
+      <Logo size="large" className="hidden sm:flex" />
+      <Logo size="medium" className="sm:hidden" hideTrainer />
+      <div className="flex flex-wrap gap-2 justify-end">
+        {/* Language selector - Dropdown with text on desktop, icon on mobile */}
+        <Dropdown
+          menu={{
+            items: [
+              { key: 'ru', label: t('trainer.russian') },
+              { key: 'en', label: t('trainer.english') },
+            ] as MenuProps['items'],
+            onClick: ({ key }) => {
+              i18n.changeLanguage(key);
+              const translationLanguage: Language = key === 'ru' ? 'Russian' : 'English';
+              onLanguageChange(translationLanguage);
+            },
+            selectedKeys: [i18n.language],
+          }}
+          trigger={['click']}
+        >
+          <Button
+            icon={<GlobalOutlined />}
+            style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
+          >
+            <span className="hidden sm:inline">
+              {i18n.language === 'ru' ? t('trainer.russian') : t('trainer.english')}
+            </span>
+          </Button>
+        </Dropdown>
+        <Button
+          icon={<BookOutlined />}
+          onClick={onDictionaryClick}
+          style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
+        >
+          <span className="hidden sm:inline">{t('trainer.myDictionary')}</span>
+        </Button>
+        <Button
+          type="primary"
+          icon={<SettingOutlined />}
+          onClick={onSettingsClick}
+          style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
+        >
+          <span className="hidden sm:inline">{t('trainer.settings')}</span>
+        </Button>
+      </div>
+    </div>
+  );
+}
