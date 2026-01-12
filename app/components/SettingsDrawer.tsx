@@ -140,8 +140,8 @@ export default function SettingsDrawer({
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
-              <Radio value="user">{t('settings.custom')}</Radio>
               <Radio value="default">{t('settings.default')}</Radio>
+              <Radio value="user">{t('settings.custom')}</Radio>
             </Flex>
           </Radio.Group>
         </div>
