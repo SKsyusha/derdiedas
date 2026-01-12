@@ -65,6 +65,7 @@
     "genitiv": "Genitiv"
   },
   "topics": {
+    "Abstract": "Abstract",
     "Animals": "Animals",
     "Bathroom": "Bathroom",
     "Body Parts": "Body Parts",
@@ -74,14 +75,17 @@
     "Communication": "Communication",
     "Countries & Languages": "Countries & Languages",
     "Drinks": "Drinks",
+    "Everyday Life": "Everyday Life",
     "Family": "Family",
     "Food": "Food",
     "Furniture & Home Items": "Furniture & Home Items",
+    "Health": "Health",
     "Home & Rooms": "Home & Rooms",
     "Home Appliances": "Home Appliances",
     "Home Textiles": "Home Textiles",
     "Housing & Neighbors": "Housing & Neighbors",
     "Kitchen Appliances": "Kitchen Appliances",
+    "Leisure & Free Time": "Leisure & Free Time",
     "Maintenance": "Maintenance",
     "Months and Days of the Week": "Months and Days of the Week",
     "Nature": "Nature",
@@ -95,6 +99,7 @@
     "Time": "Time",
     "Time & Dates": "Time & Dates",
     "Transport": "Transport",
+    "Travel & Accommodation": "Travel & Accommodation",
     "Work": "Work"
   }
 }

@@ -65,6 +65,7 @@
     "genitiv": "Genitiv"
   },
   "topics": {
+    "Abstract": "Абстрактные понятия",
     "Animals": "Животные",
     "Bathroom": "Ванная",
     "Body Parts": "Части тела",
@@ -74,14 +75,17 @@
     "Communication": "Общение",
     "Countries & Languages": "Страны и языки",
     "Drinks": "Напитки",
+    "Everyday Life": "Повседневная жизнь",
     "Family": "Семья",
     "Food": "Еда",
     "Furniture & Home Items": "Мебель и предметы для дома",
+    "Health": "Здоровье",
     "Home & Rooms": "Дом и комнаты",
     "Home Appliances": "Бытовая техника",
     "Home Textiles": "Домашний текстиль",
     "Housing & Neighbors": "Жилье и соседи",
     "Kitchen Appliances": "Кухонная техника",
+    "Leisure & Free Time": "Досуг и свободное время",
     "Maintenance": "Обслуживание",
     "Months and Days of the Week": "Месяцы и дни недели",
     "Nature": "Природа",
@@ -95,6 +99,7 @@
     "Time": "Время",
     "Time & Dates": "Время и даты",
     "Transport": "Транспорт",
+    "Travel & Accommodation": "Путешествия и размещение",
     "Work": "Работа"
   }
 }
