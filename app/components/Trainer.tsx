@@ -450,12 +450,7 @@ export default function Trainer() {
             >
               <Button
                 icon={<GlobalOutlined />}
-                size="large"
-                style={{ 
-                  width: isMobile ? 40 : undefined, 
-                  height: 40, 
-                  padding: isMobile ? 0 : undefined 
-                }}
+                style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
               >
                 <span className="hidden sm:inline">
                   {i18n.language === 'ru' ? t('trainer.russian') : t('trainer.english')}
@@ -465,12 +460,7 @@ export default function Trainer() {
             <Button
               icon={<BookOutlined />}
               onClick={() => setShowUserDict(true)}
-              size="large"
-              style={{ 
-                width: isMobile ? 40 : undefined, 
-                height: 40, 
-                padding: isMobile ? 0 : undefined 
-              }}
+              style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
             >
               <span className="hidden sm:inline">{t('trainer.myDictionary')}</span>
             </Button>
@@ -478,15 +468,7 @@ export default function Trainer() {
               type="primary"
               icon={<SettingOutlined />}
               onClick={() => setShowSettings(!showSettings)}
-              size="large"
-              style={{ 
-                backgroundColor: '#8b5cf6', 
-                borderColor: '#8b5cf6',
-                color: '#ffffff',
-                width: isMobile ? 40 : undefined,
-                height: 40,
-                padding: isMobile ? 0 : undefined
-              }}
+              style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
             >
               <span className="hidden sm:inline">{t('trainer.settings')}</span>
             </Button>
@@ -624,7 +606,6 @@ export default function Trainer() {
                   <div className="flex flex-col sm:flex-row sm:justify-center gap-3 sm:gap-2 w-full">
                     <Button
                       type="primary"
-                      size="large"
                       onClick={checkAnswer}
                       disabled={!userInput}
                       className="w-full sm:w-auto"
@@ -632,7 +613,6 @@ export default function Trainer() {
                         backgroundColor: '#8b5cf6',
                         borderColor: '#8b5cf6',
                         color: '#ffffff',
-                        height: '48px',
                         paddingLeft: '32px',
                         paddingRight: '32px',
                       }}
@@ -643,10 +623,8 @@ export default function Trainer() {
                     {/* Кнопка "Следующее слово" для мобильных - всегда видна */}
                     {isMobile && (
                       <Button
-                        size="large"
                         onClick={getNextWord}
                         className="w-full"
-                        style={{ height: '48px' }}
                       >
                         {t('trainer.nextWord')}
                       </Button>
@@ -655,9 +633,7 @@ export default function Trainer() {
                     {/* Кнопка "Следующее слово" для десктопа - только при неправильном ответе */}
                     {!isMobile && feedback === 'incorrect' && (
                       <Button
-                        size="large"
                         onClick={getNextWord}
-                        style={{ height: '48px' }}
                       >
                         {t('trainer.nextWord')}
                       </Button>
