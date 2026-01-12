@@ -135,14 +135,26 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         }, 100);
       }, delay);
     } else {
-      // Очищаем поле ввода при неправильном ответе, чтобы можно было ввести новый ответ
-      setUserInput('');
+      // Не очищаем поле ввода сразу - оставляем пользовательский ввод до переключения на новое слово
       // Сбрасываем флаг обработки
       isProcessingRef.current = false;
       // Сохраняем фокус
       setTimeout(() => {
         inputRef.current?.focus();
       }, 100);
+      
+      // Автоматически переключаем на следующее слово после ошибки
+      // На мобильных устройствах используем большую задержку для лучшей видимости
+      const delay = isMobile ? 2000 : 1500;
+      timeoutRef.current = setTimeout(() => {
+        setUserInput('');
+        setFeedback(null);
+        getNextWord();
+        isProcessingRef.current = false;
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }, delay);
     }
 
     return isCorrect;

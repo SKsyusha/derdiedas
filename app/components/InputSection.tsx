@@ -90,13 +90,6 @@ export default function InputSection({
               {t('trainer.nextWord')}
             </Button>
           )}
-
-          {/* Кнопка "Следующее слово" для десктопа - только при неправильном ответе */}
-          {!isMobile && feedback === 'incorrect' && (
-            <Button onClick={onNextWord}>
-              {t('trainer.nextWord')}
-            </Button>
-          )}
         </div>
       </div>
     </>
