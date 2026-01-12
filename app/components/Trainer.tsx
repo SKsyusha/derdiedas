@@ -98,7 +98,7 @@ export default function Trainer() {
     getNextWord,
     handleInput,
     checkAnswer: checkAnswerBase,
-  } = useWordTraining({ settings, getEnabledWords });
+  } = useWordTraining({ settings, getEnabledWords, isMobile });
 
   // Keep ref updated with latest getNextWord
   useEffect(() => {

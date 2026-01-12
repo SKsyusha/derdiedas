@@ -5,9 +5,10 @@ import { generateSentence, getArticleByCase } from '../dictionaries';
 interface UseWordTrainingProps {
   settings: TrainingSettings;
   getEnabledWords: () => Word[];
+  isMobile?: boolean;
 }
 
-export function useWordTraining({ settings, getEnabledWords }: UseWordTrainingProps) {
+export function useWordTraining({ settings, getEnabledWords, isMobile = false }: UseWordTrainingProps) {
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
   const [currentSentence, setCurrentSentence] = useState<string>('');
   const [currentCase, setCurrentCase] = useState<Case>('nominativ');
@@ -121,6 +122,7 @@ export function useWordTraining({ settings, getEnabledWords }: UseWordTrainingPr
 
     if (isCorrect) {
       // Автоматически переходим к следующему слову с задержкой
+      const delay = 1500;
       timeoutRef.current = setTimeout(() => {
         setUserInput('');
         setFeedback(null);
@@ -131,7 +133,7 @@ export function useWordTraining({ settings, getEnabledWords }: UseWordTrainingPr
         setTimeout(() => {
           inputRef.current?.focus();
         }, 100);
-      }, 1500);
+      }, delay);
     } else {
       // Очищаем поле ввода при неправильном ответе, чтобы можно было ввести новый ответ
       setUserInput('');
