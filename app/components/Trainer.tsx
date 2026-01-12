@@ -55,6 +55,8 @@ export default function Trainer() {
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const hasLoadedWordRef = useRef<boolean>(false);
+  const hasInitializedRef = useRef<boolean>(false);
+  const getNextWordRef = useRef<(() => void) | undefined>(undefined);
 
   // Get all enabled words
   const getEnabledWords = useCallback((): Word[] => {
@@ -136,6 +138,11 @@ export default function Trainer() {
       inputRef.current?.focus();
     }, 50);
   }, [settings, getEnabledWords]);
+
+  // Keep ref updated with latest getNextWord
+  useEffect(() => {
+    getNextWordRef.current = getNextWord;
+  }, [getNextWord]);
 
   // Получение всех слов из выбранных топиков (без фильтрации по level)
   const getAllWordsInTopics = useCallback((): Word[] => {
@@ -228,41 +235,12 @@ export default function Trainer() {
 
   // Initialize first word only after component has mounted (client-side)
   useEffect(() => {
-    if (!isMounted) return;
-    if (hasLoadedWordRef.current) return; // Don't reload word on settings change
+    if (!isMounted || hasInitializedRef.current) return;
+    hasInitializedRef.current = true;
     
-    // Call getNextWord only once on mount
-    const words = getEnabledWords();
-    if (words.length === 0) {
-      setCurrentWord(null);
-      setCurrentSentence('');
-      setIsLoading(false);
-      hasLoadedWordRef.current = false;
-      return;
+    if (getNextWordRef.current) {
+      getNextWordRef.current();
     }
-
-    const randomWord = words[Math.floor(Math.random() * words.length)];
-    setCurrentWord(randomWord);
-    hasLoadedWordRef.current = true;
-
-    if (settings.mode === 'sentence' && settings.cases.length > 0) {
-      const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
-      setCurrentCase(randomCase);
-      const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
-      setCurrentSentence(sentence);
-    } else {
-      setCurrentSentence('');
-      setCurrentCase('nominativ');
-    }
-
-    setUserInput('');
-    setFeedback(null);
-    setIsLoading(false);
-    
-    setTimeout(() => {
-      inputRef.current?.focus();
-    }, 50);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted]);
 
   // Очистка таймера при размонтировании компонента
