@@ -287,22 +287,42 @@ export default function SettingsDrawer({
         {/* Cases */}
         <div>
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.cases')}</Title>
-          <Checkbox.Group
-            value={settings.cases}
-            onChange={(checkedValues) => {
-              setSettings({
-                ...settings,
-                cases: checkedValues as Case[],
-              });
-            }}
-          >
-            <Flex orientation="vertical" gap="small">
-              <Checkbox value="nominativ">{t('cases.nominativ')}</Checkbox>
-              <Checkbox value="akkusativ">{t('cases.akkusativ')}</Checkbox>
-              <Checkbox value="dativ">{t('cases.dativ')}</Checkbox>
-              <Checkbox value="genitiv">{t('cases.genitiv')}</Checkbox>
-            </Flex>
-          </Checkbox.Group>
+          {settings.mode === 'noun-only' ? (
+            <Radio.Group
+              value={settings.cases[0] || 'nominativ'}
+              onChange={(e) => {
+                setSettings({
+                  ...settings,
+                  cases: [e.target.value as Case],
+                });
+              }}
+              style={{ width: '100%' }}
+            >
+              <Flex orientation="vertical" gap="small">
+                <Radio value="nominativ">{t('cases.nominativ')}</Radio>
+                <Radio value="akkusativ">{t('cases.akkusativ')}</Radio>
+                <Radio value="dativ">{t('cases.dativ')}</Radio>
+                <Radio value="genitiv">{t('cases.genitiv')}</Radio>
+              </Flex>
+            </Radio.Group>
+          ) : (
+            <Checkbox.Group
+              value={settings.cases}
+              onChange={(checkedValues) => {
+                setSettings({
+                  ...settings,
+                  cases: checkedValues as Case[],
+                });
+              }}
+            >
+              <Flex orientation="vertical" gap="small">
+                <Checkbox value="nominativ">{t('cases.nominativ')}</Checkbox>
+                <Checkbox value="akkusativ">{t('cases.akkusativ')}</Checkbox>
+                <Checkbox value="dativ">{t('cases.dativ')}</Checkbox>
+                <Checkbox value="genitiv">{t('cases.genitiv')}</Checkbox>
+              </Flex>
+            </Checkbox.Group>
+          )}
         </div>
 
         <Divider style={{ margin: '4px 0' }} />
