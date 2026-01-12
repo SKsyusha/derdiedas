@@ -561,7 +561,8 @@ export default function Trainer() {
                         {correctAnswer} {currentWord.noun}
                         {settings.showTranslation && currentTranslation && (
                           <span className="text-gray-500 text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline">
-                            ({currentTranslation})
+                            <span className="sm:hidden">{currentTranslation}</span>
+                            <span className="hidden sm:inline">({currentTranslation})</span>
                           </span>
                         )}
                       </div>
@@ -570,7 +571,8 @@ export default function Trainer() {
                         {correctAnswer} {currentWord.noun}
                         {settings.showTranslation && currentTranslation && (
                           <span className="text-gray-500 text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline">
-                            ({currentTranslation})
+                            <span className="sm:hidden">{currentTranslation}</span>
+                            <span className="hidden sm:inline">({currentTranslation})</span>
                           </span>
                         )}
                       </div>
@@ -580,7 +582,8 @@ export default function Trainer() {
                         {currentWord.noun}
                         {settings.showTranslation && currentTranslation && (
                           <span className="text-gray-500 text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline">
-                            ({currentTranslation})
+                            <span className="sm:hidden">{currentTranslation}</span>
+                            <span className="hidden sm:inline">({currentTranslation})</span>
                           </span>
                         )}
                       </>
