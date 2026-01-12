@@ -47,3 +47,47 @@ input.ant-input:focus:-ms-input-placeholder,
   opacity: 0 !important;
   color: transparent !important;
 }
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Ensure drawers take full width on mobile */
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Better touch targets for mobile */
+  .ant-btn {
+    min-height: 44px;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Remove card styles on mobile - override any Tailwind classes */
+  .training-block,
+  .stats-block {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+  
+  .training-block-inner,
+  .stats-block-inner {
+    padding: 0 !important;
+  }
+  
+  /* Remove card styles on mobile */
+  .ant-card,
+  .ant-card-body {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

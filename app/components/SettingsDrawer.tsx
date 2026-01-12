@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
@@ -27,6 +27,16 @@ export default function SettingsDrawer({
   userDictionaries = [],
 }: SettingsDrawerProps) {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Extract unique topics from all available dictionaries dynamically
   const allTopics = useMemo(() => {
@@ -92,7 +102,7 @@ export default function SettingsDrawer({
       placement="right"
       onClose={onClose}
       open={open}
-      size={drawerSize}
+      size={isMobile ? 'default' : drawerSize}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div>

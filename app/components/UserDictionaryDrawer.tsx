@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Drawer, Input, Space, Select, Button, Typography, Empty } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Word, Article } from '../types';
@@ -28,6 +29,16 @@ export default function UserDictionaryDrawer({
   onDictionaryCreated,
 }: UserDictionaryDrawerProps) {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const addUserWord = () => {
     if (!newWord.noun || !newWord.article) return;
@@ -68,20 +79,20 @@ export default function UserDictionaryDrawer({
       placement="right"
       onClose={onClose}
       open={open}
-      size={600}
+      size={isMobile ? 'default' : 600}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <Space.Compact style={{ width: '100%' }}>
+        <div className="flex flex-col sm:flex-row gap-2">
           <Input
             placeholder={t('userDictionary.noun')}
             value={newWord.noun}
             onChange={(e) => setNewWord({ ...newWord, noun: e.target.value })}
-            style={{ flex: 1 }}
+            className="flex-1"
           />
           <Select
             value={newWord.article}
             onChange={(value) => setNewWord({ ...newWord, article: value as Article })}
-            style={{ width: 100 }}
+            className="w-full sm:w-24"
             options={[
               { label: 'der', value: 'der' },
               { label: 'die', value: 'die' },
@@ -92,11 +103,12 @@ export default function UserDictionaryDrawer({
             placeholder={t('userDictionary.translationOptional')}
             value={newWord.translation}
             onChange={(e) => setNewWord({ ...newWord, translation: e.target.value })}
-            style={{ flex: 1 }}
+            className="flex-1"
           />
           <Button
             type="primary"
             onClick={addUserWord}
+            className="w-full sm:w-auto"
             style={{ 
               backgroundColor: '#8b5cf6', 
               borderColor: '#8b5cf6',
@@ -105,7 +117,7 @@ export default function UserDictionaryDrawer({
           >
             {t('userDictionary.add')}
           </Button>
-        </Space.Compact>
+        </div>
 
         {userDictionaries.length === 0 || userDictionaries.every(dict => dict.words.length === 0) ? (
           <Empty
