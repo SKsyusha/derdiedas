@@ -55,7 +55,22 @@ export default function InputSection({
         <div className="flex flex-col sm:flex-row sm:justify-center gap-3 sm:gap-2 w-full">
           <Button
             type="primary"
-            onClick={onCheck}
+            htmlType="button"
+            onMouseDown={(e) => {
+              // На мобильных предотвращаем blur на input при клике на кнопку
+              if (isMobile) {
+                e.preventDefault();
+              }
+            }}
+            onClick={() => {
+              onCheck();
+              // На мобильных возвращаем фокус на input после клика
+              if (isMobile) {
+                setTimeout(() => {
+                  inputRef.current?.focus();
+                }, 50);
+              }
+            }}
             disabled={disabled}
             className="w-full sm:w-auto"
             style={{
