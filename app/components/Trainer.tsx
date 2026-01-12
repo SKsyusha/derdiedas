@@ -229,8 +229,10 @@ export default function Trainer() {
   // Initialize first word only after component has mounted (client-side)
   useEffect(() => {
     if (!isMounted) return;
+    if (hasLoadedWordRef.current) return; // Don't reload word on settings change
     getNextWord();
-  }, [getNextWord, isMounted]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isMounted]);
 
   // Очистка таймера при размонтировании компонента
   useEffect(() => {
