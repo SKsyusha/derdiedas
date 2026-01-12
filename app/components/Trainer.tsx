@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Button, Input, Space, Select, Typography, Spin, Progress } from 'antd';
-import { SettingOutlined } from '@ant-design/icons';
+import { Button, Input, Typography, Spin, Progress, Dropdown } from 'antd';
+import type { MenuProps } from 'antd';
+import { SettingOutlined, BookOutlined, GlobalOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 import { Word, TrainingSettings, SessionStats, Case, Article, Language } from '../types';
@@ -427,45 +428,67 @@ export default function Trainer() {
   return (
     <div className="min-h-screen bg-white px-4 py-2 sm:px-6 sm:py-4">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
+        <div className="mb-4 sm:mb-6 flex flex-row sm:flex-row justify-between items-center gap-3 sm:gap-0">
           <Logo size="large" className="hidden sm:flex" />
-          <Logo size="medium" className="sm:hidden" />
-          <div className="flex flex-wrap gap-2 w-full sm:w-auto">
-            <Select
-              value={i18n.language}
-              onChange={(value) => {
-                i18n.changeLanguage(value);
-                // Sync translation language with UI language
-                const translationLanguage: Language = value === 'ru' ? 'Russian' : 'English';
-                setSettings((prev) => ({ ...prev, language: translationLanguage }));
+          <Logo size="medium" className="sm:hidden" hideTrainer />
+          <div className="flex flex-wrap gap-2 justify-end">
+            {/* Language selector - Dropdown with text on desktop, icon on mobile */}
+            <Dropdown
+              menu={{
+                items: [
+                  { key: 'ru', label: t('trainer.russian') },
+                  { key: 'en', label: t('trainer.english') },
+                ] as MenuProps['items'],
+                onClick: ({ key }) => {
+                  i18n.changeLanguage(key);
+                  const translationLanguage: Language = key === 'ru' ? 'Russian' : 'English';
+                  setSettings((prev) => ({ ...prev, language: translationLanguage }));
+                },
+                selectedKeys: [i18n.language],
               }}
-              style={{ width: 120 }}
-              size="large"
-              className="flex-1 sm:flex-none"
-              options={[
-                { label: t('trainer.russian'), value: 'ru' },
-                { label: t('trainer.english'), value: 'en' },
-              ]}
-            />
-            <Button
-              onClick={() => setShowUserDict(true)}
-              className="flex-1 sm:flex-none"
+              trigger={['click']}
             >
-              {t('trainer.myDictionary')}
+              <Button
+                icon={<GlobalOutlined />}
+                size="large"
+                style={{ 
+                  width: isMobile ? 40 : undefined, 
+                  height: 40, 
+                  padding: isMobile ? 0 : undefined 
+                }}
+              >
+                <span className="hidden sm:inline">
+                  {i18n.language === 'ru' ? t('trainer.russian') : t('trainer.english')}
+                </span>
+              </Button>
+            </Dropdown>
+            <Button
+              icon={<BookOutlined />}
+              onClick={() => setShowUserDict(true)}
+              size="large"
+              style={{ 
+                width: isMobile ? 40 : undefined, 
+                height: 40, 
+                padding: isMobile ? 0 : undefined 
+              }}
+            >
+              <span className="hidden sm:inline">{t('trainer.myDictionary')}</span>
             </Button>
             <Button
               type="primary"
               icon={<SettingOutlined />}
               onClick={() => setShowSettings(!showSettings)}
-              className="flex-1 sm:flex-none"
+              size="large"
               style={{ 
                 backgroundColor: '#8b5cf6', 
                 borderColor: '#8b5cf6',
-                color: '#ffffff'
+                color: '#ffffff',
+                width: isMobile ? 40 : undefined,
+                height: 40,
+                padding: isMobile ? 0 : undefined
               }}
             >
               <span className="hidden sm:inline">{t('trainer.settings')}</span>
-              <span className="sm:hidden">{t('trainer.settings')}</span>
             </Button>
           </div>
         </div>

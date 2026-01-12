@@ -5,9 +5,10 @@ import Link from 'next/link';
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
+  hideTrainer?: boolean;
 }
 
-export default function Logo({ size = 'medium', className = '' }: LogoProps) {
+export default function Logo({ size = 'medium', className = '', hideTrainer = false }: LogoProps) {
   const sizeClasses = {
     small: { articles: 'text-lg', trainer: 'text-xl', gap: 'gap-1.5' },
     medium: { articles: 'text-2xl', trainer: 'text-3xl', gap: 'gap-2' },
@@ -50,18 +51,20 @@ export default function Logo({ size = 'medium', className = '' }: LogoProps) {
           Das
         </span>
       </div>
-      <span 
-        className={`${currentSize.trainer} font-bold`}
-        style={{ 
-          background: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          letterSpacing: '-0.02em',
-        }}
-      >
-        Trainer
-      </span>
+      {!hideTrainer && (
+        <span 
+          className={`${currentSize.trainer} font-bold`}
+          style={{ 
+            background: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            letterSpacing: '-0.02em',
+          }}
+        >
+          Trainer
+        </span>
+      )}
     </Link>
   );
 }
