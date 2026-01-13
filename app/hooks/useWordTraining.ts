@@ -2,6 +2,16 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import { Word, TrainingSettings, Case } from '../types';
 import { generateSentence, getArticleByCase } from '../dictionaries';
 
+// Fisher-Yates shuffle
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 interface UseWordTrainingProps {
   settings: TrainingSettings;
   getEnabledWords: () => Word[];
@@ -20,6 +30,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const hasLoadedWordRef = useRef<boolean>(false);
+  
+  // Храним перемешанный список слов и текущий индекс
+  const shuffledWordsRef = useRef<Word[]>([]);
+  const currentIndexRef = useRef<number>(0);
+  const lastWordsHashRef = useRef<string>('');
 
   const getNextWord = useCallback(() => {
     // Очищаем таймер и сбрасываем флаг обработки при переходе к новому слову
@@ -35,18 +50,39 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       setCurrentSentence('');
       setIsLoading(false);
       hasLoadedWordRef.current = false;
+      shuffledWordsRef.current = [];
+      currentIndexRef.current = 0;
+      lastWordsHashRef.current = '';
       return;
     }
 
-    // Загружаем слово сразу без задержки и без показа спиннера
-    const randomWord = words[Math.floor(Math.random() * words.length)];
-    setCurrentWord(randomWord);
+    // Создаём хеш для проверки изменения списка слов
+    const wordsHash = words.map(w => w.noun).sort().join('|');
+    
+    // Если список слов изменился - перемешиваем заново
+    if (wordsHash !== lastWordsHashRef.current) {
+      shuffledWordsRef.current = shuffleArray(words);
+      currentIndexRef.current = 0;
+      lastWordsHashRef.current = wordsHash;
+    }
+    
+    // Если прошли все слова - перемешиваем заново
+    if (currentIndexRef.current >= shuffledWordsRef.current.length) {
+      shuffledWordsRef.current = shuffleArray(words);
+      currentIndexRef.current = 0;
+    }
+
+    // Берём следующее слово из перемешанного списка
+    const nextWord = shuffledWordsRef.current[currentIndexRef.current];
+    currentIndexRef.current++;
+    
+    setCurrentWord(nextWord);
     hasLoadedWordRef.current = true;
 
     if (settings.mode === 'sentence' && settings.cases.length > 0) {
       const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
       setCurrentCase(randomCase);
-      const sentence = generateSentence(randomWord, randomCase, settings.usePronouns);
+      const sentence = generateSentence(nextWord, randomCase, settings.usePronouns);
       setCurrentSentence(sentence);
     } else {
       setCurrentSentence('');
@@ -135,6 +171,9 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         }, 100);
       }, delay);
     } else {
+      // При ошибке добавляем слово обратно в очередь для повторения
+      shuffledWordsRef.current.push(currentWord);
+      
       // Не очищаем поле ввода сразу - оставляем пользовательский ввод до переключения на новое слово
       // Сбрасываем флаг обработки
       isProcessingRef.current = false;
