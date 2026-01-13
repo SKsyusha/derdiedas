@@ -423,6 +423,15 @@
     "topic": "Person"
   },
   {
+    "noun": "Dank",
+    "article": "der",
+    "translation_ru": "благодарность",
+    "translation_en": "thanks",
+    "translation_uk": "подяка",
+    "level": "A1",
+    "topic": "Person"
+  },
+  {
     "noun": "Arm",
     "article": "der",
     "translation_ru": "рука",
@@ -3733,14 +3742,5 @@
     "translation_uk": "захід",
     "level": "A1",
     "topic": "Geography"
-  },
-  {
-    "noun": "Dank",
-    "article": "der",
-    "translation_ru": "благодарность",
-    "translation_en": "thanks",
-    "translation_uk": "подяка",
-    "level": "A1",
-    "topic": "Topic"
   }
 ]
