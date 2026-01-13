@@ -154,9 +154,18 @@ export default function SettingsDrawer({
               <Radio.Group
                 value={settings.level[0] || 'A1'}
                 onChange={(e) => {
+                  const newLevel = e.target.value as Level;
+                  // Фильтруем выбранные топики - оставляем только те, в которых есть слова для нового уровня
+                  const filteredTopics = settings.topics.filter((topic) => {
+                    if (builtInDictionaries[newLevel]) {
+                      return builtInDictionaries[newLevel].some((w: Word) => w.topic === topic);
+                    }
+                    return false;
+                  });
                   setSettings({
                     ...settings,
-                    level: [e.target.value as Level],
+                    level: [newLevel],
+                    topics: filteredTopics,
                   });
                 }}
               >
@@ -246,14 +255,16 @@ export default function SettingsDrawer({
                 setSettings({ ...settings, topics: [...settings.topics, topic] });
               }
             }}
-            options={allTopics.map((topic) => {
-              const count = getTopicCount(topic);
-              const topicLabel = t(`topics.${topic}`);
-              return { 
-                label: count > 0 ? `${topicLabel} (${count})` : topicLabel, 
-                value: topic 
-              };
-            })}
+            options={allTopics
+              .filter((topic) => getTopicCount(topic) > 0)
+              .map((topic) => {
+                const count = getTopicCount(topic);
+                const topicLabel = t(`topics.${topic}`);
+                return { 
+                  label: `${topicLabel} (${count})`, 
+                  value: topic 
+                };
+              })}
           />
           
           {/* Selected Topics */}
