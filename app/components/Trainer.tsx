@@ -50,6 +50,7 @@ export default function Trainer() {
   const [isMobile, setIsMobile] = useState(false);
   const hasInitializedRef = useRef<boolean>(false);
   const getNextWordRef = useRef<(() => void) | undefined>(undefined);
+  const prevFiltersRef = useRef<string>('');
 
   // Get all enabled words
   const getEnabledWords = useCallback((): Word[] => {
@@ -196,10 +197,54 @@ export default function Trainer() {
     if (!isMounted || hasInitializedRef.current) return;
     hasInitializedRef.current = true;
     
+    // Initialize prevFiltersRef with current filters to avoid unnecessary update
+    prevFiltersRef.current = JSON.stringify({
+      mode: settings.mode,
+      level: settings.level,
+      cases: settings.cases,
+      usePronouns: settings.usePronouns,
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+      articleType: settings.articleType,
+      pronounType: settings.pronounType,
+      showTranslation: settings.showTranslation,
+      dictionaryType: settings.dictionaryType,
+    });
+    
     if (getNextWordRef.current) {
       getNextWordRef.current();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted]);
+
+  // Update current word when filters change (but not when only language changes)
+  useEffect(() => {
+    if (!isMounted || !hasInitializedRef.current) return;
+    
+    // Create a string representation of all settings except language
+    const currentFilters = JSON.stringify({
+      mode: settings.mode,
+      level: settings.level,
+      cases: settings.cases,
+      usePronouns: settings.usePronouns,
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+      articleType: settings.articleType,
+      pronounType: settings.pronounType,
+      showTranslation: settings.showTranslation,
+      dictionaryType: settings.dictionaryType,
+    });
+    
+    // If filters changed (not just language), update the current word
+    if (prevFiltersRef.current && prevFiltersRef.current !== currentFilters) {
+      if (getNextWordRef.current) {
+        getNextWordRef.current();
+      }
+    }
+    
+    // Update the ref with current filters
+    prevFiltersRef.current = currentFilters;
+  }, [settings, isMounted]);
 
   // Check answer with stats tracking
   const checkAnswer = () => {
