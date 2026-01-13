@@ -81,6 +81,10 @@ export default function InputSection({
           {/* Кнопка "Следующее слово" для мобильных - всегда видна */}
           {isMobile && (
             <Button 
+              onMouseDown={(e) => {
+                // Предотвращаем потерю фокуса с input
+                e.preventDefault();
+              }}
               onClick={() => {
                 onNextWord();
               }}
