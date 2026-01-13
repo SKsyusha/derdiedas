@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType } from '../types';
+import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType, Level } from '../types';
 import { builtInDictionaries } from '../dictionaries';
 
 const { Title } = Typography;
@@ -42,14 +42,16 @@ export default function SettingsDrawer({
   const allTopics = useMemo(() => {
     const topicsSet = new Set<Topic>();
     
-    // Extract from built-in dictionaries (A1)
-    if (builtInDictionaries.A1) {
-      builtInDictionaries.A1.forEach((word: Word) => {
-        if (word.topic) {
-          topicsSet.add(word.topic);
-        }
-      });
-    }
+    // Extract from built-in dictionaries (A1, A2)
+    (['A1', 'A2'] as Level[]).forEach((level) => {
+      if (builtInDictionaries[level]) {
+        builtInDictionaries[level].forEach((word: Word) => {
+          if (word.topic) {
+            topicsSet.add(word.topic);
+          }
+        });
+      }
+    });
     
     // Extract from user dictionaries
     userDictionaries.forEach((dict) => {
@@ -64,19 +66,16 @@ export default function SettingsDrawer({
     return Array.from(topicsSet).sort();
   }, [userDictionaries]);
   
-  // Функция для получения количества слов в топике напрямую из A1.json
+  // Функция для получения количества слов в топике
   const getTopicCount = (topic: Topic): number => {
     let count = 0;
     
     if (settings.dictionaryType === 'default') {
-      // Считаем из встроенных словарей
-      settings.enabledDictionaries.forEach((dictId) => {
-        if (dictId === 'A1' && builtInDictionaries.A1) {
-          const wordsInTopic = builtInDictionaries.A1.filter((w: Word) => {
-            const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
-            const topicMatch = w.topic === topic;
-            return levelMatch && topicMatch;
-          });
+      // Считаем из встроенных словарей по выбранным уровням
+      const levels = settings.level.length > 0 ? settings.level : (['A1', 'A2'] as Level[]);
+      levels.forEach((level) => {
+        if (builtInDictionaries[level]) {
+          const wordsInTopic = builtInDictionaries[level].filter((w: Word) => w.topic === topic);
           count += wordsInTopic.length;
         }
       });
@@ -145,6 +144,30 @@ export default function SettingsDrawer({
             </Flex>
           </Radio.Group>
         </div>
+
+        {/* Level Selector - only for default dictionary */}
+        {settings.dictionaryType === 'default' && (
+          <>
+            <Divider style={{ margin: '4px 0' }} />
+            <div>
+              <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.level')}</Title>
+              <Radio.Group
+                value={settings.level[0] || 'A1'}
+                onChange={(e) => {
+                  setSettings({
+                    ...settings,
+                    level: [e.target.value as Level],
+                  });
+                }}
+              >
+                <Flex gap="middle">
+                  <Radio value="A1">A1 ({builtInDictionaries.A1?.length || 0})</Radio>
+                  <Radio value="A2">A2 ({builtInDictionaries.A2?.length || 0})</Radio>
+                </Flex>
+              </Radio.Group>
+            </div>
+          </>
+        )}
 
         <Divider style={{ margin: '4px 0' }} />
 

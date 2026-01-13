@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { Button, Spin, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
-import { Word, TrainingSettings, SessionStats, Article, Language } from '../types';
+import { Word, TrainingSettings, SessionStats, Article, Language, Level } from '../types';
 import { builtInDictionaries, getArticleByCase } from '../dictionaries';
 import SettingsDrawer from './SettingsDrawer';
 import UserDictionaryDrawer from './UserDictionaryDrawer';
@@ -88,13 +88,15 @@ export default function Trainer() {
     const words: Word[] = [];
     
     if (settings.dictionaryType === 'default') {
-      settings.enabledDictionaries.forEach((dictId) => {
-        if (dictId === 'A1' && builtInDictionaries.A1) {
-          const levelWords = builtInDictionaries.A1;
+      // Используем выбранные уровни или все если ничего не выбрано
+      const levels = settings.level.length > 0 ? settings.level : (['A1', 'A2'] as Level[]);
+      
+      levels.forEach((level) => {
+        if (builtInDictionaries[level]) {
+          const levelWords = builtInDictionaries[level];
           const filteredWords = levelWords.filter((w: Word) => {
-            const levelMatch = !settings.level.length || settings.level.includes(w.level || 'A1');
             const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
-            return levelMatch && topicMatch;
+            return topicMatch;
           });
           words.push(...filteredWords);
         }
@@ -137,15 +139,16 @@ export default function Trainer() {
     getNextWordRef.current = getNextWord;
   }, [getNextWord]);
 
-  // Получение всех слов из выбранных топиков (без фильтрации по level)
+  // Получение всех слов из выбранных топиков
   const getAllWordsInTopics = useCallback((): Word[] => {
     const words: Word[] = [];
     
     if (settings.dictionaryType === 'default') {
-      settings.enabledDictionaries.forEach((dictId) => {
-        if (dictId === 'A1' && builtInDictionaries.A1) {
-          const levelWords = builtInDictionaries.A1;
-          const topicWords = levelWords.filter((w: Word) => 
+      const levels = settings.level.length > 0 ? settings.level : (['A1', 'A2'] as Level[]);
+      
+      levels.forEach((level) => {
+        if (builtInDictionaries[level]) {
+          const topicWords = builtInDictionaries[level].filter((w: Word) => 
             w.topic && settings.topics.includes(w.topic)
           );
           words.push(...topicWords);
@@ -167,7 +170,7 @@ export default function Trainer() {
     }
     
     return words;
-  }, [settings.topics, settings.dictionaryType, settings.enabledDictionaries, userDictionaries]);
+  }, [settings.topics, settings.dictionaryType, settings.level, userDictionaries]);
 
   // Расчет прогресса по топикам или всем словам
   const topicProgress = useMemo(() => {
@@ -300,6 +303,8 @@ export default function Trainer() {
   const getTranslation = (word: Word): string | undefined => {
     if (settings.language === 'English') {
       return word.translation_en || word.translation;
+    } else if (settings.language === 'Ukrainian') {
+      return word.translation_uk || word.translation;
     } else {
       return word.translation_ru || word.translation;
     }

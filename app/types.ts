@@ -10,7 +10,7 @@ export type ArticleType = 'definite' | 'indefinite'; // определенный
 
 export type PronounType = 'none' | 'personal' | 'possessive' | 'demonstrative'; // нет / личные / притяжательные / указательные
 
-export type Language = 'Russian' | 'English';
+export type Language = 'Russian' | 'English' | 'Ukrainian';
 
 export type Topic = string;
 
@@ -20,6 +20,7 @@ export interface Word {
   translation?: string; // для обратной совместимости
   translation_ru?: string;
   translation_en?: string;
+  translation_uk?: string;
   exampleSentence?: string;
   level?: Level;
   topic?: Topic;

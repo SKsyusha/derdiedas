@@ -1,0 +1,5938 @@
+[
+    {
+      "noun": "Ausweis",
+      "article": "der",
+      "translation_ru": "удостоверение",
+      "translation_en": "ID card",
+      "translation_uk": "посвідчення",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Baby",
+      "article": "das",
+      "translation_ru": "младенец",
+      "translation_en": "baby",
+      "translation_uk": "немовля",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Dame",
+      "article": "die",
+      "translation_ru": "дама",
+      "translation_en": "lady",
+      "translation_uk": "дама",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Erwachsene",
+      "article": "der",
+      "translation_ru": "взрослый",
+      "translation_en": "adult",
+      "translation_uk": "дорослий",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Familienname",
+      "article": "der",
+      "translation_ru": "фамилия",
+      "translation_en": "last name / family name",
+      "translation_uk": "прізвище",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Fan",
+      "article": "der",
+      "translation_ru": "фанат",
+      "translation_en": "fan",
+      "translation_uk": "фан",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Frau",
+      "article": "die",
+      "translation_ru": "женщина",
+      "translation_en": "woman",
+      "translation_uk": "жінка",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Freund",
+      "article": "der",
+      "translation_ru": "друг",
+      "translation_en": "friend",
+      "translation_uk": "друг",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Freundin",
+      "article": "die",
+      "translation_ru": "подруга",
+      "translation_en": "female friend",
+      "translation_uk": "подруга",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Gast",
+      "article": "der",
+      "translation_ru": "гость",
+      "translation_en": "guest",
+      "translation_uk": "гість",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Herr",
+      "article": "der",
+      "translation_ru": "мужчина",
+      "translation_en": "man",
+      "translation_uk": "чоловік",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Junge",
+      "article": "der",
+      "translation_ru": "мальчик",
+      "translation_en": "boy",
+      "translation_uk": "хлопчик",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Kranke",
+      "article": "die",
+      "translation_ru": "больные",
+      "translation_en": "patients",
+      "translation_uk": "хворі",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Kunde",
+      "article": "der",
+      "translation_ru": "клиент",
+      "translation_en": "customer",
+      "translation_uk": "клієнт",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Kundin",
+      "article": "die",
+      "translation_ru": "клиентка",
+      "translation_en": "customer (female)",
+      "translation_uk": "клієнтка",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Leute",
+      "article": "die",
+      "translation_ru": "люди",
+      "translation_en": "people",
+      "translation_uk": "люди",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Mann",
+      "article": "der",
+      "translation_ru": "мужчина",
+      "translation_en": "man",
+      "translation_uk": "чоловік",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Mensch",
+      "article": "der",
+      "translation_ru": "человек",
+      "translation_en": "human",
+      "translation_uk": "людина",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Mädchen",
+      "article": "das",
+      "translation_ru": "девочка",
+      "translation_en": "girl",
+      "translation_uk": "дівчинка",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Nachbar",
+      "article": "der",
+      "translation_ru": "сосед",
+      "translation_en": "neighbor",
+      "translation_uk": "сусід",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Nachbarin",
+      "article": "die",
+      "translation_ru": "женщина-соседка",
+      "translation_en": "female neighbor",
+      "translation_uk": "жінка-сусідка",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Person",
+      "article": "die",
+      "translation_ru": "человек",
+      "translation_en": "person",
+      "translation_uk": "особа",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Schüler",
+      "article": "der",
+      "translation_ru": "ученик",
+      "translation_en": "pupil",
+      "translation_uk": "учень",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Schülerin",
+      "article": "die",
+      "translation_ru": "ученица",
+      "translation_en": "female student",
+      "translation_uk": "учениця",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Student",
+      "article": "der",
+      "translation_ru": "студент",
+      "translation_en": "student",
+      "translation_uk": "студент",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Studentin",
+      "article": "die",
+      "translation_ru": "студентка",
+      "translation_en": "female student",
+      "translation_uk": "студентка",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Tourist",
+      "article": "der",
+      "translation_ru": "турист",
+      "translation_en": "tourist",
+      "translation_uk": "турист",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Touristin",
+      "article": "die",
+      "translation_ru": "туристка",
+      "translation_en": "tourist",
+      "translation_uk": "туристка",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Vorname",
+      "article": "der",
+      "translation_ru": "имя",
+      "translation_en": "first name",
+      "translation_uk": "ім'я",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Familie",
+      "article": "die",
+      "translation_ru": "семья",
+      "translation_en": "family",
+      "translation_uk": "сім'я",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Kind",
+      "article": "das",
+      "translation_ru": "ребёнок",
+      "translation_en": "child",
+      "translation_uk": "дитина",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Kinder",
+      "article": "die",
+      "translation_ru": "дети",
+      "translation_en": "children",
+      "translation_uk": "діти",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+        "noun": "Bruder",
+        "article": "der",
+        "translation_ru": "брат",
+        "translation_en": "brother",
+        "translation_uk": "брат",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Cousin",
+        "article": "der",
+        "translation_ru": "двоюродный брат",
+        "translation_en": "cousin",
+        "translation_uk": "двоюрідний брат",
+        "level": "A2",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Cousine",
+        "article": "die",
+        "translation_ru": "двоюродная сестра",
+        "translation_en": "cousin",
+        "translation_uk": "двоюрідна сестра",
+        "level": "A2",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Eltern",
+        "article": "die",
+        "translation_ru": "родители",
+        "translation_en": "parents",
+        "translation_uk": "батьки",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Enkel",
+        "article": "der",
+        "translation_ru": "внук",
+        "translation_en": "grandson",
+        "translation_uk": "ону́к",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Enkelin",
+        "article": "die",
+        "translation_ru": "внучка",
+        "translation_en": "granddaughter",
+        "translation_uk": "ону́чка",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Geschwister",
+        "article": "die",
+        "translation_ru": "братья и сёстры",
+        "translation_en": "siblings",
+        "translation_uk": "брати й сестри",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Großeltern",
+        "article": "die",
+        "translation_ru": "бабушка и дедушка",
+        "translation_en": "grandparents",
+        "translation_uk": "дідусь і бабуся",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Großmutter",
+        "article": "die",
+        "translation_ru": "бабушка",
+        "translation_en": "grandmother",
+        "translation_uk": "бабуся",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Großvater",
+        "article": "der",
+        "translation_ru": "дедушка",
+        "translation_en": "grandfather",
+        "translation_uk": "дідусь",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Kind",
+        "article": "das",
+        "translation_ru": "ребёнок",
+        "translation_en": "child",
+        "translation_uk": "дитина",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Mutter",
+        "article": "die",
+        "translation_ru": "мать",
+        "translation_en": "mother",
+        "translation_uk": "мати",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Onkel",
+        "article": "der",
+        "translation_ru": "дядя",
+        "translation_en": "uncle",
+        "translation_uk": "дядько",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Schwester",
+        "article": "die",
+        "translation_ru": "сестра",
+        "translation_en": "sister",
+        "translation_uk": "сестра",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Sohn",
+        "article": "der",
+        "translation_ru": "сын",
+        "translation_en": "son",
+        "translation_uk": "син",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Tante",
+        "article": "die",
+        "translation_ru": "тётя",
+        "translation_en": "aunt",
+        "translation_uk": "тітка",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Tochter",
+        "article": "die",
+        "translation_ru": "дочь",
+        "translation_en": "daughter",
+        "translation_uk": "дочка",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Vater",
+        "article": "der",
+        "translation_ru": "отец",
+        "translation_en": "father",
+        "translation_uk": "батько",
+        "level": "A1",
+        "topic": "Family Members"
+      },
+      {
+        "noun": "Verwandte",
+        "article": "die",
+        "translation_ru": "родственники",
+        "translation_en": "relatives",
+        "translation_uk": "родичі",
+        "level": "A2",
+        "topic": "Family Members"
+      },
+    {
+      "noun": "Ehefrau",
+      "article": "die",
+      "translation_ru": "жена",
+      "translation_en": "wife",
+      "translation_uk": "дружина",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Ehemann",
+      "article": "der",
+      "translation_ru": "муж",
+      "translation_en": "husband",
+      "translation_uk": "чоловік",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Ehepartner",
+      "article": "der",
+      "translation_ru": "супруг",
+      "translation_en": "spouse",
+      "translation_uk": "подружжя",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Partner",
+      "article": "der",
+      "translation_ru": "партнер",
+      "translation_en": "partner",
+      "translation_uk": "партнер",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Partnerin",
+      "article": "die",
+      "translation_ru": "партнерша",
+      "translation_en": "partner (female)",
+      "translation_uk": "партнерка",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Rentnerin",
+      "article": "die",
+      "translation_ru": "пенсионерка",
+      "translation_en": "female retiree",
+      "translation_uk": "пенсіонерка",
+      "level": "A2",
+      "topic": "Family Members"
+    },
+    {
+      "noun": "Arm",
+      "article": "der",
+      "translation_ru": "рука",
+      "translation_en": "arm",
+      "translation_uk": "рука",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Auge",
+      "article": "das",
+      "translation_ru": "глаз",
+      "translation_en": "eye",
+      "translation_uk": "око",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Bauch",
+      "article": "der",
+      "translation_ru": "живот",
+      "translation_en": "belly",
+      "translation_uk": "живіт",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Bein",
+      "article": "das",
+      "translation_ru": "нога",
+      "translation_en": "leg",
+      "translation_uk": "нога",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Brille",
+      "article": "die",
+      "translation_ru": "очки",
+      "translation_en": "glasses",
+      "translation_uk": "окуляри",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Durst",
+      "article": "der",
+      "translation_ru": "жажда",
+      "translation_en": "thirst",
+      "translation_uk": "спрага",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Fieber",
+      "article": "das",
+      "translation_ru": "лихорадка",
+      "translation_en": "fever",
+      "translation_uk": "лихоманка",
+      "level": "A2",
+      "topic": "Health"
+    },
+    {
+      "noun": "Fuß",
+      "article": "der",
+      "translation_ru": "ступня",
+      "translation_en": "foot",
+      "translation_uk": "стопа",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Gesicht",
+      "article": "das",
+      "translation_ru": "лицо",
+      "translation_en": "face",
+      "translation_uk": "обличчя",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Grippe",
+      "article": "die",
+      "translation_ru": "грипп",
+      "translation_en": "flu",
+      "translation_uk": "грип",
+      "level": "A2",
+      "topic": "Health"
+    },
+    {
+      "noun": "Haar",
+      "article": "das",
+      "translation_ru": "волос",
+      "translation_en": "hair",
+      "translation_uk": "волосся",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Haare",
+      "article": "die",
+      "translation_ru": "волосы",
+      "translation_en": "hair",
+      "translation_uk": "волосся",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Hals",
+      "article": "der",
+      "translation_ru": "шея",
+      "translation_en": "neck",
+      "translation_uk": "шия",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Hand",
+      "article": "die",
+      "translation_ru": "рука",
+      "translation_en": "hand",
+      "translation_uk": "рука",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Hände",
+      "article": "die",
+      "translation_ru": "руки",
+      "translation_en": "hands",
+      "translation_uk": "руки",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Kopf",
+      "article": "der",
+      "translation_ru": "голова",
+      "translation_en": "head",
+      "translation_uk": "голова",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Körper",
+      "article": "der",
+      "translation_ru": "тело",
+      "translation_en": "body",
+      "translation_uk": "тіло",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Magen",
+      "article": "der",
+      "translation_ru": "желудок",
+      "translation_en": "stomach",
+      "translation_uk": "шлунок",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Mund",
+      "article": "der",
+      "translation_ru": "рот",
+      "translation_en": "mouth",
+      "translation_uk": "рот",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Ohr",
+      "article": "das",
+      "translation_ru": "ухо",
+      "translation_en": "ear",
+      "translation_uk": "вухо",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Rücken",
+      "article": "der",
+      "translation_ru": "спина",
+      "translation_en": "back",
+      "translation_uk": "спина",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Zahn",
+      "article": "der",
+      "translation_ru": "зуб",
+      "translation_en": "tooth",
+      "translation_uk": "зуб",
+      "level": "A2",
+      "topic": "Body Parts"
+    },
+    {
+      "noun": "Arzt",
+      "article": "der",
+      "translation_ru": "врач",
+      "translation_en": "doctor",
+      "translation_uk": "лікар",
+      "level": "A2",
+      "topic": "Professions"
+    },
+    {
+      "noun": "Babysitter",
+      "article": "der",
+      "translation_ru": "няня",
+      "translation_en": "babysitter",
+      "translation_uk": "няня",
+      "level": "A2",
+      "topic": "Professions"
+    },
+    {
+      "noun": "Beruf",
+      "article": "der",
+      "translation_ru": "профессия",
+      "translation_en": "profession",
+      "translation_uk": "професія",
+      "level": "A2",
+      "topic": "Professions"
+    },
+    {
+        "noun": "Angestellter",
+        "article": "der",
+        "translation_ru": "служащий",
+        "translation_en": "employee",
+        "translation_uk": "службовець",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Angestellte",
+        "article": "die",
+        "translation_ru": "служащая",
+        "translation_en": "employee",
+        "translation_uk": "службовиця",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Ärztin",
+        "article": "die",
+        "translation_ru": "врач (жен.)",
+        "translation_en": "doctor",
+        "translation_uk": "лікарка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Auszubildender",
+        "article": "der",
+        "translation_ru": "стажёр, ученик",
+        "translation_en": "trainee",
+        "translation_uk": "стажер",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Auszubildende",
+        "article": "die",
+        "translation_ru": "стажёр (жен.)",
+        "translation_en": "trainee",
+        "translation_uk": "стажерка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Autor",
+        "article": "der",
+        "translation_ru": "автор",
+        "translation_en": "author",
+        "translation_uk": "автор",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Autorin",
+        "article": "die",
+        "translation_ru": "автор (жен.)",
+        "translation_en": "author",
+        "translation_uk": "авторка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Bäcker",
+        "article": "der",
+        "translation_ru": "пекарь",
+        "translation_en": "baker",
+        "translation_uk": "пекар",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Bäckerin",
+        "article": "die",
+        "translation_ru": "пекарь (жен.)",
+        "translation_en": "baker",
+        "translation_uk": "пекарка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Doktor",
+        "article": "der",
+        "translation_ru": "доктор",
+        "translation_en": "doctor",
+        "translation_uk": "доктор",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Doktorin",
+        "article": "die",
+        "translation_ru": "доктор (жен.)",
+        "translation_en": "doctor",
+        "translation_uk": "докторка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+    
+      {
+        "noun": "Fahrer",
+        "article": "der",
+        "translation_ru": "водитель",
+        "translation_en": "driver",
+        "translation_uk": "водій",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Fahrerin",
+        "article": "die",
+        "translation_ru": "водитель (жен.)",
+        "translation_en": "driver",
+        "translation_uk": "водійка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+    
+      {
+        "noun": "Friseur",
+        "article": "der",
+        "translation_ru": "парикмахер",
+        "translation_en": "hairdresser",
+        "translation_uk": "перукар",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Friseurin",
+        "article": "die",
+        "translation_ru": "парикмахер (жен.)",
+        "translation_en": "hairdresser",
+        "translation_uk": "перукарка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+    
+      {
+        "noun": "Handwerker",
+        "article": "der",
+        "translation_ru": "ремесленник",
+        "translation_en": "craftsman",
+        "translation_uk": "ремісник",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Handwerkerin",
+        "article": "die",
+        "translation_ru": "ремесленник (жен.)",
+        "translation_en": "craftswoman",
+        "translation_uk": "ремісниця",
+        "level": "A2",
+        "topic": "Professions"
+      },
+    
+      {
+        "noun": "Hausmann",
+        "article": "der",
+        "translation_ru": "домохозяин",
+        "translation_en": "househusband",
+        "translation_uk": "домогосподар",
+        "level": "A2",
+        "topic": "Professions"
+      },
+      {
+        "noun": "Hausfrau",
+        "article": "die",
+        "translation_ru": "домохозяйка",
+        "translation_en": "housewife",
+        "translation_uk": "домогосподарка",
+        "level": "A2",
+        "topic": "Professions"
+      },
+    {
+      "noun": "Ahnung",
+      "article": "die",
+      "translation_ru": "идея",
+      "translation_en": "idea",
+      "translation_uk": "ідея",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Alter",
+      "article": "das",
+      "translation_ru": "возраст",
+      "translation_en": "age",
+      "translation_uk": "вік",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Angst",
+      "article": "die",
+      "translation_ru": "страх",
+      "translation_en": "fear",
+      "translation_uk": "страх",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Antwort",
+      "article": "die",
+      "translation_ru": "ответ",
+      "translation_en": "answer",
+      "translation_uk": "відповідь",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Artikel",
+      "article": "der",
+      "translation_ru": "статья",
+      "translation_en": "article",
+      "translation_uk": "стаття",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Aufgaben",
+      "article": "die",
+      "translation_ru": "задания",
+      "translation_en": "tasks",
+      "translation_uk": "завдання",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Bescheid",
+      "article": "der",
+      "translation_ru": "уведомление",
+      "translation_en": "notice",
+      "translation_uk": "повідомлення",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Bitte",
+      "article": "die",
+      "translation_ru": "просьба",
+      "translation_en": "request",
+      "translation_uk": "прохання",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Dank",
+      "article": "der",
+      "translation_ru": "благодарность",
+      "translation_en": "thanks",
+      "translation_uk": "подяка",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Ding",
+      "article": "das",
+      "translation_ru": "вещь",
+      "translation_en": "thing",
+      "translation_uk": "річ",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Einladung",
+      "article": "die",
+      "translation_ru": "приглашение",
+      "translation_en": "invitation",
+      "translation_uk": "запрошення",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Entschuldigung",
+      "article": "die",
+      "translation_ru": "извинение",
+      "translation_en": "apology",
+      "translation_uk": "вибачення",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Erfahrung",
+      "article": "die",
+      "translation_ru": "опыт",
+      "translation_en": "experience",
+      "translation_uk": "досвід",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Erlaubnis",
+      "article": "die",
+      "translation_ru": "разрешение",
+      "translation_en": "permission",
+      "translation_uk": "дозвіл",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Fehler",
+      "article": "der",
+      "translation_ru": "ошибка",
+      "translation_en": "mistake",
+      "translation_uk": "помилка",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Feier",
+      "article": "die",
+      "translation_ru": "праздник",
+      "translation_en": "celebration",
+      "translation_uk": "свято",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Frage",
+      "article": "die",
+      "translation_ru": "вопрос",
+      "translation_en": "question",
+      "translation_uk": "питання",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Gegenteil",
+      "article": "das",
+      "translation_ru": "противоположное",
+      "translation_en": "opposite",
+      "translation_uk": "протилежне",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Geschichte",
+      "article": "die",
+      "translation_ru": "история",
+      "translation_en": "story",
+      "translation_uk": "історія",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Gespräch",
+      "article": "das",
+      "translation_ru": "разговор",
+      "translation_en": "conversation",
+      "translation_uk": "розмова",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Gesundheit",
+      "article": "die",
+      "translation_ru": "здоровье",
+      "translation_en": "health",
+      "translation_uk": "здоров'я",
+      "level": "A2",
+      "topic": "Health"
+    },
+    {
+      "noun": "Glück",
+      "article": "das",
+      "translation_ru": "удача",
+      "translation_en": "luck",
+      "translation_uk": "удача",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Gruppe",
+      "article": "die",
+      "translation_ru": "группа",
+      "translation_en": "group",
+      "translation_uk": "група",
+      "level": "A2",
+      "topic": "Person"
+    },
+    {
+      "noun": "Gruß",
+      "article": "der",
+      "translation_ru": "приветствие",
+      "translation_en": "greeting",
+      "translation_uk": "привітання",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Hilfe",
+      "article": "die",
+      "translation_ru": "помощь",
+      "translation_en": "help",
+      "translation_uk": "допомога",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Hunger",
+      "article": "der",
+      "translation_ru": "голод",
+      "translation_en": "hunger",
+      "translation_uk": "голод",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Idee",
+      "article": "die",
+      "translation_ru": "идея",
+      "translation_en": "idea",
+      "translation_uk": "ідея",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Information",
+      "article": "die",
+      "translation_ru": "информация",
+      "translation_en": "information",
+      "translation_uk": "інформація",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Interesse",
+      "article": "das",
+      "translation_ru": "интерес",
+      "translation_en": "interest",
+      "translation_uk": "інтерес",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Jugend",
+      "article": "die",
+      "translation_ru": "молодёжь",
+      "translation_en": "youth",
+      "translation_uk": "молодь",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Kenntnisse",
+      "article": "die",
+      "translation_ru": "знания",
+      "translation_en": "knowledge",
+      "translation_uk": "знання",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Kontakt",
+      "article": "der",
+      "translation_ru": "контакт",
+      "translation_en": "contact",
+      "translation_uk": "контакт",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Krankheit",
+      "article": "die",
+      "translation_ru": "болезнь",
+      "translation_en": "illness",
+      "translation_uk": "хвороба",
+      "level": "A2",
+      "topic": "Health"
+    },
+    {
+      "noun": "Kultur",
+      "article": "die",
+      "translation_ru": "культура",
+      "translation_en": "culture",
+      "translation_uk": "культура",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Kunst",
+      "article": "die",
+      "translation_ru": "искусство",
+      "translation_en": "art",
+      "translation_uk": "мистецтво",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Leben",
+      "article": "das",
+      "translation_ru": "жизнь",
+      "translation_en": "life",
+      "translation_uk": "життя",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Lust",
+      "article": "die",
+      "translation_ru": "желание",
+      "translation_en": "desire",
+      "translation_uk": "бажання",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Lüge",
+      "article": "die",
+      "translation_ru": "ложь",
+      "translation_en": "lie",
+      "translation_uk": "брехня",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Meinung",
+      "article": "die",
+      "translation_ru": "мнение",
+      "translation_en": "opinion",
+      "translation_uk": "думка",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Mitte",
+      "article": "die",
+      "translation_ru": "середина",
+      "translation_en": "middle",
+      "translation_uk": "середина",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Mittel",
+      "article": "das",
+      "translation_ru": "средство",
+      "translation_en": "means",
+      "translation_uk": "засіб",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Nachrichten",
+      "article": "die",
+      "translation_ru": "новости",
+      "translation_en": "news",
+      "translation_uk": "новини",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Name",
+      "article": "der",
+      "translation_ru": "имя",
+      "translation_en": "name",
+      "translation_uk": "ім'я",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Notiz",
+      "article": "die",
+      "translation_ru": "запись",
+      "translation_en": "note",
+      "translation_uk": "нотатка",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Ordnung",
+      "article": "die",
+      "translation_ru": "порядок",
+      "translation_en": "order",
+      "translation_uk": "порядок",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Passwort",
+      "article": "das",
+      "translation_ru": "пароль",
+      "translation_en": "password",
+      "translation_uk": "пароль",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Plan",
+      "article": "der",
+      "translation_ru": "план",
+      "translation_en": "plan",
+      "translation_uk": "план",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Problem",
+      "article": "das",
+      "translation_ru": "проблема",
+      "translation_en": "problem",
+      "translation_uk": "проблема",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Qualität",
+      "article": "die",
+      "translation_ru": "качество",
+      "translation_en": "quality",
+      "translation_uk": "якість",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Reihe",
+      "article": "die",
+      "translation_ru": "ряд",
+      "translation_en": "row",
+      "translation_uk": "ряд",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Rest",
+      "article": "der",
+      "translation_ru": "остаток",
+      "translation_en": "rest",
+      "translation_uk": "залишок",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Ruhe",
+      "article": "die",
+      "translation_ru": "тишина",
+      "translation_en": "quiet",
+      "translation_uk": "тиша",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Schmerz",
+      "article": "der",
+      "translation_ru": "боль",
+      "translation_en": "pain",
+      "translation_uk": "біль",
+      "level": "A2",
+      "topic": "Health"
+    },
+    {
+      "noun": "Situation",
+      "article": "die",
+      "translation_ru": "ситуация",
+      "translation_en": "situation",
+      "translation_uk": "ситуація",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Star",
+      "article": "der",
+      "translation_ru": "звезда",
+      "translation_en": "star",
+      "translation_uk": "зірка",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Stress",
+      "article": "der",
+      "translation_ru": "стресс",
+      "translation_en": "stress",
+      "translation_uk": "стрес",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Thema",
+      "article": "das",
+      "translation_ru": "тема",
+      "translation_en": "topic",
+      "translation_uk": "тема",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Tipp",
+      "article": "der",
+      "translation_ru": "совет",
+      "translation_en": "tip",
+      "translation_uk": "порада",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Titel",
+      "article": "der",
+      "translation_ru": "название",
+      "translation_en": "title",
+      "translation_uk": "назва",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Traum",
+      "article": "der",
+      "translation_ru": "сон",
+      "translation_en": "dream",
+      "translation_uk": "сон",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Unterschied",
+      "article": "der",
+      "translation_ru": "разница",
+      "translation_en": "difference",
+      "translation_uk": "різниця",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Unterschrift",
+      "article": "die",
+      "translation_ru": "подпись",
+      "translation_en": "signature",
+      "translation_uk": "підпис",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Vorschlag",
+      "article": "der",
+      "translation_ru": "предложение",
+      "translation_en": "suggestion",
+      "translation_uk": "пропозиція",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Wort",
+      "article": "das",
+      "translation_ru": "слово",
+      "translation_en": "word",
+      "translation_uk": "слово",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Wunsch",
+      "article": "der",
+      "translation_ru": "желание",
+      "translation_en": "wish",
+      "translation_uk": "бажання",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Zettel",
+      "article": "der Zettel - корректный артикль для 'записка' (обычно 'der Zettel' - листок, записка)",
+      "translation_ru": "записка",
+      "translation_en": "note",
+      "translation_uk": "записка",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Ziel",
+      "article": "das",
+      "translation_ru": "цель",
+      "translation_en": "goal",
+      "translation_uk": "мета",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Adresse",
+      "article": "die",
+      "translation_ru": "адрес",
+      "translation_en": "address",
+      "translation_uk": "адреса",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Aufzug",
+      "article": "der",
+      "translation_ru": "лифт",
+      "translation_en": "elevator",
+      "translation_uk": "ліфт",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Bad",
+      "article": "das",
+      "translation_ru": "ванная",
+      "translation_en": "bathroom",
+      "translation_uk": "ванна",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Balkon",
+      "article": "der",
+      "translation_ru": "балкон",
+      "translation_en": "balcony",
+      "translation_uk": "балкон",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Bett",
+      "article": "das",
+      "translation_ru": "кровать",
+      "translation_en": "bed",
+      "translation_uk": "ліжко",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Bibliothek",
+      "article": "die",
+      "translation_ru": "библиотека",
+      "translation_en": "library",
+      "translation_uk": "бібліотека",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Bibliothek",
+      "article": "die",
+      "translation_ru": "библиотека",
+      "translation_en": "library",
+      "translation_uk": "бібліотека",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Doppelzimmer",
+      "article": "das",
+      "translation_ru": "двухместный номер",
+      "translation_en": "double room",
+      "translation_uk": "двомісний номер",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Dusche",
+      "article": "die",
+      "translation_ru": "душ",
+      "translation_en": "shower",
+      "translation_uk": "душ",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Ecke",
+      "article": "die",
+      "translation_ru": "угол",
+      "translation_en": "corner",
+      "translation_uk": "кут",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Eingang",
+      "article": "der",
+      "translation_ru": "вход",
+      "translation_en": "entrance",
+      "translation_uk": "вхід",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Erdgeschoss",
+      "article": "das",
+      "translation_ru": "первый этаж",
+      "translation_en": "ground floor",
+      "translation_uk": "перший поверх",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Fenster",
+      "article": "das",
+      "translation_ru": "окно",
+      "translation_en": "window",
+      "translation_uk": "вікно",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Garage",
+      "article": "die",
+      "translation_ru": "гараж",
+      "translation_en": "garage",
+      "translation_uk": "гараж",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Garten",
+      "article": "der",
+      "translation_ru": "сад",
+      "translation_en": "garden",
+      "translation_uk": "сад",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Halle",
+      "article": "die",
+      "translation_ru": "зал",
+      "translation_en": "hall",
+      "translation_uk": "зал",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Handtuch",
+      "article": "das",
+      "translation_ru": "полотенце",
+      "translation_en": "towel",
+      "translation_uk": "рушник",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Handtücher",
+      "article": "die",
+      "translation_ru": "полотенца",
+      "translation_en": "towels",
+      "translation_uk": "рушники",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Haus",
+      "article": "das",
+      "translation_ru": "дом",
+      "translation_en": "house",
+      "translation_uk": "дім",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Haushalt",
+      "article": "der",
+      "translation_ru": "домашнее хозяйство",
+      "translation_en": "household",
+      "translation_uk": "домашнє господарство",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Haustür",
+      "article": "die",
+      "translation_ru": "входная дверь",
+      "translation_en": "front door",
+      "translation_uk": "вхідні двері",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Heizung",
+      "article": "die",
+      "translation_ru": "отопление",
+      "translation_en": "heating",
+      "translation_uk": "опалення",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Herd",
+      "article": "der",
+      "translation_ru": "плита",
+      "translation_en": "stove",
+      "translation_uk": "плита",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Hotel",
+      "article": "das",
+      "translation_ru": "отель",
+      "translation_en": "hotel",
+      "translation_uk": "готель",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Keller",
+      "article": "der",
+      "translation_ru": "подвал",
+      "translation_en": "cellar",
+      "translation_uk": "підвал",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Kirche",
+      "article": "die",
+      "translation_ru": "церковь",
+      "translation_en": "church",
+      "translation_uk": "церква",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Küche",
+      "article": "die",
+      "translation_ru": "кухня",
+      "translation_en": "kitchen",
+      "translation_uk": "кухня",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Kühlschrank",
+      "article": "der Kühlschrank",
+      "translation_ru": "холодильник",
+      "translation_en": "cooler",
+      "translation_uk": "холодильник",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Lampe",
+      "article": "die",
+      "translation_ru": "лампа",
+      "translation_en": "lamp",
+      "translation_uk": "лампа",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Miete",
+      "article": "die",
+      "translation_ru": "арендная плата",
+      "translation_en": "rent",
+      "translation_uk": "орендна плата",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Möbel",
+      "article": "die",
+      "translation_ru": "мебель",
+      "translation_en": "furniture",
+      "translation_uk": "меблі",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Rathaus",
+      "article": "das",
+      "translation_ru": "ратуша",
+      "translation_en": "city hall",
+      "translation_uk": "ратуша",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Raum",
+      "article": "der",
+      "translation_ru": "комната",
+      "translation_en": "room",
+      "translation_uk": "кімната",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Regal",
+      "article": "das",
+      "translation_ru": "полка",
+      "translation_en": "shelf",
+      "translation_uk": "полиця",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Schlafzimmer",
+      "article": "das",
+      "translation_ru": "спальня",
+      "translation_en": "bedroom",
+      "translation_uk": "спальня",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Schloss",
+      "article": "das",
+      "translation_ru": "замок",
+      "translation_en": "castle",
+      "translation_uk": "замок",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Schlüssel",
+      "article": "der",
+      "translation_ru": "ключ",
+      "translation_en": "key",
+      "translation_uk": "ключ",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Schlüssel",
+      "article": "der",
+      "translation_ru": "ключи",
+      "translation_en": "keys",
+      "translation_uk": "ключі",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Schrank",
+      "article": "der",
+      "translation_ru": "шкаф",
+      "translation_en": "cupboard",
+      "translation_uk": "шафа",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Sofa",
+      "article": "das",
+      "translation_ru": "диван",
+      "translation_en": "sofa",
+      "translation_uk": "диван",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Stock",
+      "article": "der",
+      "translation_ru": "этаж",
+      "translation_en": "floor",
+      "translation_uk": "поверх",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Stockwerk",
+      "article": "das",
+      "translation_ru": "этаж",
+      "translation_en": "floor",
+      "translation_uk": "поверх",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Stuhl",
+      "article": "der",
+      "translation_ru": "стул",
+      "translation_en": "chair",
+      "translation_uk": "стілець",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Tisch",
+      "article": "der",
+      "translation_ru": "стол",
+      "translation_en": "table",
+      "translation_uk": "сті́л",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Toilette",
+      "article": "die",
+      "translation_ru": "туалет",
+      "translation_en": "toilet",
+      "translation_uk": "туалет",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Toilette",
+      "article": "die",
+      "translation_ru": "туалет",
+      "translation_en": "toilet",
+      "translation_uk": "туалет",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Treppe",
+      "article": "die",
+      "translation_ru": "лестница",
+      "translation_en": "stairs",
+      "translation_uk": "сходи",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Tür",
+      "article": "die",
+      "translation_ru": "дверь",
+      "translation_en": "door",
+      "translation_uk": "двері",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Tür",
+      "article": "die",
+      "translation_ru": "дверь",
+      "translation_en": "door",
+      "translation_uk": "двері",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Türen",
+      "article": "die",
+      "translation_ru": "двери",
+      "translation_en": "doors",
+      "translation_uk": "двері",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Umzug",
+      "article": "der",
+      "translation_ru": "переезд",
+      "translation_en": "move",
+      "translation_uk": "переїзд",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Unterkunft",
+      "article": "die",
+      "translation_ru": "жильё",
+      "translation_en": "accommodation",
+      "translation_uk": "житло",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Vermieter",
+      "article": "der",
+      "translation_ru": "арендодатель",
+      "translation_en": "landlord",
+      "translation_uk": "орендодавець",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Vermieterin",
+      "article": "die",
+      "translation_ru": "арендодательница",
+      "translation_en": "landlady",
+      "translation_uk": "орендодавиця",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Wand",
+      "article": "die",
+      "translation_ru": "стена",
+      "translation_en": "wall",
+      "translation_uk": "стіна",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Waschmaschine",
+      "article": "die",
+      "translation_ru": "стиральная машина",
+      "translation_en": "washing machine",
+      "translation_uk": "пральна машина",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Wohnung",
+      "article": "die",
+      "translation_ru": "квартира",
+      "translation_en": "apartment",
+      "translation_uk": "квартира",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Wohnzimmer",
+      "article": "das",
+      "translation_ru": "гостиная",
+      "translation_en": "living room",
+      "translation_uk": "вітальня",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Wäsche",
+      "article": "die",
+      "translation_ru": "белье",
+      "translation_en": "laundry",
+      "translation_uk": "прання",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Zimmer",
+      "article": "das",
+      "translation_ru": "комната",
+      "translation_en": "room",
+      "translation_uk": "кімната",
+      "level": "A2",
+      "topic": "Housing"
+    },
+    {
+      "noun": "Baum",
+      "article": "der",
+      "translation_ru": "дерево",
+      "translation_en": "tree",
+      "translation_uk": "дерево",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Berg",
+      "article": "der",
+      "translation_ru": "гора",
+      "translation_en": "mountain",
+      "translation_uk": "гора",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Berge",
+      "article": "die",
+      "translation_ru": "горы",
+      "translation_en": "mountains",
+      "translation_uk": "гори",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Blatt",
+      "article": "das",
+      "translation_ru": "лист",
+      "translation_en": "leaf",
+      "translation_uk": "лист",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Blume",
+      "article": "die",
+      "translation_ru": "цветок",
+      "translation_en": "flower",
+      "translation_uk": "квітка",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Blumen",
+      "article": "die",
+      "translation_ru": "цветы",
+      "translation_en": "flowers",
+      "translation_uk": "квіти",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Fluss",
+      "article": "der",
+      "translation_ru": "река",
+      "translation_en": "river",
+      "translation_uk": "річка",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Gewitter",
+      "article": "das",
+      "translation_ru": "гроза",
+      "translation_en": "thunderstorm",
+      "translation_uk": "гроза",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Himmel",
+      "article": "der",
+      "translation_ru": "небо",
+      "translation_en": "sky",
+      "translation_uk": "небо",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Landschaft",
+      "article": "die",
+      "translation_ru": "пейзаж",
+      "translation_en": "landscape",
+      "translation_uk": "пейзаж",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Licht",
+      "article": "das",
+      "translation_ru": "свет",
+      "translation_en": "light",
+      "translation_uk": "світло",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Meer",
+      "article": "das",
+      "translation_ru": "море",
+      "translation_en": "sea",
+      "translation_uk": "морe",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Mineral",
+      "article": "das",
+      "translation_ru": "минерал",
+      "translation_en": "mineral",
+      "translation_uk": "мінерал",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Müll",
+      "article": "der Müll (no article or der Müll is used, but der is uncommon, better no article)",
+      "translation_ru": "мусор",
+      "translation_en": "trash",
+      "translation_uk": "сміття",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Natur",
+      "article": "die",
+      "translation_ru": "природа",
+      "translation_en": "nature",
+      "translation_uk": "природа",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Park",
+      "article": "der",
+      "translation_ru": "парк",
+      "translation_en": "park",
+      "translation_uk": "парк",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Pflanze",
+      "article": "die",
+      "translation_ru": "растение",
+      "translation_en": "plant",
+      "translation_uk": "рослина",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Regen",
+      "article": "der",
+      "translation_ru": "дождь",
+      "translation_en": "rain",
+      "translation_uk": "дощ",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Rose",
+      "article": "die",
+      "translation_ru": "роза",
+      "translation_en": "rose",
+      "translation_uk": "роза",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "See",
+      "article": "der",
+      "translation_ru": "озеро",
+      "translation_en": "lake",
+      "translation_uk": "озеро",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "See",
+      "article": "die",
+      "translation_ru": "море",
+      "translation_en": "sea",
+      "translation_uk": "море",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Sonne",
+      "article": "die",
+      "translation_ru": "солнце",
+      "translation_en": "sun",
+      "translation_uk": "сонце",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Strand",
+      "article": "der",
+      "translation_ru": "пляж",
+      "translation_en": "beach",
+      "translation_uk": "пляж",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Wald",
+      "article": "der",
+      "translation_ru": "лес",
+      "translation_en": "forest",
+      "translation_uk": "ліс",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Wasser",
+      "article": "das",
+      "translation_ru": "вода",
+      "translation_en": "water",
+      "translation_uk": "вода",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Wetter",
+      "article": "das",
+      "translation_ru": "погода",
+      "translation_en": "weather",
+      "translation_uk": "погода",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Wind",
+      "article": "der",
+      "translation_ru": "ветер",
+      "translation_en": "wind",
+      "translation_uk": "вітер",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Wolke",
+      "article": "die",
+      "translation_ru": "облако",
+      "translation_en": "cloud",
+      "translation_uk": "хмара",
+      "level": "A2",
+      "topic": "Environment"
+    },
+    {
+      "noun": "Fisch",
+      "article": "der",
+      "translation_ru": "рыба",
+      "translation_en": "fish",
+      "translation_uk": "риба",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Hund",
+      "article": "der",
+      "translation_ru": "собака",
+      "translation_en": "dog",
+      "translation_uk": "собака",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Hähnchen",
+      "article": "das",
+      "translation_ru": "цыпленок",
+      "translation_en": "chicken",
+      "translation_uk": "курча",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Katze",
+      "article": "die",
+      "translation_ru": "кот",
+      "translation_en": "cat",
+      "translation_uk": "кіт",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Pferd",
+      "article": "das",
+      "translation_ru": "лошадь",
+      "translation_en": "horse",
+      "translation_uk": "кінь",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Rind",
+      "article": "das",
+      "translation_ru": "крупный рогатый скот",
+      "translation_en": "cattle",
+      "translation_uk": "велика рогата худоба",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Schwein",
+      "article": "das",
+      "translation_ru": "свинья",
+      "translation_en": "pig",
+      "translation_uk": "свиня",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Tier",
+      "article": "das",
+      "translation_ru": "животное",
+      "translation_en": "animal",
+      "translation_uk": "тварина",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Vogel",
+      "article": "der",
+      "translation_ru": "птица",
+      "translation_en": "bird",
+      "translation_uk": "птах",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Vögel",
+      "article": "die",
+      "translation_ru": "птицы",
+      "translation_en": "birds",
+      "translation_uk": "птахи",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Zoo",
+      "article": "der",
+      "translation_ru": "зоопарк",
+      "translation_en": "zoo",
+      "translation_uk": "зоопарк",
+      "level": "A2",
+      "topic": "Animals"
+    },
+    {
+      "noun": "Ausland",
+      "article": "das",
+      "translation_ru": "зарубежье",
+      "translation_en": "abroad",
+      "translation_uk": "закордоння",
+      "level": "A2",
+      "topic": "Countries & Nationalities"
+    },
+    {
+      "noun": "Land",
+      "article": "das",
+      "translation_ru": "страна",
+      "translation_en": "country",
+      "translation_uk": "країна",
+      "level": "A2",
+      "topic": "Countries & Nationalities"
+    },
+    {
+      "noun": "Schweiz",
+      "article": "die",
+      "translation_ru": "Швейцария",
+      "translation_en": "Switzerland",
+      "translation_uk": "Швейцарія",
+      "level": "A2",
+      "topic": "Countries & Nationalities"
+    },
+    {
+      "noun": "Bachstraße",
+      "article": "die",
+      "translation_ru": "улица Баха",
+      "translation_en": "stream street",
+      "translation_uk": "вулиця Баха",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Dorf",
+      "article": "das Dorf - neuter",
+      "translation_ru": "деревня",
+      "translation_en": "village",
+      "translation_uk": "село",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Hauptstadt",
+      "article": "die",
+      "translation_ru": "столица",
+      "translation_en": "capital city",
+      "translation_uk": "столиця",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Heimat",
+      "article": "die",
+      "translation_ru": "родина",
+      "translation_en": "homeland",
+      "translation_uk": "батьківщина",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Insel",
+      "article": "die",
+      "translation_ru": "остров",
+      "translation_en": "island",
+      "translation_uk": "острів",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Nordsee",
+      "article": "die Nordsee",
+      "translation_ru": "Северное море",
+      "translation_en": "North Sea",
+      "translation_uk": "Північне море",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Nähe",
+      "article": "die",
+      "translation_ru": "близость",
+      "translation_en": "vicinity",
+      "translation_uk": "близькість",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Nähe",
+      "article": "die",
+      "translation_ru": "близость",
+      "translation_en": "vicinity",
+      "translation_uk": "близькість",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Ort",
+      "article": "der",
+      "translation_ru": "место",
+      "translation_en": "place",
+      "translation_uk": "місце",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Ostsee",
+      "article": "die",
+      "translation_ru": "Балтийское море",
+      "translation_en": "Baltic Sea",
+      "translation_uk": "Балтійське море",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Platz",
+      "article": "der",
+      "translation_ru": "площадь",
+      "translation_en": "square",
+      "translation_uk": "площа",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Plätze",
+      "article": "die",
+      "translation_ru": "места",
+      "translation_en": "places",
+      "translation_uk": "місця",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Sehenswürdigkeiten",
+      "article": "die",
+      "translation_ru": "достопримечательности",
+      "translation_en": "sights",
+      "translation_uk": "пам'ятки",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Stadt",
+      "article": "die",
+      "translation_ru": "город",
+      "translation_en": "city",
+      "translation_uk": "місто",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Stadt",
+      "article": "die",
+      "translation_ru": "город",
+      "translation_en": "city",
+      "translation_uk": "місто",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Stadtplan",
+      "article": "der",
+      "translation_ru": "карта",
+      "translation_en": "map",
+      "translation_uk": "карта",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Straße",
+      "article": "die",
+      "translation_ru": "улица",
+      "translation_en": "street",
+      "translation_uk": "вулиця",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Straße",
+      "article": "die",
+      "translation_ru": "улица",
+      "translation_en": "street",
+      "translation_uk": "вулиця",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Straße",
+      "article": "die",
+      "translation_ru": "улицы",
+      "translation_en": "streets",
+      "translation_uk": "вулиці",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Tengstraße",
+      "article": "die",
+      "translation_ru": "улица Тенг",
+      "translation_en": "Teng Street",
+      "translation_uk": "вулиця Тенг",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Welt",
+      "article": "die",
+      "translation_ru": "мир",
+      "translation_en": "world",
+      "translation_uk": "світ",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Zentrum",
+      "article": "das",
+      "translation_ru": "центр",
+      "translation_en": "center",
+      "translation_uk": "центр",
+      "level": "A2",
+      "topic": "Geography"
+    },
+    {
+      "noun": "Fach",
+      "article": "das",
+      "translation_ru": "предмет",
+      "translation_en": "subject",
+      "translation_uk": "предмет",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Tafel",
+      "article": "die",
+      "translation_ru": "доска",
+      "translation_en": "blackboard",
+      "translation_uk": "дошка",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Ausbildung",
+      "article": "die",
+      "translation_ru": "обучение",
+      "translation_en": "training",
+      "translation_uk": "навчання",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Buch",
+      "article": "das",
+      "translation_ru": "книга",
+      "translation_en": "book",
+      "translation_uk": "книга",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Buchstabe",
+      "article": "der",
+      "translation_ru": "буква",
+      "translation_en": "letter",
+      "translation_uk": "буква",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Führerscheinprüfung",
+      "article": "die",
+      "translation_ru": "экзамен на водительские права",
+      "translation_en": "driver's test",
+      "translation_uk": "іспит на водійські права",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Hausaufgaben",
+      "article": "die",
+      "translation_ru": "домашнее задание",
+      "translation_en": "homework",
+      "translation_uk": "домашнє завдання",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Kindergarten",
+      "article": "der",
+      "translation_ru": "детский сад",
+      "translation_en": "kindergarten",
+      "translation_uk": "дитячий садок",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Klasse",
+      "article": "die",
+      "translation_ru": "класс",
+      "translation_en": "class",
+      "translation_uk": "клас",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Kurs",
+      "article": "der",
+      "translation_ru": "курс",
+      "translation_en": "course",
+      "translation_uk": "курс",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Kursbuch",
+      "article": "das",
+      "translation_ru": "учебник",
+      "translation_en": "coursebook",
+      "translation_uk": "підручник",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Note",
+      "article": "die",
+      "translation_ru": "оценка",
+      "translation_en": "grade",
+      "translation_uk": "оцінка",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Prüfung",
+      "article": "die",
+      "translation_ru": "экзамен",
+      "translation_en": "exam",
+      "translation_uk": "екзамен",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Satz",
+      "article": "der",
+      "translation_ru": "предложение",
+      "translation_en": "sentence",
+      "translation_uk": "речення",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Schule",
+      "article": "die",
+      "translation_ru": "школа",
+      "translation_en": "school",
+      "translation_uk": "школа",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Seite",
+      "article": "die",
+      "translation_ru": "страница",
+      "translation_en": "page",
+      "translation_uk": "сторінка",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Sprache",
+      "article": "die",
+      "translation_ru": "язык",
+      "translation_en": "language",
+      "translation_uk": "мова",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Stift",
+      "article": "der",
+      "translation_ru": "ручка",
+      "translation_en": "pen",
+      "translation_uk": "ручка",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Stipendium",
+      "article": "das",
+      "translation_ru": "стипендия",
+      "translation_en": "stipend",
+      "translation_uk": "стипендія",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Studium",
+      "article": "das",
+      "translation_ru": "учёба",
+      "translation_en": "studies",
+      "translation_uk": "навчання",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Text",
+      "article": "der",
+      "translation_ru": "текст",
+      "translation_en": "text",
+      "translation_uk": "текст",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Universität",
+      "article": "die",
+      "translation_ru": "университет",
+      "translation_en": "university",
+      "translation_uk": "університет",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Universität",
+      "article": "die",
+      "translation_ru": "университет",
+      "translation_en": "university",
+      "translation_uk": "університет",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Unterricht",
+      "article": "der",
+      "translation_ru": "урок",
+      "translation_en": "lesson",
+      "translation_uk": "урок",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Zeugnis",
+      "article": "das",
+      "translation_ru": "табель успеваемости",
+      "translation_en": "report card",
+      "translation_uk": "табель успішності",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Arbeit",
+      "article": "die",
+      "translation_ru": "работа",
+      "translation_en": "work",
+      "translation_uk": "робота",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Baustelle",
+      "article": "die",
+      "translation_ru": "стройка",
+      "translation_en": "construction site",
+      "translation_uk": "будівельний майданчик",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Bewerbung",
+      "article": "die",
+      "translation_ru": "заявление",
+      "translation_en": "application",
+      "translation_uk": "заява",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Büro",
+      "article": "das",
+      "translation_ru": "офис",
+      "translation_en": "office",
+      "translation_uk": "офіс",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Chef",
+      "article": "der",
+      "translation_ru": "босс",
+      "translation_en": "boss",
+      "translation_uk": "бос",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Chefin",
+      "article": "die",
+      "translation_ru": "женщина-босс",
+      "translation_en": "female boss",
+      "translation_uk": "жінка-бос",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Datei",
+      "article": "die",
+      "translation_ru": "файл",
+      "translation_en": "file",
+      "translation_uk": "файл",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Firma",
+      "article": "die",
+      "translation_ru": "компания",
+      "translation_en": "company",
+      "translation_uk": "компанія",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Gehalt",
+      "article": "das",
+      "translation_ru": "зарплата",
+      "translation_en": "salary",
+      "translation_uk": "зарплата",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Hausmeister",
+      "article": "der",
+      "translation_ru": "завхоз",
+      "translation_en": "caretaker",
+      "translation_uk": "двірник",
+      "level": "A2",
+      "topic": "Professions"
+    },
+    {
+      "noun": "Interview",
+      "article": "das",
+      "translation_ru": "интервью",
+      "translation_en": "interview",
+      "translation_uk": "інтерв'ю",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Job",
+      "article": "der",
+      "translation_ru": "работа",
+      "translation_en": "job",
+      "translation_uk": "робота",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Kollege",
+      "article": "der",
+      "translation_ru": "коллега",
+      "translation_en": "colleague",
+      "translation_uk": "колега",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Kollegin",
+      "article": "die",
+      "translation_ru": "коллега (женщина)",
+      "translation_en": "female colleague",
+      "translation_uk": "колега (жінка)",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Mitarbeiter",
+      "article": "der",
+      "translation_ru": "сотрудник",
+      "translation_en": "employee",
+      "translation_uk": "співробітник",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Praktikum",
+      "article": "das",
+      "translation_ru": "стажировка",
+      "translation_en": "internship",
+      "translation_uk": "стажування",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Projekt",
+      "article": "das",
+      "translation_ru": "проект",
+      "translation_en": "project",
+      "translation_uk": "проект",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Stelle",
+      "article": "die",
+      "translation_ru": "работа",
+      "translation_en": "job",
+      "translation_uk": "робота",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Team",
+      "article": "das",
+      "translation_ru": "команда",
+      "translation_en": "team",
+      "translation_uk": "команда",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Werkstatt",
+      "article": "die",
+      "translation_ru": "мастерская",
+      "translation_en": "workshop",
+      "translation_uk": "майстерня",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Workshop",
+      "article": "der",
+      "translation_ru": "мастерская",
+      "translation_en": "workshop",
+      "translation_uk": "майстерня",
+      "level": "A2",
+      "topic": "Work & Career"
+    },
+    {
+      "noun": "Abendessen",
+      "article": "das",
+      "translation_ru": "ужин",
+      "translation_en": "dinner",
+      "translation_uk": "вечеря",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Apfel",
+      "article": "der",
+      "translation_ru": "яблоко",
+      "translation_en": "apple",
+      "translation_uk": "яблуко",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Banane",
+      "article": "die",
+      "translation_ru": "банан",
+      "translation_en": "banana",
+      "translation_uk": "банан",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Bier",
+      "article": "das",
+      "translation_ru": "пиво",
+      "translation_en": "beer",
+      "translation_uk": "пиво",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Birne",
+      "article": "die",
+      "translation_ru": "груша",
+      "translation_en": "pear",
+      "translation_uk": "грішка",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Bohne",
+      "article": "die",
+      "translation_ru": "фасоль",
+      "translation_en": "bean",
+      "translation_uk": "квасоля",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Brot",
+      "article": "das",
+      "translation_ru": "хлеб",
+      "translation_en": "bread",
+      "translation_uk": "хліб",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Brötchen",
+      "article": "das",
+      "translation_ru": "булочка",
+      "translation_en": "bread roll",
+      "translation_uk": "булочка",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Butter",
+      "article": "die",
+      "translation_ru": "масло",
+      "translation_en": "butter",
+      "translation_uk": "масло",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Creme",
+      "article": "die",
+      "translation_ru": "крем",
+      "translation_en": "cream",
+      "translation_uk": "крем",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Creme",
+      "article": "die",
+      "translation_ru": "крем",
+      "translation_en": "cream",
+      "translation_uk": "крем",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Ei",
+      "article": "das",
+      "translation_ru": "яйцо",
+      "translation_en": "egg",
+      "translation_uk": "яйце",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Eis",
+      "article": "das",
+      "translation_ru": "мороженое",
+      "translation_en": "ice cream",
+      "translation_uk": "морозиво",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Essen",
+      "article": "das",
+      "translation_ru": "еда",
+      "translation_en": "food",
+      "translation_uk": "їжа",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Fleisch",
+      "article": "das",
+      "translation_ru": "мясо",
+      "translation_en": "meat",
+      "translation_uk": "м'ясо",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Frühstück",
+      "article": "das",
+      "translation_ru": "завтрак",
+      "translation_en": "breakfast",
+      "translation_uk": "сніданок",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Gemüse",
+      "article": "das",
+      "translation_ru": "овощи",
+      "translation_en": "vegetables",
+      "translation_uk": "овочі",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Geschirr",
+      "article": "das",
+      "translation_ru": "посуда",
+      "translation_en": "dishes",
+      "translation_uk": "посуд",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Getränk",
+      "article": "das",
+      "translation_ru": "напиток",
+      "translation_en": "drink",
+      "translation_uk": "напій",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Hamburger",
+      "article": "der",
+      "translation_ru": "гамбургер",
+      "translation_en": "hamburger",
+      "translation_uk": "гамбургер",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Kaffee",
+      "article": "der",
+      "translation_ru": "кофе",
+      "translation_en": "coffee",
+      "translation_uk": "кава",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Kartoffel",
+      "article": "die",
+      "translation_ru": "картофель",
+      "translation_en": "potato",
+      "translation_uk": "картопля",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Kartoffeln",
+      "article": "die",
+      "translation_ru": "картофель",
+      "translation_en": "potatoes",
+      "translation_uk": "картопля",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Kuchen",
+      "article": "der",
+      "translation_ru": "торт",
+      "translation_en": "cake",
+      "translation_uk": "торт",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Käse",
+      "article": "der",
+      "translation_ru": "сыр",
+      "translation_en": "cheese",
+      "translation_uk": "сир",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Lebensmittel",
+      "article": "die",
+      "translation_ru": "продукты питания",
+      "translation_en": "food",
+      "translation_uk": "продукти харчування",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Medikament",
+      "article": "das",
+      "translation_ru": "лекарство",
+      "translation_en": "medicine",
+      "translation_uk": "ліки",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Messer",
+      "article": "das",
+      "translation_ru": "нож",
+      "translation_en": "knife",
+      "translation_uk": "ніж",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Milch",
+      "article": "die",
+      "translation_ru": "молоко",
+      "translation_en": "milk",
+      "translation_uk": "молоко",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Mittagessen",
+      "article": "das",
+      "translation_ru": "обед",
+      "translation_en": "lunch",
+      "translation_uk": "обід",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Nudel",
+      "article": "die",
+      "translation_ru": "лапша",
+      "translation_en": "noodle",
+      "translation_uk": "локшина",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Obst",
+      "article": "das",
+      "translation_ru": "фрукты",
+      "translation_en": "fruit",
+      "translation_uk": "фрукти",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Orange",
+      "article": "die",
+      "translation_ru": "апельсин",
+      "translation_en": "orange",
+      "translation_uk": "апельсин",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Pfanne",
+      "article": "die",
+      "translation_ru": "сковорода",
+      "translation_en": "pan",
+      "translation_uk": "сковорода",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Pizza",
+      "article": "die",
+      "translation_ru": "пицца",
+      "translation_en": "pizza",
+      "translation_uk": "піца",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Pommes",
+      "article": "die",
+      "translation_ru": "картофель фри",
+      "translation_en": "fried potatoes",
+      "translation_uk": "картопля фрі",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Portion",
+      "article": "die",
+      "translation_ru": "порция",
+      "translation_en": "portion",
+      "translation_uk": "порція",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Reis",
+      "article": "der (regional) or das (standard)",
+      "translation_ru": "рис",
+      "translation_en": "rice",
+      "translation_uk": "рис",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Rezept",
+      "article": "das",
+      "translation_ru": "рецепт",
+      "translation_en": "recipe",
+      "translation_uk": "рецепт",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Saft",
+      "article": "der",
+      "translation_ru": "сок",
+      "translation_en": "juice",
+      "translation_uk": "сік",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Salat",
+      "article": "der",
+      "translation_ru": "салат",
+      "translation_en": "salad",
+      "translation_uk": "салат",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Salz",
+      "article": "das Salz - neutrum, но обычно используется без артикля, артикль 'das' возможен",
+      "translation_ru": "соль",
+      "translation_en": "salt",
+      "translation_uk": "сіль",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Schokolade",
+      "article": "die",
+      "translation_ru": "шоколад",
+      "translation_en": "chocolate",
+      "translation_uk": "шоколад",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Speisekarte",
+      "article": "die",
+      "translation_ru": "меню",
+      "translation_en": "menu",
+      "translation_uk": "меню",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Suppe",
+      "article": "die",
+      "translation_ru": "суп",
+      "translation_en": "soup",
+      "translation_uk": "суп",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Süßigkeiten",
+      "article": "die",
+      "translation_ru": "конфеты",
+      "translation_en": "sweets",
+      "translation_uk": "цукерки",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Tablette",
+      "article": "die",
+      "translation_ru": "таблетка",
+      "translation_en": "tablet",
+      "translation_uk": "таблетка",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Tabletten",
+      "article": "die",
+      "translation_ru": "таблетки",
+      "translation_en": "pills",
+      "translation_uk": "таблетки",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Tasse",
+      "article": "die",
+      "translation_ru": "чашка",
+      "translation_en": "cup",
+      "translation_uk": "чашка",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Tee",
+      "article": "der",
+      "translation_ru": "чай",
+      "translation_en": "tea",
+      "translation_uk": "чай",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Teller",
+      "article": "die",
+      "translation_ru": "тарелки",
+      "translation_en": "plates",
+      "translation_uk": "тарілки",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Tomate",
+      "article": "die",
+      "translation_ru": "помидор",
+      "translation_en": "tomato",
+      "translation_uk": "помідор",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Topf",
+      "article": "der",
+      "translation_ru": "горшок",
+      "translation_en": "pot",
+      "translation_uk": "горщик",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Torte",
+      "article": "die",
+      "translation_ru": "торт",
+      "translation_en": "cake",
+      "translation_uk": "торт",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Wein",
+      "article": "der",
+      "translation_ru": "вино",
+      "translation_en": "wine",
+      "translation_uk": "вино",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Wurst",
+      "article": "die",
+      "translation_ru": "колбаса",
+      "translation_en": "sausage",
+      "translation_uk": "ковбаса",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Zitrone",
+      "article": "die",
+      "translation_ru": "лимон",
+      "translation_en": "lemon",
+      "translation_uk": "лимон",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Zucker",
+      "article": "Zucker - мужской род, артикль 'der' корректен, но часто используется без артикля",
+      "translation_ru": "сахар",
+      "translation_en": "sugar",
+      "translation_uk": "цукор",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Öl",
+      "article": "das",
+      "translation_ru": "масло",
+      "translation_en": "oil",
+      "translation_uk": "олія",
+      "level": "A2",
+      "topic": "Food & Drink"
+    },
+    {
+      "noun": "Angebot",
+      "article": "das",
+      "translation_ru": "предложение",
+      "translation_en": "offer",
+      "translation_uk": "пропозиція",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Angebote",
+      "article": "die",
+      "translation_ru": "предложения",
+      "translation_en": "offers",
+      "translation_uk": "пропозиції",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Anzeigen",
+      "article": "die",
+      "translation_ru": "объявления",
+      "translation_en": "advertisements",
+      "translation_uk": "оголошення",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Anzug",
+      "article": "der",
+      "translation_ru": "костюм",
+      "translation_en": "suit",
+      "translation_uk": "костюм",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Apparat",
+      "article": "der",
+      "translation_ru": "аппарат",
+      "translation_en": "device",
+      "translation_uk": "апарат",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Automat",
+      "article": "der",
+      "translation_ru": "автомат",
+      "translation_en": "machine",
+      "translation_uk": "автомат",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Bleistift",
+      "article": "der",
+      "translation_ru": "карандаш",
+      "translation_en": "pencil",
+      "translation_uk": "олівець",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Bluse",
+      "article": "die",
+      "translation_ru": "блузка",
+      "translation_en": "blouse",
+      "translation_uk": "блузка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Briefmarke",
+      "article": "die",
+      "translation_ru": "марка",
+      "translation_en": "stamp",
+      "translation_uk": "марка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Computer",
+      "article": "der",
+      "translation_ru": "компьютер",
+      "translation_en": "computer",
+      "translation_uk": "комп’ютер",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Drucker",
+      "article": "der",
+      "translation_ru": "принтер",
+      "translation_en": "printer",
+      "translation_uk": "принтер",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Einkauf",
+      "article": "der",
+      "translation_ru": "покупки",
+      "translation_en": "shopping",
+      "translation_uk": "покупки",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Ermäßigung",
+      "article": "die",
+      "translation_ru": "скидка",
+      "translation_en": "discount",
+      "translation_uk": "знижка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Flasche",
+      "article": "die",
+      "translation_ru": "бутылка",
+      "translation_en": "bottle",
+      "translation_uk": "пляшка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Flohmarkt",
+      "article": "der",
+      "translation_ru": "блошиный рынок",
+      "translation_en": "flea market",
+      "translation_uk": "блошиний ринок",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Fundsachen",
+      "article": "die",
+      "translation_ru": "найденные вещи",
+      "translation_en": "lost property",
+      "translation_uk": "знайдені речі",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Gabel",
+      "article": "die",
+      "translation_ru": "вилка",
+      "translation_en": "fork",
+      "translation_uk": "вилка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Geldbörse",
+      "article": "die",
+      "translation_ru": "кошелёк",
+      "translation_en": "wallet",
+      "translation_uk": "гаманець",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Gerät",
+      "article": "das",
+      "translation_ru": "устройство",
+      "translation_en": "device",
+      "translation_uk": "пристрій",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Geschenk",
+      "article": "das",
+      "translation_ru": "подарок",
+      "translation_en": "present",
+      "translation_uk": "подарунок",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Geschäft",
+      "article": "das",
+      "translation_ru": "магазин",
+      "translation_en": "shop",
+      "translation_uk": "магазин",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Glas",
+      "article": "das",
+      "translation_ru": "стекло",
+      "translation_en": "glass",
+      "translation_uk": "скло",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Handy",
+      "article": "das",
+      "translation_ru": "мобильный телефон",
+      "translation_en": "mobile phone",
+      "translation_uk": "мобільний телефон",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Handys",
+      "article": "die",
+      "translation_ru": "мобильные телефоны",
+      "translation_en": "mobile phones",
+      "translation_uk": "мобільні телефони",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Heft",
+      "article": "das",
+      "translation_ru": "тетрадь",
+      "translation_en": "notebook",
+      "translation_uk": "зошит",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Hemd",
+      "article": "das",
+      "translation_ru": "рубашка",
+      "translation_en": "shirt",
+      "translation_uk": "сорочка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Hose",
+      "article": "die",
+      "translation_ru": "штаны",
+      "translation_en": "pants",
+      "translation_uk": "штани",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Jacke",
+      "article": "die",
+      "translation_ru": "куртка",
+      "translation_en": "jacket",
+      "translation_uk": "куртка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Jeans",
+      "article": "die",
+      "translation_ru": "джинсы",
+      "translation_en": "jeans",
+      "translation_uk": "джинси",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kamera",
+      "article": "die",
+      "translation_ru": "камера",
+      "translation_en": "camera",
+      "translation_uk": "камера",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Karte",
+      "article": "die",
+      "translation_ru": "карта",
+      "translation_en": "card",
+      "translation_uk": "карта",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kasse",
+      "article": "die",
+      "translation_ru": "касса",
+      "translation_en": "cash register",
+      "translation_uk": "каса",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kasse",
+      "article": "die",
+      "translation_ru": "касса",
+      "translation_en": "cash desk",
+      "translation_uk": "касa",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kaufhaus",
+      "article": "das",
+      "translation_ru": "универмаг",
+      "translation_en": "department store",
+      "translation_uk": "універмаг",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kette",
+      "article": "die",
+      "translation_ru": "цепь",
+      "translation_en": "chain",
+      "translation_uk": "ланцюг",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kiosk",
+      "article": "der",
+      "translation_ru": "киоск",
+      "translation_en": "kiosk",
+      "translation_uk": "кіоск",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kleid",
+      "article": "das",
+      "translation_ru": "платье",
+      "translation_en": "dress",
+      "translation_uk": "плаття",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kleidung",
+      "article": "die",
+      "translation_ru": "одежда",
+      "translation_en": "clothes",
+      "translation_uk": "одяг",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Kosmetik",
+      "article": "die",
+      "translation_ru": "косметика",
+      "translation_en": "cosmetics",
+      "translation_uk": "косметика",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Laden",
+      "article": "der",
+      "translation_ru": "магазин",
+      "translation_en": "shop",
+      "translation_uk": "магазин",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Laptop",
+      "article": "das",
+      "translation_ru": "ноутбук",
+      "translation_en": "laptop",
+      "translation_uk": "ноутбук",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Link",
+      "article": "der",
+      "translation_ru": "ссылка",
+      "translation_en": "link",
+      "translation_uk": "посилання",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Löffel",
+      "article": "der",
+      "translation_ru": "ложка",
+      "translation_en": "spoon",
+      "translation_uk": "ложка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Mantel",
+      "article": "der",
+      "translation_ru": "пальто",
+      "translation_en": "coat",
+      "translation_uk": "пальто",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Markt",
+      "article": "der",
+      "translation_ru": "рынок",
+      "translation_en": "market",
+      "translation_uk": "ринок",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Maschine",
+      "article": "die",
+      "translation_ru": "машина",
+      "translation_en": "machine",
+      "translation_uk": "машина",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Mobil",
+      "article": "das",
+      "translation_ru": "мобильный телефон",
+      "translation_en": "mobile phone",
+      "translation_uk": "мобільний телефон",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Mode",
+      "article": "die",
+      "translation_ru": "мода",
+      "translation_en": "fashion",
+      "translation_uk": "мода",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Mütze",
+      "article": "die",
+      "translation_ru": "шапка",
+      "translation_en": "cap",
+      "translation_uk": "шапка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Paar",
+      "article": "das",
+      "translation_ru": "пара",
+      "translation_en": "pair",
+      "translation_uk": "пара",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Paket",
+      "article": "das",
+      "translation_ru": "пакет",
+      "translation_en": "package",
+      "translation_uk": "пакет",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Papier",
+      "article": "das",
+      "translation_ru": "бумага",
+      "translation_en": "paper",
+      "translation_uk": "папір",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Papiere",
+      "article": "die",
+      "translation_ru": "бумаги",
+      "translation_en": "papers",
+      "translation_uk": "папери",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Parfüm",
+      "article": "das",
+      "translation_ru": "парфюм",
+      "translation_en": "perfume",
+      "translation_uk": "парфуми",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Plakat",
+      "article": "das",
+      "translation_ru": "плакат",
+      "translation_en": "poster",
+      "translation_uk": "плакат",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Preis",
+      "article": "der",
+      "translation_ru": "цена",
+      "translation_en": "price",
+      "translation_uk": "ціна",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Produkt",
+      "article": "das",
+      "translation_ru": "продукт",
+      "translation_en": "product",
+      "translation_uk": "продукт",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Prospekt",
+      "article": "der",
+      "translation_ru": "брошюра",
+      "translation_en": "brochure",
+      "translation_uk": "брошура",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Pullover",
+      "article": "der",
+      "translation_ru": "свитер",
+      "translation_en": "jumper",
+      "translation_uk": "светр",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Ring",
+      "article": "der",
+      "translation_ru": "кольцо",
+      "translation_en": "ring",
+      "translation_uk": "кільце",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Rock",
+      "article": "der",
+      "translation_ru": "юбка",
+      "translation_en": "skirt",
+      "translation_uk": "спідниця",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Sache",
+      "article": "die",
+      "translation_ru": "вещь",
+      "translation_en": "thing",
+      "translation_uk": "річ",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Sachen",
+      "article": "die",
+      "translation_ru": "вещи",
+      "translation_en": "things",
+      "translation_uk": "речі",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Schere",
+      "article": "die",
+      "translation_ru": "ножницы",
+      "translation_en": "scissors",
+      "translation_uk": "ножиці",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Schuh",
+      "article": "der",
+      "translation_ru": "ботинок",
+      "translation_en": "shoe",
+      "translation_uk": "туфля",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Schuhe",
+      "article": "die",
+      "translation_ru": "обувь",
+      "translation_en": "shoes",
+      "translation_uk": "взуття",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Seife",
+      "article": "die",
+      "translation_ru": "мыло",
+      "translation_en": "soap",
+      "translation_uk": "мило",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Stiefel",
+      "article": "der",
+      "translation_ru": "ботинок",
+      "translation_en": "boot",
+      "translation_uk": "чобіт",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Stück",
+      "article": "das",
+      "translation_ru": "кусок",
+      "translation_en": "piece",
+      "translation_uk": "шматок",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Supermarkt",
+      "article": "der",
+      "translation_ru": "супермаркет",
+      "translation_en": "supermarket",
+      "translation_uk": "супермаркет",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "T-Shirt",
+      "article": "das",
+      "translation_ru": "футболка",
+      "translation_en": "T-shirt",
+      "translation_uk": "футболка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Tablet",
+      "article": "das",
+      "translation_ru": "планшет",
+      "translation_en": "tablet",
+      "translation_uk": "планшет",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Tasche",
+      "article": "die",
+      "translation_ru": "сумка",
+      "translation_en": "bag",
+      "translation_uk": "сумка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Tasche",
+      "article": "die",
+      "translation_ru": "сумка",
+      "translation_en": "bag",
+      "translation_uk": "сумка",
+      "level": "A2",
+      "topic": "Shopping & Everyday Items"
+    },
+    {
+      "noun": "Geld",
+      "article": "das",
+      "translation_ru": "деньги",
+      "translation_en": "money",
+      "translation_uk": "гроші",
+      "level": "A2",
+      "topic": "Currencies & Measurements"
+    },
+    {
+      "noun": "Kredit",
+      "article": "der",
+      "translation_ru": "кредит",
+      "translation_en": "loan",
+      "translation_uk": "кредит",
+      "level": "A2",
+      "topic": "Currencies & Measurements"
+    },
+    {
+      "noun": "Taschengeld",
+      "article": "das",
+      "translation_ru": "карманные деньги",
+      "translation_en": "pocket money",
+      "translation_uk": "кишенькові гроші",
+      "level": "A2",
+      "topic": "Currencies & Measurements"
+    },
+    {
+      "noun": "Größe",
+      "article": "die",
+      "translation_ru": "размер",
+      "translation_en": "size",
+      "translation_uk": "розмір",
+      "level": "A2",
+      "topic": "Measurements"
+    },
+    {
+      "noun": "Menge",
+      "article": "die",
+      "translation_ru": "количество",
+      "translation_en": "amount",
+      "translation_uk": "кількість",
+      "level": "A2",
+      "topic": "Measurements"
+    },
+    {
+      "noun": "Anmeldung",
+      "article": "die",
+      "translation_ru": "регистрация",
+      "translation_en": "registration",
+      "translation_uk": "реєстрація",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Anruf",
+      "article": "der",
+      "translation_ru": "звонок",
+      "translation_en": "call",
+      "translation_uk": "дзвінок",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Anrufbeantworter",
+      "article": "der",
+      "translation_ru": "автоответчик",
+      "translation_en": "answering machine",
+      "translation_uk": "автовідповідач",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Anzeige",
+      "article": "die",
+      "translation_ru": "объявление",
+      "translation_en": "advertisement",
+      "translation_uk": "оголошення",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Apotheke",
+      "article": "die",
+      "translation_ru": "аптека",
+      "translation_en": "pharmacy",
+      "translation_uk": "аптека",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Apotheke",
+      "article": "die",
+      "translation_ru": "аптека",
+      "translation_en": "pharmacy",
+      "translation_uk": "аптека",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Auskunft",
+      "article": "die",
+      "translation_ru": "справка",
+      "translation_en": "information",
+      "translation_uk": "довідка",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Bank",
+      "article": "die",
+      "translation_ru": "банк",
+      "translation_en": "bank",
+      "translation_uk": "банк",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Bank",
+      "article": "die",
+      "translation_ru": "банк",
+      "translation_en": "bank",
+      "translation_uk": "банк",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Besuch",
+      "article": "der",
+      "translation_ru": "визит",
+      "translation_en": "visit",
+      "translation_uk": "візит",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Brief",
+      "article": "der",
+      "translation_ru": "письмо",
+      "translation_en": "letter",
+      "translation_uk": "лист",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Bäckerei",
+      "article": "die",
+      "translation_ru": "пекарня",
+      "translation_en": "bakery",
+      "translation_uk": "пекарня",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Cafeteria",
+      "article": "die",
+      "translation_ru": "кафетерий",
+      "translation_en": "cafeteria",
+      "translation_uk": "кафетерій",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Cafeteria",
+      "article": "die",
+      "translation_ru": "кафетерий",
+      "translation_en": "cafeteria",
+      "translation_uk": "кафетерій",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Eintritt",
+      "article": "der",
+      "translation_ru": "вход",
+      "translation_en": "admission",
+      "translation_uk": "вхід",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Empfänger",
+      "article": "der",
+      "translation_ru": "получатель",
+      "translation_en": "recipient",
+      "translation_uk": "одержувач",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Formular",
+      "article": "das",
+      "translation_ru": "форма",
+      "translation_en": "form",
+      "translation_uk": "форма",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Führer",
+      "article": "der",
+      "translation_ru": "гид",
+      "translation_en": "guide",
+      "translation_uk": "гі́д",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Gericht",
+      "article": "das",
+      "translation_ru": "суд",
+      "translation_en": "court",
+      "translation_uk": "суд",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Homepage",
+      "article": "die",
+      "translation_ru": "домашняя страница",
+      "translation_en": "homepage",
+      "translation_uk": "домашня сторінка",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Homepage",
+      "article": "die",
+      "translation_ru": "домашняя страница",
+      "translation_en": "homepage",
+      "translation_uk": "домашня сторінка",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Internet",
+      "article": "das",
+      "translation_ru": "интернет",
+      "translation_en": "Internet",
+      "translation_uk": "інтернет",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Konto",
+      "article": "das",
+      "translation_ru": "счёт",
+      "translation_en": "account",
+      "translation_uk": "рахунок",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Lokal",
+      "article": "das",
+      "translation_ru": "ресторан",
+      "translation_en": "restaurant",
+      "translation_uk": "ресторан",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Mail",
+      "article": "die",
+      "translation_ru": "электронное письмо",
+      "translation_en": "email",
+      "translation_uk": "електронна пошта",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Mailbox",
+      "article": "die",
+      "translation_ru": "голосовая почта",
+      "translation_en": "voicemail",
+      "translation_uk": "голосова пошта",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Nachricht",
+      "article": "die",
+      "translation_ru": "сообщение",
+      "translation_en": "message",
+      "translation_uk": "повідомлення",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Polizei",
+      "article": "die",
+      "translation_ru": "полиция",
+      "translation_en": "police",
+      "translation_uk": "поліція",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Post",
+      "article": "die",
+      "translation_ru": "почта",
+      "translation_en": "post office",
+      "translation_uk": "пошта",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Post",
+      "article": "die",
+      "translation_ru": "почта",
+      "translation_en": "post office",
+      "translation_uk": "пошта",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Praxis",
+      "article": "die",
+      "translation_ru": "врачебная практика",
+      "translation_en": "doctor's office",
+      "translation_uk": "лікарська практика",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Rechnung",
+      "article": "die",
+      "translation_ru": "счёт",
+      "translation_en": "bill",
+      "translation_uk": "рахунок",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Reinigung",
+      "article": "die",
+      "translation_ru": "уборка",
+      "translation_en": "cleaning",
+      "translation_uk": "прибирання",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Reisebüro",
+      "article": "das",
+      "translation_ru": "турагентство",
+      "translation_en": "travel agency",
+      "translation_uk": "туристичне агентство",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Reparatur",
+      "article": "die",
+      "translation_ru": "ремонт",
+      "translation_en": "repair",
+      "translation_uk": "ремонт",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Restaurant",
+      "article": "das",
+      "translation_ru": "ресторан",
+      "translation_en": "restaurant",
+      "translation_uk": "ресторан",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Rezeption",
+      "article": "die",
+      "translation_ru": "рецепция",
+      "translation_en": "reception",
+      "translation_uk": "рецепція",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Rezeption",
+      "article": "die",
+      "translation_ru": "ресепшн",
+      "translation_en": "reception desk",
+      "translation_uk": "ресепшн",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Schalter",
+      "article": "der",
+      "translation_ru": "окно (в службе)",
+      "translation_en": "counter",
+      "translation_uk": "віконце (у службі)",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Service",
+      "article": "der",
+      "translation_ru": "сервис",
+      "translation_en": "service",
+      "translation_uk": "сервіс",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Versicherung",
+      "article": "die",
+      "translation_ru": "страховка путешествий",
+      "translation_en": "travel insurance",
+      "translation_uk": "страхування подорожей",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Vertrag",
+      "article": "der",
+      "translation_ru": "договор",
+      "translation_en": "contract",
+      "translation_uk": "договір",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Webseite",
+      "article": "die",
+      "translation_ru": "вебсайт",
+      "translation_en": "website",
+      "translation_uk": "вебсайт",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Ausflug",
+      "article": "der",
+      "translation_ru": "экскурсия",
+      "translation_en": "excursion",
+      "translation_uk": "екскурсія",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Ausstellung",
+      "article": "die",
+      "translation_ru": "выставка",
+      "translation_en": "exhibition",
+      "translation_uk": "виставка",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Ball",
+      "article": "der",
+      "translation_ru": "мяч",
+      "translation_en": "ball",
+      "translation_uk": "м'яч",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Band",
+      "article": "die",
+      "translation_ru": "группа",
+      "translation_en": "band",
+      "translation_uk": "гурт",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Basketball",
+      "article": "der",
+      "translation_ru": "баскетбол",
+      "translation_en": "basketball",
+      "translation_uk": "баскетбол",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Bild",
+      "article": "das",
+      "translation_ru": "картина",
+      "translation_en": "picture",
+      "translation_uk": "картина",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Blog",
+      "article": "das",
+      "translation_ru": "блог",
+      "translation_en": "blog",
+      "translation_uk": "блог",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Club",
+      "article": "der",
+      "translation_ru": "клуб",
+      "translation_en": "club",
+      "translation_uk": "клуб",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Comic",
+      "article": "das",
+      "translation_ru": "комикс",
+      "translation_en": "comic book",
+      "translation_uk": "комікс",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Disco",
+      "article": "die",
+      "translation_ru": "диско",
+      "translation_en": "disco",
+      "translation_uk": "диско",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Disko",
+      "article": "die",
+      "translation_ru": "диско",
+      "translation_en": "disco",
+      "translation_uk": "диско",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "E-Book",
+      "article": "das",
+      "translation_ru": "электронная книга",
+      "translation_en": "ebook",
+      "translation_uk": "електронна книга",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Fernseher",
+      "article": "der",
+      "translation_ru": "телевизор",
+      "translation_en": "TV",
+      "translation_uk": "телевізор",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Festival",
+      "article": "das",
+      "translation_ru": "фестиваль",
+      "translation_en": "festival",
+      "translation_uk": "фестиваль",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Film",
+      "article": "der",
+      "translation_ru": "фильм",
+      "translation_en": "film",
+      "translation_uk": "фільм",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Foto",
+      "article": "das",
+      "translation_ru": "фото",
+      "translation_en": "photo",
+      "translation_uk": "фото",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Fotoapparat",
+      "article": "der",
+      "translation_ru": "фотоаппарат",
+      "translation_en": "camera",
+      "translation_uk": "фотоапарат",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Freizeit",
+      "article": "die",
+      "translation_ru": "свободное время",
+      "translation_en": "free time",
+      "translation_uk": "вільний час",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Fußball",
+      "article": "der",
+      "translation_ru": "футбол",
+      "translation_en": "football",
+      "translation_uk": "футбол",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Fußballspiel",
+      "article": "das",
+      "translation_ru": "футбольный матч",
+      "translation_en": "football match",
+      "translation_uk": "футбольний матч",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Führung",
+      "article": "die",
+      "translation_ru": "экскурсия",
+      "translation_en": "tour",
+      "translation_uk": "екскурсія",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Gitarre",
+      "article": "die",
+      "translation_ru": "гитара",
+      "translation_en": "guitar",
+      "translation_uk": "гітара",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Hobby",
+      "article": "das",
+      "translation_ru": "хобби",
+      "translation_en": "hobby",
+      "translation_uk": "хобі",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Instrument",
+      "article": "das",
+      "translation_ru": "инструмент",
+      "translation_en": "instrument",
+      "translation_uk": "інструмент",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Karten",
+      "article": "die",
+      "translation_ru": "карты",
+      "translation_en": "cards",
+      "translation_uk": "карти",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Kino",
+      "article": "das",
+      "translation_ru": "кинотеатр",
+      "translation_en": "cinema",
+      "translation_uk": "кінотеатр",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Klavier",
+      "article": "das",
+      "translation_ru": "пианино",
+      "translation_en": "piano",
+      "translation_uk": "піаніно",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Konzert",
+      "article": "das",
+      "translation_ru": "концерт",
+      "translation_en": "concert",
+      "translation_uk": "концерт",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Krimi",
+      "article": "der",
+      "translation_ru": "детектив",
+      "translation_en": "crime novel",
+      "translation_uk": "детектив",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Lied",
+      "article": "das",
+      "translation_ru": "песня",
+      "translation_en": "song",
+      "translation_uk": "пісня",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Mannschaft",
+      "article": "die",
+      "translation_ru": "команда",
+      "translation_en": "team",
+      "translation_uk": "команда",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Messe",
+      "article": "die",
+      "translation_ru": "ярмарка",
+      "translation_en": "fair",
+      "translation_uk": "виставка",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Museum",
+      "article": "das",
+      "translation_ru": "музей",
+      "translation_en": "museum",
+      "translation_uk": "музей",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Musik",
+      "article": "die",
+      "translation_ru": "музыка",
+      "translation_en": "music",
+      "translation_uk": "музика",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Party",
+      "article": "die",
+      "translation_ru": "вечеринка",
+      "translation_en": "party",
+      "translation_uk": "вечірка",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Party",
+      "article": "die",
+      "translation_ru": "вечеринка",
+      "translation_en": "party",
+      "translation_uk": "вечірка",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Poster",
+      "article": "das",
+      "translation_ru": "плакат",
+      "translation_en": "poster",
+      "translation_uk": "плакат",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Programm",
+      "article": "das",
+      "translation_ru": "программа",
+      "translation_en": "program",
+      "translation_uk": "програма",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Quiz",
+      "article": "das",
+      "translation_ru": "викторина",
+      "translation_en": "quiz",
+      "translation_uk": "вікторина",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Radio",
+      "article": "das",
+      "translation_ru": "радио",
+      "translation_en": "radio",
+      "translation_uk": "радіо",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Rundgang",
+      "article": "der",
+      "translation_ru": "экскурсия",
+      "translation_en": "tour",
+      "translation_uk": "екскурсія",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Rätsel",
+      "article": "das",
+      "translation_ru": "загадка",
+      "translation_en": "riddle",
+      "translation_uk": "загадка",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Schwimmen",
+      "article": "das",
+      "translation_ru": "плавание",
+      "translation_en": "swimming",
+      "translation_uk": "плавання",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Sendung",
+      "article": "die",
+      "translation_ru": "передача",
+      "translation_en": "programme",
+      "translation_uk": "передача",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Ski",
+      "article": "der",
+      "translation_ru": "лыжа",
+      "translation_en": "ski",
+      "translation_uk": "лижa",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Spaziergang",
+      "article": "der",
+      "translation_ru": "прогулка",
+      "translation_en": "walk",
+      "translation_uk": "прогулянка",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Spaß",
+      "article": "der",
+      "translation_ru": "веселье",
+      "translation_en": "fun",
+      "translation_uk": "веселощі",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Spiel",
+      "article": "das",
+      "translation_ru": "игра",
+      "translation_en": "game",
+      "translation_uk": "гра",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Sport",
+      "article": "der",
+      "translation_ru": "спорт",
+      "translation_en": "sport",
+      "translation_uk": "спорт",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Sportplatz",
+      "article": "der",
+      "translation_ru": "спортплощадка",
+      "translation_en": "sports field",
+      "translation_uk": "спортивний майданчик",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Tennis",
+      "article": "das",
+      "translation_ru": "теннис",
+      "translation_en": "tennis",
+      "translation_uk": "теніс",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Theater",
+      "article": "das",
+      "translation_ru": "театр",
+      "translation_en": "theater",
+      "translation_uk": "театр",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Training",
+      "article": "das",
+      "translation_ru": "тренировка",
+      "translation_en": "training",
+      "translation_uk": "тренування",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Veranstaltung",
+      "article": "die",
+      "translation_ru": "мероприятие",
+      "translation_en": "event",
+      "translation_uk": "заход",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Verein",
+      "article": "der",
+      "translation_ru": "клуб",
+      "translation_en": "club",
+      "translation_uk": "клуб",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Volleyball",
+      "article": "der",
+      "translation_ru": "волейбол",
+      "translation_en": "volleyball",
+      "translation_uk": "волейбол",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Wettbewerb",
+      "article": "der",
+      "translation_ru": "конкурс",
+      "translation_en": "competition",
+      "translation_uk": "конкурс",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Witz",
+      "article": "der",
+      "translation_ru": "шутка",
+      "translation_en": "joke",
+      "translation_uk": "жарт",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zeitschrift",
+      "article": "die",
+      "translation_ru": "журнал",
+      "translation_en": "magazine",
+      "translation_uk": "журнал",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zeitung",
+      "article": "die",
+      "translation_ru": "газета",
+      "translation_en": "newspaper",
+      "translation_uk": "газета",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zeitung",
+      "article": "die",
+      "translation_ru": "газета",
+      "translation_en": "newspaper",
+      "translation_uk": "газета",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zeitungen",
+      "article": "die",
+      "translation_ru": "газеты",
+      "translation_en": "newspapers",
+      "translation_uk": "газети",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zelt",
+      "article": "das",
+      "translation_ru": "палатка",
+      "translation_en": "tent",
+      "translation_uk": "намет",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zirkus",
+      "article": "der",
+      "translation_ru": "цирк",
+      "translation_en": "circus",
+      "translation_uk": "цирк",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Uhr",
+      "article": "die",
+      "translation_ru": "часы",
+      "translation_en": "clock",
+      "translation_uk": "годинник",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Nacht",
+      "article": "die",
+      "translation_ru": "ночь",
+      "translation_en": "night",
+      "translation_uk": "ніч",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Datum",
+      "article": "das",
+      "translation_ru": "дата",
+      "translation_en": "date",
+      "translation_uk": "дата",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Ferien",
+      "article": "die",
+      "translation_ru": "каникулы",
+      "translation_en": "vacation",
+      "translation_uk": "канікули",
+      "level": "A2",
+      "topic": "Holidays"
+    },
+    {
+      "noun": "Fest",
+      "article": "das",
+      "translation_ru": "праздник",
+      "translation_en": "party",
+      "translation_uk": "свято",
+      "level": "A2",
+      "topic": "Holidays"
+    },
+    {
+      "noun": "Hochzeit",
+      "article": "die",
+      "translation_ru": "свадьба",
+      "translation_en": "wedding",
+      "translation_uk": "весілля",
+      "level": "A2",
+      "topic": "Holidays"
+    },
+    {
+      "noun": "Urlaub",
+      "article": "der",
+      "translation_ru": "отпуск",
+      "translation_en": "holiday",
+      "translation_uk": "відпустка",
+      "level": "A2",
+      "topic": "Holidays"
+    },
+    {
+      "noun": "Anfang",
+      "article": "der",
+      "translation_ru": "начало",
+      "translation_en": "beginning",
+      "translation_uk": "початок",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Ende",
+      "article": "das",
+      "translation_ru": "конец",
+      "translation_en": "end",
+      "translation_uk": "кінець",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Kalender",
+      "article": "der",
+      "translation_ru": "календарь",
+      "translation_en": "calendar",
+      "translation_uk": "календар",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Mal",
+      "article": "das",
+      "translation_ru": "раз",
+      "translation_en": "time",
+      "translation_uk": "раз",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Moment",
+      "article": "der",
+      "translation_ru": "момент",
+      "translation_en": "moment",
+      "translation_uk": "момент",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Pause",
+      "article": "die",
+      "translation_ru": "перерыв",
+      "translation_en": "break",
+      "translation_uk": "перерва",
+      "level": "A2",
+      "topic": "Education & Learning"
+    },
+    {
+      "noun": "Schluss",
+      "article": "der",
+      "translation_ru": "конец",
+      "translation_en": "end",
+      "translation_uk": "кінець",
+      "level": "A2",
+      "topic": "Abstract Concepts"
+    },
+    {
+      "noun": "Termin",
+      "article": "der",
+      "translation_ru": "встреча",
+      "translation_en": "appointment",
+      "translation_uk": "зустріч",
+      "level": "A2",
+      "topic": "Services"
+    },
+    {
+      "noun": "Wiederhören",
+      "article": "das",
+      "translation_ru": "до свидания (по телефону)",
+      "translation_en": "goodbye (on the phone)",
+      "translation_uk": "до побачення (по телефону)",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Wiedersehen",
+      "article": "das",
+      "translation_ru": "встреча",
+      "translation_en": "reunion",
+      "translation_uk": "зустріч",
+      "level": "A2",
+      "topic": "Leisure & Entertainment"
+    },
+    {
+      "noun": "Zeit",
+      "article": "die",
+      "translation_ru": "время",
+      "translation_en": "time",
+      "translation_uk": "час",
+      "level": "A2",
+      "topic": "Time & Dates"
+    },
+    {
+      "noun": "Nummer",
+      "article": "die",
+      "translation_ru": "номер",
+      "translation_en": "number",
+      "translation_uk": "номер",
+      "level": "A2",
+      "topic": "Numbers"
+    },
+    {
+      "noun": "Zahl",
+      "article": "die",
+      "translation_ru": "число",
+      "translation_en": "number",
+      "translation_uk": "число",
+      "level": "A2",
+      "topic": "Numbers"
+    },
+    {
+      "noun": "Abfahrt",
+      "article": "die",
+      "translation_ru": "отправление",
+      "translation_en": "departure",
+      "translation_uk": "відправлення",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Ampel",
+      "article": "die",
+      "translation_ru": "светофор",
+      "translation_en": "traffic light",
+      "translation_uk": "світлофор",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Ampel",
+      "article": "die",
+      "translation_ru": "светофор",
+      "translation_en": "traffic light",
+      "translation_uk": "світлофор",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Ankunft",
+      "article": "die",
+      "translation_ru": "прибытие",
+      "translation_en": "arrival",
+      "translation_uk": "прибуття",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Anschluss",
+      "article": "der",
+      "translation_ru": "соединение",
+      "translation_en": "connection",
+      "translation_uk": "підключення",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Ausgang",
+      "article": "der",
+      "translation_ru": "выход",
+      "translation_en": "exit",
+      "translation_uk": "вихід",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Auto",
+      "article": "das",
+      "translation_ru": "машина",
+      "translation_en": "car",
+      "translation_uk": "автомобіль",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Autobahn",
+      "article": "die",
+      "translation_ru": "автобан",
+      "translation_en": "motorway",
+      "translation_uk": "автобан",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Autobahn",
+      "article": "die",
+      "translation_ru": "автобан",
+      "translation_en": "highway",
+      "translation_uk": "автобан",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Bahn",
+      "article": "die",
+      "translation_ru": "поезд",
+      "translation_en": "train",
+      "translation_uk": "потяг",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Bahn",
+      "article": "die",
+      "translation_ru": "железная дорога",
+      "translation_en": "railway",
+      "translation_uk": "залізниця",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Bahnhof",
+      "article": "der",
+      "translation_ru": "станция",
+      "translation_en": "station",
+      "translation_uk": "станція",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Bahnhofstraße",
+      "article": "die",
+      "translation_ru": "вокзальная улица",
+      "translation_en": "station street",
+      "translation_uk": "вокзальна вулиця",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Bahnsteig",
+      "article": "der",
+      "translation_ru": "платформа",
+      "translation_en": "platform",
+      "translation_uk": "платформа",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Brücke",
+      "article": "die",
+      "translation_ru": "мост",
+      "translation_en": "bridge",
+      "translation_uk": "міст",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Bus",
+      "article": "der",
+      "translation_ru": "автобус",
+      "translation_en": "bus",
+      "translation_uk": "автобус",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Fahrkarte",
+      "article": "die",
+      "translation_ru": "билет",
+      "translation_en": "ticket",
+      "translation_uk": "квиток",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Fahrkartenautomat",
+      "article": "der",
+      "translation_ru": "автомат для билетов",
+      "translation_en": "ticket machine",
+      "translation_uk": "автомат для квитків",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Fahrplan",
+      "article": "der",
+      "translation_ru": "расписание",
+      "translation_en": "timetable",
+      "translation_uk": "розклад",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Flug",
+      "article": "der",
+      "translation_ru": "рейс",
+      "translation_en": "flight",
+      "translation_uk": "рейс",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Flughafen",
+      "article": "der",
+      "translation_ru": "аэропорт",
+      "translation_en": "airport",
+      "translation_uk": "аеропорт",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Flugzeug",
+      "article": "das",
+      "translation_ru": "самолёт",
+      "translation_en": "plane",
+      "translation_uk": "літак",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Gepäck",
+      "article": "das",
+      "translation_ru": "багаж",
+      "translation_en": "luggage",
+      "translation_uk": "багаж",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Gleis",
+      "article": "das Gleis - track (correct)",
+      "translation_ru": "путь",
+      "translation_en": "track",
+      "translation_uk": "колія",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Haltestelle",
+      "article": "die",
+      "translation_ru": "остановка",
+      "translation_en": "stop",
+      "translation_uk": "зупинка",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Haltestelle",
+      "article": "die",
+      "translation_ru": "остановка",
+      "translation_en": "bus stop",
+      "translation_uk": "зупинка",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Koffer",
+      "article": "der",
+      "translation_ru": "чемодан",
+      "translation_en": "suitcase",
+      "translation_uk": "валіза",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Kreuzung",
+      "article": "die",
+      "translation_ru": "перекрёсток",
+      "translation_en": "crossroad",
+      "translation_uk": "перехрестя",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Motor",
+      "article": "der",
+      "translation_ru": "двигатель",
+      "translation_en": "engine",
+      "translation_uk": "двигун",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Motorroller",
+      "article": "der",
+      "translation_ru": "мотороллер",
+      "translation_en": "scooter",
+      "translation_uk": "моторолер",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Pass",
+      "article": "der",
+      "translation_ru": "паспорт",
+      "translation_en": "passport",
+      "translation_uk": "паспорт",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Postkarte",
+      "article": "die",
+      "translation_ru": "открытка",
+      "translation_en": "postcard",
+      "translation_uk": "листівка",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Postleitzahl",
+      "article": "die",
+      "translation_ru": "почтовый индекс",
+      "translation_en": "postal code",
+      "translation_uk": "поштовий індекс",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Reifen",
+      "article": "der Reifen is plural, singular is der Reifen; Reifen singular is masculine, but Reifen plural is die Reifen. So article 'der' is incorrect for plural.",
+      "translation_ru": "шина",
+      "translation_en": "tire",
+      "translation_uk": "шина",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Reise",
+      "article": "die",
+      "translation_ru": "поездка",
+      "translation_en": "trip",
+      "translation_uk": "подорож",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Reise",
+      "article": "die",
+      "translation_ru": "поездка",
+      "translation_en": "trip",
+      "translation_uk": "подорож",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Reiseführer",
+      "article": "der",
+      "translation_ru": "путеводитель",
+      "translation_en": "guidebook",
+      "translation_uk": "путівник",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Rucksack",
+      "article": "der",
+      "translation_ru": "рюкзак",
+      "translation_en": "backpack",
+      "translation_uk": "рюкзак",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Schiff",
+      "article": "das",
+      "translation_ru": "корабль",
+      "translation_en": "ship",
+      "translation_uk": "корабель",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Schild",
+      "article": "das",
+      "translation_ru": "знак",
+      "translation_en": "sign",
+      "translation_uk": "знак",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Schirm",
+      "article": "der",
+      "translation_ru": "зонт",
+      "translation_en": "umbrella",
+      "translation_uk": "парасоля",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Straßenbahn",
+      "article": "die",
+      "translation_ru": "трамвай",
+      "translation_en": "tram",
+      "translation_uk": "трамвай",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Straßenbahn",
+      "article": "die",
+      "translation_ru": "трамвай",
+      "translation_en": "tram",
+      "translation_uk": "трамвай",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Taxi",
+      "article": "das",
+      "translation_ru": "такси",
+      "translation_en": "taxi",
+      "translation_uk": "таксі",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Telefon",
+      "article": "das",
+      "translation_ru": "телефон",
+      "translation_en": "telephone",
+      "translation_uk": "телефон",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Ticket",
+      "article": "das",
+      "translation_ru": "билет",
+      "translation_en": "ticket",
+      "translation_uk": "квиток",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Tour",
+      "article": "die",
+      "translation_ru": "тур",
+      "translation_en": "tour",
+      "translation_uk": "тур",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Unfall",
+      "article": "der",
+      "translation_ru": "авария",
+      "translation_en": "accident",
+      "translation_uk": "аварія",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Verkehr",
+      "article": "der",
+      "translation_ru": "транспорт",
+      "translation_en": "traffic",
+      "translation_uk": "транспорт",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Verkehr",
+      "article": "der",
+      "translation_ru": "трафик",
+      "translation_en": "traffic",
+      "translation_uk": "трафік",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Verspätung",
+      "article": "die",
+      "translation_ru": "задержка",
+      "translation_en": "delay",
+      "translation_uk": "затримка",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Wagen",
+      "article": "der",
+      "translation_ru": "машина",
+      "translation_en": "car",
+      "translation_uk": "автомобіль",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Weg",
+      "article": "der",
+      "translation_ru": "путь",
+      "translation_en": "way",
+      "translation_uk": "шлях",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Zug",
+      "article": "der",
+      "translation_ru": "поезд",
+      "translation_en": "train",
+      "translation_uk": "потяг",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Züge",
+      "article": "die",
+      "translation_ru": "поезда",
+      "translation_en": "trains",
+      "translation_uk": "поїзди",
+      "level": "A2",
+      "topic": "Travel & Transport"
+    },
+    {
+      "noun": "Farbe",
+      "article": "die",
+      "translation_ru": "цвет",
+      "translation_en": "color",
+      "translation_uk": "колір",
+      "level": "A2",
+      "topic": "Colors"
+    }
+  ]
+  
