@@ -192,13 +192,9 @@ export default function Trainer() {
     });
   }, [isMounted]);
 
-  // Initialize first word only after component has mounted (client-side)
-  useEffect(() => {
-    if (!isMounted || hasInitializedRef.current) return;
-    hasInitializedRef.current = true;
-    
-    // Initialize prevFiltersRef with current filters to avoid unnecessary update
-    prevFiltersRef.current = JSON.stringify({
+  // Create a stable string representation of all settings except language
+  const currentFiltersString = useMemo(() => {
+    return JSON.stringify({
       mode: settings.mode,
       level: settings.level,
       cases: settings.cases,
@@ -210,41 +206,32 @@ export default function Trainer() {
       showTranslation: settings.showTranslation,
       dictionaryType: settings.dictionaryType,
     });
-    
-    if (getNextWordRef.current) {
-      getNextWordRef.current();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isMounted]);
+  }, [settings.mode, settings.level, settings.cases, settings.usePronouns, settings.enabledDictionaries, settings.topics, settings.articleType, settings.pronounType, settings.showTranslation, settings.dictionaryType]);
 
-  // Update current word when filters change (but not when only language changes)
+  // Initialize first word and handle filter changes (but not when only language changes)
   useEffect(() => {
-    if (!isMounted || !hasInitializedRef.current) return;
+    if (!isMounted) return;
     
-    // Create a string representation of all settings except language
-    const currentFilters = JSON.stringify({
-      mode: settings.mode,
-      level: settings.level,
-      cases: settings.cases,
-      usePronouns: settings.usePronouns,
-      enabledDictionaries: settings.enabledDictionaries,
-      topics: settings.topics,
-      articleType: settings.articleType,
-      pronounType: settings.pronounType,
-      showTranslation: settings.showTranslation,
-      dictionaryType: settings.dictionaryType,
-    });
+    // Initialize on first mount
+    if (!hasInitializedRef.current) {
+      hasInitializedRef.current = true;
+      prevFiltersRef.current = currentFiltersString;
+      if (getNextWordRef.current) {
+        getNextWordRef.current();
+      }
+      return;
+    }
     
     // If filters changed (not just language), update the current word
-    if (prevFiltersRef.current && prevFiltersRef.current !== currentFilters) {
+    if (prevFiltersRef.current !== currentFiltersString) {
       if (getNextWordRef.current) {
         getNextWordRef.current();
       }
     }
     
     // Update the ref with current filters
-    prevFiltersRef.current = currentFilters;
-  }, [settings, isMounted]);
+    prevFiltersRef.current = currentFiltersString;
+  }, [isMounted, currentFiltersString]);
 
   // Check answer with stats tracking
   const checkAnswer = () => {
