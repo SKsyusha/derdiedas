@@ -16,8 +16,6 @@ import ProgressBar from './ProgressBar';
 import { useWordTraining } from '../hooks/useWordTraining';
 import { getCookie, setCookie } from '../utils/cookies';
 
-const { Text } = Typography;
-
 const SETTINGS_COOKIE_NAME = 'training_settings';
 
 const defaultSettings: TrainingSettings = {

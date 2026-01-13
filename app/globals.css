@@ -48,6 +48,25 @@ input.ant-input:focus:-ms-input-placeholder,
   color: transparent !important;
 }
 
+/* Remove tap highlight and focus styles on mobile buttons */
+.ant-btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Only show focus ring on keyboard navigation, not touch */
+.ant-btn:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.ant-btn-default:focus:not(:focus-visible) {
+  border-color: #d9d9d9 !important;
+}
+
+.ant-btn-primary:focus:not(:focus-visible) {
+  border-color: var(--purple-primary) !important;
+}
+
 /* Mobile optimizations */
 @media (max-width: 640px) {
   /* Ensure drawers take full width on mobile */

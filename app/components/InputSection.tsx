@@ -56,12 +56,6 @@ export default function InputSection({
           <Button
             type="primary"
             htmlType="button"
-            onMouseDown={(e) => {
-              // На мобильных предотвращаем blur на input при клике на кнопку
-              if (isMobile) {
-                e.preventDefault();
-              }
-            }}
             onClick={() => {
               onCheck();
               // На мобильных возвращаем фокус на input после клика
@@ -86,7 +80,13 @@ export default function InputSection({
 
           {/* Кнопка "Следующее слово" для мобильных - всегда видна */}
           {isMobile && (
-            <Button onClick={onNextWord} className="w-full">
+            <Button 
+              onClick={() => {
+                onNextWord();
+              }}
+              tabIndex={-1}
+              className="w-full"
+            >
               {t('trainer.nextWord')}
             </Button>
           )}
