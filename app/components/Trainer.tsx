@@ -14,24 +14,56 @@ import InputSection from './InputSection';
 import StatsCard from './StatsCard';
 import ProgressBar from './ProgressBar';
 import { useWordTraining } from '../hooks/useWordTraining';
+import { getCookie, setCookie } from '../utils/cookies';
 
 const { Text } = Typography;
 
+const SETTINGS_COOKIE_NAME = 'training_settings';
+
+const defaultSettings: TrainingSettings = {
+  mode: 'noun-only',
+  level: ['A1'],
+  cases: ['nominativ'],
+  usePronouns: false,
+  enabledDictionaries: ['A1'],
+  language: 'Russian',
+  topics: [],
+  articleType: 'definite',
+  pronounType: 'none',
+  showTranslation: true,
+  dictionaryType: 'default',
+};
+
+function getInitialSettings(): TrainingSettings {
+  if (typeof window === 'undefined') {
+    return defaultSettings;
+  }
+  
+  const savedSettings = getCookie(SETTINGS_COOKIE_NAME);
+  if (savedSettings) {
+    try {
+      const parsed = JSON.parse(savedSettings) as Partial<TrainingSettings>;
+      return {
+        ...defaultSettings,
+        ...parsed,
+        // Ensure arrays are properly set
+        level: parsed.level || defaultSettings.level,
+        cases: parsed.cases || defaultSettings.cases,
+        topics: parsed.topics || defaultSettings.topics,
+        enabledDictionaries: parsed.enabledDictionaries || defaultSettings.enabledDictionaries,
+      };
+    } catch (error) {
+      console.error('Failed to parse settings from cookie:', error);
+      return defaultSettings;
+    }
+  }
+  
+  return defaultSettings;
+}
+
 export default function Trainer() {
   const { t } = useTranslation();
-  const [settings, setSettings] = useState<TrainingSettings>({
-    mode: 'noun-only',
-    level: ['A1'],
-    cases: ['nominativ'],
-    usePronouns: false,
-    enabledDictionaries: ['A1'],
-    language: 'Russian',
-    topics: [],
-    articleType: 'definite',
-    pronounType: 'none',
-    showTranslation: true,
-    dictionaryType: 'default',
-  });
+  const [settings, setSettings] = useState<TrainingSettings>(getInitialSettings);
 
   const [userDictionaries, setUserDictionaries] = useState<Array<{ id: string; name: string; words: Word[]; enabled: boolean }>>([]);
   const [stats, setStats] = useState<SessionStats>({
@@ -51,6 +83,7 @@ export default function Trainer() {
   const hasInitializedRef = useRef<boolean>(false);
   const getNextWordRef = useRef<(() => void) | undefined>(undefined);
   const prevFiltersRef = useRef<string>('');
+  const settingsLoadedFromCookieRef = useRef<boolean>(false);
 
   // Get all enabled words
   const getEnabledWords = useCallback((): Word[] => {
@@ -167,6 +200,7 @@ export default function Trainer() {
   // Mark component as mounted (client-side only)
   useEffect(() => {
     setIsMounted(true);
+    settingsLoadedFromCookieRef.current = true; // Settings already loaded in getInitialSettings
   }, []);
 
   // Detect mobile device
@@ -191,6 +225,12 @@ export default function Trainer() {
       return prev;
     });
   }, [isMounted]);
+
+  // Save settings to cookies whenever they change (but not on initial load)
+  useEffect(() => {
+    if (!isMounted || !settingsLoadedFromCookieRef.current) return;
+    setCookie(SETTINGS_COOKIE_NAME, JSON.stringify(settings));
+  }, [settings, isMounted]);
 
   // Create a stable string representation of all settings except language
   const currentFiltersString = useMemo(() => {
