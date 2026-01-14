@@ -1422,6 +1422,87 @@
     "topic": "Animals"
   },
   {
+    "noun": "Katze",
+    "article": "die",
+    "translation_ru": "кошка",
+    "translation_en": "cat",
+    "translation_uk": "кіт / кішка",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Vogel",
+    "article": "der",
+    "translation_ru": "птица",
+    "translation_en": "bird",
+    "translation_uk": "птах",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Pferd",
+    "article": "das",
+    "translation_ru": "лошадь",
+    "translation_en": "horse",
+    "translation_uk": "кінь",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Kuh",
+    "article": "die",
+    "translation_ru": "корова",
+    "translation_en": "cow",
+    "translation_uk": "корова",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Schwein",
+    "article": "das",
+    "translation_ru": "свинья",
+    "translation_en": "pig",
+    "translation_uk": "свиня",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Schaf",
+    "article": "das",
+    "translation_ru": "овца",
+    "translation_en": "sheep",
+    "translation_uk": "вівця",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Fisch",
+    "article": "der",
+    "translation_ru": "рыба",
+    "translation_en": "fish",
+    "translation_uk": "риба",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Maus",
+    "article": "die",
+    "translation_ru": "мышь",
+    "translation_en": "mouse",
+    "translation_uk": "миша",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
+    "noun": "Hase",
+    "article": "der",
+    "translation_ru": "заяц",
+    "translation_en": "hare",
+    "translation_uk": "заєць",
+    "level": "A1",
+    "topic": "Animals"
+  },
+  {
     "noun": "Bundesrepublik",
     "article": "der",
     "translation_ru": "федеративная республика",
@@ -1482,7 +1563,7 @@
     "translation_en": "north",
     "translation_uk": "північ",
     "level": "A1",
-    "topic": "Compass Directions"
+    "topic": "Geography"
   },
   {
     "noun": "Osten",
@@ -1491,7 +1572,7 @@
     "translation_en": "east",
     "translation_uk": "схід",
     "level": "A1",
-    "topic": "Compass Directions"
+    "topic": "Geography"
   },
   {
     "noun": "Süden",
@@ -1500,7 +1581,7 @@
     "translation_en": "south",
     "translation_uk": "південь",
     "level": "A1",
-    "topic": "Compass Directions"
+    "topic": "Geography"
   },
   {
     "noun": "Westen",
@@ -1509,7 +1590,7 @@
     "translation_en": "west",
     "translation_uk": "захід",
     "level": "A1",
-    "topic": "Compass Directions"
+    "topic": "Geography"
   },
   {
     "noun": "Dorf",
