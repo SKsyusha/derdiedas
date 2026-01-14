@@ -170,8 +170,8 @@ export default function SettingsDrawer({
                 }}
               >
                 <Flex gap="middle">
-                  <Radio value="A1">A1 ({builtInDictionaries.A1?.length || 0})</Radio>
-                  <Radio value="A2">A2 ({builtInDictionaries.A2?.length || 0})</Radio>
+                  <Radio value="A1">A1</Radio>
+                  <Radio value="A2">A2</Radio>
                 </Flex>
               </Radio.Group>
             </div>
@@ -246,13 +246,21 @@ export default function SettingsDrawer({
         <div>
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.topic')}</Title>
           <Select
+            key={`topic-select-${settings.topics.join(',')}`}
             placeholder={t('settings.selectTopic')}
             style={{ width: '100%' }}
             size="middle"
+            value={null as unknown as string}
             onChange={(value) => {
               const topic = value as Topic;
-              if (topic && !settings.topics.includes(topic)) {
-                setSettings({ ...settings, topics: [...settings.topics, topic] });
+              if (topic) {
+                if (settings.topics.includes(topic)) {
+                  // Убираем топик если он уже выбран
+                  setSettings({ ...settings, topics: settings.topics.filter(t => t !== topic) });
+                } else {
+                  // Добавляем топик если он не выбран
+                  setSettings({ ...settings, topics: [...settings.topics, topic] });
+                }
               }
             }}
             options={allTopics
@@ -260,8 +268,14 @@ export default function SettingsDrawer({
               .map((topic) => {
                 const count = getTopicCount(topic);
                 const topicLabel = t(`topics.${topic}`);
+                const isSelected = settings.topics.includes(topic);
                 return { 
-                  label: `${topicLabel} (${count})`, 
+                  label: (
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span>{topicLabel} ({count})</span>
+                      {isSelected && <span style={{ color: '#8b5cf6', fontWeight: 'bold' }}>✓</span>}
+                    </div>
+                  ), 
                   value: topic 
                 };
               })}
