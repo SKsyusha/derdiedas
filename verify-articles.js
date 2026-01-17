@@ -98,13 +98,32 @@ async function findCorrectArticle(word) {
 }
 
 /**
- * Parse range argument (e.g., "1-10" -> { start: 0, end: 9 })
+ * Parse range argument
+ * Formats:
+ *   "1-10"  -> words 1 to 10
+ *   "200-"  -> from 200 to end
+ *   "-50"   -> from 1 to 50
  * Note: User provides 1-based indices, we convert to 0-based
  */
 function parseRange(arg) {
+  // Format: "200-" (from 200 to end)
+  const openEndMatch = arg.match(/^(\d+)-$/);
+  if (openEndMatch) {
+    const start = parseInt(openEndMatch[1], 10) - 1;
+    return { start, end: Infinity };
+  }
+  
+  // Format: "-50" (from 1 to 50)
+  const openStartMatch = arg.match(/^-(\d+)$/);
+  if (openStartMatch) {
+    const end = parseInt(openStartMatch[1], 10) - 1;
+    return { start: 0, end };
+  }
+  
+  // Format: "1-10" (from 1 to 10)
   const match = arg.match(/^(\d+)-(\d+)$/);
   if (!match) {
-    throw new Error('Invalid range format. Use: <start>-<end> (e.g., 1-10)');
+    throw new Error('Invalid range format. Use: <start>-<end>, <start>-, or -<end>');
   }
   
   const start = parseInt(match[1], 10) - 1; // Convert to 0-based
@@ -122,12 +141,16 @@ async function main() {
   const dictArg = process.argv[3] || 'A1';
   
   if (!rangeArg) {
-    console.log('Usage: node verify-articles.js <start>-<end> [dictionary]');
-    console.log('Example: node verify-articles.js 1-10');
-    console.log('Example: node verify-articles.js 1-10 A2');
-    console.log('Example: node verify-articles.js 1-10 B1');
-    console.log('\nThis will verify words 1 through 10 (1-based indexing)');
-    console.log('Default dictionary: A1');
+    console.log('Usage: node verify-articles.js <range> [dictionary]');
+    console.log('\nRange formats:');
+    console.log('  1-10   Words 1 to 10');
+    console.log('  200-   From 200 to end');
+    console.log('  -50    From 1 to 50');
+    console.log('\nExamples:');
+    console.log('  node verify-articles.js 1-10');
+    console.log('  node verify-articles.js 200- A2');
+    console.log('  node verify-articles.js 1-100 B1');
+    console.log('\nDefault dictionary: A1');
     process.exit(1);
   }
   
@@ -161,6 +184,10 @@ async function main() {
   let unchanged = 0;
   let fromCache = 0;
   
+  // Track details for summary
+  const correctedWords = [];  // { noun, oldArticle, newArticle }
+  const notFoundWords = [];   // list of nouns
+  
   for (let i = start; i <= actualEnd; i++) {
     const entry = data[i];
     const { noun, article: currentArticle } = entry;
@@ -171,6 +198,16 @@ async function main() {
     const cacheKey = noun.toLowerCase();
     if (cache[cacheKey]) {
       const cached = cache[cacheKey];
+      
+      // Handle cached "not found" entries
+      if (cached.notFound) {
+        console.log(`  📦 Found in cache: NOT FOUND`);
+        notFoundWords.push(noun);
+        notFound++;
+        fromCache++;
+        continue;
+      }
+      
       console.log(`  📦 Found in cache: ${cached.article}`);
       
       entry.audio_url = cached.audio_url;
@@ -178,6 +215,7 @@ async function main() {
       if (cached.article !== currentArticle) {
         console.log(`  🔄 Article mismatch! Updating: ${currentArticle} → ${cached.article}`);
         entry.article = cached.article;
+        correctedWords.push({ noun, oldArticle: currentArticle, newArticle: cached.article });
         updated++;
       } else {
         unchanged++;
@@ -191,6 +229,7 @@ async function main() {
     
     if (!result) {
       console.log(`  ⚠️  Word not found on der-artikel.de`);
+      notFoundWords.push(noun);
       notFound++;
       // Cache the "not found" result too
       cache[cacheKey] = { article: null, audio_url: null, notFound: true };
@@ -209,6 +248,7 @@ async function main() {
       if (correctArticle !== currentArticle) {
         console.log(`  🔄 Article mismatch! Updating: ${currentArticle} → ${correctArticle}`);
         entry.article = correctArticle;
+        correctedWords.push({ noun, oldArticle: currentArticle, newArticle: correctArticle });
         updated++;
       } else {
         console.log(`  ✓ Article correct (${correctArticle}), audio URL added`);
@@ -237,7 +277,25 @@ async function main() {
   console.log(`Updated articles: ${updated}`);
   console.log(`Unchanged: ${unchanged}`);
   console.log(`Not found on website: ${notFound}`);
-  console.log('==============================\n');
+  console.log('==============================');
+  
+  // List corrected words
+  if (correctedWords.length > 0) {
+    console.log('\n🔄 Corrected words:');
+    correctedWords.forEach(({ noun, oldArticle, newArticle }) => {
+      console.log(`   ${noun}: ${oldArticle} → ${newArticle}`);
+    });
+  }
+  
+  // List not found words
+  if (notFoundWords.length > 0) {
+    console.log('\n⚠️  Words not found on der-artikel.de:');
+    notFoundWords.forEach(noun => {
+      console.log(`   - ${noun}`);
+    });
+  }
+  
+  console.log('');
 }
 
 main().catch(error => {

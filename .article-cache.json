@@ -406,5 +406,412 @@
   "thema": {
     "article": "das",
     "audio_url": "https://der-artikel.de/audio/thema.mp3"
+  },
+  "vorname": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/vorname.mp3"
+  },
+  "vorsicht": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/vorsicht.mp3"
+  },
+  "wiederhören": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/wiederh%C3%B6ren.mp3"
+  },
+  "wiedersehen": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/wiedersehen.mp3"
+  },
+  "zeit": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/zeit.mp3"
+  },
+  "apartment": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/apartment.mp3"
+  },
+  "aufzug": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/aufzug.mp3"
+  },
+  "bad": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/bad.mp3"
+  },
+  "balkon": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/balkon.mp3"
+  },
+  "bett": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/bett.mp3"
+  },
+  "doppelzimmer": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/doppelzimmer.mp3"
+  },
+  "dusche": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/dusche.mp3"
+  },
+  "ecke": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/ecke.mp3"
+  },
+  "eingang": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/eingang.mp3"
+  },
+  "einzelzimmer": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/einzelzimmer.mp3"
+  },
+  "fenster": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/fenster.mp3"
+  },
+  "halle": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/halle.mp3"
+  },
+  "haus": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/haus.mp3"
+  },
+  "haustür": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/haust%C3%BCr.mp3"
+  },
+  "herd": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/herd.mp3"
+  },
+  "hotel": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/hotel.mp3"
+  },
+  "küche": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/k%C3%BCche.mp3"
+  },
+  "kühlschrank": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/k%C3%BChlschrank.mp3"
+  },
+  "licht": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/licht.mp3"
+  },
+  "miete": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/miete.mp3"
+  },
+  "möbel": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/m%C3%B6bel.mp3"
+  },
+  "raum": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/raum.mp3"
+  },
+  "schlüssel": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/schl%C3%BCssel.mp3"
+  },
+  "schrank": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/schrank.mp3"
+  },
+  "schule": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/schule.mp3"
+  },
+  "sofa": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/sofa.mp3"
+  },
+  "tisch": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/tisch.mp3"
+  },
+  "toilette": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/toilette.mp3"
+  },
+  "treppe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/treppe.mp3"
+  },
+  "tür": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/t%C3%BCr.mp3"
+  },
+  "vermieter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/vermieter.mp3"
+  },
+  "wohnung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/wohnung.mp3"
+  },
+  "zimmer": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/zimmer.mp3"
+  },
+  "bank": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/bank.mp3"
+  },
+  "baum": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/baum.mp3"
+  },
+  "blick": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/blick.mp3"
+  },
+  "blume": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/blume.mp3"
+  },
+  "feuer": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/feuer.mp3"
+  },
+  "garten": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/garten.mp3"
+  },
+  "meer": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/meer.mp3"
+  },
+  "regen": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/regen.mp3"
+  },
+  "see": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/see.mp3"
+  },
+  "sonne": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/sonne.mp3"
+  },
+  "stock": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/stock.mp3"
+  },
+  "wetter": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/wetter.mp3"
+  },
+  "wind": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/wind.mp3"
+  },
+  "hund": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/hund.mp3"
+  },
+  "katze": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/katze.mp3"
+  },
+  "vogel": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/vogel.mp3"
+  },
+  "pferd": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/pferd.mp3"
+  },
+  "kuh": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/kuh.mp3"
+  },
+  "schwein": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/schwein.mp3"
+  },
+  "schaf": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/schaf.mp3"
+  },
+  "fisch": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/fisch.mp3"
+  },
+  "maus": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/maus.mp3"
+  },
+  "hase": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/hase.mp3"
+  },
+  "bundesrepublik": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/bundesrepublik.mp3"
+  },
+  "deutsche": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/deutsche.mp3"
+  },
+  "kantonalen": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "land": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/land.mp3"
+  },
+  "länder": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "schweiz": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/schweiz.mp3"
+  },
+  "norden": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/norden.mp3"
+  },
+  "osten": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/osten.mp3"
+  },
+  "süden": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/s%C3%BCden.mp3"
+  },
+  "westen": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/westen.mp3"
+  },
+  "dorf": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/dorf.mp3"
+  },
+  "geburtsort": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/geburtsort.mp3"
+  },
+  "heimat": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/heimat.mp3"
+  },
+  "ort": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/ort.mp3"
+  },
+  "platz": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/platz.mp3"
+  },
+  "stadt": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/stadt.mp3"
+  },
+  "welt": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/welt.mp3"
+  },
+  "buch": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/buch.mp3"
+  },
+  "buchstabe": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/buchstabe.mp3"
+  },
+  "hausaufgabe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/hausaufgabe.mp3"
+  },
+  "kindergarten": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/kindergarten.mp3"
+  },
+  "klasse": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/klasse.mp3"
+  },
+  "kurs": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/kurs.mp3"
+  },
+  "praktikum": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/praktikum.mp3"
+  },
+  "prüfung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/pr%C3%BCfung.mp3"
+  },
+  "studium": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/studium.mp3"
+  },
+  "stunde": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/stunde.mp3"
+  },
+  "test": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/test.mp3"
+  },
+  "text": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/text.mp3"
+  },
+  "unterricht": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/unterricht.mp3"
+  },
+  "wort": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/wort.mp3"
+  },
+  "arbeit": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/arbeit.mp3"
+  },
+  "arbeitsplatz": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/arbeitsplatz.mp3"
+  },
+  "chef": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/chef.mp3"
+  },
+  "drucker": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/drucker.mp3"
+  },
+  "firma": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/firma.mp3"
+  },
+  "job": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/job.mp3"
+  },
+  "kollege": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/kollege.mp3"
+  },
+  "maschine": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/maschine.mp3"
+  },
+  "papiere": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
   }
 }
