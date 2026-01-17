@@ -1116,15 +1116,6 @@
     "topic": "Housing"
   },
   {
-    "noun": "Küche",
-    "article": "die",
-    "translation_ru": "кухня",
-    "translation_en": "kitchen",
-    "translation_uk": "кухня",
-    "level": "A1",
-    "topic": "Housing"
-  },
-  {
     "noun": "Kühlschrank",
     "article": "der",
     "translation_ru": "холодильник",
@@ -1179,15 +1170,6 @@
     "topic": "Housing"
   },
   {
-    "noun": "Schlüssel",
-    "article": "die",
-    "translation_ru": "ключи",
-    "translation_en": "keys",
-    "translation_uk": "ключі",
-    "level": "A1",
-    "topic": "Housing"
-  },
-  {
     "noun": "Schrank",
     "article": "der",
     "translation_ru": "шкаф",
@@ -1233,15 +1215,6 @@
     "topic": "Housing"
   },
   {
-    "noun": "Toilette",
-    "article": "die",
-    "translation_ru": "туалет",
-    "translation_en": "toilet",
-    "translation_uk": "туалет",
-    "level": "A1",
-    "topic": "Housing"
-  },
-  {
     "noun": "Treppe",
     "article": "die",
     "translation_ru": "лестница",
@@ -1253,15 +1226,6 @@
   {
     "noun": "Tür",
     "article": "die",
-    "translation_ru": "дверь",
-    "translation_en": "door",
-    "translation_uk": "двері",
-    "level": "A1",
-    "topic": "Housing"
-  },
-  {
-    "noun": "Tür",
-    "article": "der",
     "translation_ru": "дверь",
     "translation_en": "door",
     "translation_uk": "двері",
@@ -1620,15 +1584,6 @@
     "topic": "Person"
   },
   {
-    "noun": "Mitte",
-    "article": "die",
-    "translation_ru": "центр",
-    "translation_en": "center",
-    "translation_uk": "центр",
-    "level": "A1",
-    "topic": "Geography"
-  },
-  {
     "noun": "Ort",
     "article": "der",
     "translation_ru": "место",
@@ -1656,26 +1611,8 @@
     "topic": "Geography"
   },
   {
-    "noun": "Stadt",
-    "article": "der",
-    "translation_ru": "город",
-    "translation_en": "city",
-    "translation_uk": "місто",
-    "level": "A1",
-    "topic": "Geography"
-  },
-  {
     "noun": "Welt",
     "article": "die",
-    "translation_ru": "мир",
-    "translation_en": "world",
-    "translation_uk": "світ",
-    "level": "A1",
-    "topic": "Geography"
-  },
-  {
-    "noun": "Welt",
-    "article": "der",
     "translation_ru": "мир",
     "translation_en": "world",
     "translation_uk": "світ",
@@ -1751,15 +1688,6 @@
     "translation_ru": "экзамен",
     "translation_en": "exam",
     "translation_uk": "іспит",
-    "level": "A1",
-    "topic": "Education & Learning"
-  },
-  {
-    "noun": "Schule",
-    "article": "die",
-    "translation_ru": "школа",
-    "translation_en": "school",
-    "translation_uk": "школа",
     "level": "A1",
     "topic": "Education & Learning"
   },
@@ -1994,15 +1922,6 @@
     "translation_ru": "еда",
     "translation_en": "food",
     "translation_uk": "їжа",
-    "level": "A1",
-    "topic": "Food & Drink"
-  },
-  {
-    "noun": "Fisch",
-    "article": "der",
-    "translation_ru": "рыба",
-    "translation_en": "fish",
-    "translation_uk": "риба",
     "level": "A1",
     "topic": "Food & Drink"
   },
@@ -2349,15 +2268,6 @@
     "topic": "Shopping & Everyday Items"
   },
   {
-    "noun": "Kasse",
-    "article": "der",
-    "translation_ru": "касса",
-    "translation_en": "cash register",
-    "translation_uk": "касa",
-    "level": "A1",
-    "topic": "Shopping & Everyday Items"
-  },
-  {
     "noun": "Kiosk",
     "article": "der",
     "translation_ru": "киоск",
@@ -2682,15 +2592,6 @@
     "topic": "Services"
   },
   {
-    "noun": "Rezeption",
-    "article": "der",
-    "translation_ru": "ресепшн",
-    "translation_en": "reception desk",
-    "translation_uk": "рецепція",
-    "level": "A1",
-    "topic": "Services"
-  },
-  {
     "noun": "Schalter",
     "article": "der",
     "translation_ru": "окно",
@@ -2900,15 +2801,6 @@
   {
     "noun": "Zeitung",
     "article": "der",
-    "translation_ru": "газета",
-    "translation_en": "newspaper",
-    "translation_uk": "газета",
-    "level": "A1",
-    "topic": "Leisure & Entertainment"
-  },
-  {
-    "noun": "Zeitung",
-    "article": "die",
     "translation_ru": "газета",
     "translation_en": "newspaper",
     "translation_uk": "газета",
@@ -3339,15 +3231,6 @@
     "topic": "Time & Dates"
   },
   {
-    "noun": "Stunde",
-    "article": "die",
-    "translation_ru": "час",
-    "translation_en": "hour",
-    "translation_uk": "година",
-    "level": "A1",
-    "topic": "Time & Dates"
-  },
-  {
     "noun": "Pause",
     "article": "die",
     "translation_ru": "перерыв",
@@ -3368,15 +3251,6 @@
   {
     "noun": "Abfahrt",
     "article": "die",
-    "translation_ru": "отправление",
-    "translation_en": "departure",
-    "translation_uk": "відправлення",
-    "level": "A1",
-    "topic": "Travel & Transport"
-  },
-  {
-    "noun": "Abfahrt",
-    "article": "der",
     "translation_ru": "отправление",
     "translation_en": "departure",
     "translation_uk": "відправлення",
@@ -3452,15 +3326,6 @@
     "translation_ru": "поезд",
     "translation_en": "train",
     "translation_uk": "потяг",
-    "level": "A1",
-    "topic": "Travel & Transport"
-  },
-  {
-    "noun": "Bahn",
-    "article": "der",
-    "translation_ru": "железная дорога",
-    "translation_en": "railway",
-    "translation_uk": "залізниця",
     "level": "A1",
     "topic": "Travel & Transport"
   },
@@ -3573,15 +3438,6 @@
     "topic": "Travel & Transport"
   },
   {
-    "noun": "Haltestelle",
-    "article": "der",
-    "translation_ru": "остановка",
-    "translation_en": "stop",
-    "translation_uk": "зупинка",
-    "level": "A1",
-    "topic": "Travel & Transport"
-  },
-  {
     "noun": "Koffer",
     "article": "der",
     "translation_ru": "чемодан",
@@ -3674,15 +3530,6 @@
   {
     "noun": "Straße",
     "article": "der",
-    "translation_ru": "улица",
-    "translation_en": "street",
-    "translation_uk": "вулиця",
-    "level": "A1",
-    "topic": "Travel & Transport"
-  },
-  {
-    "noun": "Straße",
-    "article": "die",
     "translation_ru": "улица",
     "translation_en": "street",
     "translation_uk": "вулиця",
