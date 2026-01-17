@@ -2999,7 +2999,8 @@
     "translation_en": "cinema",
     "translation_uk": "кінотеатр",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/kino.mp3"
   },
   {
     "noun": "Lied",
@@ -3008,7 +3009,8 @@
     "translation_en": "song",
     "translation_uk": "пісня",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/lied.mp3"
   },
   {
     "noun": "Party",
@@ -3017,7 +3019,8 @@
     "translation_en": "party",
     "translation_uk": "вечірка",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/party.mp3"
   },
   {
     "noun": "Schwimmbad",
@@ -3026,7 +3029,8 @@
     "translation_en": "swimming pool",
     "translation_uk": "басейн",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/schwimmbad.mp3"
   },
   {
     "noun": "Spiel",
@@ -3035,7 +3039,8 @@
     "translation_en": "game",
     "translation_uk": "гра",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/spiel.mp3"
   },
   {
     "noun": "Sport",
@@ -3044,7 +3049,8 @@
     "translation_en": "sport",
     "translation_uk": "спорт",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/sport.mp3"
   },
   {
     "noun": "Verein",
@@ -3053,16 +3059,18 @@
     "translation_en": "club",
     "translation_uk": "клуб",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/verein.mp3"
   },
   {
     "noun": "Zeitung",
-    "article": "der",
+    "article": "die",
     "translation_ru": "газета",
     "translation_en": "newspaper",
     "translation_uk": "газета",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/zeitung.mp3"
   },
   {
     "noun": "Anfang",
@@ -3071,7 +3079,8 @@
     "translation_en": "beginning",
     "translation_uk": "початок",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/anfang.mp3"
   },
   {
     "noun": "Ende",
@@ -3080,7 +3089,8 @@
     "translation_en": "end",
     "translation_uk": "кінець",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/ende.mp3"
   },
   {
     "noun": "Moment",
@@ -3089,7 +3099,8 @@
     "translation_en": "moment",
     "translation_uk": "момент",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/moment.mp3"
   },
   {
     "noun": "Tag",
@@ -3098,7 +3109,8 @@
     "translation_en": "day",
     "translation_uk": "день",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/tag.mp3"
   },
   {
     "noun": "Termin",
@@ -3107,7 +3119,8 @@
     "translation_en": "appointment",
     "translation_uk": "зустріч",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/termin.mp3"
   },
   {
     "noun": "Uhr",
@@ -3116,7 +3129,8 @@
     "translation_en": "clock",
     "translation_uk": "годинник",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/uhr.mp3"
   },
   {
     "noun": "Woche",
@@ -3125,7 +3139,8 @@
     "translation_en": "week",
     "translation_uk": "тиждень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/woche.mp3"
   },
   {
     "noun": "Wochenende",
@@ -3134,7 +3149,8 @@
     "translation_en": "weekend",
     "translation_uk": "вихідні",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/wochenende.mp3"
   },
   {
     "noun": "Abend",
@@ -3143,7 +3159,8 @@
     "translation_en": "evening",
     "translation_uk": "вечір",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/abend.mp3"
   },
   {
     "noun": "Mittag",
@@ -3152,7 +3169,8 @@
     "translation_en": "noon",
     "translation_uk": "полудень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/mittag.mp3"
   },
   {
     "noun": "Morgen",
@@ -3161,7 +3179,8 @@
     "translation_en": "morning",
     "translation_uk": "ранок",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/morgen.mp3"
   },
   {
     "noun": "Nachmittag",
@@ -3170,7 +3189,8 @@
     "translation_en": "afternoon",
     "translation_uk": "після полудня",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/nachmittag.mp3"
   },
   {
     "noun": "Nacht",
@@ -3179,7 +3199,8 @@
     "translation_en": "night",
     "translation_uk": "ніч",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/nacht.mp3"
   },
   {
     "noun": "Vormittag",
@@ -3188,7 +3209,8 @@
     "translation_en": "morning",
     "translation_uk": "ранок",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/vormittag.mp3"
   },
   {
     "noun": "Dienstag",
@@ -3197,7 +3219,8 @@
     "translation_en": "Tuesday",
     "translation_uk": "вівторок",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/dienstag.mp3"
   },
   {
     "noun": "Donnerstag",
@@ -3206,7 +3229,8 @@
     "translation_en": "Thursday",
     "translation_uk": "четвер",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/donnerstag.mp3"
   },
   {
     "noun": "Freitag",
@@ -3215,7 +3239,8 @@
     "translation_en": "Friday",
     "translation_uk": "п’ятниця",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/freitag.mp3"
   },
   {
     "noun": "Mittwoch",
@@ -3224,7 +3249,8 @@
     "translation_en": "Wednesday",
     "translation_uk": "середа",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/mittwoch.mp3"
   },
   {
     "noun": "Montag",
@@ -3233,7 +3259,8 @@
     "translation_en": "Monday",
     "translation_uk": "понеділок",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/montag.mp3"
   },
   {
     "noun": "Samstag",
@@ -3242,7 +3269,8 @@
     "translation_en": "Saturday",
     "translation_uk": "субота",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/samstag.mp3"
   },
   {
     "noun": "Sonntag",
@@ -3251,7 +3279,8 @@
     "translation_en": "Sunday",
     "translation_uk": "неділя",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/sonntag.mp3"
   },
   {
     "noun": "Wochentag",
@@ -3260,7 +3289,8 @@
     "translation_en": "weekday",
     "translation_uk": "день тижня",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/wochentag.mp3"
   },
   {
     "noun": "April",
@@ -3269,7 +3299,8 @@
     "translation_en": "April",
     "translation_uk": "квітень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/april.mp3"
   },
   {
     "noun": "August",
@@ -3278,7 +3309,8 @@
     "translation_en": "August",
     "translation_uk": "серпень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/august.mp3"
   },
   {
     "noun": "Dezember",
@@ -3287,7 +3319,8 @@
     "translation_en": "December",
     "translation_uk": "грудень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/dezember.mp3"
   },
   {
     "noun": "Februar",
@@ -3296,7 +3329,8 @@
     "translation_en": "February",
     "translation_uk": "лютий",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/februar.mp3"
   },
   {
     "noun": "Januar",
@@ -3305,7 +3339,8 @@
     "translation_en": "January",
     "translation_uk": "січень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/januar.mp3"
   },
   {
     "noun": "Juli",
@@ -3314,7 +3349,8 @@
     "translation_en": "July",
     "translation_uk": "липень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/juli.mp3"
   },
   {
     "noun": "Juni",
@@ -3323,7 +3359,8 @@
     "translation_en": "June",
     "translation_uk": "червень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/juni.mp3"
   },
   {
     "noun": "Mai",
@@ -3332,7 +3369,8 @@
     "translation_en": "May",
     "translation_uk": "травень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/mai.mp3"
   },
   {
     "noun": "März",
@@ -3341,7 +3379,8 @@
     "translation_en": "March",
     "translation_uk": "березень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/m%C3%A4rz.mp3"
   },
   {
     "noun": "November",
@@ -3350,7 +3389,8 @@
     "translation_en": "November",
     "translation_uk": "листопад",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/november.mp3"
   },
   {
     "noun": "Oktober",
@@ -3359,7 +3399,8 @@
     "translation_en": "October",
     "translation_uk": "жовтень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/oktober.mp3"
   },
   {
     "noun": "September",
@@ -3368,7 +3409,8 @@
     "translation_en": "September",
     "translation_uk": "вересень",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/september.mp3"
   },
   {
     "noun": "Datum",
@@ -3377,7 +3419,8 @@
     "translation_en": "date",
     "translation_uk": "дата",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/datum.mp3"
   },
   {
     "noun": "Geburtstag",
@@ -3386,7 +3429,8 @@
     "translation_en": "birthday",
     "translation_uk": "день народження",
     "level": "A1",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/geburtstag.mp3"
   },
   {
     "noun": "Hochzeit",
@@ -3395,7 +3439,8 @@
     "translation_en": "wedding",
     "translation_uk": "весілля",
     "level": "A1",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/hochzeit.mp3"
   },
   {
     "noun": "Urlaub",
@@ -3404,7 +3449,8 @@
     "translation_en": "holiday",
     "translation_uk": "відпустка",
     "level": "A1",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/urlaub.mp3"
   },
   {
     "noun": "Frühjahr",
@@ -3413,7 +3459,8 @@
     "translation_en": "spring",
     "translation_uk": "весна",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/fr%C3%BChjahr.mp3"
   },
   {
     "noun": "Frühling",
@@ -3422,7 +3469,8 @@
     "translation_en": "spring",
     "translation_uk": "весна",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/fr%C3%BChling.mp3"
   },
   {
     "noun": "Herbst",
@@ -3431,7 +3479,8 @@
     "translation_en": "autumn",
     "translation_uk": "осінь",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/herbst.mp3"
   },
   {
     "noun": "Sommer",
@@ -3440,7 +3489,8 @@
     "translation_en": "summer",
     "translation_uk": "літо",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/sommer.mp3"
   },
   {
     "noun": "Winter",
@@ -3449,7 +3499,8 @@
     "translation_en": "winter",
     "translation_uk": "зима",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/winter.mp3"
   },
   {
     "noun": "Geburtsjahr",
@@ -3458,7 +3509,8 @@
     "translation_en": "year of birth",
     "translation_uk": "рік народження",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/geburtsjahr.mp3"
   },
   {
     "noun": "Jahr",
@@ -3467,7 +3519,8 @@
     "translation_en": "year",
     "translation_uk": "рік",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/jahr.mp3"
   },
   {
     "noun": "Minute",
@@ -3476,7 +3529,8 @@
     "translation_en": "minute",
     "translation_uk": "хвилина",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/minute.mp3"
   },
   {
     "noun": "Sekunde",
@@ -3485,7 +3539,8 @@
     "translation_en": "second",
     "translation_uk": "секунда",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/sekunde.mp3"
   },
   {
     "noun": "Pause",
@@ -3494,7 +3549,8 @@
     "translation_en": "break",
     "translation_uk": "перерва",
     "level": "A1",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/pause.mp3"
   },
   {
     "noun": "Nummer",
@@ -3503,7 +3559,8 @@
     "translation_en": "number",
     "translation_uk": "номер",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/nummer.mp3"
   },
   {
     "noun": "Abfahrt",
@@ -3512,7 +3569,8 @@
     "translation_en": "departure",
     "translation_uk": "відправлення",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/abfahrt.mp3"
   },
   {
     "noun": "Abflug",
@@ -3521,7 +3579,8 @@
     "translation_en": "departure",
     "translation_uk": "відліт",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/abflug.mp3"
   },
   {
     "noun": "Ankunft",
@@ -3530,7 +3589,8 @@
     "translation_en": "arrival",
     "translation_uk": "прибуття",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/ankunft.mp3"
   },
   {
     "noun": "Anschluss",
@@ -3539,7 +3599,8 @@
     "translation_en": "connection",
     "translation_uk": "підключення",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/anschluss.mp3"
   },
   {
     "noun": "Ausgang",
@@ -3548,7 +3609,8 @@
     "translation_en": "exit",
     "translation_uk": "вихід",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/ausgang.mp3"
   },
   {
     "noun": "Ausland",
@@ -3557,7 +3619,8 @@
     "translation_en": "abroad",
     "translation_uk": "за кордоном",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/ausland.mp3"
   },
   {
     "noun": "Auto",
@@ -3566,7 +3629,8 @@
     "translation_en": "car",
     "translation_uk": "автомобіль",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/auto.mp3"
   },
   {
     "noun": "Autobahn",
@@ -3575,7 +3639,8 @@
     "translation_en": "motorway",
     "translation_uk": "автомагістраль",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/autobahn.mp3"
   },
   {
     "noun": "Bahn",
@@ -3584,7 +3649,8 @@
     "translation_en": "train",
     "translation_uk": "потяг",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/bahn.mp3"
   },
   {
     "noun": "Bahnhof",
@@ -3593,7 +3659,8 @@
     "translation_en": "station",
     "translation_uk": "вокзал",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/bahnhof.mp3"
   },
   {
     "noun": "Bahnhofstraße",
@@ -3611,7 +3678,8 @@
     "translation_en": "platform",
     "translation_uk": "платформа",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/bahnsteig.mp3"
   },
   {
     "noun": "Bus",
@@ -3620,7 +3688,8 @@
     "translation_en": "bus",
     "translation_uk": "автобус",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/bus.mp3"
   },
   {
     "noun": "Fahrkarte",
@@ -3629,7 +3698,8 @@
     "translation_en": "ticket",
     "translation_uk": "квиток",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/fahrkarte.mp3"
   },
   {
     "noun": "Fahrrad",
@@ -3638,7 +3708,8 @@
     "translation_en": "bicycle",
     "translation_uk": "велосипед",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/fahrrad.mp3"
   },
   {
     "noun": "Fahrt",
@@ -3647,7 +3718,8 @@
     "translation_en": "trip",
     "translation_uk": "подорож",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/fahrt.mp3"
   },
   {
     "noun": "Flughafen",
@@ -3656,7 +3728,8 @@
     "translation_en": "airport",
     "translation_uk": "аеропорт",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/flughafen.mp3"
   },
   {
     "noun": "Flugzeug",
@@ -3665,7 +3738,8 @@
     "translation_en": "plane",
     "translation_uk": "літак",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/flugzeug.mp3"
   },
   {
     "noun": "Gepäck",
@@ -3674,7 +3748,8 @@
     "translation_en": "luggage",
     "translation_uk": "багаж",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/gep%C3%A4ck.mp3"
   },
   {
     "noun": "Gleis",
@@ -3683,7 +3758,8 @@
     "translation_en": "platform",
     "translation_uk": "платформа",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/gleis.mp3"
   },
   {
     "noun": "Haltestelle",
@@ -3692,7 +3768,8 @@
     "translation_en": "stop",
     "translation_uk": "зупинка",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/haltestelle.mp3"
   },
   {
     "noun": "Koffer",
@@ -3701,16 +3778,8 @@
     "translation_en": "suitcase",
     "translation_uk": "чемодан",
     "level": "A1",
-    "topic": "Travel & Transport"
-  },
-  {
-    "noun": "Lkw",
-    "article": "der",
-    "translation_ru": "грузовик",
-    "translation_en": "truck",
-    "translation_uk": "вантажівка",
-    "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/koffer.mp3"
   },
   {
     "noun": "Pass",
@@ -3719,7 +3788,8 @@
     "translation_en": "passport",
     "translation_uk": "паспорт",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/pass.mp3"
   },
   {
     "noun": "Prospekt",
@@ -3728,7 +3798,8 @@
     "translation_en": "brochure",
     "translation_uk": "брошура",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/prospekt.mp3"
   },
   {
     "noun": "Reise",
@@ -3737,7 +3808,8 @@
     "translation_en": "trip",
     "translation_uk": "подорож",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/reise.mp3"
   },
   {
     "noun": "Reisebüro",
@@ -3755,7 +3827,8 @@
     "translation_en": "guidebook",
     "translation_uk": "путівник",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/reisef%C3%BChrer.mp3"
   },
   {
     "noun": "S-Bahn",
@@ -3764,7 +3837,8 @@
     "translation_en": "suburban train",
     "translation_uk": "електричка",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/s-bahn.mp3"
   },
   {
     "noun": "Schild",
@@ -3773,7 +3847,8 @@
     "translation_en": "sign",
     "translation_uk": "знак",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/schild.mp3"
   },
   {
     "noun": "Sehenswürdigkeit",
@@ -3782,16 +3857,18 @@
     "translation_en": "sightseeing spot",
     "translation_uk": "пам'ятка",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/sehensw%C3%BCrdigkeit.mp3"
   },
   {
     "noun": "Straße",
-    "article": "der",
+    "article": "die",
     "translation_ru": "улица",
     "translation_en": "street",
     "translation_uk": "вулиця",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/stra%C3%9Fe.mp3"
   },
   {
     "noun": "Straßenbahn",
@@ -3800,7 +3877,8 @@
     "translation_en": "tram",
     "translation_uk": "трамвай",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/stra%C3%9Fenbahn.mp3"
   },
   {
     "noun": "Taxi",
@@ -3809,7 +3887,8 @@
     "translation_en": "taxi",
     "translation_uk": "таксі",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/taxi.mp3"
   },
   {
     "noun": "Ticket",
@@ -3818,7 +3897,8 @@
     "translation_en": "ticket",
     "translation_uk": "квиток",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/ticket.mp3"
   },
   {
     "noun": "Vorwahl",
@@ -3827,7 +3907,8 @@
     "translation_en": "area code",
     "translation_uk": "код міста",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/vorwahl.mp3"
   },
   {
     "noun": "Zoll",
@@ -3836,7 +3917,8 @@
     "translation_en": "customs",
     "translation_uk": "митниця",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/zoll.mp3"
   },
   {
     "noun": "Zug",
@@ -3845,7 +3927,8 @@
     "translation_en": "train",
     "translation_uk": "поїзд",
     "level": "A1",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/zug.mp3"
   },
   {
     "noun": "Farbe",
@@ -3854,6 +3937,7 @@
     "translation_en": "color",
     "translation_uk": "колір",
     "level": "A1",
-    "topic": "Colors"
+    "topic": "Colors",
+    "audio_url": "https://der-artikel.de/audio/farbe.mp3"
   }
 ]

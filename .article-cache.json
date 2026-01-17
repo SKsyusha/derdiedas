@@ -1220,5 +1220,392 @@
   "internet": {
     "article": "das",
     "audio_url": "https://der-artikel.de/audio/internet.mp3"
+  },
+  "kino": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/kino.mp3"
+  },
+  "lied": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/lied.mp3"
+  },
+  "party": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/party.mp3"
+  },
+  "schwimmbad": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/schwimmbad.mp3"
+  },
+  "spiel": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/spiel.mp3"
+  },
+  "sport": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/sport.mp3"
+  },
+  "verein": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/verein.mp3"
+  },
+  "zeitung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/zeitung.mp3"
+  },
+  "anfang": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/anfang.mp3"
+  },
+  "ende": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/ende.mp3"
+  },
+  "moment": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/moment.mp3"
+  },
+  "tag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/tag.mp3"
+  },
+  "termin": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/termin.mp3"
+  },
+  "uhr": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/uhr.mp3"
+  },
+  "woche": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/woche.mp3"
+  },
+  "wochenende": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/wochenende.mp3"
+  },
+  "abend": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/abend.mp3"
+  },
+  "mittag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/mittag.mp3"
+  },
+  "morgen": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/morgen.mp3"
+  },
+  "nachmittag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/nachmittag.mp3"
+  },
+  "nacht": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/nacht.mp3"
+  },
+  "vormittag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/vormittag.mp3"
+  },
+  "dienstag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/dienstag.mp3"
+  },
+  "donnerstag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/donnerstag.mp3"
+  },
+  "freitag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/freitag.mp3"
+  },
+  "mittwoch": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/mittwoch.mp3"
+  },
+  "montag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/montag.mp3"
+  },
+  "samstag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/samstag.mp3"
+  },
+  "sonntag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/sonntag.mp3"
+  },
+  "wochentag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/wochentag.mp3"
+  },
+  "april": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/april.mp3"
+  },
+  "august": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/august.mp3"
+  },
+  "dezember": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/dezember.mp3"
+  },
+  "februar": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/februar.mp3"
+  },
+  "januar": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/januar.mp3"
+  },
+  "juli": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/juli.mp3"
+  },
+  "juni": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/juni.mp3"
+  },
+  "mai": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/mai.mp3"
+  },
+  "märz": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/m%C3%A4rz.mp3"
+  },
+  "november": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/november.mp3"
+  },
+  "oktober": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/oktober.mp3"
+  },
+  "september": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/september.mp3"
+  },
+  "datum": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/datum.mp3"
+  },
+  "geburtstag": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/geburtstag.mp3"
+  },
+  "hochzeit": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/hochzeit.mp3"
+  },
+  "urlaub": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/urlaub.mp3"
+  },
+  "frühjahr": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/fr%C3%BChjahr.mp3"
+  },
+  "frühling": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/fr%C3%BChling.mp3"
+  },
+  "herbst": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/herbst.mp3"
+  },
+  "sommer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/sommer.mp3"
+  },
+  "winter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/winter.mp3"
+  },
+  "geburtsjahr": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/geburtsjahr.mp3"
+  },
+  "jahr": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/jahr.mp3"
+  },
+  "minute": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/minute.mp3"
+  },
+  "sekunde": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/sekunde.mp3"
+  },
+  "pause": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/pause.mp3"
+  },
+  "nummer": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/nummer.mp3"
+  },
+  "abfahrt": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/abfahrt.mp3"
+  },
+  "abflug": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/abflug.mp3"
+  },
+  "ankunft": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/ankunft.mp3"
+  },
+  "anschluss": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/anschluss.mp3"
+  },
+  "ausgang": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/ausgang.mp3"
+  },
+  "ausland": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/ausland.mp3"
+  },
+  "auto": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/auto.mp3"
+  },
+  "autobahn": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/autobahn.mp3"
+  },
+  "bahn": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/bahn.mp3"
+  },
+  "bahnhof": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/bahnhof.mp3"
+  },
+  "bahnhofstraße": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "bahnsteig": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/bahnsteig.mp3"
+  },
+  "bus": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/bus.mp3"
+  },
+  "fahrkarte": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/fahrkarte.mp3"
+  },
+  "fahrrad": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/fahrrad.mp3"
+  },
+  "fahrt": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/fahrt.mp3"
+  },
+  "flughafen": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/flughafen.mp3"
+  },
+  "flugzeug": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/flugzeug.mp3"
+  },
+  "gepäck": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/gep%C3%A4ck.mp3"
+  },
+  "gleis": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/gleis.mp3"
+  },
+  "haltestelle": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/haltestelle.mp3"
+  },
+  "koffer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/koffer.mp3"
+  },
+  "lkw": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "pass": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/pass.mp3"
+  },
+  "prospekt": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/prospekt.mp3"
+  },
+  "reise": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/reise.mp3"
+  },
+  "reisebüro": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "reiseführer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/reisef%C3%BChrer.mp3"
+  },
+  "s-bahn": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/s-bahn.mp3"
+  },
+  "schild": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/schild.mp3"
+  },
+  "sehenswürdigkeit": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/sehensw%C3%BCrdigkeit.mp3"
+  },
+  "straße": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/stra%C3%9Fe.mp3"
+  },
+  "straßenbahn": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/stra%C3%9Fenbahn.mp3"
+  },
+  "taxi": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/taxi.mp3"
+  },
+  "ticket": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/ticket.mp3"
+  },
+  "vorwahl": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/vorwahl.mp3"
+  },
+  "zoll": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/zoll.mp3"
+  },
+  "zug": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/zug.mp3"
+  },
+  "farbe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/farbe.mp3"
   }
 }
