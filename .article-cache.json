@@ -200,5 +200,211 @@
     "article": null,
     "audio_url": null,
     "notFound": true
+  },
+  "kopf": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/kopf.mp3"
+  },
+  "mund": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/mund.mp3"
+  },
+  "arzt": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/arzt.mp3"
+  },
+  "beamte": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/beamte.mp3"
+  },
+  "beamtin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/beamtin.mp3"
+  },
+  "beruf": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/beruf.mp3"
+  },
+  "doktor": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/doktor.mp3"
+  },
+  "hausfrau": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/hausfrau.mp3"
+  },
+  "hausmann": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/hausmann.mp3"
+  },
+  "kultusminister": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "lehrer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/lehrer.mp3"
+  },
+  "verkäufer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/verk%C3%A4ufer.mp3"
+  },
+  "adresse": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/adresse.mp3"
+  },
+  "alter": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/alter.mp3"
+  },
+  "anrede": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/anrede.mp3"
+  },
+  "antwort": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/antwort.mp3"
+  },
+  "appetit": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/appetit.mp3"
+  },
+  "aufgabe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/aufgabe.mp3"
+  },
+  "aussage": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/aussage.mp3"
+  },
+  "beispiel": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/beispiel.mp3"
+  },
+  "bitte": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/bitte.mp3"
+  },
+  "dank": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/dank.mp3"
+  },
+  "durst": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/durst.mp3"
+  },
+  "einladung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/einladung.mp3"
+  },
+  "entschuldigung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/entschuldigung.mp3"
+  },
+  "ergebnis": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/ergebnis.mp3"
+  },
+  "familienname": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/familienname.mp3"
+  },
+  "fehler": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/fehler.mp3"
+  },
+  "fieber": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/fieber.mp3"
+  },
+  "frage": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/frage.mp3"
+  },
+  "gespräch": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/gespr%C3%A4ch.mp3"
+  },
+  "glück": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/gl%C3%BCck.mp3"
+  },
+  "glückwunsch": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/gl%C3%BCckwunsch.mp3"
+  },
+  "gruppe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/gruppe.mp3"
+  },
+  "gruß": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/gru%C3%9F.mp3"
+  },
+  "hilfe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/hilfe.mp3"
+  },
+  "hunger": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/hunger.mp3"
+  },
+  "information": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/information.mp3"
+  },
+  "leben": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/leben.mp3"
+  },
+  "lösung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/l%C3%B6sung.mp3"
+  },
+  "mitte": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/mitte.mp3"
+  },
+  "name": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/name.mp3"
+  },
+  "niveaustufen": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "ordnung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/ordnung.mp3"
+  },
+  "plan": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/plan.mp3"
+  },
+  "problem": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/problem.mp3"
+  },
+  "schluss": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/schluss.mp3"
+  },
+  "sprache": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/sprache.mp3"
+  },
+  "stufe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/stufe.mp3"
+  },
+  "teil": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/teil.mp3"
+  },
+  "thema": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/thema.mp3"
   }
 }

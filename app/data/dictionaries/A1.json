@@ -480,22 +480,14 @@
     "audio_url": "https://der-artikel.de/audio/hand.mp3"
   },
   {
-    "noun": "Hände",
-    "article": "die",
-    "translation_ru": "руки",
-    "translation_en": "hands",
-    "translation_uk": "руки",
-    "level": "A1",
-    "topic": "Body Parts"
-  },
-  {
     "noun": "Kopf",
     "article": "der",
     "translation_ru": "голова",
     "translation_en": "head",
     "translation_uk": "голова",
     "level": "A1",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/kopf.mp3"
   },
   {
     "noun": "Mund",
@@ -504,7 +496,8 @@
     "translation_en": "mouth",
     "translation_uk": "рот",
     "level": "A1",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/mund.mp3"
   },
   {
     "noun": "Arzt",
@@ -513,7 +506,8 @@
     "translation_en": "doctor",
     "translation_uk": "лікар",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/arzt.mp3"
   },
   {
     "noun": "Beamte",
@@ -522,7 +516,8 @@
     "translation_en": "civil servant",
     "translation_uk": "чиновник",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/beamte.mp3"
   },
   {
     "noun": "Beamtin",
@@ -531,7 +526,8 @@
     "translation_en": "female civil servant",
     "translation_uk": "державна службовиця",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/beamtin.mp3"
   },
   {
     "noun": "Beruf",
@@ -540,7 +536,8 @@
     "translation_en": "profession",
     "translation_uk": "професія",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/beruf.mp3"
   },
   {
     "noun": "Doktor",
@@ -549,7 +546,8 @@
     "translation_en": "doctor",
     "translation_uk": "лікар",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/doktor.mp3"
   },
   {
     "noun": "Hausfrau",
@@ -558,7 +556,8 @@
     "translation_en": "housewife",
     "translation_uk": "домогосподарка",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/hausfrau.mp3"
   },
   {
     "noun": "Hausmann",
@@ -567,7 +566,8 @@
     "translation_en": "househusband",
     "translation_uk": "домогосподар",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/hausmann.mp3"
   },
   {
     "noun": "Kultusminister",
@@ -585,7 +585,8 @@
     "translation_en": "teacher",
     "translation_uk": "вчитель",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/lehrer.mp3"
   },
   {
     "noun": "Verkäufer",
@@ -594,7 +595,8 @@
     "translation_en": "seller",
     "translation_uk": "продавець",
     "level": "A1",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/verk%C3%A4ufer.mp3"
   },
   {
     "noun": "Adresse",
@@ -603,7 +605,8 @@
     "translation_en": "address",
     "translation_uk": "адрес",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/adresse.mp3"
   },
   {
     "noun": "Alter",
@@ -612,7 +615,8 @@
     "translation_en": "age",
     "translation_uk": "вік",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/alter.mp3"
   },
   {
     "noun": "Anrede",
@@ -621,7 +625,8 @@
     "translation_en": "form of address",
     "translation_uk": "звертання",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/anrede.mp3"
   },
   {
     "noun": "Antwort",
@@ -630,7 +635,8 @@
     "translation_en": "answer",
     "translation_uk": "відповідь",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/antwort.mp3"
   },
   {
     "noun": "Appetit",
@@ -639,7 +645,8 @@
     "translation_en": "appetite",
     "translation_uk": "апетит",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/appetit.mp3"
   },
   {
     "noun": "Aufgabe",
@@ -648,7 +655,8 @@
     "translation_en": "task",
     "translation_uk": "завдання",
     "level": "A1",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/aufgabe.mp3"
   },
   {
     "noun": "Aussage",
@@ -657,7 +665,8 @@
     "translation_en": "statement",
     "translation_uk": "заява",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/aussage.mp3"
   },
   {
     "noun": "Beispiel",
@@ -666,7 +675,8 @@
     "translation_en": "example",
     "translation_uk": "приклад",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/beispiel.mp3"
   },
   {
     "noun": "Bitte",
@@ -675,7 +685,8 @@
     "translation_en": "request",
     "translation_uk": "прохання",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/bitte.mp3"
   },
   {
     "noun": "Dank",
@@ -684,7 +695,8 @@
     "translation_en": "thanks",
     "translation_uk": "подяка",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/dank.mp3"
   },
   {
     "noun": "Durst",
@@ -693,7 +705,8 @@
     "translation_en": "thirst",
     "translation_uk": "спрага",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/durst.mp3"
   },
   {
     "noun": "Einladung",
@@ -702,7 +715,8 @@
     "translation_en": "invitation",
     "translation_uk": "запрошення",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/einladung.mp3"
   },
   {
     "noun": "Entschuldigung",
@@ -711,7 +725,8 @@
     "translation_en": "apology",
     "translation_uk": "вибачення",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/entschuldigung.mp3"
   },
   {
     "noun": "Ergebnis",
@@ -720,7 +735,8 @@
     "translation_en": "result",
     "translation_uk": "результат",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ergebnis.mp3"
   },
   {
     "noun": "Familienname",
@@ -729,7 +745,8 @@
     "translation_en": "surname",
     "translation_uk": "прізвище",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/familienname.mp3"
   },
   {
     "noun": "Fehler",
@@ -738,7 +755,8 @@
     "translation_en": "error",
     "translation_uk": "помилка",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/fehler.mp3"
   },
   {
     "noun": "Fieber",
@@ -747,7 +765,8 @@
     "translation_en": "fever",
     "translation_uk": "лихоманка",
     "level": "A1",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/fieber.mp3"
   },
   {
     "noun": "Frage",
@@ -756,7 +775,8 @@
     "translation_en": "question",
     "translation_uk": "питання",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/frage.mp3"
   },
   {
     "noun": "Gespräch",
@@ -765,7 +785,8 @@
     "translation_en": "conversation",
     "translation_uk": "розмова",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gespr%C3%A4ch.mp3"
   },
   {
     "noun": "Glück",
@@ -774,7 +795,8 @@
     "translation_en": "luck",
     "translation_uk": "вдача",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gl%C3%BCck.mp3"
   },
   {
     "noun": "Glückwunsch",
@@ -783,7 +805,8 @@
     "translation_en": "congratulation",
     "translation_uk": "привітання",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gl%C3%BCckwunsch.mp3"
   },
   {
     "noun": "Gruppe",
@@ -792,7 +815,8 @@
     "translation_en": "group",
     "translation_uk": "група",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gruppe.mp3"
   },
   {
     "noun": "Gruß",
@@ -801,7 +825,8 @@
     "translation_en": "greeting",
     "translation_uk": "привітання",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gru%C3%9F.mp3"
   },
   {
     "noun": "Hilfe",
@@ -810,7 +835,8 @@
     "translation_en": "help",
     "translation_uk": "допомога",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/hilfe.mp3"
   },
   {
     "noun": "Hunger",
@@ -819,7 +845,8 @@
     "translation_en": "hunger",
     "translation_uk": "голод",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/hunger.mp3"
   },
   {
     "noun": "Information",
@@ -828,7 +855,8 @@
     "translation_en": "information",
     "translation_uk": "інформація",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/information.mp3"
   },
   {
     "noun": "Leben",
@@ -837,7 +865,8 @@
     "translation_en": "life",
     "translation_uk": "життя",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/leben.mp3"
   },
   {
     "noun": "Lösung",
@@ -846,16 +875,18 @@
     "translation_en": "solution",
     "translation_uk": "розв'язок",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/l%C3%B6sung.mp3"
   },
   {
     "noun": "Mitte",
-    "article": "der",
+    "article": "die",
     "translation_ru": "середина",
     "translation_en": "middle",
     "translation_uk": "середина",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/mitte.mp3"
   },
   {
     "noun": "Name",
@@ -864,16 +895,8 @@
     "translation_en": "name",
     "translation_uk": "ім'я",
     "level": "A1",
-    "topic": "Person"
-  },
-  {
-    "noun": "Niveaustufen",
-    "article": "die",
-    "translation_ru": "уровни",
-    "translation_en": "levels",
-    "translation_uk": "рівні",
-    "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/name.mp3"
   },
   {
     "noun": "Ordnung",
@@ -882,7 +905,8 @@
     "translation_en": "order",
     "translation_uk": "порядок",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ordnung.mp3"
   },
   {
     "noun": "Plan",
@@ -891,7 +915,8 @@
     "translation_en": "plan",
     "translation_uk": "план",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/plan.mp3"
   },
   {
     "noun": "Problem",
@@ -900,7 +925,8 @@
     "translation_en": "problem",
     "translation_uk": "проблема",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/problem.mp3"
   },
   {
     "noun": "Schluss",
@@ -909,7 +935,8 @@
     "translation_en": "ending",
     "translation_uk": "кінець",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/schluss.mp3"
   },
   {
     "noun": "Sprache",
@@ -918,7 +945,8 @@
     "translation_en": "language",
     "translation_uk": "мова",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/sprache.mp3"
   },
   {
     "noun": "Stufe",
@@ -927,7 +955,8 @@
     "translation_en": "step",
     "translation_uk": "сходинка",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/stufe.mp3"
   },
   {
     "noun": "Teil",
@@ -936,7 +965,8 @@
     "translation_en": "part",
     "translation_uk": "частина",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/teil.mp3"
   },
   {
     "noun": "Thema",
@@ -945,7 +975,8 @@
     "translation_en": "topic",
     "translation_uk": "тема",
     "level": "A1",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/thema.mp3"
   },
   {
     "noun": "Unterschrift",
