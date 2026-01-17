@@ -17,8 +17,83 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DerDieDas Trainer - German Articles Practice",
-  description: "Interactive trainer to master German articles der / die / das. Practice with real words from Goethe A1/A2 vocabulary.",
+  title: "DerDieDas Trainer - Learn German Articles der/die/das",
+  description: "Free interactive trainer to master German articles der, die, das. Practice with 1000+ words from official Goethe A1/A2 vocabulary. Track your progress and learn faster!",
+  keywords: [
+    "German articles",
+    "der die das",
+    "learn German",
+    "German grammar",
+    "Goethe A1",
+    "Goethe A2",
+    "German vocabulary",
+    "German trainer",
+    "German practice",
+    "Deutsche Artikel",
+    "Deutsch lernen",
+    "German gender",
+    "noun gender German",
+  ],
+  authors: [{ name: "DerDieDas Trainer" }],
+  creator: "DerDieDas Trainer",
+  publisher: "DerDieDas Trainer",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://derdiedas-trainer.de",
+    title: "DerDieDas Trainer - Learn German Articles der/die/das",
+    description: "Free interactive trainer to master German articles. Practice with 1000+ words from Goethe A1/A2 vocabulary.",
+    siteName: "DerDieDas Trainer",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DerDieDas Trainer - Learn German Articles",
+    description: "Master German articles der/die/das with our free interactive trainer. 1000+ words from Goethe vocabulary.",
+  },
+  alternates: {
+    canonical: "https://derdiedas-trainer.de",
+  },
+  category: "Education",
+};
+
+// JSON-LD structured data for SEO and AI assistants
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "DerDieDas Trainer",
+  description: "Free interactive trainer to master German articles der, die, das. Practice with 1000+ words from official Goethe A1/A2 vocabulary.",
+  url: "https://derdiedas-trainer.de",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  featureList: [
+    "Practice German articles (der, die, das)",
+    "1000+ words from Goethe A1/A2 vocabulary",
+    "Multiple training modes",
+    "Progress tracking",
+    "Support for Russian, English, Ukrainian translations",
+    "Custom vocabulary lists",
+  ],
+  inLanguage: ["en", "de", "ru", "uk"],
+  isAccessibleForFree: true,
+  educationalLevel: "Beginner to Intermediate",
+  learningResourceType: "Interactive exercise",
+  teaches: "German grammar - noun genders and articles",
 };
 
 export default function RootLayout({
@@ -28,6 +103,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning

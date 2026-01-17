@@ -1,0 +1,22 @@
+# robots.txt for DerDieDas Trainer
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://derdiedas-trainer.de/sitemap.xml
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
