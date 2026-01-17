@@ -33,20 +33,16 @@ export interface Dictionary {
   enabled: boolean;
 }
 
-export type DictionaryType = 'default' | 'user'; // дефолтный или свой словарь
-
 export interface TrainingSettings {
   mode: TrainingMode;
-  level: Level[];
   cases: Case[];
   usePronouns: boolean;
-  enabledDictionaries: string[];
+  enabledDictionaries: string[]; // Contains 'A1', 'A2', or user dictionary IDs
   language: Language;
   topics: Topic[];
   articleType: ArticleType;
   pronounType: PronounType;
   showTranslation: boolean;
-  dictionaryType: DictionaryType;
 }
 
 export interface SessionStats {

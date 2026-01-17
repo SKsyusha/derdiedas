@@ -4,8 +4,9 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { Button, Spin, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
-import { Word, TrainingSettings, SessionStats, Article, Language, Level } from '../types';
-import { builtInDictionaries, getArticleByCase } from '../dictionaries';
+import { Word, TrainingSettings, SessionStats, Article, Language } from '../types';
+import { getArticleByCase } from '../dictionaries';
+import { getEnabledWords as getEnabledWordsFromDataset, getWordsInTopics } from '../utils/dataset';
 import SettingsDrawer from './SettingsDrawer';
 import UserDictionaryDrawer from './UserDictionaryDrawer';
 import TrainerHeader from './TrainerHeader';
@@ -20,7 +21,6 @@ const SETTINGS_COOKIE_NAME = 'training_settings';
 
 const defaultSettings: TrainingSettings = {
   mode: 'noun-only',
-  level: ['A1'],
   cases: ['nominativ'],
   usePronouns: false,
   enabledDictionaries: ['A1'],
@@ -29,7 +29,6 @@ const defaultSettings: TrainingSettings = {
   articleType: 'definite',
   pronounType: 'none',
   showTranslation: true,
-  dictionaryType: 'default',
 };
 
 function getInitialSettings(): TrainingSettings {
@@ -45,7 +44,6 @@ function getInitialSettings(): TrainingSettings {
         ...defaultSettings,
         ...parsed,
         // Ensure arrays are properly set
-        level: parsed.level || defaultSettings.level,
         cases: parsed.cases || defaultSettings.cases,
         topics: parsed.topics || defaultSettings.topics,
         enabledDictionaries: parsed.enabledDictionaries || defaultSettings.enabledDictionaries,
@@ -83,41 +81,13 @@ export default function Trainer() {
   const prevFiltersRef = useRef<string>('');
   const settingsLoadedFromCookieRef = useRef<boolean>(false);
 
-  // Get all enabled words
+  // Get all enabled words with deduplication using Set
   const getEnabledWords = useCallback((): Word[] => {
-    const words: Word[] = [];
-    
-    if (settings.dictionaryType === 'default') {
-      // Используем выбранные уровни или все если ничего не выбрано
-      const levels = settings.level.length > 0 ? settings.level : (['A1', 'A2'] as Level[]);
-      
-      levels.forEach((level) => {
-        if (builtInDictionaries[level]) {
-          const levelWords = builtInDictionaries[level];
-          const filteredWords = levelWords.filter((w: Word) => {
-            const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
-            return topicMatch;
-          });
-          words.push(...filteredWords);
-        }
-      });
-    } else {
-      const enabledDictIds = settings.enabledDictionaries.length > 0 
-        ? settings.enabledDictionaries 
-        : userDictionaries.map(d => d.id);
-      
-      userDictionaries.forEach((dict) => {
-        if (enabledDictIds.includes(dict.id)) {
-          const filteredWords = dict.words.filter((w) => {
-            const topicMatch = !settings.topics.length || (w.topic && settings.topics.includes(w.topic));
-            return topicMatch;
-          });
-          words.push(...filteredWords);
-        }
-      });
-    }
-
-    return words;
+    return getEnabledWordsFromDataset({
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+      userDictionaries,
+    });
   }, [settings, userDictionaries]);
 
   // Use word training hook
@@ -139,38 +109,14 @@ export default function Trainer() {
     getNextWordRef.current = getNextWord;
   }, [getNextWord]);
 
-  // Получение всех слов из выбранных топиков
+  // Получение всех слов из выбранных топиков с дедупликацией
   const getAllWordsInTopics = useCallback((): Word[] => {
-    const words: Word[] = [];
-    
-    if (settings.dictionaryType === 'default') {
-      const levels = settings.level.length > 0 ? settings.level : (['A1', 'A2'] as Level[]);
-      
-      levels.forEach((level) => {
-        if (builtInDictionaries[level]) {
-          const topicWords = builtInDictionaries[level].filter((w: Word) => 
-            w.topic && settings.topics.includes(w.topic)
-          );
-          words.push(...topicWords);
-        }
-      });
-    } else {
-      const enabledDictIds = settings.enabledDictionaries.length > 0 
-        ? settings.enabledDictionaries 
-        : userDictionaries.map(d => d.id);
-      
-      userDictionaries.forEach((dict) => {
-        if (enabledDictIds.includes(dict.id)) {
-          const topicWords = dict.words.filter((w) => 
-            w.topic && settings.topics.includes(w.topic)
-          );
-          words.push(...topicWords);
-        }
-      });
-    }
-    
-    return words;
-  }, [settings.topics, settings.dictionaryType, settings.level, userDictionaries]);
+    return getWordsInTopics({
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+      userDictionaries,
+    });
+  }, [settings.topics, settings.enabledDictionaries, userDictionaries]);
 
   // Расчет прогресса по топикам или всем словам
   const topicProgress = useMemo(() => {
@@ -237,7 +183,6 @@ export default function Trainer() {
   const currentFiltersString = useMemo(() => {
     return JSON.stringify({
       mode: settings.mode,
-      level: settings.level,
       cases: settings.cases,
       usePronouns: settings.usePronouns,
       enabledDictionaries: settings.enabledDictionaries,
@@ -245,9 +190,8 @@ export default function Trainer() {
       articleType: settings.articleType,
       pronounType: settings.pronounType,
       showTranslation: settings.showTranslation,
-      dictionaryType: settings.dictionaryType,
     });
-  }, [settings.mode, settings.level, settings.cases, settings.usePronouns, settings.enabledDictionaries, settings.topics, settings.articleType, settings.pronounType, settings.showTranslation, settings.dictionaryType]);
+  }, [settings.mode, settings.cases, settings.usePronouns, settings.enabledDictionaries, settings.topics, settings.articleType, settings.pronounType, settings.showTranslation]);
 
   // Initialize first word and handle filter changes (but not when only language changes)
   useEffect(() => {

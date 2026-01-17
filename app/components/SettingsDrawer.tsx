@@ -3,8 +3,8 @@
 import { useMemo, useState, useEffect } from 'react';
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { TrainingSettings, Case, Language, Topic, ArticleType, PronounType, Word, DictionaryType, Level } from '../types';
-import { builtInDictionaries } from '../dictionaries';
+import { TrainingSettings, Case, Topic, ArticleType, PronounType, Word } from '../types';
+import { getAllTopics, getTopicWordCount, hasCustomDictionaryEnabled, filterTopicsWithWords } from '../utils/dataset';
 
 const { Title } = Typography;
 
@@ -40,60 +40,17 @@ export default function SettingsDrawer({
   
   // Extract unique topics from all available dictionaries dynamically
   const allTopics = useMemo(() => {
-    const topicsSet = new Set<Topic>();
-    
-    // Extract from built-in dictionaries (A1, A2)
-    (['A1', 'A2'] as Level[]).forEach((level) => {
-      if (builtInDictionaries[level]) {
-        builtInDictionaries[level].forEach((word: Word) => {
-          if (word.topic) {
-            topicsSet.add(word.topic);
-          }
-        });
-      }
-    });
-    
-    // Extract from user dictionaries
-    userDictionaries.forEach((dict) => {
-      dict.words.forEach((word) => {
-        if (word.topic) {
-          topicsSet.add(word.topic);
-        }
-      });
-    });
-    
-    // Convert to sorted array
-    return Array.from(topicsSet).sort();
+    return getAllTopics(userDictionaries);
   }, [userDictionaries]);
+
+  // Check if custom dictionary is enabled
+  const hasCustomDictEnabled = useMemo(() => {
+    return hasCustomDictionaryEnabled(settings.enabledDictionaries);
+  }, [settings.enabledDictionaries]);
   
   // Функция для получения количества слов в топике
   const getTopicCount = (topic: Topic): number => {
-    let count = 0;
-    
-    if (settings.dictionaryType === 'default') {
-      // Считаем из встроенных словарей по выбранным уровням
-      const levels = settings.level.length > 0 ? settings.level : (['A1', 'A2'] as Level[]);
-      levels.forEach((level) => {
-        if (builtInDictionaries[level]) {
-          const wordsInTopic = builtInDictionaries[level].filter((w: Word) => w.topic === topic);
-          count += wordsInTopic.length;
-        }
-      });
-    } else {
-      // Считаем из пользовательских словарей
-      const enabledDictIds = settings.enabledDictionaries.length > 0 
-        ? settings.enabledDictionaries 
-        : userDictionaries.map(d => d.id);
-      
-      userDictionaries.forEach((dict) => {
-        if (enabledDictIds.includes(dict.id)) {
-          const wordsInTopic = dict.words.filter((w) => w.topic === topic);
-          count += wordsInTopic.length;
-        }
-      });
-    }
-    
-    return count;
+    return getTopicWordCount(topic, settings.enabledDictionaries, userDictionaries);
   };
   return (
     <Drawer
@@ -104,79 +61,65 @@ export default function SettingsDrawer({
       size={isMobile ? 'default' : drawerSize}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        {/* Dictionaries Section - Multi-select */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.dictionary')}</Title>
-          <Radio.Group
-            value={settings.dictionaryType}
-            onChange={(e) => {
-              const newType = e.target.value as DictionaryType;
-              let newEnabledDictionaries = [...settings.enabledDictionaries];
-              
-              if (newType === 'user') {
-                // При переключении на "мой словарь", добавляем user dictionaries в enabledDictionaries
-                if (userDictionaries && userDictionaries.length > 0) {
-                  const userDictIds = userDictionaries.map(d => d.id);
-                  // Убираем дефолтные словари и добавляем пользовательские
-                  newEnabledDictionaries = userDictIds.filter(id => id !== 'A1');
-                  if (newEnabledDictionaries.length === 0 && userDictIds.length > 0) {
-                    newEnabledDictionaries = [userDictIds[0]];
-                  }
-                }
-              } else {
-                // При переключении на "дефолтный", убираем user dictionaries и добавляем дефолтные
-                newEnabledDictionaries = settings.enabledDictionaries.filter(id => id === 'A1');
-                if (newEnabledDictionaries.length === 0) {
-                  newEnabledDictionaries = ['A1'];
-                }
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.dictionaries')}</Title>
+          <Checkbox.Group
+            value={settings.enabledDictionaries}
+            onChange={(checkedValues) => {
+              const newEnabledDictionaries = checkedValues as string[];
+              // Ensure at least one dictionary is selected
+              if (newEnabledDictionaries.length === 0) {
+                return;
               }
               
-              setSettings({ 
-                ...settings, 
-                dictionaryType: newType,
-                enabledDictionaries: newEnabledDictionaries
+              // Filter topics to only include those with words in selected dictionaries
+              const filteredTopics = filterTopicsWithWords(
+                settings.topics,
+                newEnabledDictionaries,
+                userDictionaries
+              );
+              
+              setSettings({
+                ...settings,
+                enabledDictionaries: newEnabledDictionaries,
+                topics: filteredTopics,
               });
             }}
-            style={{ width: '100%' }}
           >
-            <Flex orientation="vertical" gap="small">
-              <Radio value="default">{t('settings.default')}</Radio>
-              <Radio value="user">{t('settings.custom')}</Radio>
-            </Flex>
-          </Radio.Group>
-        </div>
-
-        {/* Level Selector - only for default dictionary */}
-        {settings.dictionaryType === 'default' && (
-          <>
-            <Divider style={{ margin: '4px 0' }} />
-            <div>
-              <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.level')}</Title>
-              <Radio.Group
-                value={settings.level[0] || 'A1'}
+            <Flex vertical gap="small">
+              <Checkbox value="A1">{t('settings.a1Goethe')}</Checkbox>
+              <Checkbox value="A2">{t('settings.a2Goethe')}</Checkbox>
+              <Checkbox 
+                value="custom" 
+                disabled={userDictionaries.length === 0}
+                checked={hasCustomDictEnabled}
                 onChange={(e) => {
-                  const newLevel = e.target.value as Level;
-                  // Фильтруем выбранные топики - оставляем только те, в которых есть слова для нового уровня
-                  const filteredTopics = settings.topics.filter((topic) => {
-                    if (builtInDictionaries[newLevel]) {
-                      return builtInDictionaries[newLevel].some((w: Word) => w.topic === topic);
-                    }
-                    return false;
-                  });
+                  const isChecked = e.target.checked;
+                  let newEnabledDicts: string[] = settings.enabledDictionaries.filter(id => id === 'A1' || id === 'A2');
+                  
+                  if (isChecked && userDictionaries.length > 0) {
+                    // Add all user dictionaries
+                    const userDictIds = userDictionaries.map(d => d.id);
+                    newEnabledDicts = [...newEnabledDicts, ...userDictIds];
+                  }
+                  
+                  // Ensure at least one dictionary is selected
+                  if (newEnabledDicts.length === 0) {
+                    newEnabledDicts = ['A1'];
+                  }
+                  
                   setSettings({
                     ...settings,
-                    level: [newLevel],
-                    topics: filteredTopics,
+                    enabledDictionaries: newEnabledDicts,
                   });
                 }}
               >
-                <Flex gap="middle">
-                  <Radio value="A1">A1</Radio>
-                  <Radio value="A2">A2</Radio>
-                </Flex>
-              </Radio.Group>
-            </div>
-          </>
-        )}
+                {t('settings.custom')} {userDictionaries.length === 0 && `(${t('settings.noCustomDicts')})`}
+              </Checkbox>
+            </Flex>
+          </Checkbox.Group>
+        </div>
 
         <Divider style={{ margin: '4px 0' }} />
 
