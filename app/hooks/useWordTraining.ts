@@ -30,6 +30,10 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const hasLoadedWordRef = useRef<boolean>(false);
+  const isFirstLoadRef = useRef<boolean>(true); // Track first load to skip auto-focus on mobile
+  
+  // Check if mobile on first render (before any useEffect)
+  const isMobileDevice = typeof window !== 'undefined' && window.innerWidth < 640;
   
   // Храним перемешанный список слов и текущий индекс
   const shuffledWordsRef = useRef<Word[]>([]);
@@ -97,10 +101,15 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     setIsLoading(false);
     
     // Сохраняем фокус после загрузки нового слова
-    setTimeout(() => {
-      inputRef.current?.focus();
-    }, 50);
-  }, [settings, getEnabledWords]);
+    // Но не на мобильных при первой загрузке (чтобы клавиатура не открывалась автоматически)
+    if (isFirstLoadRef.current && isMobileDevice) {
+      isFirstLoadRef.current = false;
+    } else {
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 50);
+    }
+  }, [settings, getEnabledWords, isMobileDevice]);
 
   const handleInput = useCallback((value: string) => {
     const trimmedValue = value.toLowerCase().trim();
