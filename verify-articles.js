@@ -1,0 +1,246 @@
+#!/usr/bin/env node
+
+/**
+ * Script to verify articles from A1.json against der-artikel.de
+ * 
+ * Usage: node verify-articles.js <start>-<end> [dictionary]
+ * Example: node verify-articles.js 1-10
+ * Example: node verify-articles.js 1-10 A2
+ * 
+ * The script will:
+ * 1. Try der/die/das for each word on der-artikel.de
+ * 2. Update the article if it differs from the website
+ * 3. Add audio_url field with the link to audio file
+ * 4. Cache results to avoid duplicate requests across runs
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const BASE_URL = 'https://der-artikel.de';
+const ARTICLES = ['der', 'die', 'das'];
+const CACHE_PATH = path.join(__dirname, '.article-cache.json');
+
+/**
+ * Load cache from file
+ */
+function loadCache() {
+  try {
+    if (fs.existsSync(CACHE_PATH)) {
+      const data = fs.readFileSync(CACHE_PATH, 'utf-8');
+      return JSON.parse(data);
+    }
+  } catch (error) {
+    console.log('Warning: Could not load cache, starting fresh');
+  }
+  return {};
+}
+
+/**
+ * Save cache to file
+ */
+function saveCache(cache) {
+  fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2), 'utf-8');
+}
+
+// Delay between requests to be polite to the server (random 1-3 seconds)
+const DELAY_MIN_MS = 1000;
+const DELAY_MAX_MS = 3000;
+
+async function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function randomDelay() {
+  return Math.floor(Math.random() * (DELAY_MAX_MS - DELAY_MIN_MS + 1)) + DELAY_MIN_MS;
+}
+
+/**
+ * Check if a URL returns 200 (exists) or 404 (not found)
+ */
+async function checkUrl(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'de,en-US;q=0.9,en;q=0.8',
+      }
+    });
+    return response.status === 200;
+  } catch (error) {
+    console.error(`  Error fetching ${url}: ${error.message}`);
+    return false;
+  }
+}
+
+/**
+ * Find the correct article for a word by trying all three articles
+ */
+async function findCorrectArticle(word) {
+  for (const article of ARTICLES) {
+    const url = `${BASE_URL}/${article}/${encodeURIComponent(word)}.html`;
+    const exists = await checkUrl(url);
+    
+    if (exists) {
+      return {
+        article,
+        pageUrl: url,
+        audioUrl: `${BASE_URL}/audio/${encodeURIComponent(word.toLowerCase())}.mp3`
+      };
+    }
+    
+    await sleep(100); // Small delay between article checks
+  }
+  
+  return null; // Word not found on the website
+}
+
+/**
+ * Parse range argument (e.g., "1-10" -> { start: 0, end: 9 })
+ * Note: User provides 1-based indices, we convert to 0-based
+ */
+function parseRange(arg) {
+  const match = arg.match(/^(\d+)-(\d+)$/);
+  if (!match) {
+    throw new Error('Invalid range format. Use: <start>-<end> (e.g., 1-10)');
+  }
+  
+  const start = parseInt(match[1], 10) - 1; // Convert to 0-based
+  const end = parseInt(match[2], 10) - 1;   // Convert to 0-based
+  
+  if (start < 0 || end < start) {
+    throw new Error('Invalid range. Start must be >= 1 and end must be >= start');
+  }
+  
+  return { start, end };
+}
+
+async function main() {
+  const rangeArg = process.argv[2];
+  const dictArg = process.argv[3] || 'A1';
+  
+  if (!rangeArg) {
+    console.log('Usage: node verify-articles.js <start>-<end> [dictionary]');
+    console.log('Example: node verify-articles.js 1-10');
+    console.log('Example: node verify-articles.js 1-10 A2');
+    console.log('Example: node verify-articles.js 1-10 B1');
+    console.log('\nThis will verify words 1 through 10 (1-based indexing)');
+    console.log('Default dictionary: A1');
+    process.exit(1);
+  }
+  
+  const { start, end } = parseRange(rangeArg);
+  
+  // Determine JSON path based on dictionary
+  let jsonPath;
+  if (dictArg === 'B1') {
+    jsonPath = path.join(__dirname, 'data/dictionaries/B1.json');
+  } else {
+    jsonPath = path.join(__dirname, `app/data/dictionaries/${dictArg}.json`);
+  }
+  
+  // Load cache
+  const cache = loadCache();
+  const cacheSize = Object.keys(cache).length;
+  console.log(`\nLoaded cache with ${cacheSize} words`);
+  
+  // Read the JSON file
+  console.log(`Reading ${jsonPath}...`);
+  const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+  
+  const totalWords = data.length;
+  const actualEnd = Math.min(end, totalWords - 1);
+  
+  console.log(`Total words in dictionary: ${totalWords}`);
+  console.log(`Processing range: ${start + 1}-${actualEnd + 1} (${actualEnd - start + 1} words)\n`);
+  
+  let updated = 0;
+  let notFound = 0;
+  let unchanged = 0;
+  let fromCache = 0;
+  
+  for (let i = start; i <= actualEnd; i++) {
+    const entry = data[i];
+    const { noun, article: currentArticle } = entry;
+    
+    console.log(`[${i + 1}/${actualEnd + 1}] Checking "${noun}" (current: ${currentArticle})...`);
+    
+    // Check cache first
+    const cacheKey = noun.toLowerCase();
+    if (cache[cacheKey]) {
+      const cached = cache[cacheKey];
+      console.log(`  📦 Found in cache: ${cached.article}`);
+      
+      entry.audio_url = cached.audio_url;
+      
+      if (cached.article !== currentArticle) {
+        console.log(`  🔄 Article mismatch! Updating: ${currentArticle} → ${cached.article}`);
+        entry.article = cached.article;
+        updated++;
+      } else {
+        unchanged++;
+      }
+      fromCache++;
+      continue;
+    }
+    
+    // Not in cache, fetch from website
+    const result = await findCorrectArticle(noun);
+    
+    if (!result) {
+      console.log(`  ⚠️  Word not found on der-artikel.de`);
+      notFound++;
+      // Cache the "not found" result too
+      cache[cacheKey] = { article: null, audio_url: null, notFound: true };
+    } else {
+      const { article: correctArticle, audioUrl } = result;
+      
+      // Save to cache
+      cache[cacheKey] = {
+        article: correctArticle,
+        audio_url: audioUrl
+      };
+      
+      // Always add/update audio URL
+      entry.audio_url = audioUrl;
+      
+      if (correctArticle !== currentArticle) {
+        console.log(`  🔄 Article mismatch! Updating: ${currentArticle} → ${correctArticle}`);
+        entry.article = correctArticle;
+        updated++;
+      } else {
+        console.log(`  ✓ Article correct (${correctArticle}), audio URL added`);
+        unchanged++;
+      }
+    }
+    
+    const delay = randomDelay();
+    console.log(`  ⏳ Waiting ${(delay / 1000).toFixed(1)}s...`);
+    await sleep(delay);
+  }
+  
+  // Save cache
+  console.log(`\nSaving cache (${Object.keys(cache).length} words)...`);
+  saveCache(cache);
+  
+  // Save the updated JSON
+  console.log(`Saving updated JSON...`);
+  fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf-8');
+  
+  // Summary
+  console.log('\n========== Summary ==========');
+  console.log(`Total processed: ${actualEnd - start + 1}`);
+  console.log(`From cache: ${fromCache}`);
+  console.log(`Fetched from web: ${actualEnd - start + 1 - fromCache}`);
+  console.log(`Updated articles: ${updated}`);
+  console.log(`Unchanged: ${unchanged}`);
+  console.log(`Not found on website: ${notFound}`);
+  console.log('==============================\n');
+}
+
+main().catch(error => {
+  console.error('Error:', error.message);
+  process.exit(1);
+});

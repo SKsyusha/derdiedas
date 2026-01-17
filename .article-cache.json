@@ -1,0 +1,204 @@
+{
+  "absender": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/absender.mp3"
+  },
+  "ausländer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/ausl%C3%A4nder.mp3"
+  },
+  "baby": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/baby.mp3"
+  },
+  "bekannte": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/bekannte.mp3"
+  },
+  "dame": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/dame.mp3"
+  },
+  "empfänger": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/empf%C3%A4nger.mp3"
+  },
+  "erwachsene": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/erwachsene.mp3"
+  },
+  "fahrer": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/fahrer.mp3"
+  },
+  "frau": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/frau.mp3"
+  },
+  "freund": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/freund.mp3"
+  },
+  "gast": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/gast.mp3"
+  },
+  "herr": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/herr.mp3"
+  },
+  "jugendliche": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/jugendliche.mp3"
+  },
+  "junge": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/junge.mp3"
+  },
+  "kind": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/kind.mp3"
+  },
+  "kunde": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/kunde.mp3"
+  },
+  "leute": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/leute.mp3"
+  },
+  "mann": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/mann.mp3"
+  },
+  "mensch": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/mensch.mp3"
+  },
+  "mädchen": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/m%C3%A4dchen.mp3"
+  },
+  "schüler": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BCler.mp3"
+  },
+  "student": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/student.mp3"
+  },
+  "bruder": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/bruder.mp3"
+  },
+  "eltern": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/eltern.mp3"
+  },
+  "familie": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/familie.mp3"
+  },
+  "geschwister": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/geschwister.mp3"
+  },
+  "großeltern": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Feltern.mp3"
+  },
+  "großmutter": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Fmutter.mp3"
+  },
+  "großvater": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Fvater.mp3"
+  },
+  "mutter": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/mutter.mp3"
+  },
+  "oma": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/oma.mp3"
+  },
+  "opa": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/opa.mp3"
+  },
+  "schwester": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/schwester.mp3"
+  },
+  "sohn": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/sohn.mp3"
+  },
+  "tochter": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/tochter.mp3"
+  },
+  "vater": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/vater.mp3"
+  },
+  "verwandte": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "ehefrau": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/ehefrau.mp3"
+  },
+  "ehemann": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/ehemann.mp3"
+  },
+  "familienstand": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/familienstand.mp3"
+  },
+  "partner": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/partner.mp3"
+  },
+  "partnerin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/partnerin.mp3"
+  },
+  "arm": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/arm.mp3"
+  },
+  "auge": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/auge.mp3"
+  },
+  "bauch": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/bauch.mp3"
+  },
+  "bein": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/bein.mp3"
+  },
+  "fuß": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/fu%C3%9F.mp3"
+  },
+  "haar": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/haar.mp3"
+  },
+  "hand": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/hand.mp3"
+  },
+  "hände": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  }
+}
