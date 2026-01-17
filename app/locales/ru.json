@@ -8,7 +8,7 @@
     "level": "Уровень",
     "a1Goethe": "A1 Goethe",
     "a2Goethe": "A2 Goethe",
-    "noCustomDicts": "нет словарей",
+    "empty": "пусто",
     "trainingMode": "Режим тренировки",
     "inSentence": "В предложении",
     "nounOnly": "Только существительное",

@@ -115,7 +115,7 @@ export default function SettingsDrawer({
                   });
                 }}
               >
-                {t('settings.custom')} {userDictionaries.length === 0 && `(${t('settings.noCustomDicts')})`}
+                {t('settings.custom')} {userDictionaries.length === 0 && `(${t('settings.empty')})`}
               </Checkbox>
             </Flex>
           </Checkbox.Group>

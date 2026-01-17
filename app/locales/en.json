@@ -8,7 +8,7 @@
     "level": "Level",
     "a1Goethe": "A1 Goethe",
     "a2Goethe": "A2 Goethe",
-    "noCustomDicts": "no dictionaries",
+    "empty": "empty",
     "trainingMode": "Training Mode",
     "inSentence": "In Sentence",
     "nounOnly": "Noun Only",
