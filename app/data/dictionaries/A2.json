@@ -6,7 +6,8 @@
     "translation_en": "ID card",
     "translation_uk": "посвідчення",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/ausweis.mp3"
   },
   {
     "noun": "Baby",
@@ -15,7 +16,8 @@
     "translation_en": "baby",
     "translation_uk": "немовля",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/baby.mp3"
   },
   {
     "noun": "Dame",
@@ -24,16 +26,18 @@
     "translation_en": "lady",
     "translation_uk": "дама",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/dame.mp3"
   },
   {
     "noun": "Erwachsene",
-    "article": "der",
+    "article": "die",
     "translation_ru": "взрослый",
     "translation_en": "adult",
     "translation_uk": "дорослий",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/erwachsene.mp3"
   },
   {
     "noun": "Familienname",
@@ -42,7 +46,8 @@
     "translation_en": "last name / family name",
     "translation_uk": "прізвище",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/familienname.mp3"
   },
   {
     "noun": "Fan",
@@ -51,7 +56,8 @@
     "translation_en": "fan",
     "translation_uk": "фан",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/fan.mp3"
   },
   {
     "noun": "Frau",
@@ -60,7 +66,8 @@
     "translation_en": "woman",
     "translation_uk": "жінка",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/frau.mp3"
   },
   {
     "noun": "Freund",
@@ -69,7 +76,8 @@
     "translation_en": "friend",
     "translation_uk": "друг",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/freund.mp3"
   },
   {
     "noun": "Freundin",
@@ -78,7 +86,8 @@
     "translation_en": "female friend",
     "translation_uk": "подруга",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/freundin.mp3"
   },
   {
     "noun": "Gast",
@@ -87,7 +96,8 @@
     "translation_en": "guest",
     "translation_uk": "гість",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/gast.mp3"
   },
   {
     "noun": "Herr",
@@ -96,7 +106,8 @@
     "translation_en": "man",
     "translation_uk": "чоловік",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/herr.mp3"
   },
   {
     "noun": "Junge",
@@ -105,7 +116,8 @@
     "translation_en": "boy",
     "translation_uk": "хлопчик",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/junge.mp3"
   },
   {
     "noun": "Kranke",
@@ -123,7 +135,8 @@
     "translation_en": "customer",
     "translation_uk": "клієнт",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/kunde.mp3"
   },
   {
     "noun": "Kundin",
@@ -132,7 +145,8 @@
     "translation_en": "customer (female)",
     "translation_uk": "клієнтка",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/kundin.mp3"
   },
   {
     "noun": "Leute",
@@ -141,7 +155,8 @@
     "translation_en": "people",
     "translation_uk": "люди",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/leute.mp3"
   },
   {
     "noun": "Mann",
@@ -150,7 +165,8 @@
     "translation_en": "man",
     "translation_uk": "чоловік",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/mann.mp3"
   },
   {
     "noun": "Mensch",
@@ -159,7 +175,8 @@
     "translation_en": "human",
     "translation_uk": "людина",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/mensch.mp3"
   },
   {
     "noun": "Mädchen",
@@ -168,7 +185,8 @@
     "translation_en": "girl",
     "translation_uk": "дівчинка",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/m%C3%A4dchen.mp3"
   },
   {
     "noun": "Nachbar",
@@ -177,7 +195,8 @@
     "translation_en": "neighbor",
     "translation_uk": "сусід",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/nachbar.mp3"
   },
   {
     "noun": "Nachbarin",
@@ -186,7 +205,8 @@
     "translation_en": "female neighbor",
     "translation_uk": "жінка-сусідка",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/nachbarin.mp3"
   },
   {
     "noun": "Person",
@@ -195,7 +215,8 @@
     "translation_en": "person",
     "translation_uk": "особа",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/person.mp3"
   },
   {
     "noun": "Schüler",
@@ -204,7 +225,8 @@
     "translation_en": "pupil",
     "translation_uk": "учень",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BCler.mp3"
   },
   {
     "noun": "Schülerin",
@@ -213,7 +235,8 @@
     "translation_en": "female student",
     "translation_uk": "учениця",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BClerin.mp3"
   },
   {
     "noun": "Student",
@@ -222,7 +245,8 @@
     "translation_en": "student",
     "translation_uk": "студент",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/student.mp3"
   },
   {
     "noun": "Studentin",
@@ -231,7 +255,8 @@
     "translation_en": "female student",
     "translation_uk": "студентка",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/studentin.mp3"
   },
   {
     "noun": "Tourist",
@@ -240,7 +265,8 @@
     "translation_en": "tourist",
     "translation_uk": "турист",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/tourist.mp3"
   },
   {
     "noun": "Touristin",
@@ -249,7 +275,8 @@
     "translation_en": "tourist",
     "translation_uk": "туристка",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/touristin.mp3"
   },
   {
     "noun": "Vorname",
@@ -258,7 +285,8 @@
     "translation_en": "first name",
     "translation_uk": "ім'я",
     "level": "A2",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/vorname.mp3"
   },
   {
     "noun": "Familie",
@@ -267,7 +295,8 @@
     "translation_en": "family",
     "translation_uk": "сім'я",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/familie.mp3"
   },
   {
     "noun": "Kind",
@@ -276,7 +305,8 @@
     "translation_en": "child",
     "translation_uk": "дитина",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/kind.mp3"
   },
   {
     "noun": "Kinder",
@@ -294,7 +324,8 @@
     "translation_en": "brother",
     "translation_uk": "брат",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/bruder.mp3"
   },
   {
     "noun": "Cousin",
@@ -303,7 +334,8 @@
     "translation_en": "cousin",
     "translation_uk": "двоюрідний брат",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/cousin.mp3"
   },
   {
     "noun": "Cousine",
@@ -312,7 +344,8 @@
     "translation_en": "cousin",
     "translation_uk": "двоюрідна сестра",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/cousine.mp3"
   },
   {
     "noun": "Eltern",
@@ -321,7 +354,8 @@
     "translation_en": "parents",
     "translation_uk": "батьки",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/eltern.mp3"
   },
   {
     "noun": "Enkel",
@@ -330,7 +364,8 @@
     "translation_en": "grandson",
     "translation_uk": "ону́к",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/enkel.mp3"
   },
   {
     "noun": "Enkelin",
@@ -339,16 +374,18 @@
     "translation_en": "granddaughter",
     "translation_uk": "ону́чка",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/enkelin.mp3"
   },
   {
     "noun": "Geschwister",
-    "article": "die",
+    "article": "das",
     "translation_ru": "братья и сёстры",
     "translation_en": "siblings",
     "translation_uk": "брати й сестри",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/geschwister.mp3"
   },
   {
     "noun": "Großeltern",
@@ -357,7 +394,8 @@
     "translation_en": "grandparents",
     "translation_uk": "дідусь і бабуся",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Feltern.mp3"
   },
   {
     "noun": "Großmutter",
@@ -366,7 +404,8 @@
     "translation_en": "grandmother",
     "translation_uk": "бабуся",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Fmutter.mp3"
   },
   {
     "noun": "Großvater",
@@ -375,7 +414,8 @@
     "translation_en": "grandfather",
     "translation_uk": "дідусь",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Fvater.mp3"
   },
   {
     "noun": "Mutter",
@@ -384,7 +424,8 @@
     "translation_en": "mother",
     "translation_uk": "мати",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/mutter.mp3"
   },
   {
     "noun": "Onkel",
@@ -393,7 +434,8 @@
     "translation_en": "uncle",
     "translation_uk": "дядько",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/onkel.mp3"
   },
   {
     "noun": "Schwester",
@@ -402,7 +444,8 @@
     "translation_en": "sister",
     "translation_uk": "сестра",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/schwester.mp3"
   },
   {
     "noun": "Sohn",
@@ -411,7 +454,8 @@
     "translation_en": "son",
     "translation_uk": "син",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/sohn.mp3"
   },
   {
     "noun": "Tante",
@@ -420,7 +464,8 @@
     "translation_en": "aunt",
     "translation_uk": "тітка",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/tante.mp3"
   },
   {
     "noun": "Tochter",
@@ -429,7 +474,8 @@
     "translation_en": "daughter",
     "translation_uk": "дочка",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/tochter.mp3"
   },
   {
     "noun": "Vater",
@@ -438,7 +484,8 @@
     "translation_en": "father",
     "translation_uk": "батько",
     "level": "A1",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/vater.mp3"
   },
   {
     "noun": "Verwandte",
@@ -456,7 +503,8 @@
     "translation_en": "wife",
     "translation_uk": "дружина",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/ehefrau.mp3"
   },
   {
     "noun": "Ehemann",
@@ -465,7 +513,8 @@
     "translation_en": "husband",
     "translation_uk": "чоловік",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/ehemann.mp3"
   },
   {
     "noun": "Ehepartner",
@@ -474,7 +523,8 @@
     "translation_en": "spouse",
     "translation_uk": "подружжя",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/ehepartner.mp3"
   },
   {
     "noun": "Partner",
@@ -483,7 +533,8 @@
     "translation_en": "partner",
     "translation_uk": "партнер",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/partner.mp3"
   },
   {
     "noun": "Partnerin",
@@ -492,7 +543,8 @@
     "translation_en": "partner (female)",
     "translation_uk": "партнерка",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/partnerin.mp3"
   },
   {
     "noun": "Rentnerin",
@@ -501,7 +553,8 @@
     "translation_en": "female retiree",
     "translation_uk": "пенсіонерка",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/rentnerin.mp3"
   },
   {
     "noun": "Arm",
@@ -510,7 +563,8 @@
     "translation_en": "arm",
     "translation_uk": "рука",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/arm.mp3"
   },
   {
     "noun": "Auge",
@@ -519,7 +573,8 @@
     "translation_en": "eye",
     "translation_uk": "око",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/auge.mp3"
   },
   {
     "noun": "Bauch",
@@ -528,7 +583,8 @@
     "translation_en": "belly",
     "translation_uk": "живіт",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/bauch.mp3"
   },
   {
     "noun": "Bein",
@@ -537,7 +593,8 @@
     "translation_en": "leg",
     "translation_uk": "нога",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/bein.mp3"
   },
   {
     "noun": "Brille",
@@ -546,7 +603,8 @@
     "translation_en": "glasses",
     "translation_uk": "окуляри",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/brille.mp3"
   },
   {
     "noun": "Durst",
@@ -555,7 +613,8 @@
     "translation_en": "thirst",
     "translation_uk": "спрага",
     "level": "A2",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/durst.mp3"
   },
   {
     "noun": "Fieber",
@@ -564,7 +623,8 @@
     "translation_en": "fever",
     "translation_uk": "лихоманка",
     "level": "A2",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/fieber.mp3"
   },
   {
     "noun": "Fuß",
@@ -573,7 +633,8 @@
     "translation_en": "foot",
     "translation_uk": "стопа",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/fu%C3%9F.mp3"
   },
   {
     "noun": "Gesicht",
@@ -582,7 +643,8 @@
     "translation_en": "face",
     "translation_uk": "обличчя",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/gesicht.mp3"
   },
   {
     "noun": "Grippe",
@@ -591,7 +653,8 @@
     "translation_en": "flu",
     "translation_uk": "грип",
     "level": "A2",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/grippe.mp3"
   },
   {
     "noun": "Haar",
@@ -600,7 +663,8 @@
     "translation_en": "hair",
     "translation_uk": "волосся",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/haar.mp3"
   },
   {
     "noun": "Haare",
@@ -618,7 +682,8 @@
     "translation_en": "neck",
     "translation_uk": "шия",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/hals.mp3"
   },
   {
     "noun": "Hand",
@@ -627,7 +692,8 @@
     "translation_en": "hand",
     "translation_uk": "рука",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/hand.mp3"
   },
   {
     "noun": "Kopf",
@@ -636,7 +702,8 @@
     "translation_en": "head",
     "translation_uk": "голова",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/kopf.mp3"
   },
   {
     "noun": "Körper",
@@ -645,7 +712,8 @@
     "translation_en": "body",
     "translation_uk": "тіло",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/k%C3%B6rper.mp3"
   },
   {
     "noun": "Magen",
@@ -654,7 +722,8 @@
     "translation_en": "stomach",
     "translation_uk": "шлунок",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/magen.mp3"
   },
   {
     "noun": "Mund",
@@ -663,7 +732,8 @@
     "translation_en": "mouth",
     "translation_uk": "рот",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/mund.mp3"
   },
   {
     "noun": "Ohr",
@@ -672,7 +742,8 @@
     "translation_en": "ear",
     "translation_uk": "вухо",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/ohr.mp3"
   },
   {
     "noun": "Rücken",
@@ -681,7 +752,8 @@
     "translation_en": "back",
     "translation_uk": "спина",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/r%C3%BCcken.mp3"
   },
   {
     "noun": "Zahn",
@@ -690,7 +762,8 @@
     "translation_en": "tooth",
     "translation_uk": "зуб",
     "level": "A2",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/zahn.mp3"
   },
   {
     "noun": "Arzt",
@@ -699,7 +772,8 @@
     "translation_en": "doctor",
     "translation_uk": "лікар",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/arzt.mp3"
   },
   {
     "noun": "Babysitter",
@@ -708,7 +782,8 @@
     "translation_en": "babysitter",
     "translation_uk": "няня",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/babysitter.mp3"
   },
   {
     "noun": "Beruf",
@@ -717,7 +792,8 @@
     "translation_en": "profession",
     "translation_uk": "професія",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/beruf.mp3"
   },
   {
     "noun": "Angestellter",
@@ -726,16 +802,18 @@
     "translation_en": "employee",
     "translation_uk": "службовець",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/angestellter.mp3"
   },
   {
     "noun": "Angestellte",
-    "article": "die",
+    "article": "der",
     "translation_ru": "служащая",
     "translation_en": "employee",
     "translation_uk": "службовиця",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/angestellte.mp3"
   },
   {
     "noun": "Ärztin",
@@ -744,7 +822,8 @@
     "translation_en": "doctor",
     "translation_uk": "лікарка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/%C3%A4rztin.mp3"
   },
   {
     "noun": "Auszubildender",
@@ -762,7 +841,8 @@
     "translation_en": "trainee",
     "translation_uk": "стажерка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/auszubildende.mp3"
   },
   {
     "noun": "Autor",
@@ -771,7 +851,8 @@
     "translation_en": "author",
     "translation_uk": "автор",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/autor.mp3"
   },
   {
     "noun": "Autorin",
@@ -780,7 +861,8 @@
     "translation_en": "author",
     "translation_uk": "авторка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/autorin.mp3"
   },
   {
     "noun": "Bäcker",
@@ -789,7 +871,8 @@
     "translation_en": "baker",
     "translation_uk": "пекар",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/b%C3%A4cker.mp3"
   },
   {
     "noun": "Bäckerin",
@@ -798,7 +881,8 @@
     "translation_en": "baker",
     "translation_uk": "пекарка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/b%C3%A4ckerin.mp3"
   },
   {
     "noun": "Doktor",
@@ -807,7 +891,8 @@
     "translation_en": "doctor",
     "translation_uk": "доктор",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/doktor.mp3"
   },
   {
     "noun": "Doktorin",
@@ -816,7 +901,8 @@
     "translation_en": "doctor",
     "translation_uk": "докторка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/doktorin.mp3"
   },
   {
     "noun": "Fahrer",
@@ -825,7 +911,8 @@
     "translation_en": "driver",
     "translation_uk": "водій",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/fahrer.mp3"
   },
   {
     "noun": "Fahrerin",
@@ -834,7 +921,8 @@
     "translation_en": "driver",
     "translation_uk": "водійка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/fahrerin.mp3"
   },
   {
     "noun": "Friseur",
@@ -843,7 +931,8 @@
     "translation_en": "hairdresser",
     "translation_uk": "перукар",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/friseur.mp3"
   },
   {
     "noun": "Friseurin",
@@ -852,7 +941,8 @@
     "translation_en": "hairdresser",
     "translation_uk": "перукарка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/friseurin.mp3"
   },
   {
     "noun": "Handwerker",
@@ -861,7 +951,8 @@
     "translation_en": "craftsman",
     "translation_uk": "ремісник",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/handwerker.mp3"
   },
   {
     "noun": "Handwerkerin",
@@ -870,7 +961,8 @@
     "translation_en": "craftswoman",
     "translation_uk": "ремісниця",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/handwerkerin.mp3"
   },
   {
     "noun": "Hausmann",
@@ -879,7 +971,8 @@
     "translation_en": "househusband",
     "translation_uk": "домогосподар",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/hausmann.mp3"
   },
   {
     "noun": "Hausfrau",
@@ -888,7 +981,8 @@
     "translation_en": "housewife",
     "translation_uk": "домогосподарка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/hausfrau.mp3"
   },
   {
     "noun": "Ahnung",
@@ -897,7 +991,8 @@
     "translation_en": "idea",
     "translation_uk": "ідея",
     "level": "A2",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ahnung.mp3"
   },
   {
     "noun": "Alter",

@@ -1607,5 +1607,197 @@
   "farbe": {
     "article": "die",
     "audio_url": "https://der-artikel.de/audio/farbe.mp3"
+  },
+  "fan": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/fan.mp3"
+  },
+  "freundin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/freundin.mp3"
+  },
+  "kranke": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "kundin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/kundin.mp3"
+  },
+  "nachbar": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/nachbar.mp3"
+  },
+  "nachbarin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/nachbarin.mp3"
+  },
+  "person": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/person.mp3"
+  },
+  "schülerin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BClerin.mp3"
+  },
+  "studentin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/studentin.mp3"
+  },
+  "tourist": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/tourist.mp3"
+  },
+  "touristin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/touristin.mp3"
+  },
+  "kinder": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "cousin": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/cousin.mp3"
+  },
+  "cousine": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/cousine.mp3"
+  },
+  "enkel": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/enkel.mp3"
+  },
+  "enkelin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/enkelin.mp3"
+  },
+  "onkel": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/onkel.mp3"
+  },
+  "tante": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/tante.mp3"
+  },
+  "ehepartner": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/ehepartner.mp3"
+  },
+  "rentnerin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/rentnerin.mp3"
+  },
+  "brille": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/brille.mp3"
+  },
+  "gesicht": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/gesicht.mp3"
+  },
+  "grippe": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/grippe.mp3"
+  },
+  "haare": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "hals": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/hals.mp3"
+  },
+  "körper": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/k%C3%B6rper.mp3"
+  },
+  "magen": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/magen.mp3"
+  },
+  "ohr": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/ohr.mp3"
+  },
+  "rücken": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/r%C3%BCcken.mp3"
+  },
+  "zahn": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/zahn.mp3"
+  },
+  "babysitter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/babysitter.mp3"
+  },
+  "angestellter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/angestellter.mp3"
+  },
+  "angestellte": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/angestellte.mp3"
+  },
+  "ärztin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/%C3%A4rztin.mp3"
+  },
+  "auszubildender": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "auszubildende": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/auszubildende.mp3"
+  },
+  "autor": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/autor.mp3"
+  },
+  "autorin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/autorin.mp3"
+  },
+  "bäcker": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/b%C3%A4cker.mp3"
+  },
+  "bäckerin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/b%C3%A4ckerin.mp3"
+  },
+  "doktorin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/doktorin.mp3"
+  },
+  "fahrerin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/fahrerin.mp3"
+  },
+  "friseur": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/friseur.mp3"
+  },
+  "friseurin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/friseurin.mp3"
+  },
+  "handwerker": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/handwerker.mp3"
+  },
+  "handwerkerin": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/handwerkerin.mp3"
+  },
+  "ahnung": {
+    "article": "die",
+    "audio_url": "https://der-artikel.de/audio/ahnung.mp3"
   }
 }
