@@ -279,16 +279,9 @@ export default function Trainer() {
   const correctAnswer = useMemo(() => {
     if (!currentWord) return '';
     
-    if (settings.mode === 'sentence' && currentSentence) {
-      return getArticleByCase(currentWord.article, currentCase, settings.articleType);
-    }
-    
-    if (settings.articleType === 'indefinite') {
-      return currentWord.article === 'der' ? 'ein' : currentWord.article === 'die' ? 'eine' : 'ein';
-    }
-    
-    return currentWord.article;
-  }, [currentWord, settings.mode, settings.articleType, currentSentence, currentCase]);
+    // Get correct answer based on article, case, and article type (works for both modes)
+    return getArticleByCase(currentWord.article, currentCase, settings.articleType);
+  }, [currentWord, settings.articleType, currentCase]);
 
   const currentTranslation = currentWord ? getTranslation(currentWord) : undefined;
 

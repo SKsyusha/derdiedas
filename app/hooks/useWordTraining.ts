@@ -79,14 +79,17 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     setCurrentWord(nextWord);
     hasLoadedWordRef.current = true;
 
-    if (settings.mode === 'sentence' && settings.cases.length > 0) {
-      const randomCase = settings.cases[Math.floor(Math.random() * settings.cases.length)];
-      setCurrentCase(randomCase);
-      const sentence = generateSentence(nextWord, randomCase, settings.usePronouns);
+    // Set the case based on settings (for both modes)
+    const selectedCase = settings.cases.length > 0 
+      ? settings.cases[Math.floor(Math.random() * settings.cases.length)]
+      : 'nominativ';
+    setCurrentCase(selectedCase);
+
+    if (settings.mode === 'sentence') {
+      const sentence = generateSentence(nextWord, selectedCase, settings.usePronouns);
       setCurrentSentence(sentence);
     } else {
       setCurrentSentence('');
-      setCurrentCase('nominativ');
     }
 
     setUserInput('');
@@ -141,17 +144,8 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       timeoutRef.current = null;
     }
 
-    let correctAnswer: string;
-    if (settings.mode === 'sentence' && currentSentence) {
-      correctAnswer = getArticleByCase(currentWord.article, currentCase, settings.articleType);
-    } else {
-      // For noun-only mode, return ein/eine based on articleType
-      if (settings.articleType === 'indefinite') {
-        correctAnswer = currentWord.article === 'der' ? 'ein' : currentWord.article === 'die' ? 'eine' : 'ein';
-      } else {
-        correctAnswer = currentWord.article;
-      }
-    }
+    // Get correct answer based on article, case, and article type
+    const correctAnswer = getArticleByCase(currentWord.article, currentCase, settings.articleType);
 
     const isCorrect = userInput === correctAnswer;
     setFeedback(isCorrect ? 'correct' : 'incorrect');
@@ -197,7 +191,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     }
 
     return isCorrect;
-  }, [currentWord, currentSentence, currentCase, userInput, settings, getNextWord]);
+  }, [currentWord, currentCase, userInput, settings, getNextWord, isMobile]);
 
   // Очистка таймера при размонтировании компонента
   useEffect(() => {
