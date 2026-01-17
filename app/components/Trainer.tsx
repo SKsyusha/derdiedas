@@ -144,8 +144,20 @@ export default function Trainer() {
     };
   }, [settings.topics, learnedWords, getAllWordsInTopics, getEnabledWords]);
 
-  // Mark component as mounted (client-side only)
+  // Load user dictionaries from localStorage on mount
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    try {
+      const savedDictionaries = localStorage.getItem('userDictionaries');
+      if (savedDictionaries) {
+        const parsed = JSON.parse(savedDictionaries);
+        setUserDictionaries(parsed);
+      }
+    } catch (error) {
+      console.error('Failed to load user dictionaries from localStorage:', error);
+    }
+    
     setIsMounted(true);
     settingsLoadedFromCookieRef.current = true; // Settings already loaded in getInitialSettings
   }, []);
@@ -178,6 +190,16 @@ export default function Trainer() {
     if (!isMounted || !settingsLoadedFromCookieRef.current) return;
     setCookie(SETTINGS_COOKIE_NAME, JSON.stringify(settings));
   }, [settings, isMounted]);
+
+  // Save user dictionaries to localStorage whenever they change
+  useEffect(() => {
+    if (!isMounted) return;
+    try {
+      localStorage.setItem('userDictionaries', JSON.stringify(userDictionaries));
+    } catch (error) {
+      console.error('Failed to save user dictionaries to localStorage:', error);
+    }
+  }, [userDictionaries, isMounted]);
 
   // Create a stable string representation of all settings except language
   const currentFiltersString = useMemo(() => {

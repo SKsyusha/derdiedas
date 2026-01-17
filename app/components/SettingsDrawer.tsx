@@ -117,12 +117,31 @@ export default function SettingsDrawer({
         <div>
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.dictionaries')}</Title>
           <Checkbox.Group
-            value={settings.enabledDictionaries}
+            value={[
+              ...settings.enabledDictionaries.filter(id => id === 'A1' || id === 'A2'),
+              ...(hasCustomDictEnabled ? ['custom'] : [])
+            ]}
             onChange={(checkedValues) => {
-              const newEnabledDictionaries = checkedValues as string[];
+              const checked = checkedValues as string[];
+              let newEnabledDictionaries: string[] = [];
+              
+              // Add A1 and A2 if checked
+              if (checked.includes('A1')) {
+                newEnabledDictionaries.push('A1');
+              }
+              if (checked.includes('A2')) {
+                newEnabledDictionaries.push('A2');
+              }
+              
+              // If custom is checked and dictionaries are not empty, add all user dictionary IDs
+              if (checked.includes('custom') && !areUserDictionariesEmpty) {
+                const userDictIds = userDictionaries.map(d => d.id);
+                newEnabledDictionaries = [...newEnabledDictionaries, ...userDictIds];
+              }
+              
               // Ensure at least one dictionary is selected
               if (newEnabledDictionaries.length === 0) {
-                return;
+                newEnabledDictionaries = ['A1'];
               }
               
               // Filter topics to only include those with words in selected dictionaries
@@ -145,27 +164,6 @@ export default function SettingsDrawer({
               <Checkbox 
                 value="custom" 
                 disabled={areUserDictionariesEmpty}
-                checked={hasCustomDictEnabled}
-                onChange={(e) => {
-                  const isChecked = e.target.checked;
-                  let newEnabledDicts: string[] = settings.enabledDictionaries.filter(id => id === 'A1' || id === 'A2');
-                  
-                  if (isChecked && !areUserDictionariesEmpty) {
-                    // Add all user dictionaries
-                    const userDictIds = userDictionaries.map(d => d.id);
-                    newEnabledDicts = [...newEnabledDicts, ...userDictIds];
-                  }
-                  
-                  // Ensure at least one dictionary is selected
-                  if (newEnabledDicts.length === 0) {
-                    newEnabledDicts = ['A1'];
-                  }
-                  
-                  setSettings({
-                    ...settings,
-                    enabledDictionaries: newEnabledDicts,
-                  });
-                }}
               >
                 {t('settings.custom')} {areUserDictionariesEmpty && `(${t('settings.empty')})`}
               </Checkbox>
