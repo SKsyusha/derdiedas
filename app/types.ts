@@ -2,6 +2,12 @@ export type Article = 'der' | 'die' | 'das';
 
 export type Case = 'nominativ' | 'akkusativ' | 'dativ' | 'genitiv';
 
+// Built-in dictionary levels
+// To add a new level (e.g., B1):
+// 1. Add it here: 'A1' | 'A2' | 'B1'
+// 2. Add JSON file to app/data/dictionaries/B1.json
+// 3. Import and add to BUILT_IN_DICTIONARIES in app/dictionaries.ts
+// 4. Add translation key in locales (settings.b1Goethe)
 export type Level = 'A1' | 'A2';
 
 export type TrainingMode = 'noun-only' | 'sentence';

@@ -1,5 +1,5 @@
-import { Word, Level, Topic } from '../types';
-import { builtInDictionaries } from '../dictionaries';
+import { Word, Topic } from '../types';
+import { builtInDictionaries, BUILT_IN_DICTIONARY_IDS, isBuiltInDictionary } from '../dictionaries';
 
 export interface UserDictionary {
   id: string;
@@ -21,8 +21,8 @@ export function getEnabledWords(options: DatasetOptions): Word[] {
   const { enabledDictionaries, topics = [], userDictionaries = [] } = options;
   const wordsMap = new Map<string, Word>();
 
-  // Add words from built-in dictionaries (A1, A2)
-  (['A1', 'A2'] as Level[]).forEach((level) => {
+  // Add words from built-in dictionaries
+  BUILT_IN_DICTIONARY_IDS.forEach((level) => {
     if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((w: Word) => {
         const topicMatch = !topics.length || (w.topic && topics.includes(w.topic));
@@ -55,8 +55,8 @@ export function getWordsInTopics(options: DatasetOptions): Word[] {
   const { enabledDictionaries, topics = [], userDictionaries = [] } = options;
   const wordsMap = new Map<string, Word>();
 
-  // Add words from built-in dictionaries (A1, A2)
-  (['A1', 'A2'] as Level[]).forEach((level) => {
+  // Add words from built-in dictionaries
+  BUILT_IN_DICTIONARY_IDS.forEach((level) => {
     if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((w: Word) => {
         if (w.topic && topics.includes(w.topic) && !wordsMap.has(w.noun)) {
@@ -91,7 +91,7 @@ export function getTopicWordCount(
   const seenNouns = new Set<string>();
 
   // Count from built-in dictionaries
-  (['A1', 'A2'] as Level[]).forEach((level) => {
+  BUILT_IN_DICTIONARY_IDS.forEach((level) => {
     if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((w: Word) => {
         if (w.topic === topic && !seenNouns.has(w.noun)) {
@@ -121,8 +121,8 @@ export function getTopicWordCount(
 export function getAllTopics(userDictionaries: UserDictionary[] = []): Topic[] {
   const topicsSet = new Set<Topic>();
 
-  // Extract from built-in dictionaries (A1, A2)
-  (['A1', 'A2'] as Level[]).forEach((level) => {
+  // Extract from built-in dictionaries
+  BUILT_IN_DICTIONARY_IDS.forEach((level) => {
     if (builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((word: Word) => {
         if (word.topic) {
@@ -148,7 +148,7 @@ export function getAllTopics(userDictionaries: UserDictionary[] = []): Topic[] {
  * Check if any custom dictionary is enabled
  */
 export function hasCustomDictionaryEnabled(enabledDictionaries: string[]): boolean {
-  return enabledDictionaries.some(id => id !== 'A1' && id !== 'A2');
+  return enabledDictionaries.some(id => !isBuiltInDictionary(id));
 }
 
 /**
@@ -161,7 +161,7 @@ export function filterTopicsWithWords(
 ): Topic[] {
   return topics.filter((topic) => {
     // Check built-in dictionaries
-    for (const level of ['A1', 'A2'] as Level[]) {
+    for (const level of BUILT_IN_DICTIONARY_IDS) {
       if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
         if (builtInDictionaries[level].some((w: Word) => w.topic === topic)) {
           return true;

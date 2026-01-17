@@ -5,7 +5,7 @@ import { Button, Spin, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 import { Word, TrainingSettings, SessionStats, Article, Language } from '../types';
-import { getArticleByCase } from '../dictionaries';
+import { getArticleByCase, DEFAULT_DICTIONARY_ID } from '../dictionaries';
 import { getEnabledWords as getEnabledWordsFromDataset, getWordsInTopics } from '../utils/dataset';
 import SettingsDrawer from './SettingsDrawer';
 import UserDictionaryDrawer from './UserDictionaryDrawer';
@@ -23,7 +23,7 @@ const defaultSettings: TrainingSettings = {
   mode: 'noun-only',
   cases: ['nominativ'],
   usePronouns: false,
-  enabledDictionaries: ['A1'],
+  enabledDictionaries: [DEFAULT_DICTIONARY_ID],
   language: 'Russian',
   topics: [],
   articleType: 'definite',

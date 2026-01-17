@@ -5,6 +5,7 @@ import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 
 import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Topic, ArticleType, PronounType, Word } from '../types';
 import { getAllTopics, getTopicWordCount, hasCustomDictionaryEnabled, filterTopicsWithWords } from '../utils/dataset';
+import { BUILT_IN_DICTIONARIES, isBuiltInDictionary, DEFAULT_DICTIONARY_ID } from '../dictionaries';
 
 const { Title } = Typography;
 
@@ -69,20 +70,20 @@ export default function SettingsDrawer({
       const currentSettings = settingsRef.current;
       const currentUserDictionaries = userDictionariesRef.current;
       
-      // Remove all custom dictionary IDs from enabledDictionaries
+      // Remove all custom dictionary IDs from enabledDictionaries (keep only built-in)
       const newEnabledDictionaries = currentSettings.enabledDictionaries.filter(
-        (id: string) => id === 'A1' || id === 'A2'
+        (id: string) => isBuiltInDictionary(id)
       );
       
       // Check if we actually need to update (avoid unnecessary updates)
-      const hasCustomDicts = currentSettings.enabledDictionaries.some((id: string) => id !== 'A1' && id !== 'A2');
+      const hasCustomDicts = currentSettings.enabledDictionaries.some((id: string) => !isBuiltInDictionary(id));
       if (!hasCustomDicts) {
         return; // Already cleaned up
       }
       
       // Ensure at least one dictionary is selected
       const finalEnabledDictionaries = newEnabledDictionaries.length === 0 
-        ? ['A1'] 
+        ? [DEFAULT_DICTIONARY_ID] 
         : newEnabledDictionaries;
       
       // Filter topics to only include those with words in selected dictionaries
@@ -118,20 +119,19 @@ export default function SettingsDrawer({
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.dictionaries')}</Title>
           <Checkbox.Group
             value={[
-              ...settings.enabledDictionaries.filter(id => id === 'A1' || id === 'A2'),
+              ...settings.enabledDictionaries.filter(id => isBuiltInDictionary(id)),
               ...(hasCustomDictEnabled ? ['custom'] : [])
             ]}
             onChange={(checkedValues) => {
               const checked = checkedValues as string[];
               let newEnabledDictionaries: string[] = [];
               
-              // Add A1 and A2 if checked
-              if (checked.includes('A1')) {
-                newEnabledDictionaries.push('A1');
-              }
-              if (checked.includes('A2')) {
-                newEnabledDictionaries.push('A2');
-              }
+              // Add all checked built-in dictionaries
+              BUILT_IN_DICTIONARIES.forEach(dict => {
+                if (checked.includes(dict.id)) {
+                  newEnabledDictionaries.push(dict.id);
+                }
+              });
               
               // If custom is checked and dictionaries are not empty, add all user dictionary IDs
               if (checked.includes('custom') && !areUserDictionariesEmpty) {
@@ -141,7 +141,7 @@ export default function SettingsDrawer({
               
               // Ensure at least one dictionary is selected
               if (newEnabledDictionaries.length === 0) {
-                newEnabledDictionaries = ['A1'];
+                newEnabledDictionaries = [DEFAULT_DICTIONARY_ID];
               }
               
               // Filter topics to only include those with words in selected dictionaries
@@ -159,8 +159,11 @@ export default function SettingsDrawer({
             }}
           >
             <Flex vertical gap="small">
-              <Checkbox value="A1">{t('settings.a1Goethe')}</Checkbox>
-              <Checkbox value="A2">{t('settings.a2Goethe')}</Checkbox>
+              {/* Built-in dictionaries */}
+              {BUILT_IN_DICTIONARIES.map(dict => (
+                <Checkbox key={dict.id} value={dict.id}>{t(dict.translationKey)}</Checkbox>
+              ))}
+              {/* Custom user dictionaries */}
               <Checkbox 
                 value="custom" 
                 disabled={areUserDictionariesEmpty}

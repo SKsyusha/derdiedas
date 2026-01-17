@@ -2,10 +2,62 @@ import { Word, Level } from './types';
 import A1Words from './data/dictionaries/A1.json';
 import A2Words from './data/dictionaries/A2.json';
 
-export const builtInDictionaries: Record<Level, Word[]> = {
-  A1: A1Words as Word[],
-  A2: A2Words as Word[],
-};
+// =====================================================
+// BUILT-IN DICTIONARIES CONFIGURATION
+// To add a new dictionary:
+// 1. Add JSON file to app/data/dictionaries/
+// 2. Import it here
+// 3. Add to BUILT_IN_DICTIONARIES array below
+// 4. Add Level type in types.ts
+// 5. Add translation key in locales (settings.{id}Goethe)
+// =====================================================
+
+export interface BuiltInDictionaryConfig {
+  id: Level;
+  words: Word[];
+  translationKey: string; // key for i18n (e.g., 'settings.a1Goethe')
+}
+
+/**
+ * Configuration for all built-in dictionaries.
+ * Add new dictionaries here - they will automatically appear in settings.
+ */
+export const BUILT_IN_DICTIONARIES: BuiltInDictionaryConfig[] = [
+  { id: 'A1', words: A1Words as Word[], translationKey: 'settings.a1Goethe' },
+  { id: 'A2', words: A2Words as Word[], translationKey: 'settings.a2Goethe' },
+  // To add B1: { id: 'B1', words: B1Words as Word[], translationKey: 'settings.b1Goethe' },
+];
+
+/**
+ * Array of all built-in dictionary IDs (e.g., ['A1', 'A2'])
+ */
+export const BUILT_IN_DICTIONARY_IDS: Level[] = BUILT_IN_DICTIONARIES.map(d => d.id);
+
+/**
+ * Default dictionary ID (used when no dictionary is selected)
+ */
+export const DEFAULT_DICTIONARY_ID: Level = 'A1';
+
+/**
+ * Check if an ID is a built-in dictionary
+ */
+export function isBuiltInDictionary(id: string): id is Level {
+  return BUILT_IN_DICTIONARY_IDS.includes(id as Level);
+}
+
+/**
+ * Check if an ID is a custom (user) dictionary
+ */
+export function isCustomDictionary(id: string): boolean {
+  return !isBuiltInDictionary(id);
+}
+
+/**
+ * Legacy: Record of built-in dictionaries for backward compatibility
+ */
+export const builtInDictionaries: Record<Level, Word[]> = Object.fromEntries(
+  BUILT_IN_DICTIONARIES.map(d => [d.id, d.words])
+) as Record<Level, Word[]>;
 
 // Helper function to get article declension based on case and article type
 export function getArticleByCase(article: string, case_: string, articleType: 'definite' | 'indefinite' = 'definite'): string {
