@@ -131,8 +131,8 @@ export default function SettingsDrawer({
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
+            <Radio value="noun-only">{t('settings.nounOnly')}</Radio>
               <Radio value="sentence">{t('settings.inSentence')}</Radio>
-              <Radio value="noun-only">{t('settings.nounOnly')}</Radio>
             </Flex>
           </Radio.Group>
         </div>
