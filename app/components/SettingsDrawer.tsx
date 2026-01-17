@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { TrainingSettings, Case, Topic, ArticleType, PronounType, Word } from '../types';
@@ -48,6 +48,58 @@ export default function SettingsDrawer({
     return hasCustomDictionaryEnabled(settings.enabledDictionaries);
   }, [settings.enabledDictionaries]);
   
+  // Check if user dictionaries are empty (no dictionaries or all dictionaries have no words)
+  const areUserDictionariesEmpty = useMemo(() => {
+    return userDictionaries.length === 0 || userDictionaries.every(d => d.words.length === 0);
+  }, [userDictionaries]);
+  
+  // Store refs to avoid including objects in dependencies
+  const settingsRef = useRef(settings);
+  const userDictionariesRef = useRef(userDictionaries);
+  
+  // Update refs when values change
+  useEffect(() => {
+    settingsRef.current = settings;
+    userDictionariesRef.current = userDictionaries;
+  }, [settings, userDictionaries]);
+  
+  // Auto-disable custom dictionary if it's empty
+  useEffect(() => {
+    if (areUserDictionariesEmpty && hasCustomDictEnabled) {
+      const currentSettings = settingsRef.current;
+      const currentUserDictionaries = userDictionariesRef.current;
+      
+      // Remove all custom dictionary IDs from enabledDictionaries
+      const newEnabledDictionaries = currentSettings.enabledDictionaries.filter(
+        (id: string) => id === 'A1' || id === 'A2'
+      );
+      
+      // Check if we actually need to update (avoid unnecessary updates)
+      const hasCustomDicts = currentSettings.enabledDictionaries.some((id: string) => id !== 'A1' && id !== 'A2');
+      if (!hasCustomDicts) {
+        return; // Already cleaned up
+      }
+      
+      // Ensure at least one dictionary is selected
+      const finalEnabledDictionaries = newEnabledDictionaries.length === 0 
+        ? ['A1'] 
+        : newEnabledDictionaries;
+      
+      // Filter topics to only include those with words in selected dictionaries
+      const filteredTopics = filterTopicsWithWords(
+        currentSettings.topics,
+        finalEnabledDictionaries,
+        currentUserDictionaries
+      );
+      
+      setSettings({
+        ...currentSettings,
+        enabledDictionaries: finalEnabledDictionaries,
+        topics: filteredTopics,
+      });
+    }
+  }, [areUserDictionariesEmpty, hasCustomDictEnabled, setSettings]);
+  
   // Функция для получения количества слов в топике
   const getTopicCount = (topic: Topic): number => {
     return getTopicWordCount(topic, settings.enabledDictionaries, userDictionaries);
@@ -92,13 +144,13 @@ export default function SettingsDrawer({
               <Checkbox value="A2">{t('settings.a2Goethe')}</Checkbox>
               <Checkbox 
                 value="custom" 
-                disabled={userDictionaries.length === 0}
+                disabled={areUserDictionariesEmpty}
                 checked={hasCustomDictEnabled}
                 onChange={(e) => {
                   const isChecked = e.target.checked;
                   let newEnabledDicts: string[] = settings.enabledDictionaries.filter(id => id === 'A1' || id === 'A2');
                   
-                  if (isChecked && userDictionaries.length > 0) {
+                  if (isChecked && !areUserDictionariesEmpty) {
                     // Add all user dictionaries
                     const userDictIds = userDictionaries.map(d => d.id);
                     newEnabledDicts = [...newEnabledDicts, ...userDictIds];
@@ -115,7 +167,7 @@ export default function SettingsDrawer({
                   });
                 }}
               >
-                {t('settings.custom')} {userDictionaries.length === 0 && `(${t('settings.empty')})`}
+                {t('settings.custom')} {areUserDictionariesEmpty && `(${t('settings.empty')})`}
               </Checkbox>
             </Flex>
           </Checkbox.Group>
