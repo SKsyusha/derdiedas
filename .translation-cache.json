@@ -1,0 +1,42 @@
+{
+  "absender": {
+    "translation": "sender",
+    "matchScore": 1
+  },
+  "ausländer": {
+    "translation": "nationals",
+    "matchScore": 1
+  },
+  "baby": {
+    "translation": "baby",
+    "matchScore": 0.99
+  },
+  "bekannte": {
+    "translation": "friends",
+    "matchScore": 1
+  },
+  "dame": {
+    "translation": "woman",
+    "matchScore": 0.99
+  },
+  "empfänger": {
+    "translation": "recipient",
+    "matchScore": 1
+  },
+  "erwachsene": {
+    "translation": "grown-ups never",
+    "matchScore": 0.99
+  },
+  "fahrer": {
+    "translation": "driver",
+    "matchScore": 1
+  },
+  "frau": {
+    "translation": "ms",
+    "matchScore": 1
+  },
+  "freund": {
+    "translation": "friend",
+    "matchScore": 1
+  }
+}
