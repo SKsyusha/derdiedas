@@ -56,6 +56,10 @@ export default function InputSection({
           <Button
             type="primary"
             htmlType="button"
+            onMouseDown={(e) => {
+              // Предотвращаем потерю фокуса с input (чтобы клавиатура не закрывалась)
+              e.preventDefault();
+            }}
             onClick={() => {
               onCheck();
               // На мобильных возвращаем фокус на input после клика
