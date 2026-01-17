@@ -104,8 +104,7 @@
     "audio_url": "https://der-artikel.de/audio/geschwister.mp3"
   },
   "großeltern": {
-    "article": "die",
-    "audio_url": "https://der-artikel.de/audio/gro%C3%9Feltern.mp3"
+    "article": "die"
   },
   "großmutter": {
     "article": "die",
@@ -416,8 +415,7 @@
     "audio_url": "https://der-artikel.de/audio/vorsicht.mp3"
   },
   "wiederhören": {
-    "article": "das",
-    "audio_url": "https://der-artikel.de/audio/wiederh%C3%B6ren.mp3"
+    "article": "das"
   },
   "wiedersehen": {
     "article": "das",
@@ -762,8 +760,7 @@
     "audio_url": "https://der-artikel.de/audio/stunde.mp3"
   },
   "test": {
-    "article": "der",
-    "audio_url": "https://der-artikel.de/audio/test.mp3"
+    "article": "der"
   },
   "text": {
     "article": "der",
@@ -1426,8 +1423,7 @@
     "audio_url": "https://der-artikel.de/audio/winter.mp3"
   },
   "geburtsjahr": {
-    "article": "das",
-    "audio_url": "https://der-artikel.de/audio/geburtsjahr.mp3"
+    "article": "das"
   },
   "jahr": {
     "article": "das",
@@ -1773,8 +1769,7 @@
     "audio_url": "https://der-artikel.de/audio/b%C3%A4ckerin.mp3"
   },
   "doktorin": {
-    "article": "die",
-    "audio_url": "https://der-artikel.de/audio/doktorin.mp3"
+    "article": "die"
   },
   "fahrerin": {
     "article": "die",
@@ -1793,8 +1788,7 @@
     "audio_url": "https://der-artikel.de/audio/handwerker.mp3"
   },
   "handwerkerin": {
-    "article": "die",
-    "audio_url": "https://der-artikel.de/audio/handwerkerin.mp3"
+    "article": "die"
   },
   "ahnung": {
     "article": "die",
@@ -2103,8 +2097,7 @@
     "audio_url": "https://der-artikel.de/audio/landschaft.mp3"
   },
   "mineral": {
-    "article": "das",
-    "audio_url": "https://der-artikel.de/audio/mineral.mp3"
+    "article": "das"
   },
   "müll": {
     "article": "der",
@@ -2156,8 +2149,7 @@
     "audio_url": "https://der-artikel.de/audio/zoo.mp3"
   },
   "bachstraße": {
-    "article": "die",
-    "audio_url": "https://der-artikel.de/audio/bachstra%C3%9Fe.mp3"
+    "article": "die"
   },
   "hauptstadt": {
     "article": "die",
@@ -2813,8 +2805,7 @@
     "audio_url": "https://der-artikel.de/audio/sendung.mp3"
   },
   "ski": {
-    "article": "der",
-    "audio_url": "https://der-artikel.de/audio/ski.mp3"
+    "article": "der"
   },
   "spaziergang": {
     "article": "der",

@@ -266,8 +266,7 @@
     "translation_en": "grandparents",
     "translation_uk": "бабуся і дідусь",
     "level": "A1",
-    "topic": "Family Members",
-    "audio_url": "https://der-artikel.de/audio/gro%C3%9Feltern.mp3"
+    "topic": "Family Members"
   },
   {
     "noun": "Großmutter",
@@ -1015,8 +1014,7 @@
     "translation_en": "goodbye (on phone)",
     "translation_uk": "до побачення (по телефону)",
     "level": "A1",
-    "topic": "Abstract Concepts",
-    "audio_url": "https://der-artikel.de/audio/wiederh%C3%B6ren.mp3"
+    "topic": "Abstract Concepts"
   },
   {
     "noun": "Wiedersehen",
@@ -1864,8 +1862,7 @@
     "translation_en": "test",
     "translation_uk": "тест",
     "level": "A1",
-    "topic": "Education & Learning",
-    "audio_url": "https://der-artikel.de/audio/test.mp3"
+    "topic": "Education & Learning"
   },
   {
     "noun": "Text",
@@ -3510,8 +3507,7 @@
     "translation_en": "year of birth",
     "translation_uk": "рік народження",
     "level": "A1",
-    "topic": "Person",
-    "audio_url": "https://der-artikel.de/audio/geburtsjahr.mp3"
+    "topic": "Person"
   },
   {
     "noun": "Jahr",
