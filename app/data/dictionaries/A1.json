@@ -1992,7 +1992,8 @@
     "translation_en": "job",
     "translation_uk": "робота",
     "level": "A1",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/stelle.mp3"
   },
   {
     "noun": "Ständigen",
@@ -2010,7 +2011,8 @@
     "translation_en": "apple",
     "translation_uk": "яблуко",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/apfel.mp3"
   },
   {
     "noun": "Banane",
@@ -2019,7 +2021,8 @@
     "translation_en": "banana",
     "translation_uk": "банан",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/banane.mp3"
   },
   {
     "noun": "Bier",
@@ -2028,7 +2031,8 @@
     "translation_en": "beer",
     "translation_uk": "пиво",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/bier.mp3"
   },
   {
     "noun": "Birne",
@@ -2037,7 +2041,8 @@
     "translation_en": "pear",
     "translation_uk": "груша",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/birne.mp3"
   },
   {
     "noun": "Brot",
@@ -2046,7 +2051,8 @@
     "translation_en": "bread",
     "translation_uk": "хліб",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/brot.mp3"
   },
   {
     "noun": "Brötchen",
@@ -2055,7 +2061,8 @@
     "translation_en": "bread roll",
     "translation_uk": "булочка",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/br%C3%B6tchen.mp3"
   },
   {
     "noun": "Butter",
@@ -2064,7 +2071,8 @@
     "translation_en": "butter",
     "translation_uk": "масло",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/butter.mp3"
   },
   {
     "noun": "Ei",
@@ -2073,7 +2081,8 @@
     "translation_en": "egg",
     "translation_uk": "яйце",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/ei.mp3"
   },
   {
     "noun": "Essen",
@@ -2082,7 +2091,8 @@
     "translation_en": "food",
     "translation_uk": "їжа",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/essen.mp3"
   },
   {
     "noun": "Fleisch",
@@ -2091,7 +2101,8 @@
     "translation_en": "meat",
     "translation_uk": "м'ясо",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/fleisch.mp3"
   },
   {
     "noun": "Frühstück",
@@ -2100,7 +2111,8 @@
     "translation_en": "breakfast",
     "translation_uk": "сніданок",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/fr%C3%BChst%C3%BCck.mp3"
   },
   {
     "noun": "Gemüse",
@@ -2109,7 +2121,8 @@
     "translation_en": "vegetables",
     "translation_uk": "овочі",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/gem%C3%BCse.mp3"
   },
   {
     "noun": "Getränk",
@@ -2118,7 +2131,8 @@
     "translation_en": "drink",
     "translation_uk": "напій",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/getr%C3%A4nk.mp3"
   },
   {
     "noun": "Hähnchen",
@@ -2127,7 +2141,8 @@
     "translation_en": "chicken",
     "translation_uk": "курка",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/h%C3%A4hnchen.mp3"
   },
   {
     "noun": "Kaffee",
@@ -2136,7 +2151,8 @@
     "translation_en": "coffee",
     "translation_uk": "кава",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/kaffee.mp3"
   },
   {
     "noun": "Kartoffel",
@@ -2145,7 +2161,8 @@
     "translation_en": "potato",
     "translation_uk": "картопля",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/kartoffel.mp3"
   },
   {
     "noun": "Kuchen",
@@ -2154,7 +2171,8 @@
     "translation_en": "cake",
     "translation_uk": "пиріг",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/kuchen.mp3"
   },
   {
     "noun": "Lokal",
@@ -2163,7 +2181,8 @@
     "translation_en": "restaurant",
     "translation_uk": "ресторан",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/lokal.mp3"
   },
   {
     "noun": "Milch",
@@ -2172,7 +2191,8 @@
     "translation_en": "milk",
     "translation_uk": "молоко",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/milch.mp3"
   },
   {
     "noun": "Obst",
@@ -2181,7 +2201,8 @@
     "translation_en": "fruit",
     "translation_uk": "фрукти",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/obst.mp3"
   },
   {
     "noun": "Pommes",
@@ -2190,7 +2211,8 @@
     "translation_en": "fries",
     "translation_uk": "картопля фрі",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/pommes.mp3"
   },
   {
     "noun": "Reis",
@@ -2199,7 +2221,8 @@
     "translation_en": "rice",
     "translation_uk": "рис",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/reis.mp3"
   },
   {
     "noun": "Restaurant",
@@ -2208,7 +2231,8 @@
     "translation_en": "restaurant",
     "translation_uk": "ресторан",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/restaurant.mp3"
   },
   {
     "noun": "Saft",
@@ -2217,7 +2241,8 @@
     "translation_en": "juice",
     "translation_uk": "сік",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/saft.mp3"
   },
   {
     "noun": "Salat",
@@ -2226,7 +2251,8 @@
     "translation_en": "salad",
     "translation_uk": "салат",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/salat.mp3"
   },
   {
     "noun": "Salz",
@@ -2235,7 +2261,8 @@
     "translation_en": "salt",
     "translation_uk": "сіль",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/salz.mp3"
   },
   {
     "noun": "Schinken",
@@ -2244,7 +2271,8 @@
     "translation_en": "ham",
     "translation_uk": "шинка",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/schinken.mp3"
   },
   {
     "noun": "Speisekarte",
@@ -2253,7 +2281,8 @@
     "translation_en": "menu",
     "translation_uk": "меню",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/speisekarte.mp3"
   },
   {
     "noun": "Tee",
@@ -2262,7 +2291,8 @@
     "translation_en": "tea",
     "translation_uk": "чай",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/tee.mp3"
   },
   {
     "noun": "Tomate",
@@ -2271,7 +2301,8 @@
     "translation_en": "tomato",
     "translation_uk": "помідор",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/tomate.mp3"
   },
   {
     "noun": "Wasser",
@@ -2280,7 +2311,8 @@
     "translation_en": "water",
     "translation_uk": "вода",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/wasser.mp3"
   },
   {
     "noun": "Wein",
@@ -2289,7 +2321,8 @@
     "translation_en": "wine",
     "translation_uk": "вино",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/wein.mp3"
   },
   {
     "noun": "Öl",
@@ -2298,7 +2331,8 @@
     "translation_en": "oil",
     "translation_uk": "олія",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/%C3%B6l.mp3"
   },
   {
     "noun": "Angebot",
@@ -2307,7 +2341,8 @@
     "translation_en": "offer",
     "translation_uk": "пропозиція",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/angebot.mp3"
   },
   {
     "noun": "Automat",
@@ -2316,7 +2351,8 @@
     "translation_en": "machine",
     "translation_uk": "автомат",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/automat.mp3"
   },
   {
     "noun": "Bleistift",
@@ -2325,7 +2361,8 @@
     "translation_en": "pencil",
     "translation_uk": "олівець",
     "level": "A1",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/bleistift.mp3"
   },
   {
     "noun": "Briefmarke",
@@ -2334,7 +2371,8 @@
     "translation_en": "stamp",
     "translation_uk": "марка",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/briefmarke.mp3"
   },
   {
     "noun": "Computer",
@@ -2343,7 +2381,8 @@
     "translation_en": "computer",
     "translation_uk": "комп’ютер",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/computer.mp3"
   },
   {
     "noun": "Flasche",
@@ -2352,7 +2391,8 @@
     "translation_en": "bottle",
     "translation_uk": "пляшка",
     "level": "A1",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/flasche.mp3"
   },
   {
     "noun": "Geschenk",
@@ -2361,7 +2401,8 @@
     "translation_en": "gift",
     "translation_uk": "подарунок",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/geschenk.mp3"
   },
   {
     "noun": "Geschäft",
@@ -2370,7 +2411,8 @@
     "translation_en": "shop",
     "translation_uk": "магазин",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/gesch%C3%A4ft.mp3"
   },
   {
     "noun": "Glas",
@@ -2379,7 +2421,8 @@
     "translation_en": "glass",
     "translation_uk": "скло",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/glas.mp3"
   },
   {
     "noun": "Handy",
@@ -2388,7 +2431,8 @@
     "translation_en": "mobile phone",
     "translation_uk": "мобільний телефон",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/handy.mp3"
   },
   {
     "noun": "Handys",
@@ -2406,7 +2450,8 @@
     "translation_en": "jacket",
     "translation_uk": "куртка",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/jacke.mp3"
   },
   {
     "noun": "Karte",
@@ -2415,7 +2460,8 @@
     "translation_en": "card",
     "translation_uk": "карта",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/karte.mp3"
   },
   {
     "noun": "Kasse",
@@ -2424,7 +2470,8 @@
     "translation_en": "cash register",
     "translation_uk": "касa",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kasse.mp3"
   },
   {
     "noun": "Kiosk",
@@ -2433,7 +2480,8 @@
     "translation_en": "kiosk",
     "translation_uk": "кіоск",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kiosk.mp3"
   },
   {
     "noun": "Kleidung",
@@ -2442,7 +2490,8 @@
     "translation_en": "clothing",
     "translation_uk": "одяг",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kleidung.mp3"
   },
   {
     "noun": "Kugelschreiber",
@@ -2451,7 +2500,8 @@
     "translation_en": "pen",
     "translation_uk": "ручка",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kugelschreiber.mp3"
   },
   {
     "noun": "Laden",
@@ -2460,7 +2510,8 @@
     "translation_en": "shop",
     "translation_uk": "магазин",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/laden.mp3"
   },
   {
     "noun": "Papier",
@@ -2469,7 +2520,8 @@
     "translation_en": "paper",
     "translation_uk": "папір",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/papier.mp3"
   },
   {
     "noun": "Preis",
@@ -2478,7 +2530,8 @@
     "translation_en": "price",
     "translation_uk": "ціна",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/preis.mp3"
   },
   {
     "noun": "Schuh",
@@ -2487,7 +2540,8 @@
     "translation_en": "shoe",
     "translation_uk": "туфля",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/schuh.mp3"
   },
   {
     "noun": "Schuhe",
@@ -2505,7 +2559,8 @@
     "translation_en": "bag",
     "translation_uk": "сумка",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/tasche.mp3"
   },
   {
     "noun": "Zigarette",
@@ -2514,7 +2569,8 @@
     "translation_en": "cigarette",
     "translation_uk": "цигарета",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/zigarette.mp3"
   },
   {
     "noun": "Geld",
@@ -2523,7 +2579,8 @@
     "translation_en": "money",
     "translation_uk": "гроші",
     "level": "A1",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/geld.mp3"
   },
   {
     "noun": "Breite",
@@ -2532,7 +2589,8 @@
     "translation_en": "width",
     "translation_uk": "ширина",
     "level": "A1",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/breite.mp3"
   },
   {
     "noun": "Gewicht",
@@ -2541,7 +2599,8 @@
     "translation_en": "weight",
     "translation_uk": "вага",
     "level": "A1",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/gewicht.mp3"
   },
   {
     "noun": "Größe",
@@ -2550,7 +2609,8 @@
     "translation_en": "size",
     "translation_uk": "розмір",
     "level": "A1",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/gr%C3%B6%C3%9Fe.mp3"
   },
   {
     "noun": "Anmeldung",
@@ -2559,7 +2619,8 @@
     "translation_en": "registration",
     "translation_uk": "реєстрація",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/anmeldung.mp3"
   },
   {
     "noun": "Anruf",
@@ -2568,7 +2629,8 @@
     "translation_en": "call",
     "translation_uk": "дзвінок",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/anruf.mp3"
   },
   {
     "noun": "Ansage",
@@ -2577,7 +2639,8 @@
     "translation_en": "announcement",
     "translation_uk": "оголошення",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/ansage.mp3"
   },
   {
     "noun": "Anzeige",
@@ -2586,16 +2649,18 @@
     "translation_en": "advertisement",
     "translation_uk": "оголошення",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/anzeige.mp3"
   },
   {
     "noun": "Apotheke",
-    "article": "der",
+    "article": "die",
     "translation_ru": "аптека",
     "translation_en": "pharmacy",
     "translation_uk": "аптека",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/apotheke.mp3"
   },
   {
     "noun": "Auskunft",
@@ -2604,7 +2669,8 @@
     "translation_en": "information desk",
     "translation_uk": "інформація",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/auskunft.mp3"
   },
   {
     "noun": "Ausweis",
@@ -2613,7 +2679,8 @@
     "translation_en": "ID card",
     "translation_uk": "посвідчення особи",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/ausweis.mp3"
   },
   {
     "noun": "Brief",
@@ -2622,7 +2689,8 @@
     "translation_en": "letter",
     "translation_uk": "лист",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/brief.mp3"
   },
   {
     "noun": "Bäckerei",
@@ -2631,7 +2699,8 @@
     "translation_en": "bakery",
     "translation_uk": "пекарня",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/b%C3%A4ckerei.mp3"
   },
   {
     "noun": "Durchsage",
@@ -2640,7 +2709,8 @@
     "translation_en": "announcement",
     "translation_uk": "оголошення",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/durchsage.mp3"
   },
   {
     "noun": "E-Mail",
@@ -2649,7 +2719,8 @@
     "translation_en": "email",
     "translation_uk": "електронна пошта",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/e-mail.mp3"
   },
   {
     "noun": "Fax",
@@ -2658,7 +2729,8 @@
     "translation_en": "fax",
     "translation_uk": "факс",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/fax.mp3"
   },
   {
     "noun": "Formular",
@@ -2667,7 +2739,8 @@
     "translation_en": "form",
     "translation_uk": "форма",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/formular.mp3"
   },
   {
     "noun": "Halbpension",
@@ -2676,7 +2749,8 @@
     "translation_en": "half board",
     "translation_uk": "напівпансіон",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/halbpension.mp3"
   },
   {
     "noun": "Konto",
@@ -2685,7 +2759,8 @@
     "translation_en": "account",
     "translation_uk": "рахунок",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/konto.mp3"
   },
   {
     "noun": "Polizei",
@@ -2694,7 +2769,8 @@
     "translation_en": "police",
     "translation_uk": "поліція",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/polizei.mp3"
   },
   {
     "noun": "Post",
@@ -2703,7 +2779,8 @@
     "translation_en": "post office",
     "translation_uk": "пошта",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/post.mp3"
   },
   {
     "noun": "Postleitzahl",
@@ -2712,7 +2789,8 @@
     "translation_en": "postal code",
     "translation_uk": "поштовий індекс",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/postleitzahl.mp3"
   },
   {
     "noun": "Praxis",
@@ -2721,7 +2799,8 @@
     "translation_en": "doctor's office",
     "translation_uk": "лікарняний кабінет",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/praxis.mp3"
   },
   {
     "noun": "Rechnung",
@@ -2730,7 +2809,8 @@
     "translation_en": "bill",
     "translation_uk": "рахунок",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/rechnung.mp3"
   },
   {
     "noun": "Reparatur",
@@ -2739,7 +2819,8 @@
     "translation_en": "repair",
     "translation_uk": "ремонт",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/reparatur.mp3"
   },
   {
     "noun": "Rezeption",
@@ -2748,7 +2829,8 @@
     "translation_en": "reception desk",
     "translation_uk": "ресепшн",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/rezeption.mp3"
   },
   {
     "noun": "Schalter",
@@ -2757,7 +2839,8 @@
     "translation_en": "counter",
     "translation_uk": "вікно",
     "level": "A1",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/schalter.mp3"
   },
   {
     "noun": "Telefon",
@@ -2766,7 +2849,8 @@
     "translation_en": "telephone",
     "translation_uk": "телефон",
     "level": "A1",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/telefon.mp3"
   },
   {
     "noun": "Ausflug",
@@ -2775,7 +2859,8 @@
     "translation_en": "excursion",
     "translation_uk": "екскурсія",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/ausflug.mp3"
   },
   {
     "noun": "Bild",
@@ -2784,7 +2869,8 @@
     "translation_en": "picture",
     "translation_uk": "картина",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/bild.mp3"
   },
   {
     "noun": "Bogen",
@@ -2793,7 +2879,8 @@
     "translation_en": "bow",
     "translation_uk": "лук",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/bogen.mp3"
   },
   {
     "noun": "CD",
@@ -2802,7 +2889,8 @@
     "translation_en": "CD",
     "translation_uk": "CD",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/cd.mp3"
   },
   {
     "noun": "Disco",
@@ -2811,16 +2899,18 @@
     "translation_en": "discotheque",
     "translation_uk": "диско",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/disco.mp3"
   },
   {
     "noun": "Disko",
-    "article": "der",
+    "article": "die",
     "translation_ru": "диско",
     "translation_en": "disco",
     "translation_uk": "диско",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/disko.mp3"
   },
   {
     "noun": "Eintritt",
@@ -2829,7 +2919,8 @@
     "translation_en": "entry",
     "translation_uk": "вхід",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/eintritt.mp3"
   },
   {
     "noun": "Film",
@@ -2838,7 +2929,8 @@
     "translation_en": "movie",
     "translation_uk": "фільм",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/film.mp3"
   },
   {
     "noun": "Foto",
@@ -2847,7 +2939,8 @@
     "translation_en": "photo",
     "translation_uk": "фото",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/foto.mp3"
   },
   {
     "noun": "Freizeit",
@@ -2856,7 +2949,8 @@
     "translation_en": "free time",
     "translation_uk": "вільний час",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/freizeit.mp3"
   },
   {
     "noun": "Fußball",
@@ -2865,7 +2959,8 @@
     "translation_en": "football",
     "translation_uk": "футбол",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/fu%C3%9Fball.mp3"
   },
   {
     "noun": "Führung",
@@ -2874,7 +2969,8 @@
     "translation_en": "tour",
     "translation_uk": "екскурсія",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/f%C3%BChrung.mp3"
   },
   {
     "noun": "Hobby",
@@ -2883,7 +2979,8 @@
     "translation_en": "hobby",
     "translation_uk": "хобі",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/hobby.mp3"
   },
   {
     "noun": "Internet",
@@ -2892,7 +2989,8 @@
     "translation_en": "internet",
     "translation_uk": "інтернет",
     "level": "A1",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/internet.mp3"
   },
   {
     "noun": "Kino",
