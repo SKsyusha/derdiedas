@@ -1,10 +1,14 @@
 {
   "settings": {
     "title": "Налаштування",
+    "dictionaries": "Словники",
     "dictionary": "Словник",
     "custom": "Свій",
     "default": "Стандартний",
     "level": "Рівень",
+    "a1Goethe": "A1 Goethe",
+    "a2Goethe": "A2 Goethe",
+    "noCustomDicts": "немає словників",
     "trainingMode": "Режим тренування",
     "inSentence": "У реченні",
     "nounOnly": "Тільки іменник",
