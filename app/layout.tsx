@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DerDieDas Trainer - Тренажёр артиклей немецкого языка",
-  description: "Интерактивный тренажёр для автоматизации правильного выбора артиклей der / die / das в немецком языке",
+  title: "DerDieDas Trainer - German Articles Practice",
+  description: "Interactive trainer to master German articles der / die / das. Practice with real words from Goethe A1/A2 vocabulary.",
 };
 
 export default function RootLayout({
