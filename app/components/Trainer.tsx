@@ -329,7 +329,7 @@ export default function Trainer() {
           newWord={newWord}
           setNewWord={setNewWord}
           onDictionaryCreated={(dictId) => {
-            if (settings.dictionaryType === 'user' && !settings.enabledDictionaries.includes(dictId)) {
+            if (!settings.enabledDictionaries.includes(dictId)) {
               setSettings({
                 ...settings,
                 enabledDictionaries: [...settings.enabledDictionaries, dictId],
@@ -427,7 +427,7 @@ export default function Trainer() {
         newWord={newWord}
         setNewWord={setNewWord}
         onDictionaryCreated={(dictId) => {
-          if (settings.dictionaryType === 'user' && !settings.enabledDictionaries.includes(dictId)) {
+          if (!settings.enabledDictionaries.includes(dictId)) {
             setSettings({
               ...settings,
               enabledDictionaries: [...settings.enabledDictionaries, dictId],
