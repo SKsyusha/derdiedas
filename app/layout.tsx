@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ConfigProvider } from "antd";
+import { Analytics } from "@vercel/analytics/next";
 import "antd/dist/reset.css";
 import "./globals.css";
 import I18nProvider from "./components/I18nProvider";
@@ -153,6 +154,7 @@ export default function RootLayout({
           </I18nProvider>
         </ConfigProvider>
         <BuyMeACoffee />
+        <Analytics />
       </body>
     </html>
   );
