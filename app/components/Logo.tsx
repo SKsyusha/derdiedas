@@ -26,8 +26,8 @@ export default function Logo({ size = 'medium', className = '', hideTrainer = fa
         <span 
           className={`${currentSize.articles} font-extrabold`}
           style={{ 
-            color: '#2563eb',
-            textShadow: '0 1px 2px rgba(37, 99, 235, 0.2)',
+            color: '#3b82f6',
+            textShadow: '0 1px 2px rgba(59, 130, 246, 0.3)',
           }}
         >
           Der
@@ -35,8 +35,8 @@ export default function Logo({ size = 'medium', className = '', hideTrainer = fa
         <span 
           className={`${currentSize.articles} font-extrabold`}
           style={{ 
-            color: '#db2777',
-            textShadow: '0 1px 2px rgba(219, 39, 119, 0.2)',
+            color: '#ec4899',
+            textShadow: '0 1px 2px rgba(236, 72, 153, 0.3)',
           }}
         >
           Die
@@ -44,8 +44,8 @@ export default function Logo({ size = 'medium', className = '', hideTrainer = fa
         <span 
           className={`${currentSize.articles} font-extrabold`}
           style={{ 
-            color: '#16a34a',
-            textShadow: '0 1px 2px rgba(22, 163, 74, 0.2)',
+            color: '#22c55e',
+            textShadow: '0 1px 2px rgba(34, 197, 94, 0.3)',
           }}
         >
           Das
@@ -55,7 +55,7 @@ export default function Logo({ size = 'medium', className = '', hideTrainer = fa
         <span 
           className={`${currentSize.trainer} font-bold`}
           style={{ 
-            background: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
+            background: 'linear-gradient(135deg, #a78bfa 0%, #818cf8 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',

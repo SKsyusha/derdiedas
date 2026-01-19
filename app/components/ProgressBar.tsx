@@ -18,7 +18,7 @@ export default function ProgressBar({ learned, total, percentage, hasTopics }: P
   return (
     <div className="mt-2 sm:mt-4" style={{ marginBottom: '16px' }}>
       <div className="mb-2">
-        <Text strong className="text-xs sm:text-sm">
+        <Text strong className="text-xs sm:text-sm" style={{ color: 'var(--foreground)' }}>
           {hasTopics
             ? t('trainer.topicProgress', { learned, total })
             : t('trainer.allWordsProgress', { learned, total })
@@ -31,6 +31,7 @@ export default function ProgressBar({ learned, total, percentage, hasTopics }: P
           '0%': '#8b5cf6',
           '100%': '#6366f1',
         }}
+        railColor="var(--gray-border)"
         showInfo={true}
       />
     </div>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ConfigProvider } from "antd";
 import { Analytics } from "@vercel/analytics/next";
 import "antd/dist/reset.css";
 import "./globals.css";
 import I18nProvider from "./components/I18nProvider";
 import BuyMeACoffee from "./components/BuyMeACoffee";
+import { ThemeProvider } from "./components/ThemeProvider";
+import AntConfigProvider from "./components/AntConfigProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -103,56 +104,43 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Prevent flash of wrong theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = document.cookie.match(/theme=([^;]+)/)?.[1];
+                  if (!theme) {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  }
+                  document.documentElement.setAttribute('data-theme', theme);
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
         />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <ConfigProvider
-          theme={{
-            token: {
-              colorPrimary: '#8b5cf6', // Purple/violet primary color
-              colorBgContainer: '#ffffff',
-              colorBgElevated: '#ffffff',
-              borderRadius: 12,
-              colorBorder: '#e5e7eb',
-              colorText: '#171717',
-            },
-            components: {
-              Button: {
-                borderRadius: 8,
-                controlHeight: 40,
-                primaryColor: '#ffffff',
-              },
-              Card: {
-                borderRadius: 16,
-                paddingLG: 24,
-              },
-              Drawer: {
-                colorBgElevated: '#ffffff',
-              },
-              Input: {
-                borderRadius: 8,
-                controlHeight: 40,
-                colorBorder: '#e5e7eb',
-              },
-              Select: {
-                borderRadius: 8,
-                controlHeight: 40,
-              },
-            },
-          }}
-        >
-          <I18nProvider>
-            {children}
-          </I18nProvider>
-        </ConfigProvider>
+        <ThemeProvider>
+          <AntConfigProvider>
+            <I18nProvider>
+              {children}
+            </I18nProvider>
+          </AntConfigProvider>
+        </ThemeProvider>
         <BuyMeACoffee />
         <Analytics />
       </body>

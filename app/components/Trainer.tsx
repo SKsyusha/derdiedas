@@ -295,8 +295,8 @@ export default function Trainer() {
       <>
         <div className="min-h-screen flex items-center justify-center p-4">
           <div className="text-center max-w-md">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4">{t('trainer.noWordsAvailable')}</h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-4">{t('trainer.enableDictionary')}</p>
+            <h2 className="text-xl sm:text-2xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>{t('trainer.noWordsAvailable')}</h2>
+            <p className="text-sm sm:text-base mb-4" style={{ color: 'var(--gray-text)' }}>{t('trainer.enableDictionary')}</p>
             <Button
               type="primary"
               size="large"
@@ -342,7 +342,7 @@ export default function Trainer() {
   }
 
   return (
-    <div className="min-h-screen bg-white px-4 py-2 sm:px-6 sm:py-4">
+    <div className="min-h-screen px-4 py-2 sm:px-6 sm:py-4" style={{ background: 'var(--background)' }}>
       <div className="max-w-7xl mx-auto">
         <TrainerHeader
           isMobile={isMobile}
@@ -364,18 +364,20 @@ export default function Trainer() {
 
             {/* Training Area */}
             <div 
-              className="training-block sm:shadow-md sm:rounded-2xl sm:border sm:border-gray-200 sm:bg-white"
+              className="training-block sm:shadow-md sm:rounded-2xl sm:border"
               style={{ 
                 marginTop: showUserDict ? '16px' : '0', 
                 marginBottom: '16px',
-                padding: '0'
+                padding: '0',
+                borderColor: 'var(--card-border)',
+                background: 'var(--card-bg)'
               }}
             >
               <div className="sm:p-6 training-block-inner">
                 {isLoading ? (
                   <div className="text-center py-8 sm:py-12">
                     <Spin size="large" />
-                    <p className="mt-4 text-gray-600 text-sm sm:text-base">{t('trainer.loading')}</p>
+                    <p className="mt-4 text-sm sm:text-base" style={{ color: 'var(--gray-text)' }}>{t('trainer.loading')}</p>
                   </div>
                 ) : currentWord ? (
                   <div className="text-center mb-6 sm:mb-8">

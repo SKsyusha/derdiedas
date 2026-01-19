@@ -2,11 +2,12 @@
 
 import { Button, Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
-import { SettingOutlined, BookOutlined, GlobalOutlined } from '@ant-design/icons';
+import { SettingOutlined, BookOutlined, GlobalOutlined, SunOutlined, MoonOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 import { Language } from '../types';
 import Logo from './Logo';
+import { useTheme } from './ThemeProvider';
 
 interface TrainerHeaderProps {
   isMobile: boolean;
@@ -22,12 +23,24 @@ export default function TrainerHeader({
   onLanguageChange,
 }: TrainerHeaderProps) {
   const { t } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="mb-4 sm:mb-6 flex flex-row sm:flex-row justify-between items-center gap-3 sm:gap-0">
       <Logo size="large" className="hidden sm:flex" />
       <Logo size="medium" className="sm:hidden" hideTrainer />
       <div className="flex flex-wrap gap-2 justify-end">
+        {/* Theme toggle */}
+        <Button
+          icon={theme === 'dark' ? <SunOutlined /> : <MoonOutlined />}
+          onClick={toggleTheme}
+          style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
+          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          <span className="hidden sm:inline">
+            {theme === 'dark' ? t('trainer.lightMode') : t('trainer.darkMode')}
+          </span>
+        </Button>
         {/* Language selector - Dropdown with text on desktop, icon on mobile */}
         <Dropdown
           menu={{

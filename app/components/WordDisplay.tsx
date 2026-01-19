@@ -1,6 +1,6 @@
 'use client';
 
-import { Word, Case } from '../types';
+import { Word } from '../types';
 
 interface WordDisplayProps {
   word: Word;
@@ -23,13 +23,13 @@ export default function WordDisplay({
 }: WordDisplayProps) {
   if (mode === 'sentence' && sentence) {
     return (
-      <div className="text-lg sm:text-2xl mb-4 sm:mb-6 text-gray-900 px-4 sm:px-2">
+      <div className="text-lg sm:text-2xl mb-4 sm:mb-6 px-4 sm:px-2" style={{ color: 'var(--foreground)' }}>
         {feedback === 'correct' ? (
-          <div className="text-green-700">
+          <div style={{ color: 'var(--success)' }}>
             {sentence.replace('___', correctAnswer)}
           </div>
         ) : feedback === 'incorrect' ? (
-          <div className="text-red-700">
+          <div style={{ color: 'var(--error)' }}>
             {sentence.replace('___', correctAnswer)}
           </div>
         ) : (
@@ -37,7 +37,7 @@ export default function WordDisplay({
             <span key={idx}>
               {part}
               {idx < arr.length - 1 && (
-                <span className="inline-block w-16 sm:w-24 border-b-2 border-purple-500 mx-1 sm:mx-2" />
+                <span className="inline-block w-16 sm:w-24 border-b-2 mx-1 sm:mx-2" style={{ borderColor: 'var(--purple-primary)' }} />
               )}
             </span>
           ))
@@ -47,22 +47,22 @@ export default function WordDisplay({
   }
 
   return (
-    <div className="text-xl sm:text-3xl mb-4 sm:mb-6 text-gray-900 px-4 sm:px-2">
+    <div className="text-xl sm:text-3xl mb-4 sm:mb-6 px-4 sm:px-2" style={{ color: 'var(--foreground)' }}>
       {feedback === 'correct' ? (
-        <div className="text-green-700">
+        <div style={{ color: 'var(--success)' }}>
           {correctAnswer} {word.noun}
           {showTranslation && translation && (
-            <span className="text-gray-500 text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline">
+            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline" style={{ color: 'var(--gray-text)' }}>
               <span className="sm:hidden">{translation}</span>
               <span className="hidden sm:inline">({translation})</span>
             </span>
           )}
         </div>
       ) : feedback === 'incorrect' ? (
-        <div className="text-red-700">
+        <div style={{ color: 'var(--error)' }}>
           {correctAnswer} {word.noun}
           {showTranslation && translation && (
-            <span className="text-gray-500 text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline">
+            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline" style={{ color: 'var(--gray-text)' }}>
               <span className="sm:hidden">{translation}</span>
               <span className="hidden sm:inline">({translation})</span>
             </span>
@@ -70,10 +70,10 @@ export default function WordDisplay({
         </div>
       ) : (
         <>
-          <span className="inline-block w-16 sm:w-24 border-b-2 border-purple-500 mx-1 sm:mx-2" />
+          <span className="inline-block w-16 sm:w-24 border-b-2 mx-1 sm:mx-2" style={{ borderColor: 'var(--purple-primary)' }} />
           {word.noun}
           {showTranslation && translation && (
-            <span className="text-gray-500 text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline">
+            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline" style={{ color: 'var(--gray-text)' }}>
               <span className="sm:hidden">{translation}</span>
               <span className="hidden sm:inline">({translation})</span>
             </span>

@@ -51,7 +51,9 @@
     "streak": "Серія",
     "bestStreak": "найкраща",
     "topicProgress": "Прогрес по темах: {{learned}} / {{total}} слів",
-    "allWordsProgress": "Прогрес: {{learned}} / {{total}} слів"
+    "allWordsProgress": "Прогрес: {{learned}} / {{total}} слів",
+    "darkMode": "Темна тема",
+    "lightMode": "Світла тема"
   },
   "userDictionary": {
     "title": "Мій словник",
