@@ -62,6 +62,12 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     document.documentElement.setAttribute('data-theme', theme);
     document.documentElement.classList.toggle('dark', theme === 'dark');
     
+    // Update iOS status bar style
+    const metaStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    if (metaStatusBar) {
+      metaStatusBar.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
+    }
+    
     // Save to cookie
     setThemeCookie(theme);
   }, [theme, mounted]);

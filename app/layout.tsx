@@ -21,6 +21,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DerDieDas Trainer - Learn German Articles der/die/das",
   description: "Free interactive trainer to master German articles der, die, das. Practice with 1000+ words from official Goethe A1/A2 vocabulary. Track your progress and learn faster!",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
+  ],
   keywords: [
     "German articles",
     "der die das",
@@ -106,6 +110,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -123,6 +130,11 @@ export default function RootLayout({
                   document.documentElement.setAttribute('data-theme', theme);
                   if (theme === 'dark') {
                     document.documentElement.classList.add('dark');
+                  }
+                  // Set iOS status bar color based on theme
+                  var metaStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+                  if (metaStatusBar) {
+                    metaStatusBar.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
                   }
                 } catch (e) {}
               })();

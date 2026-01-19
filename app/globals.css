@@ -38,6 +38,18 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+/* iOS specific: fix overscroll background while allowing pull-to-refresh */
+@supports (-webkit-touch-callout: none) {
+  /* Fix for iOS Safari status bar area */
+  html[data-theme="dark"] {
+    background-color: #0f0f0f !important;
+  }
+  
+  html[data-theme="dark"] body {
+    background-color: #0f0f0f !important;
+  }
+}
+
 /* Скрываем placeholder когда input в фокусе */
 input.ant-input:focus::placeholder,
 .ant-input:focus::placeholder {
