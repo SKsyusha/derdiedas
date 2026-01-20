@@ -2,6 +2,16 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import { Word, TrainingSettings, Case } from '../types';
 import { generateSentence, getArticleByCase } from '../dictionaries';
 
+// Valid articles list - все артикли во всех падежах
+// Определенные артикли (der/die/das): der, die, das, den, dem, des
+// Неопределенные артикли (ein/eine): ein, eine, einen, einem, einer, eines
+const VALID_ARTICLES = [
+  'der', 'die', 'das',  // Nominativ определенные
+  'den', 'dem', 'des',  // Akkusativ/Dativ/Genitiv определенные (der)
+  'ein', 'eine',        // Nominativ неопределенные
+  'einen', 'einem', 'einer', 'eines', // Akkusativ/Dativ/Genitiv неопределенные
+];
+
 // Fisher-Yates shuffle
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array];
@@ -23,7 +33,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const [currentSentence, setCurrentSentence] = useState<string>('');
   const [currentCase, setCurrentCase] = useState<Case>('nominativ');
   const [userInput, setUserInput] = useState<string>('');
-  const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
+  const [feedback, setFeedback] = useState<'correct' | 'incorrect' | 'invalid' | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   
   const inputRef = useRef<any>(null);
@@ -150,10 +160,38 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       timeoutRef.current = null;
     }
 
+    // Проверяем, является ли введенное значение валидным артиклем
+    const trimmedInput = userInput.trim().toLowerCase();
+    const isValidArticle = VALID_ARTICLES.includes(trimmedInput);
+
+    if (!isValidArticle) {
+      // Если введено не артикль - показываем ошибку и вибрируем на мобильных
+      setFeedback('invalid');
+      isProcessingRef.current = false;
+      
+      // Вибрация на мобильных устройствах
+      if (isMobile && 'vibrate' in navigator) {
+        navigator.vibrate(200); // Вибрация 200ms
+      }
+      
+      // Сбрасываем ошибку через 1.5 секунды
+      timeoutRef.current = setTimeout(() => {
+        setFeedback(null);
+        timeoutRef.current = null;
+      }, 1500);
+      
+      // Сохраняем фокус
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 100);
+      
+      return false;
+    }
+
     // Get correct answer based on article, case, and article type
     const correctAnswer = getArticleByCase(currentWord.article, currentCase, settings.articleType);
 
-    const isCorrect = userInput === correctAnswer;
+    const isCorrect = trimmedInput === correctAnswer;
     setFeedback(isCorrect ? 'correct' : 'incorrect');
 
     if (isCorrect) {

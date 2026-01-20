@@ -2,6 +2,7 @@
 
 import { Input, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 
 interface InputSectionProps {
   inputRef: React.RefObject<any>;
@@ -9,7 +10,7 @@ interface InputSectionProps {
   onInputChange: (value: string) => void;
   onCheck: () => void;
   onNextWord: () => void;
-  feedback: 'correct' | 'incorrect' | null;
+  feedback: 'correct' | 'incorrect' | 'invalid' | null;
   isMobile: boolean;
   disabled?: boolean;
 }
@@ -25,6 +26,18 @@ export default function InputSection({
   disabled = false,
 }: InputSectionProps) {
   const { t } = useTranslation();
+  const [shouldShake, setShouldShake] = useState(false);
+
+  // Trigger shake animation when invalid input
+  useEffect(() => {
+    if (feedback === 'invalid') {
+      setShouldShake(true);
+      const timer = setTimeout(() => {
+        setShouldShake(false);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [feedback]);
 
   return (
     <>
@@ -39,10 +52,11 @@ export default function InputSection({
           className={`w-full text-lg sm:text-2xl ${
             feedback === 'correct'
               ? 'border-green-500'
-              : feedback === 'incorrect'
+              : feedback === 'incorrect' || feedback === 'invalid'
               ? 'border-red-500'
               : ''
-          }`}
+          } ${shouldShake ? 'shake' : ''}`}
+          status={feedback === 'invalid' ? 'error' : undefined}
           style={{
             fontSize: '1.125rem',
             height: '52px',
