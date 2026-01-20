@@ -213,15 +213,6 @@ export default function SettingsDrawer({
                 </Flex>
               </Checkbox.Group>
             </div>
-
-            <div>
-              <Checkbox
-                checked={settings.usePronouns}
-                onChange={(e) => setSettings({ ...settings, usePronouns: e.target.checked })}
-              >
-                {t('settings.usePronouns')}
-              </Checkbox>
-            </div>
           </>
         )}
 
@@ -376,7 +367,7 @@ export default function SettingsDrawer({
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.pronouns')}</Title>
           <Radio.Group
             value={settings.pronounType}
-            onChange={(e) => setSettings({ ...settings, pronounType: e.target.value, usePronouns: e.target.value !== 'none' })}
+            onChange={(e) => setSettings({ ...settings, pronounType: e.target.value as PronounType })}
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">

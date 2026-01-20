@@ -42,7 +42,6 @@ export interface Dictionary {
 export interface TrainingSettings {
   mode: TrainingMode;
   cases: Case[];
-  usePronouns: boolean;
   enabledDictionaries: string[]; // Contains 'A1', 'A2', or user dictionary IDs
   language: Language;
   topics: Topic[];

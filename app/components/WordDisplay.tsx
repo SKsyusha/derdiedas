@@ -42,6 +42,12 @@ export default function WordDisplay({
             </span>
           ))
         )}
+
+        {showTranslation && translation && (
+          <div className="text-base sm:text-xl mt-2" style={{ color: 'var(--gray-text)' }}>
+            {translation}
+          </div>
+        )}
       </div>
     );
   }

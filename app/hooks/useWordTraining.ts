@@ -112,7 +112,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     setCurrentCase(selectedCase);
 
     if (settings.mode === 'sentence') {
-      const sentence = generateSentence(nextWord, selectedCase, settings.usePronouns);
+      const sentence = generateSentence(nextWord, selectedCase);
       setCurrentSentence(sentence);
     } else {
       setCurrentSentence('');

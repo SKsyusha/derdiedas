@@ -1,4 +1,4 @@
-import { Word, Level } from './types';
+import { Word, Level, Case, Article, ArticleType } from './types';
 import A1Words from './data/dictionaries/A1.json';
 import A2Words from './data/dictionaries/A2.json';
 
@@ -60,7 +60,11 @@ export const builtInDictionaries: Record<Level, Word[]> = Object.fromEntries(
 ) as Record<Level, Word[]>;
 
 // Helper function to get article declension based on case and article type
-export function getArticleByCase(article: string, case_: string, articleType: 'definite' | 'indefinite' = 'definite'): string {
+export function getArticleByCase(
+  article: Article,
+  case_: Case,
+  articleType: ArticleType = 'definite'
+): string {
   if (articleType === 'indefinite') {
     // Indefinite articles (ein/eine)
     const indefiniteDeclensions: Record<string, Record<string, string>> = {
@@ -113,25 +117,36 @@ export function getArticleByCase(article: string, case_: string, articleType: 'd
 // Generate sentence templates
 export function generateSentence(
   word: Word,
-  case_: string,
-  usePronouns: boolean
+  case_: Case
 ): string {
-  const templates: Record<string, string[]> = {
-    nominativ: usePronouns
-      ? ['Ich sehe ___ {noun}.', 'Du siehst ___ {noun}.', 'Er sieht ___ {noun}.', 'Sie sieht ___ {noun}.', 'Wir sehen ___ {noun}.', 'Ihr seht ___ {noun}.']
-      : ['Das ist ___ {noun}.', 'Hier ist ___ {noun}.', 'Das ___ {noun} ist schön.'],
-    akkusativ: usePronouns
-      ? ['Ich sehe ___ {noun}.', 'Du siehst ___ {noun}.', 'Er sieht ___ {noun}.', 'Sie sieht ___ {noun}.', 'Wir sehen ___ {noun}.', 'Ihr seht ___ {noun}.']
-      : ['Ich sehe ___ {noun}.', 'Ich kaufe ___ {noun}.', 'Ich finde ___ {noun}.', 'Ich mag ___ {noun}.'],
-    dativ: usePronouns
-      ? ['Ich gebe ___ {noun} ein Buch.', 'Du gibst ___ {noun} ein Buch.', 'Er gibt ___ {noun} ein Buch.', 'Sie gibt ___ {noun} ein Buch.', 'Wir geben ___ {noun} ein Buch.', 'Ihr gebt ___ {noun} ein Buch.']
-      : ['Ich helfe ___ {noun}.', 'Ich folge ___ {noun}.', 'Ich danke ___ {noun}.', 'Ich antworte ___ {noun}.'],
-    genitiv: usePronouns
-      ? ['Das ist das Buch ___ {noun}.', 'Das ist die Farbe ___ {noun}.', 'Das ist der Freund ___ {noun}.']
-      : ['Das ist das Buch ___ {noun}.', 'Die Farbe ___ {noun} ist schön.', 'Der Freund ___ {noun} kommt.', 'Das Auto ___ {noun} ist neu.'],
+  const templates: Record<Case, string[]> = {
+    nominativ: [
+      '___ {noun} ist hier.',
+      '___ {noun} ist schön.',
+      'Hier steht ___ {noun}.',
+      '___ {noun} kommt heute.',
+    ],
+    akkusativ: [
+      'Ich sehe ___ {noun}.',
+      'Ich kaufe ___ {noun}.',
+      'Ich finde ___ {noun}.',
+      'Ich mag ___ {noun}.',
+    ],
+    dativ: [
+      'Ich helfe ___ {noun}.',
+      'Ich danke ___ {noun}.',
+      'Ich folge ___ {noun}.',
+      'Ich antworte ___ {noun}.',
+    ],
+    genitiv: [
+      'Das ist das Buch ___ {noun}.',
+      'Die Farbe ___ {noun} ist schön.',
+      'Der Freund ___ {noun} kommt.',
+      'Das Auto ___ {noun} ist neu.',
+    ],
   };
 
-  const sentenceTemplates = templates[case_] || templates.nominativ;
+  const sentenceTemplates = templates[case_];
   const template = sentenceTemplates[Math.floor(Math.random() * sentenceTemplates.length)];
   return template.replace('{noun}', word.noun);
 }

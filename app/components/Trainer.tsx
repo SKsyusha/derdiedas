@@ -22,7 +22,6 @@ const SETTINGS_COOKIE_NAME = 'training_settings';
 const defaultSettings: TrainingSettings = {
   mode: 'noun-only',
   cases: ['nominativ'],
-  usePronouns: false,
   enabledDictionaries: [DEFAULT_DICTIONARY_ID],
   language: 'Russian',
   topics: [],
@@ -219,14 +218,12 @@ export default function Trainer() {
     return JSON.stringify({
       mode: settings.mode,
       cases: settings.cases,
-      usePronouns: settings.usePronouns,
       enabledDictionaries: settings.enabledDictionaries,
       topics: settings.topics,
       articleType: settings.articleType,
       pronounType: settings.pronounType,
-      showTranslation: settings.showTranslation,
     });
-  }, [settings.mode, settings.cases, settings.usePronouns, settings.enabledDictionaries, settings.topics, settings.articleType, settings.pronounType, settings.showTranslation]);
+  }, [settings.mode, settings.cases, settings.enabledDictionaries, settings.topics, settings.articleType, settings.pronounType]);
 
   // Initialize first word and handle filter changes (but not when only language changes)
   useEffect(() => {
