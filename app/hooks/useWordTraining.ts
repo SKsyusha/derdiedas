@@ -137,6 +137,17 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const checkAnswer = useCallback(() => {
     if (!currentWord) return;
 
+    // Не "воруем" фокус: возвращаем его в input только если input был в фокусе до нажатия "Проверить"
+    const shouldRestoreFocus = (() => {
+      if (typeof document === 'undefined') return false;
+      const activeEl = document.activeElement;
+      const inputEl =
+        inputRef.current?.input ??
+        inputRef.current?.resizableTextArea?.textArea ??
+        null;
+      return Boolean(activeEl && inputEl && activeEl === inputEl);
+    })();
+
     // Если есть активный таймер (ожидание после правильного ответа), сразу переходим к следующему слову
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -145,17 +156,34 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       setFeedback(null);
       getNextWord();
       isProcessingRef.current = false;
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 100);
+      if (shouldRestoreFocus) {
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }
       return;
     }
 
-    // Если поле пустое, просто переключаем на следующее слово
+    // Если поле пустое и пользователь нажал "Проверить" — показываем ошибку (как при невалидном вводе)
     if (!userInput || userInput.trim() === '') {
-      if (!isProcessingRef.current) {
-        getNextWord();
+      setFeedback('invalid');
+      isProcessingRef.current = false;
+
+      if (isMobile && 'vibrate' in navigator) {
+        navigator.vibrate(200);
       }
+
+      timeoutRef.current = setTimeout(() => {
+        setFeedback(null);
+        timeoutRef.current = null;
+      }, 1500);
+
+      if (shouldRestoreFocus) {
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }
+
       return;
     }
 
@@ -192,9 +220,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       }, 1500);
       
       // Сохраняем фокус
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 100);
+      if (shouldRestoreFocus) {
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }
       
       return false;
     }
@@ -215,9 +245,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         // Сбрасываем флаг обработки после перехода к следующему слову
         isProcessingRef.current = false;
         // Сохраняем фокус после перехода к следующему слову
-        setTimeout(() => {
-          inputRef.current?.focus();
-        }, 100);
+        if (shouldRestoreFocus) {
+          setTimeout(() => {
+            inputRef.current?.focus();
+          }, 100);
+        }
       }, delay);
     } else {
       // При ошибке добавляем слово обратно в очередь для повторения
@@ -227,9 +259,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       // Сбрасываем флаг обработки
       isProcessingRef.current = false;
       // Сохраняем фокус
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 100);
+      if (shouldRestoreFocus) {
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }
       
       // Автоматически переключаем на следующее слово после ошибки
       // На мобильных устройствах используем большую задержку для лучшей видимости
@@ -239,9 +273,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         setFeedback(null);
         getNextWord();
         isProcessingRef.current = false;
-        setTimeout(() => {
-          inputRef.current?.focus();
-        }, 100);
+        if (shouldRestoreFocus) {
+          setTimeout(() => {
+            inputRef.current?.focus();
+          }, 100);
+        }
       }, delay);
     }
 

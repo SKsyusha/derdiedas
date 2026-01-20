@@ -386,7 +386,7 @@ export default function Trainer() {
                       mode={settings.mode}
                       sentence={currentSentence}
                       correctAnswer={correctAnswer}
-                      feedback={feedback}
+                      feedback={feedback === 'invalid' ? null : feedback}
                       showTranslation={settings.showTranslation}
                       translation={currentTranslation}
                     />
@@ -399,7 +399,6 @@ export default function Trainer() {
                       onNextWord={getNextWord}
                       feedback={feedback}
                       isMobile={isMobile}
-                      disabled={!userInput}
                     />
                   </div>
                 ) : null}

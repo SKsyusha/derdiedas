@@ -75,9 +75,19 @@ export default function InputSection({
               e.preventDefault();
             }}
             onClick={() => {
+              const shouldRestoreFocus = (() => {
+                if (typeof document === 'undefined') return false;
+                const activeEl = document.activeElement;
+                const inputEl =
+                  inputRef.current?.input ??
+                  inputRef.current?.resizableTextArea?.textArea ??
+                  null;
+                return Boolean(activeEl && inputEl && activeEl === inputEl);
+              })();
+
               onCheck();
               // На мобильных возвращаем фокус на input после клика
-              if (isMobile) {
+              if (isMobile && shouldRestoreFocus) {
                 setTimeout(() => {
                   inputRef.current?.focus();
                 }, 50);
