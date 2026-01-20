@@ -48,6 +48,17 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const lastWordsHashRef = useRef<string>('');
 
   const getNextWord = useCallback(() => {
+    // Важно: не переводим фокус в input, если он не был в фокусе до клика (например, при нажатии NextWord)
+    const shouldRestoreFocus = (() => {
+      if (typeof document === 'undefined') return false;
+      const activeEl = document.activeElement;
+      const inputEl =
+        inputRef.current?.input ??
+        inputRef.current?.resizableTextArea?.textArea ??
+        null;
+      return Boolean(activeEl && inputEl && activeEl === inputEl);
+    })();
+
     // Очищаем таймер и сбрасываем флаг обработки при переходе к новому слову
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -111,7 +122,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     // Но не при первой загрузке (чтобы клавиатура не открывалась автоматически на мобильных и не было автофокуса на десктопе)
     if (isFirstLoadRef.current) {
       isFirstLoadRef.current = false;
-    } else {
+    } else if (shouldRestoreFocus) {
       setTimeout(() => {
         inputRef.current?.focus();
       }, 50);
