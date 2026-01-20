@@ -67,6 +67,26 @@ export default function InputSection({
 
       <div className="sm:px-2">
         <div className="flex flex-col sm:flex-row sm:justify-center gap-3 sm:gap-2 w-full">
+          {/* Кнопка "Следующее слово" для десктопа (слева от Check) */}
+          {!isMobile && (
+            <Button
+              onMouseDown={(e) => {
+                // Предотвращаем потерю фокуса с input (чтобы не "воровать" фокус)
+                e.preventDefault();
+              }}
+              onClick={() => {
+                onNextWord();
+              }}
+              className="w-full sm:w-auto"
+              style={{
+                paddingLeft: '32px',
+                paddingRight: '32px',
+              }}
+            >
+              {t('trainer.nextWord')}
+            </Button>
+          )}
+
           <Button
             type="primary"
             htmlType="button"
