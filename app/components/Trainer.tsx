@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Button, Spin, Typography } from 'antd';
+import { Button, Spin } from 'antd';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
-import { Word, TrainingSettings, SessionStats, Article, Language } from '../types';
+import { Word, TrainingSettings, SessionStats, Language } from '../types';
 import { getArticleByCase, DEFAULT_DICTIONARY_ID } from '../dictionaries';
 import { getEnabledWords as getEnabledWordsFromDataset, getWordsInTopics } from '../utils/dataset';
 import SettingsDrawer from './SettingsDrawer';
@@ -73,13 +73,26 @@ export default function Trainer() {
   const [showSettings, setShowSettings] = useState(false);
   const [showUserDict, setShowUserDict] = useState(false);
   const [drawerSize] = useState(400);
-  const [newWord, setNewWord] = useState({ noun: '', article: 'der' as Article, translation: '' });
   const [isMounted, setIsMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const hasInitializedRef = useRef<boolean>(false);
   const getNextWordRef = useRef<(() => void) | undefined>(undefined);
   const prevFiltersRef = useRef<string>('');
   const settingsLoadedFromCookieRef = useRef<boolean>(false);
+
+  const selectCustomDictionaryAfterImport = useCallback(
+    (nextUserDictionaries: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>) => {
+      const userDictIds = nextUserDictionaries.map((d) => d.id);
+      if (userDictIds.length === 0) return;
+      setSettings((prev) => ({
+        ...prev,
+        enabledDictionaries: userDictIds,
+        // Imported words currently have no topics, so topic filtering would hide them.
+        topics: prev.topics.length > 0 ? [] : prev.topics,
+      }));
+    },
+    []
+  );
 
   // Get all enabled words with deduplication using Set
   const getEnabledWords = useCallback((): Word[] => {
@@ -326,8 +339,7 @@ export default function Trainer() {
           onClose={() => setShowUserDict(false)}
           userDictionaries={userDictionaries}
           setUserDictionaries={setUserDictionaries}
-          newWord={newWord}
-          setNewWord={setNewWord}
+          onAfterImport={selectCustomDictionaryAfterImport}
           onDictionaryCreated={(dictId) => {
             if (!settings.enabledDictionaries.includes(dictId)) {
               setSettings({
@@ -425,8 +437,7 @@ export default function Trainer() {
         onClose={() => setShowUserDict(false)}
         userDictionaries={userDictionaries}
         setUserDictionaries={setUserDictionaries}
-        newWord={newWord}
-        setNewWord={setNewWord}
+        onAfterImport={selectCustomDictionaryAfterImport}
         onDictionaryCreated={(dictId) => {
           if (!settings.enabledDictionaries.includes(dictId)) {
             setSettings({

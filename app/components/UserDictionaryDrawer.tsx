@@ -1,22 +1,25 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Drawer, Input, Space, Select, Button, Typography, Empty } from 'antd';
+import { useMemo, useState, useEffect, useCallback } from 'react';
+import { Drawer, Input, Button, Typography, Empty, Popconfirm } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { Word, Article } from '../types';
+import {
+  mergeImportedWordsIntoUserDictionaries,
+  parseUserDictionaryImportText,
+  UserDictionaryState,
+} from '../utils/userDictionaryImport';
 
 const { Text } = Typography;
 
-type UserDictionary = { id: string; name: string; words: Word[]; enabled: boolean };
+type UserDictionary = UserDictionaryState;
 
 interface UserDictionaryDrawerProps {
   open: boolean;
   onClose: () => void;
   userDictionaries: UserDictionary[];
   setUserDictionaries: React.Dispatch<React.SetStateAction<UserDictionary[]>>;
-  newWord: { noun: string; article: Article; translation: string };
-  setNewWord: (word: { noun: string; article: Article; translation: string }) => void;
   onDictionaryCreated?: (dictId: string) => void;
+  onAfterImport?: (nextUserDictionaries: UserDictionary[]) => void;
 }
 
 export default function UserDictionaryDrawer({
@@ -24,12 +27,20 @@ export default function UserDictionaryDrawer({
   onClose,
   userDictionaries,
   setUserDictionaries,
-  newWord,
-  setNewWord,
   onDictionaryCreated,
+  onAfterImport,
 }: UserDictionaryDrawerProps) {
   const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
+  const [importText, setImportText] = useState('');
+
+  const scrollDrawerToTop = useCallback(() => {
+    if (typeof document === 'undefined') return;
+    const body = document.querySelector(
+      '.user-dictionary-drawer .ant-drawer-body'
+    ) as HTMLElement | null;
+    body?.scrollTo({ top: 0 });
+  }, []);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -40,37 +51,37 @@ export default function UserDictionaryDrawer({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   
-  const addUserWord = () => {
-    if (!newWord.noun || !newWord.article) return;
-
-    const word: Word = {
-      noun: newWord.noun,
-      article: newWord.article,
-      translation: newWord.translation || undefined,
+  // Ensure the drawer always opens scrolled to top
+  useEffect(() => {
+    if (!open) return;
+    const t1 = window.setTimeout(scrollDrawerToTop, 0);
+    const t2 = window.setTimeout(scrollDrawerToTop, 150);
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
     };
+  }, [open, scrollDrawerToTop]);
 
-    // Add to first user dictionary or create one
-    if (userDictionaries.length === 0) {
-      const newDict = {
-        id: 'user-1',
-        name: t('userDictionary.myDictionaryName'),
-        words: [word],
-        enabled: true,
-      };
-      setUserDictionaries([newDict]);
-      // Уведомляем о создании словаря
-      if (onDictionaryCreated) {
-        onDictionaryCreated(newDict.id);
-      }
-    } else {
-      setUserDictionaries((prev) => {
-        const updated = [...prev];
-        updated[0].words.push(word);
-        return updated;
-      });
-    }
+  const parsedImportWords = useMemo(() => parseUserDictionaryImportText(importText), [importText]);
+  const hasAnyWords = useMemo(() => userDictionaries.some((d) => d.words.length > 0), [userDictionaries]);
 
-    setNewWord({ noun: '', article: 'der', translation: '' });
+  const importUserWords = () => {
+    const { next, createdDictionaryId } = mergeImportedWordsIntoUserDictionaries(
+      userDictionaries,
+      parsedImportWords,
+      t('userDictionary.myDictionaryName')
+    );
+    if (next === userDictionaries) return;
+
+    setUserDictionaries(next);
+    if (createdDictionaryId && onDictionaryCreated) onDictionaryCreated(createdDictionaryId);
+    if (onAfterImport) onAfterImport(next);
+
+    setImportText('');
+  };
+
+  const clearAllUserDictionaryWords = () => {
+    setUserDictionaries((prev) => prev.map((d) => ({ ...d, words: [] })));
   };
 
   return (
@@ -80,43 +91,69 @@ export default function UserDictionaryDrawer({
       onClose={onClose}
       open={open}
       size={isMobile ? 'default' : 600}
-    >
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <div className="flex flex-col sm:flex-row gap-2">
-          <Input
-            placeholder={t('userDictionary.noun')}
-            value={newWord.noun}
-            onChange={(e) => setNewWord({ ...newWord, noun: e.target.value })}
-            className="flex-1"
-          />
-          <Select
-            value={newWord.article}
-            onChange={(value) => setNewWord({ ...newWord, article: value as Article })}
-            className="w-full sm:w-24"
-            options={[
-              { label: 'der', value: 'der' },
-              { label: 'die', value: 'die' },
-              { label: 'das', value: 'das' },
-            ]}
-          />
-          <Input
-            placeholder={t('userDictionary.translationOptional')}
-            value={newWord.translation}
-            onChange={(e) => setNewWord({ ...newWord, translation: e.target.value })}
-            className="flex-1"
-          />
+      className="user-dictionary-drawer"
+      afterOpenChange={(isOpen) => {
+        if (isOpen) scrollDrawerToTop();
+      }}
+      extra={
+        <Popconfirm
+          title={t('userDictionary.clearConfirmTitle')}
+          okText={t('userDictionary.clearConfirmOk')}
+          cancelText={t('userDictionary.clearConfirmCancel')}
+          onConfirm={clearAllUserDictionaryWords}
+          disabled={!hasAnyWords}
+        >
           <Button
-            type="primary"
-            onClick={addUserWord}
-            className="w-full sm:w-auto"
-            style={{ 
-              backgroundColor: '#8b5cf6', 
-              borderColor: '#8b5cf6',
-              color: '#ffffff'
+            type="text"
+            disabled={!hasAnyWords}
+            style={{
+              color: 'var(--purple-primary)',
             }}
           >
-            {t('userDictionary.add')}
+            {t('userDictionary.clear')}
           </Button>
+        </Popconfirm>
+      }
+      styles={{
+        header: {
+          background: 'var(--background)',
+          borderBottom: '1px solid var(--gray-border)',
+          color: 'var(--foreground)',
+        },
+        body: {
+          background: 'var(--background)',
+          color: 'var(--foreground)',
+        },
+      }}
+    >
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col gap-2">
+          <Input.TextArea
+            value={importText}
+            onChange={(e) => setImportText(e.target.value)}
+            placeholder={t('userDictionary.importPlaceholder')}
+            autoSize={{ minRows: 2 }}
+            style={{
+              backgroundColor: 'var(--input-bg)',
+              borderColor: 'var(--input-border)',
+              color: 'var(--foreground)',
+            }}
+          />
+          <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center sm:justify-end">
+            <Button
+              type="primary"
+              onClick={importUserWords}
+              disabled={parsedImportWords.length === 0}
+              className="w-full sm:w-auto"
+              style={{
+                backgroundColor: '#8b5cf6',
+                borderColor: '#8b5cf6',
+                color: '#ffffff',
+              }}
+            >
+              {t('userDictionary.import')}
+            </Button>
+          </div>
         </div>
 
         {userDictionaries.length === 0 || userDictionaries.every(dict => dict.words.length === 0) ? (
@@ -125,14 +162,13 @@ export default function UserDictionaryDrawer({
             image={Empty.PRESENTED_IMAGE_SIMPLE}
             style={{ marginTop: '40px' }}
           >
-            <Text type="secondary" style={{ fontSize: '14px' }}>
+            <Text type="secondary" style={{ fontSize: '14px', color: 'var(--gray-text)' }}>
               {t('userDictionary.addWordsHint')}
             </Text>
           </Empty>
         ) : (
           userDictionaries.map((dict) => (
             <div key={dict.id}>
-              <Text strong className="block mb-2">{dict.name}</Text>
               {dict.words.length === 0 ? (
                 <Empty
                   description={t('userDictionary.noWordsInDict')}
@@ -142,8 +178,15 @@ export default function UserDictionaryDrawer({
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {dict.words.map((word, idx) => (
-                    <div key={idx} className="flex justify-between items-center p-2 bg-gray-50 rounded-lg">
-                      <span className="text-gray-900">
+                    <div
+                      key={idx}
+                      className="flex justify-between items-center p-2 rounded-lg"
+                      style={{
+                        background: 'var(--gray-light)',
+                        border: '1px solid var(--gray-border)',
+                      }}
+                    >
+                      <span style={{ color: 'var(--foreground)' }}>
                         <strong>{word.article}</strong> {word.noun}
                         {word.translation && ` - ${word.translation}`}
                       </span>
