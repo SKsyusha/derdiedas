@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://derdiedas-trainer.de"),
   title: "DerDieDas Trainer - Learn German Articles der/die/das",
   description: "Free interactive trainer to master German articles der, die, das. Practice with 1000+ words from official Goethe A1/A2 vocabulary. Track your progress and learn faster!",
   themeColor: [
@@ -61,11 +62,20 @@ export const metadata: Metadata = {
     title: "DerDieDas Trainer - Learn German Articles der/die/das",
     description: "Free interactive trainer to master German articles. Practice with 1000+ words from Goethe A1/A2 vocabulary.",
     siteName: "DerDieDas Trainer",
+    images: [
+      {
+        url: "https://derdiedas-trainer.de/og.svg",
+        width: 1200,
+        height: 630,
+        alt: "DerDieDas Trainer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DerDieDas Trainer - Learn German Articles",
     description: "Master German articles der/die/das with our free interactive trainer. 1000+ words from Goethe vocabulary.",
+    images: ["https://derdiedas-trainer.de/og.svg"],
   },
   alternates: {
     canonical: "https://derdiedas-trainer.de",
