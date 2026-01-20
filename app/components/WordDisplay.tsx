@@ -7,6 +7,7 @@ interface WordDisplayProps {
   mode: 'sentence' | 'noun-only';
   sentence?: string;
   correctAnswer: string;
+  userAnswer?: string;
   feedback: 'correct' | 'incorrect' | null;
   showTranslation: boolean;
   translation?: string;
@@ -17,16 +18,20 @@ export default function WordDisplay({
   mode,
   sentence,
   correctAnswer,
+  userAnswer,
   feedback,
   showTranslation,
   translation,
 }: WordDisplayProps) {
+  const displayAnswer =
+    feedback === 'correct' && userAnswer ? userAnswer : correctAnswer;
+
   if (mode === 'sentence' && sentence) {
     return (
       <div className="text-lg sm:text-2xl mb-4 sm:mb-6 px-4 sm:px-2" style={{ color: 'var(--foreground)' }}>
         {feedback === 'correct' ? (
           <div style={{ color: 'var(--success)' }}>
-            {sentence.replace('___', correctAnswer)}
+            {sentence.replace('___', displayAnswer)}
           </div>
         ) : feedback === 'incorrect' ? (
           <div style={{ color: 'var(--error)' }}>
@@ -56,7 +61,7 @@ export default function WordDisplay({
     <div className="text-xl sm:text-3xl mb-4 sm:mb-6 px-4 sm:px-2" style={{ color: 'var(--foreground)' }}>
       {feedback === 'correct' ? (
         <div style={{ color: 'var(--success)' }}>
-          {correctAnswer} {word.noun}
+          {displayAnswer} {word.noun}
           {showTranslation && translation && (
             <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline" style={{ color: 'var(--gray-text)' }}>
               <span className="sm:hidden">{translation}</span>

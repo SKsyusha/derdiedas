@@ -5,7 +5,7 @@ import { Button, Spin } from 'antd';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 import { Word, TrainingSettings, SessionStats, Language } from '../types';
-import { getArticleByCase, DEFAULT_DICTIONARY_ID } from '../dictionaries';
+import { getDeterminerByCase, DEFAULT_DICTIONARY_ID } from '../dictionaries';
 import { getEnabledWords as getEnabledWordsFromDataset, getWordsInTopics } from '../utils/dataset';
 import SettingsDrawer from './SettingsDrawer';
 import UserDictionaryDrawer from './UserDictionaryDrawer';
@@ -38,7 +38,18 @@ function getInitialSettings(): TrainingSettings {
   const savedSettings = getCookie(SETTINGS_COOKIE_NAME);
   if (savedSettings) {
     try {
-      const parsed = JSON.parse(savedSettings) as Partial<TrainingSettings>;
+      const parsed = JSON.parse(savedSettings) as Omit<Partial<TrainingSettings>, 'pronounType'> & {
+        pronounType?: unknown;
+      };
+
+      // If pronounType is missing/invalid (including legacy values), fall back to default
+      const safePronounType: TrainingSettings['pronounType'] =
+        parsed.pronounType === 'none' ||
+        parsed.pronounType === 'possessive' ||
+        parsed.pronounType === 'demonstrative'
+          ? parsed.pronounType
+          : defaultSettings.pronounType;
+
       return {
         ...defaultSettings,
         ...parsed,
@@ -46,6 +57,7 @@ function getInitialSettings(): TrainingSettings {
         cases: parsed.cases || defaultSettings.cases,
         topics: parsed.topics || defaultSettings.topics,
         enabledDictionaries: parsed.enabledDictionaries || defaultSettings.enabledDictionaries,
+        pronounType: safePronounType,
       };
     } catch (error) {
       console.error('Failed to parse settings from cookie:', error);
@@ -289,9 +301,13 @@ export default function Trainer() {
   const correctAnswer = useMemo(() => {
     if (!currentWord) return '';
     
-    // Get correct answer based on article, case, and article type (works for both modes)
-    return getArticleByCase(currentWord.article, currentCase, settings.articleType);
-  }, [currentWord, settings.articleType, currentCase]);
+    return getDeterminerByCase(
+      currentWord.article,
+      currentCase,
+      settings.articleType,
+      settings.pronounType
+    );
+  }, [currentWord, settings.articleType, settings.pronounType, currentCase]);
 
   const currentTranslation = currentWord ? getTranslation(currentWord) : undefined;
 
@@ -395,6 +411,7 @@ export default function Trainer() {
                       mode={settings.mode}
                       sentence={currentSentence}
                       correctAnswer={correctAnswer}
+                      userAnswer={userInput}
                       feedback={feedback === 'invalid' ? null : feedback}
                       showTranslation={settings.showTranslation}
                       translation={currentTranslation}

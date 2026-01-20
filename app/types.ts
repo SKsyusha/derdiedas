@@ -14,7 +14,7 @@ export type TrainingMode = 'noun-only' | 'sentence';
 
 export type ArticleType = 'definite' | 'indefinite'; // определенный / неопределенный
 
-export type PronounType = 'none' | 'personal' | 'possessive' | 'demonstrative'; // нет / личные / притяжательные / указательные
+export type PronounType = 'none' | 'possessive' | 'demonstrative'; // нет / притяжательные / указательные
 
 export type Language = 'Russian' | 'English' | 'Ukrainian';
 

@@ -1,16 +1,49 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
-import { Word, TrainingSettings, Case } from '../types';
-import { generateSentence, getArticleByCase } from '../dictionaries';
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import { Word, TrainingSettings, Case, PronounType } from '../types';
+import { generateSentence, getAcceptedDeterminersByCase, getDeterminerByCase } from '../dictionaries';
 
-// Valid articles list - все артикли во всех падежах
-// Определенные артикли (der/die/das): der, die, das, den, dem, des
-// Неопределенные артикли (ein/eine): ein, eine, einen, einem, einer, eines
-const VALID_ARTICLES = [
+// Valid determiners list (for input validation) — артикли + (опционально) местоимения-детерминативы
+const BASE_VALID_DETERMINERS = [
   'der', 'die', 'das',  // Nominativ определенные
   'den', 'dem', 'des',  // Akkusativ/Dativ/Genitiv определенные (der)
   'ein', 'eine',        // Nominativ неопределенные
   'einen', 'einem', 'einer', 'eines', // Akkusativ/Dativ/Genitiv неопределенные
 ];
+
+function getValidDeterminers(pronounType: PronounType): string[] {
+  const set = new Set<string>(BASE_VALID_DETERMINERS);
+
+  if (pronounType === 'possessive') {
+    // ein-words style declension (we accept common stems)
+    const possessives = [
+      // mein-
+      'mein', 'meine', 'meinen', 'meinem', 'meiner', 'meines',
+      // dein-
+      'dein', 'deine', 'deinen', 'deinem', 'deiner', 'deines',
+      // sein-
+      'sein', 'seine', 'seinen', 'seinem', 'seiner', 'seines',
+      // ihr-
+      'ihr', 'ihre', 'ihren', 'ihrem', 'ihrer', 'ihres',
+      // unser-
+      'unser', 'unsere', 'unseren', 'unserem', 'unserer', 'unseres',
+      // euer- (contracted forms)
+      'euer', 'eure', 'euren', 'eurem', 'eurer', 'eures',
+    ];
+    for (const w of possessives) set.add(w);
+  }
+
+  if (pronounType === 'demonstrative') {
+    const demonstratives = [
+      // dieser-
+      'dieser', 'diese', 'dieses', 'diesen', 'diesem',
+      // jener-
+      'jener', 'jene', 'jenes', 'jenen', 'jenem',
+    ];
+    for (const w of demonstratives) set.add(w);
+  }
+
+  return Array.from(set);
+}
 
 // Fisher-Yates shuffle
 function shuffleArray<T>(array: T[]): T[] {
@@ -35,6 +68,10 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const [userInput, setUserInput] = useState<string>('');
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | 'invalid' | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const validDeterminers = useMemo(() => {
+    return getValidDeterminers(settings.pronounType);
+  }, [settings.pronounType]);
   
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
@@ -183,7 +220,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     // Если есть активный таймер после неправильного (но валидного) ответа: по Enter можно сразу перейти к следующему слову
     if (timeoutRef.current && timeoutPurposeRef.current === 'afterIncorrect') {
       const trimmedInputNow = userInput.trim().toLowerCase();
-      const isValidNow = VALID_ARTICLES.includes(trimmedInputNow);
+      const isValidNow = validDeterminers.includes(trimmedInputNow);
       const isSameAsLastIncorrect =
         Boolean(lastIncorrectValidInputRef.current) &&
         trimmedInputNow === lastIncorrectValidInputRef.current;
@@ -276,9 +313,9 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
 
     // Проверяем, является ли введенное значение валидным артиклем
     const trimmedInput = userInput.trim().toLowerCase();
-    const isValidArticle = VALID_ARTICLES.includes(trimmedInput);
+    const isValidDeterminer = validDeterminers.includes(trimmedInput);
 
-    if (!isValidArticle) {
+    if (!isValidDeterminer) {
       lastIncorrectValidInputRef.current = null;
       // Если введено не артикль - показываем ошибку и вибрируем на мобильных
       setFeedback('invalid');
@@ -308,10 +345,21 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       return;
     }
 
-    // Get correct answer based on article, case, and article type
-    const correctAnswer = getArticleByCase(currentWord.article, currentCase, settings.articleType);
+    const correctAnswer = getDeterminerByCase(
+      currentWord.article,
+      currentCase,
+      settings.articleType,
+      settings.pronounType
+    );
 
-    const isCorrect = trimmedInput === correctAnswer;
+    const acceptedAnswers = getAcceptedDeterminersByCase(
+      currentWord.article,
+      currentCase,
+      settings.articleType,
+      settings.pronounType
+    );
+
+    const isCorrect = acceptedAnswers.includes(trimmedInput);
     setFeedback(isCorrect ? 'correct' : 'incorrect');
 
     if (isCorrect) {
@@ -370,7 +418,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     }
 
     return isCorrect;
-  }, [currentWord, currentCase, userInput, settings, getNextWord, isMobile]);
+  }, [currentWord, currentCase, userInput, settings, getNextWord, isMobile, validDeterminers]);
 
   // Очистка таймера при размонтировании компонента
   useEffect(() => {

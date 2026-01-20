@@ -372,7 +372,6 @@ export default function SettingsDrawer({
           >
             <Flex orientation="vertical" gap="small">
               <Radio value="none">{t('settings.noPronouns')}</Radio>
-              <Radio value="personal">{t('settings.personal')}</Radio>
               <Radio value="possessive">{t('settings.possessive')}</Radio>
               <Radio value="demonstrative">{t('settings.demonstrative')}</Radio>
             </Flex>
