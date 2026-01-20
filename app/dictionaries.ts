@@ -1,4 +1,4 @@
-import { Word, Level, Case, Article, ArticleType, PronounType } from './types';
+import { Word, Level, Case, Article, ArticleType, DeterminerType } from './types';
 import A1Words from './data/dictionaries/A1.json';
 import A2Words from './data/dictionaries/A2.json';
 
@@ -132,51 +132,51 @@ function getPossessiveByCase(stem: PossessiveStem, article: Article, case_: Case
   return `${stem}${POSSESSIVE_ENDINGS[article][case_]}`;
 }
 
-function getDemonstrativeDieserByCase(article: Article, case_: Case): string {
-  // "dies-" + endings like der-words
-  const DEMONSTRATIVE_ENDINGS: Record<Article, Record<Case, 'er' | 'e' | 'es' | 'en' | 'em'>> = {
-    der: { nominativ: 'er', akkusativ: 'en', dativ: 'em', genitiv: 'es' },
-    die: { nominativ: 'e', akkusativ: 'e', dativ: 'er', genitiv: 'er' },
-    das: { nominativ: 'es', akkusativ: 'es', dativ: 'em', genitiv: 'es' },
-  };
+const DEMONSTRATIVE_STEMS = ['dies', 'jen'] as const; // dieser / jener
+type DemonstrativeStem = (typeof DEMONSTRATIVE_STEMS)[number];
 
-  return `dies${DEMONSTRATIVE_ENDINGS[article][case_]}`;
+const DEMONSTRATIVE_ENDINGS: Record<Article, Record<Case, 'er' | 'e' | 'es' | 'en' | 'em'>> = {
+  der: { nominativ: 'er', akkusativ: 'en', dativ: 'em', genitiv: 'es' },
+  die: { nominativ: 'e', akkusativ: 'e', dativ: 'er', genitiv: 'er' },
+  das: { nominativ: 'es', akkusativ: 'es', dativ: 'em', genitiv: 'es' },
+};
+
+function getDemonstrativeByCase(stem: DemonstrativeStem, article: Article, case_: Case): string {
+  return `${stem}${DEMONSTRATIVE_ENDINGS[article][case_]}`;
 }
 
 export function getAcceptedDeterminersByCase(
   article: Article,
   case_: Case,
-  articleType: ArticleType,
-  pronounType: PronounType
+  determinerType: DeterminerType
 ): string[] {
-  if (pronounType === 'possessive') {
+  if (determinerType === 'possessive') {
     // We train endings, so accept multiple stems (mein/dein/sein)
     return POSSESSIVE_STEMS.map((stem) => getPossessiveByCase(stem, article, case_));
   }
 
-  if (pronounType === 'demonstrative') {
-    // For now, accept only "dieser" (can be expanded to "jener")
-    return [getDemonstrativeDieserByCase(article, case_)];
+  if (determinerType === 'demonstrative') {
+    return DEMONSTRATIVE_STEMS.map((stem) => getDemonstrativeByCase(stem, article, case_));
   }
 
-  return [getArticleByCase(article, case_, articleType)];
+  return [getArticleByCase(article, case_, determinerType as ArticleType)];
 }
 
 export function getDeterminerByCase(
   article: Article,
   case_: Case,
-  articleType: ArticleType,
-  pronounType: PronounType
+  determinerType: DeterminerType
 ): string {
-  if (pronounType === 'possessive') {
+  if (determinerType === 'possessive') {
     return getPossessiveMeinByCase(article, case_);
   }
 
-  if (pronounType === 'demonstrative') {
-    return getDemonstrativeDieserByCase(article, case_);
+  if (determinerType === 'demonstrative') {
+    // canonical answer for display
+    return getDemonstrativeByCase('dies', article, case_);
   }
 
-  return getArticleByCase(article, case_, articleType);
+  return getArticleByCase(article, case_, determinerType as ArticleType);
 }
 
 // Generate sentence templates

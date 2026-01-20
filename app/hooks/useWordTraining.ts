@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
-import { Word, TrainingSettings, Case, PronounType } from '../types';
+import { Word, TrainingSettings, Case, DeterminerType } from '../types';
 import { generateSentence, getAcceptedDeterminersByCase, getDeterminerByCase } from '../dictionaries';
 
 // Valid determiners list (for input validation) — артикли + (опционально) местоимения-детерминативы
@@ -10,10 +10,10 @@ const BASE_VALID_DETERMINERS = [
   'einen', 'einem', 'einer', 'eines', // Akkusativ/Dativ/Genitiv неопределенные
 ];
 
-function getValidDeterminers(pronounType: PronounType): string[] {
+function getValidDeterminers(determinerType: DeterminerType): string[] {
   const set = new Set<string>(BASE_VALID_DETERMINERS);
 
-  if (pronounType === 'possessive') {
+  if (determinerType === 'possessive') {
     // ein-words style declension (we accept common stems)
     const possessives = [
       // mein-
@@ -32,7 +32,7 @@ function getValidDeterminers(pronounType: PronounType): string[] {
     for (const w of possessives) set.add(w);
   }
 
-  if (pronounType === 'demonstrative') {
+  if (determinerType === 'demonstrative') {
     const demonstratives = [
       // dieser-
       'dieser', 'diese', 'dieses', 'diesen', 'diesem',
@@ -70,8 +70,8 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const [isLoading, setIsLoading] = useState(false);
 
   const validDeterminers = useMemo(() => {
-    return getValidDeterminers(settings.pronounType);
-  }, [settings.pronounType]);
+    return getValidDeterminers(settings.determinerType);
+  }, [settings.determinerType]);
   
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
@@ -348,15 +348,13 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     const correctAnswer = getDeterminerByCase(
       currentWord.article,
       currentCase,
-      settings.articleType,
-      settings.pronounType
+      settings.determinerType
     );
 
     const acceptedAnswers = getAcceptedDeterminersByCase(
       currentWord.article,
       currentCase,
-      settings.articleType,
-      settings.pronounType
+      settings.determinerType
     );
 
     const isCorrect = acceptedAnswers.includes(trimmedInput);

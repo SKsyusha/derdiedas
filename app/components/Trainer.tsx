@@ -25,8 +25,7 @@ const defaultSettings: TrainingSettings = {
   enabledDictionaries: [DEFAULT_DICTIONARY_ID],
   language: 'Russian',
   topics: [],
-  articleType: 'definite',
-  pronounType: 'none',
+  determinerType: 'definite',
   showTranslation: true,
 };
 
@@ -38,17 +37,21 @@ function getInitialSettings(): TrainingSettings {
   const savedSettings = getCookie(SETTINGS_COOKIE_NAME);
   if (savedSettings) {
     try {
-      const parsed = JSON.parse(savedSettings) as Omit<Partial<TrainingSettings>, 'pronounType'> & {
+      const parsed = JSON.parse(savedSettings) as Omit<Partial<TrainingSettings>, 'determinerType'> & {
+        determinerType?: unknown;
+        // legacy fields (before merge)
+        articleType?: unknown;
         pronounType?: unknown;
       };
 
-      // If pronounType is missing/invalid (including legacy values), fall back to default
-      const safePronounType: TrainingSettings['pronounType'] =
-        parsed.pronounType === 'none' ||
-        parsed.pronounType === 'possessive' ||
-        parsed.pronounType === 'demonstrative'
-          ? parsed.pronounType
-          : defaultSettings.pronounType;
+      const safeDeterminerType: TrainingSettings['determinerType'] = (() => {
+        const raw = parsed.determinerType;
+        if (raw === 'definite' || raw === 'indefinite' || raw === 'possessive' || raw === 'demonstrative') return raw;
+        // legacy: pronounType had priority over articleType
+        if (parsed.pronounType === 'possessive' || parsed.pronounType === 'demonstrative') return parsed.pronounType;
+        if (parsed.articleType === 'definite' || parsed.articleType === 'indefinite') return parsed.articleType;
+        return defaultSettings.determinerType;
+      })();
 
       return {
         ...defaultSettings,
@@ -57,7 +60,7 @@ function getInitialSettings(): TrainingSettings {
         cases: parsed.cases || defaultSettings.cases,
         topics: parsed.topics || defaultSettings.topics,
         enabledDictionaries: parsed.enabledDictionaries || defaultSettings.enabledDictionaries,
-        pronounType: safePronounType,
+        determinerType: safeDeterminerType,
       };
     } catch (error) {
       console.error('Failed to parse settings from cookie:', error);
@@ -232,10 +235,9 @@ export default function Trainer() {
       cases: settings.cases,
       enabledDictionaries: settings.enabledDictionaries,
       topics: settings.topics,
-      articleType: settings.articleType,
-      pronounType: settings.pronounType,
+      determinerType: settings.determinerType,
     });
-  }, [settings.mode, settings.cases, settings.enabledDictionaries, settings.topics, settings.articleType, settings.pronounType]);
+  }, [settings.mode, settings.cases, settings.enabledDictionaries, settings.topics, settings.determinerType]);
 
   // Initialize first word and handle filter changes (but not when only language changes)
   useEffect(() => {
@@ -304,10 +306,9 @@ export default function Trainer() {
     return getDeterminerByCase(
       currentWord.article,
       currentCase,
-      settings.articleType,
-      settings.pronounType
+      settings.determinerType
     );
-  }, [currentWord, settings.articleType, settings.pronounType, currentCase]);
+  }, [currentWord, settings.determinerType, currentCase]);
 
   const currentTranslation = currentWord ? getTranslation(currentWord) : undefined;
 

@@ -18,6 +18,7 @@
     "language": "Язык",
     "topic": "Тема",
     "selectTopic": "Выберите тему...",
+    "determiner": "Артикль / местоимения",
     "article": "Артикль",
     "definite": "Определенный (der/die/das)",
     "indefinite": "Неопределенный (ein/eine)",

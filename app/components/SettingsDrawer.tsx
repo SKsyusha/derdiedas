@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { TrainingSettings, Case, Topic, ArticleType, PronounType, Word } from '../types';
+import { TrainingSettings, Case, Topic, DeterminerType, Word } from '../types';
 import { getAllTopics, getTopicWordCount, hasCustomDictionaryEnabled, filterTopicsWithWords } from '../utils/dataset';
 import { BUILT_IN_DICTIONARIES, isBuiltInDictionary, DEFAULT_DICTIONARY_ID } from '../dictionaries';
 
@@ -302,17 +302,19 @@ export default function SettingsDrawer({
 
         <Divider style={{ margin: '4px 0' }} />
 
-        {/* Article Type */}
+        {/* Determiner Type (merged: articles + pronouns) */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.article')}</Title>
+          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.determiner')}</Title>
           <Radio.Group
-            value={settings.articleType}
-            onChange={(e) => setSettings({ ...settings, articleType: e.target.value as ArticleType })}
+            value={settings.determinerType}
+            onChange={(e) => setSettings({ ...settings, determinerType: e.target.value as DeterminerType })}
             style={{ width: '100%' }}
           >
             <Flex orientation="vertical" gap="small">
               <Radio value="definite">{t('settings.definite')}</Radio>
               <Radio value="indefinite">{t('settings.indefinite')}</Radio>
+              <Radio value="possessive">{t('settings.possessive')}</Radio>
+              <Radio value="demonstrative">{t('settings.demonstrative')}</Radio>
             </Flex>
           </Radio.Group>
         </div>
@@ -360,23 +362,6 @@ export default function SettingsDrawer({
           )}
         </div>
 
-        <Divider style={{ margin: '4px 0' }} />
-
-        {/* Pronoun Type */}
-        <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.pronouns')}</Title>
-          <Radio.Group
-            value={settings.pronounType}
-            onChange={(e) => setSettings({ ...settings, pronounType: e.target.value as PronounType })}
-            style={{ width: '100%' }}
-          >
-            <Flex orientation="vertical" gap="small">
-              <Radio value="none">{t('settings.noPronouns')}</Radio>
-              <Radio value="possessive">{t('settings.possessive')}</Radio>
-              <Radio value="demonstrative">{t('settings.demonstrative')}</Radio>
-            </Flex>
-          </Radio.Group>
-        </div>
       </div>
     </Drawer>
   );

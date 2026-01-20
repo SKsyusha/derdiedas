@@ -14,7 +14,8 @@ export type TrainingMode = 'noun-only' | 'sentence';
 
 export type ArticleType = 'definite' | 'indefinite'; // определенный / неопределенный
 
-export type PronounType = 'none' | 'possessive' | 'demonstrative'; // нет / притяжательные / указательные
+// One merged group: articles + determiners (pronoun-like)
+export type DeterminerType = 'definite' | 'indefinite' | 'possessive' | 'demonstrative';
 
 export type Language = 'Russian' | 'English' | 'Ukrainian';
 
@@ -45,8 +46,7 @@ export interface TrainingSettings {
   enabledDictionaries: string[]; // Contains 'A1', 'A2', or user dictionary IDs
   language: Language;
   topics: Topic[];
-  articleType: ArticleType;
-  pronounType: PronounType;
+  determinerType: DeterminerType;
   showTranslation: boolean;
 }
 
