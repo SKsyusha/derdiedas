@@ -8,7 +8,7 @@ interface InputSectionProps {
   inputRef: React.RefObject<any>;
   userInput: string;
   onInputChange: (value: string) => void;
-  onCheck: () => void;
+  onCheck: (source?: 'enter' | 'click') => void;
   onNextWord: () => void;
   feedback: 'correct' | 'incorrect' | 'invalid' | null;
   isMobile: boolean;
@@ -47,7 +47,7 @@ export default function InputSection({
           size="large"
           value={userInput}
           onChange={(e) => onInputChange(e.target.value)}
-          onPressEnter={onCheck}
+          onPressEnter={() => onCheck('enter')}
           placeholder={t('trainer.enterArticle')}
           className={`w-full text-lg sm:text-2xl ${
             feedback === 'correct'
@@ -105,7 +105,7 @@ export default function InputSection({
                 return Boolean(activeEl && inputEl && activeEl === inputEl);
               })();
 
-              onCheck();
+              onCheck('click');
               // На мобильных возвращаем фокус на input после клика
               if (isMobile && shouldRestoreFocus) {
                 setTimeout(() => {

@@ -39,6 +39,8 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutPurposeRef = useRef<'afterCorrect' | 'afterIncorrect' | 'clearFeedback' | null>(null);
+  const lastIncorrectValidInputRef = useRef<string | null>(null);
   const hasLoadedWordRef = useRef<boolean>(false);
   const isFirstLoadRef = useRef<boolean>(true); // Track first load to skip auto-focus
   
@@ -63,6 +65,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
+      timeoutPurposeRef.current = null;
     }
     isProcessingRef.current = false;
 
@@ -100,6 +103,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     
     setCurrentWord(nextWord);
     hasLoadedWordRef.current = true;
+    lastIncorrectValidInputRef.current = null;
 
     // Set the case based on settings (for both modes)
     const selectedCase = settings.cases.length > 0 
@@ -132,9 +136,20 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const handleInput = useCallback((value: string) => {
     const trimmedValue = value.toLowerCase().trim();
     setUserInput(trimmedValue);
-  }, []);
+    
+    // Если была показана ошибка "invalid" (тряска/красная рамка) — при вводе отменяем таймер очистки
+    // и даём пользователю сразу проверить исправленный вариант.
+    if (feedback === 'invalid') {
+      if (timeoutRef.current && timeoutPurposeRef.current === 'clearFeedback') {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+        timeoutPurposeRef.current = null;
+      }
+      setFeedback(null);
+    }
+  }, [feedback]);
 
-  const checkAnswer = useCallback(() => {
+  const checkAnswer = useCallback((source?: 'enter' | 'click') => {
     if (!currentWord) return;
 
     // Не "воруем" фокус: возвращаем его в input только если input был в фокусе до нажатия "Проверить"
@@ -149,9 +164,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     })();
 
     // Если есть активный таймер (ожидание после правильного ответа), сразу переходим к следующему слову
-    if (timeoutRef.current) {
+    if (timeoutRef.current && timeoutPurposeRef.current === 'afterCorrect') {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
+      timeoutPurposeRef.current = null;
+      lastIncorrectValidInputRef.current = null;
       setUserInput('');
       setFeedback(null);
       getNextWord();
@@ -163,9 +180,65 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       }
       return;
     }
+    // Если есть активный таймер после неправильного (но валидного) ответа: по Enter можно сразу перейти к следующему слову
+    if (timeoutRef.current && timeoutPurposeRef.current === 'afterIncorrect') {
+      const trimmedInputNow = userInput.trim().toLowerCase();
+      const isValidNow = VALID_ARTICLES.includes(trimmedInputNow);
+      const isSameAsLastIncorrect =
+        Boolean(lastIncorrectValidInputRef.current) &&
+        trimmedInputNow === lastIncorrectValidInputRef.current;
+
+      if (
+        source === 'enter' &&
+        trimmedInputNow &&
+        isValidNow &&
+        isSameAsLastIncorrect
+      ) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+        timeoutPurposeRef.current = null;
+        lastIncorrectValidInputRef.current = null;
+
+        setUserInput('');
+        setFeedback(null);
+        getNextWord();
+        isProcessingRef.current = false;
+
+        if (shouldRestoreFocus) {
+          setTimeout(() => {
+            inputRef.current?.focus();
+          }, 100);
+        }
+        return;
+      }
+
+      // Если пользователь просто много раз нажимает "Проверить" с тем же неправильным вводом —
+      // НЕ сбрасываем таймер (иначе слово переключится только когда он перестанет нажимать).
+      if (isSameAsLastIncorrect) {
+        return;
+      }
+
+      // Пользователь меняет ввод (пытается исправить) — отменяем авто-переключение и продолжаем обычную проверку
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      timeoutPurposeRef.current = null;
+    }
+
+    // Если активен таймер очистки ошибок (после invalid) — не блокируем исправление:
+    // отменяем таймер и продолжаем обычную проверку.
+    if (timeoutRef.current && timeoutPurposeRef.current === 'clearFeedback') {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      timeoutPurposeRef.current = null;
+    }
+    // Если по какой-то причине есть таймер без цели — не делаем ничего
+    if (timeoutRef.current) {
+      return;
+    }
 
     // Если поле пустое и пользователь нажал "Проверить" — показываем ошибку (как при невалидном вводе)
     if (!userInput || userInput.trim() === '') {
+      lastIncorrectValidInputRef.current = null;
       setFeedback('invalid');
       isProcessingRef.current = false;
 
@@ -173,9 +246,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         navigator.vibrate(200);
       }
 
+      timeoutPurposeRef.current = 'clearFeedback';
       timeoutRef.current = setTimeout(() => {
         setFeedback(null);
         timeoutRef.current = null;
+        timeoutPurposeRef.current = null;
       }, 1500);
 
       if (shouldRestoreFocus) {
@@ -204,6 +279,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     const isValidArticle = VALID_ARTICLES.includes(trimmedInput);
 
     if (!isValidArticle) {
+      lastIncorrectValidInputRef.current = null;
       // Если введено не артикль - показываем ошибку и вибрируем на мобильных
       setFeedback('invalid');
       isProcessingRef.current = false;
@@ -214,9 +290,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       }
       
       // Сбрасываем ошибку через 1.5 секунды
+      timeoutPurposeRef.current = 'clearFeedback';
       timeoutRef.current = setTimeout(() => {
         setFeedback(null);
         timeoutRef.current = null;
+        timeoutPurposeRef.current = null;
       }, 1500);
       
       // Сохраняем фокус
@@ -226,7 +304,8 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         }, 100);
       }
       
-      return false;
+      // Не считаем это ошибкой в статистике (возвращаем undefined)
+      return;
     }
 
     // Get correct answer based on article, case, and article type
@@ -236,8 +315,10 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     setFeedback(isCorrect ? 'correct' : 'incorrect');
 
     if (isCorrect) {
+      lastIncorrectValidInputRef.current = null;
       // Автоматически переходим к следующему слову с задержкой
       const delay = 1500;
+      timeoutPurposeRef.current = 'afterCorrect';
       timeoutRef.current = setTimeout(() => {
         setUserInput('');
         setFeedback(null);
@@ -250,8 +331,11 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
             inputRef.current?.focus();
           }, 100);
         }
+        timeoutRef.current = null;
+        timeoutPurposeRef.current = null;
       }, delay);
     } else {
+      lastIncorrectValidInputRef.current = trimmedInput;
       // При ошибке добавляем слово обратно в очередь для повторения
       shuffledWordsRef.current.push(currentWord);
       
@@ -268,6 +352,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       // Автоматически переключаем на следующее слово после ошибки
       // На мобильных устройствах используем большую задержку для лучшей видимости
       const delay = isMobile ? 2000 : 1500;
+      timeoutPurposeRef.current = 'afterIncorrect';
       timeoutRef.current = setTimeout(() => {
         setUserInput('');
         setFeedback(null);
@@ -278,6 +363,9 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
             inputRef.current?.focus();
           }, 100);
         }
+        timeoutRef.current = null;
+        timeoutPurposeRef.current = null;
+        lastIncorrectValidInputRef.current = null;
       }, delay);
     }
 

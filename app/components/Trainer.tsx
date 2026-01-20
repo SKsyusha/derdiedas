@@ -241,8 +241,8 @@ export default function Trainer() {
   }, [isMounted, currentFiltersString]);
 
   // Check answer with stats tracking
-  const checkAnswer = () => {
-    const isCorrect = checkAnswerBase();
+  const checkAnswer = (source?: 'enter' | 'click') => {
+    const isCorrect = checkAnswerBase(source);
     if (isCorrect === undefined) return;
 
     setStats((prev) => {
