@@ -12,8 +12,6 @@ export type Level = 'A1' | 'A2';
 
 export type TrainingMode = 'noun-only' | 'sentence';
 
-export type ArticleType = 'definite' | 'indefinite'; // определенный / неопределенный
-
 // One merged group: articles + determiners (pronoun-like)
 export type DeterminerType = 'definite' | 'indefinite' | 'possessive' | 'demonstrative';
 

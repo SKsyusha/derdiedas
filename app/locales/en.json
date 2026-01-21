@@ -19,11 +19,8 @@
     "topic": "Topic",
     "selectTopic": "Select a topic...",
     "determiner": "Determiner",
-    "article": "Article",
     "definite": "Definite (der/die/das)",
     "indefinite": "Indefinite (ein/eine)",
-    "pronouns": "Pronouns",
-    "noPronouns": "No Pronouns",
     "possessive": "Possessive (mein, dein...)",
     "demonstrative": "Demonstrative (dieser, jener...)"
   },

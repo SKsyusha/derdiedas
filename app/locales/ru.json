@@ -19,11 +19,8 @@
     "topic": "Тема",
     "selectTopic": "Выберите тему...",
     "determiner": "Артикль / местоимения",
-    "article": "Артикль",
     "definite": "Определенный (der/die/das)",
     "indefinite": "Неопределенный (ein/eine)",
-    "pronouns": "Местоимения",
-    "noPronouns": "Без местоимений",
     "possessive": "Притяжательные (mein, dein...)",
     "demonstrative": "Указательные (dieser, jener...)"
   },

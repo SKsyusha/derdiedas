@@ -1,4 +1,4 @@
-import { Word, Level, Case, Article, ArticleType, DeterminerType } from './types';
+import { Word, Level, Case, Article, DeterminerType } from './types';
 import A1Words from './data/dictionaries/A1.json';
 import A2Words from './data/dictionaries/A2.json';
 
@@ -63,7 +63,7 @@ export const builtInDictionaries: Record<Level, Word[]> = Object.fromEntries(
 export function getArticleByCase(
   article: Article,
   case_: Case,
-  articleType: ArticleType = 'definite'
+  articleType: 'definite' | 'indefinite' = 'definite'
 ): string {
   if (articleType === 'indefinite') {
     // Indefinite articles (ein/eine)
@@ -159,7 +159,7 @@ export function getAcceptedDeterminersByCase(
     return DEMONSTRATIVE_STEMS.map((stem) => getDemonstrativeByCase(stem, article, case_));
   }
 
-  return [getArticleByCase(article, case_, determinerType as ArticleType)];
+  return [getArticleByCase(article, case_, determinerType)];
 }
 
 export function getDeterminerByCase(
@@ -176,7 +176,7 @@ export function getDeterminerByCase(
     return getDemonstrativeByCase('dies', article, case_);
   }
 
-  return getArticleByCase(article, case_, determinerType as ArticleType);
+  return getArticleByCase(article, case_, determinerType);
 }
 
 // Generate sentence templates
