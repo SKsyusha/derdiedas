@@ -68,6 +68,17 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       metaStatusBar.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
     }
     
+    // Update theme-color meta tag for PWA
+    let themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
+    } else {
+      themeColorMeta = document.createElement('meta');
+      themeColorMeta.setAttribute('name', 'theme-color');
+      themeColorMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
+      document.getElementsByTagName('head')[0].appendChild(themeColorMeta);
+    }
+    
     // Save to cookie
     setThemeCookie(theme);
   }, [theme, mounted]);

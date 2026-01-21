@@ -81,6 +81,22 @@ export const metadata: Metadata = {
     canonical: "https://derdiedas-trainer.de",
   },
   category: "Education",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/android/mipmap-xxxhdpi/ic_launcher.png", sizes: "192x192", type: "image/png" },
+      { url: "/Assets.xcassets/AppIcon.appiconset/1024.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/Assets.xcassets/AppIcon.appiconset/180.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "DerDieDas Trainer",
+  },
 };
 
 // JSON-LD structured data for SEO and AI assistants
@@ -121,8 +137,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="DerDieDas Trainer" />
+        <link rel="apple-touch-icon" href="/Assets.xcassets/AppIcon.appiconset/180.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/Assets.xcassets/AppIcon.appiconset/180.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/Assets.xcassets/AppIcon.appiconset/152.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/Assets.xcassets/AppIcon.appiconset/120.png" />
         <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#ffffff" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -145,6 +167,17 @@ export default function RootLayout({
                   var metaStatusBar = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
                   if (metaStatusBar) {
                     metaStatusBar.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
+                  }
+                  
+                  // Update theme-color meta tag for PWA
+                  var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+                  if (themeColorMeta) {
+                    themeColorMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
+                  } else {
+                    var meta = document.createElement('meta');
+                    meta.name = 'theme-color';
+                    meta.content = theme === 'dark' ? '#0f0f0f' : '#ffffff';
+                    document.getElementsByTagName('head')[0].appendChild(meta);
                   }
                 } catch (e) {}
               })();
