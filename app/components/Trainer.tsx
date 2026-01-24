@@ -369,6 +369,7 @@ export default function Trainer() {
 
   return (
     <div className="min-h-screen px-4 py-2 sm:px-6 sm:py-4" style={{ background: 'var(--background)' }}>
+      <h1 className="sr-only">DerDieDas Trainer - Learn German Articles der, die, das</h1>
       <div className="max-w-7xl mx-auto">
         <TrainerHeader
           isMobile={isMobile}

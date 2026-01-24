@@ -38,6 +38,18 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* iOS specific: fix overscroll background while allowing pull-to-refresh */
 @supports (-webkit-touch-callout: none) {
   /* Fix for iOS Safari status bar area */
