@@ -94,10 +94,11 @@ export const metadata: Metadata = {
   category: "Education",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
+      { url: "/favicon.ico?v=2" },
       { url: "/android/mipmap-xxxhdpi/ic_launcher.png", sizes: "192x192", type: "image/png" },
       { url: "/Assets.xcassets/AppIcon.appiconset/1024.png", sizes: "512x512", type: "image/png" },
     ],
+    shortcut: [{ url: "/favicon.ico?v=2" }],
     apple: [
       { url: "/Assets.xcassets/AppIcon.appiconset/180.png", sizes: "180x180", type: "image/png" },
     ],
