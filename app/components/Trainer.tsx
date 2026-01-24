@@ -145,6 +145,7 @@ export default function Trainer() {
     isLoading,
     inputRef,
     getNextWord,
+    resetWordOrder,
     handleInput,
     checkAnswer: checkAnswerBase,
   } = useWordTraining({ settings, getEnabledWords, isMobile });
@@ -162,6 +163,20 @@ export default function Trainer() {
       userDictionaries,
     });
   }, [settings.topics, settings.enabledDictionaries, userDictionaries]);
+
+  const handleResetProgress = useCallback(() => {
+    setLearnedWords(new Set());
+    setStats({ total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 });
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem(progressKey);
+        localStorage.removeItem(statsKey);
+      } catch (error) {
+        console.error('Failed to reset training progress:', error);
+      }
+    }
+    resetWordOrder();
+  }, [progressKey, statsKey, resetWordOrder]);
 
   // Расчет прогресса по топикам или всем словам
   const topicProgress = useMemo(() => {
@@ -458,6 +473,7 @@ export default function Trainer() {
                 total={topicProgress.total}
                 percentage={topicProgress.percentage}
                 hasTopics={settings.topics.length > 0}
+                onReset={handleResetProgress}
               />
             )}
 

@@ -47,6 +47,7 @@
     "streak": "Streak",
     "bestStreak": "best",
     "topicProgress": "Topic progress: {{learned}} / {{total}} words",
+    "resetProgress": "Reset",
     "allWordsProgress": "Progress: {{learned}} / {{total}} words",
     "darkMode": "Dark Mode",
     "lightMode": "Light Mode"

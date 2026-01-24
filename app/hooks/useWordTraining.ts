@@ -241,6 +241,40 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     }
   }, [settings, getEnabledWords, cacheKey, getWordKey]);
 
+  const resetWordOrder = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      timeoutPurposeRef.current = null;
+    }
+    isProcessingRef.current = false;
+    shuffledWordsRef.current = [];
+    currentIndexRef.current = 0;
+    lastWordsHashRef.current = '';
+    hasLoadedWordRef.current = true;
+    lastIncorrectValidInputRef.current = null;
+    setUserInput('');
+    setFeedback(null);
+    setIsLoading(false);
+    const words = getEnabledWords();
+    if (words.length > 0) {
+      const wordsHash = words.map(w => `${w.article}:${w.noun}`).sort().join('|');
+      const currentKey = currentWord ? getWordKey(currentWord) : null;
+      let shuffled = shuffleArray(words);
+      if (currentKey && words.length > 1) {
+        let attempts = 0;
+        while (attempts < 5 && getWordKey(shuffled[0]) === currentKey) {
+          shuffled = shuffleArray(words);
+          attempts += 1;
+        }
+      }
+      shuffledWordsRef.current = shuffled;
+      currentIndexRef.current = 0;
+      lastWordsHashRef.current = wordsHash;
+    }
+    getNextWord();
+  }, [getEnabledWords, currentWord, getNextWord, getWordKey]);
+
   useEffect(() => {
     if (!currentWord || typeof window === 'undefined') return;
     try {
@@ -523,6 +557,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     isLoading,
     inputRef,
     getNextWord,
+    resetWordOrder,
     handleInput,
     checkAnswer,
   };

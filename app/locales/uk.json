@@ -47,6 +47,7 @@
     "streak": "Серія",
     "bestStreak": "найкраща",
     "topicProgress": "Прогрес по темах: {{learned}} / {{total}} слів",
+    "resetProgress": "Скинути",
     "allWordsProgress": "Прогрес: {{learned}} / {{total}} слів",
     "darkMode": "Темна тема",
     "lightMode": "Світла тема"
