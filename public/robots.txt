@@ -3,6 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
+Sitemap: https://derdiedas-trainer.de/sitemap_index.xml
 Sitemap: https://derdiedas-trainer.de/sitemap.xml
 
 # Allow AI crawlers
