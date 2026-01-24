@@ -16,6 +16,7 @@ import StatsCard from './StatsCard';
 import ProgressBar from './ProgressBar';
 import { useWordTraining } from '../hooks/useWordTraining';
 import { getCookie, setCookie } from '../utils/cookies';
+import SeoEmptyState from './SeoEmptyState';
 
 const SETTINGS_COOKIE_NAME = 'training_settings';
 
@@ -93,6 +94,23 @@ export default function Trainer() {
   const getNextWordRef = useRef<(() => void) | undefined>(undefined);
   const prevFiltersRef = useRef<string>('');
   const settingsLoadedFromCookieRef = useRef<boolean>(false);
+
+  const progressKey = useMemo(() => {
+    return `training_progress_${JSON.stringify({
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+    })}`;
+  }, [settings.enabledDictionaries, settings.topics]);
+
+  const statsKey = useMemo(() => {
+    return `training_stats_${JSON.stringify({
+      mode: settings.mode,
+      cases: settings.cases,
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+      determinerType: settings.determinerType,
+    })}`;
+  }, [settings.mode, settings.cases, settings.enabledDictionaries, settings.topics, settings.determinerType]);
 
   const selectCustomDictionaryAfterImport = useCallback(
     (nextUserDictionaries: Array<{ id: string; name: string; words: Word[]; enabled: boolean }>) => {
@@ -189,6 +207,40 @@ export default function Trainer() {
     settingsLoadedFromCookieRef.current = true; // Settings already loaded in getInitialSettings
   }, []);
 
+  // Load learned progress when filters change or on mount
+  useEffect(() => {
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      const saved = localStorage.getItem(progressKey);
+      if (saved) {
+        const parsed = JSON.parse(saved) as string[];
+        setLearnedWords(new Set(parsed));
+      } else {
+        setLearnedWords(new Set());
+      }
+    } catch (error) {
+      console.error('Failed to load training progress:', error);
+      setLearnedWords(new Set());
+    }
+  }, [isMounted, progressKey]);
+
+  // Load session stats when filters change or on mount
+  useEffect(() => {
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      const saved = localStorage.getItem(statsKey);
+      if (saved) {
+        const parsed = JSON.parse(saved) as SessionStats;
+        setStats(parsed);
+      } else {
+        setStats({ total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 });
+      }
+    } catch (error) {
+      console.error('Failed to load session stats:', error);
+      setStats({ total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 });
+    }
+  }, [isMounted, statsKey]);
+
   // Detect mobile device
   useEffect(() => {
     if (!isMounted) return;
@@ -227,6 +279,26 @@ export default function Trainer() {
       console.error('Failed to save user dictionaries to localStorage:', error);
     }
   }, [userDictionaries, isMounted]);
+
+  // Save learned progress to localStorage
+  useEffect(() => {
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem(progressKey, JSON.stringify(Array.from(learnedWords)));
+    } catch (error) {
+      console.error('Failed to save training progress:', error);
+    }
+  }, [learnedWords, isMounted, progressKey]);
+
+  // Save session stats to localStorage
+  useEffect(() => {
+    if (!isMounted || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem(statsKey, JSON.stringify(stats));
+    } catch (error) {
+      console.error('Failed to save session stats:', error);
+    }
+  }, [stats, isMounted, statsKey]);
 
   // Create a stable string representation of all settings except language
   const currentFiltersString = useMemo(() => {
@@ -369,7 +441,7 @@ export default function Trainer() {
 
   return (
     <div className="min-h-screen px-4 py-2 sm:px-6 sm:py-4" style={{ background: 'var(--background)' }}>
-      <h1 className="sr-only">DerDieDas Trainer - Learn German Articles der, die, das</h1>
+      <h1 className="sr-only">Der Die Das Trainer - Learn German Articles der, die, das</h1>
       <div className="max-w-7xl mx-auto">
         <TrainerHeader
           isMobile={isMobile}
@@ -402,9 +474,14 @@ export default function Trainer() {
             >
               <div className="sm:p-6 training-block-inner">
                 {isLoading ? (
-                  <div className="text-center py-8 sm:py-12">
-                    <Spin size="large" />
-                    <p className="mt-4 text-sm sm:text-base" style={{ color: 'var(--gray-text)' }}>{t('trainer.loading')}</p>
+                  <div className="py-4 sm:py-6">
+                    <SeoEmptyState />
+                    <div className="text-center mt-6">
+                      <Spin size="large" />
+                      <p className="mt-4 text-sm sm:text-base" style={{ color: 'var(--gray-text)' }}>
+                        {t('trainer.loading')}
+                      </p>
+                    </div>
                   </div>
                 ) : currentWord ? (
                   <div className="text-center mb-6 sm:mb-8">

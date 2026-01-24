@@ -72,6 +72,16 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const validDeterminers = useMemo(() => {
     return getValidDeterminers(settings.determinerType);
   }, [settings.determinerType]);
+
+  const cacheKey = useMemo(() => {
+    return `training_cache_${JSON.stringify({
+      mode: settings.mode,
+      cases: settings.cases,
+      enabledDictionaries: settings.enabledDictionaries,
+      topics: settings.topics,
+      determinerType: settings.determinerType,
+    })}`;
+  }, [settings.mode, settings.cases, settings.enabledDictionaries, settings.topics, settings.determinerType]);
   
   const inputRef = useRef<any>(null);
   const isProcessingRef = useRef<boolean>(false);
@@ -85,6 +95,8 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
   const shuffledWordsRef = useRef<Word[]>([]);
   const currentIndexRef = useRef<number>(0);
   const lastWordsHashRef = useRef<string>('');
+
+  const getWordKey = useCallback((word: Word) => `${word.article}:${word.noun}`, []);
 
   const getNextWord = useCallback(() => {
     // Важно: не переводим фокус в input, если он не был в фокусе до клика (например, при нажатии NextWord)
@@ -115,11 +127,70 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       shuffledWordsRef.current = [];
       currentIndexRef.current = 0;
       lastWordsHashRef.current = '';
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.removeItem(cacheKey);
+        } catch (error) {
+          console.error('Failed to clear training cache:', error);
+        }
+      }
       return;
     }
 
     // Создаём хеш для проверки изменения списка слов
-    const wordsHash = words.map(w => w.noun).sort().join('|');
+    const wordsHash = words.map(w => `${w.article}:${w.noun}`).sort().join('|');
+
+    // Try to restore cached word on first load (only if word list matches)
+    if (!hasLoadedWordRef.current && typeof window !== 'undefined') {
+      try {
+        const cachedRaw = localStorage.getItem(cacheKey);
+        if (cachedRaw) {
+          const cached = JSON.parse(cachedRaw) as { wordKey: string; case_: Case; wordsHash?: string };
+          if (!cached.wordsHash || cached.wordsHash === wordsHash) {
+            const wordMap = new Map(words.map((word) => [getWordKey(word), word]));
+            const cachedWord = wordMap.get(cached.wordKey);
+            if (cachedWord) {
+              // Prepare shuffled list with cached word first
+              const shuffled = shuffleArray(words);
+              const cachedIndex = shuffled.findIndex((w) => getWordKey(w) === cached.wordKey);
+              if (cachedIndex > 0) {
+                [shuffled[0], shuffled[cachedIndex]] = [shuffled[cachedIndex], shuffled[0]];
+              }
+              shuffledWordsRef.current = shuffled;
+              currentIndexRef.current = 1;
+              lastWordsHashRef.current = wordsHash;
+
+              setCurrentWord(cachedWord);
+              setCurrentCase(cached.case_ || 'nominativ');
+              hasLoadedWordRef.current = true;
+              lastIncorrectValidInputRef.current = null;
+
+              if (settings.mode === 'sentence') {
+                const sentence = generateSentence(cachedWord, cached.case_ || 'nominativ');
+                setCurrentSentence(sentence);
+              } else {
+                setCurrentSentence('');
+              }
+
+              setUserInput('');
+              setFeedback(null);
+              setIsLoading(false);
+
+              if (isFirstLoadRef.current) {
+                isFirstLoadRef.current = false;
+              } else if (shouldRestoreFocus) {
+                setTimeout(() => {
+                  inputRef.current?.focus();
+                }, 50);
+              }
+              return;
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Failed to restore training cache:', error);
+      }
+    }
     
     // Если список слов изменился - перемешиваем заново
     if (wordsHash !== lastWordsHashRef.current) {
@@ -168,7 +239,23 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
         inputRef.current?.focus();
       }, 50);
     }
-  }, [settings, getEnabledWords]);
+  }, [settings, getEnabledWords, cacheKey, getWordKey]);
+
+  useEffect(() => {
+    if (!currentWord || typeof window === 'undefined') return;
+    try {
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({
+          wordKey: getWordKey(currentWord),
+          case_: currentCase,
+          wordsHash: lastWordsHashRef.current,
+        })
+      );
+    } catch (error) {
+      console.error('Failed to save training cache:', error);
+    }
+  }, [currentWord, currentCase, cacheKey, getWordKey]);
 
   const handleInput = useCallback((value: string) => {
     const trimmedValue = value.toLowerCase().trim();

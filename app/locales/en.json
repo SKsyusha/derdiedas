@@ -51,6 +51,23 @@
     "darkMode": "Dark Mode",
     "lightMode": "Light Mode"
   },
+  "landing": {
+    "kicker": "Der Die Das Trainer",
+    "title": "German article trainer",
+    "description": "Practice der/die/das with examples, hints, and progress tracking. The word base includes official Goethe A1/A2 vocabulary plus your own lists.",
+    "hint": "While the word loads, you can read the overview below.",
+    "howTitle": "How training works",
+    "howText": "Choose the article or ending, get instant feedback and a sample. Mistakes are tracked so you repeat difficult words.",
+    "insideTitle": "What’s inside",
+    "insideItems": [
+      "1000+ Goethe A1/A2 words",
+      "Multiple training modes",
+      "Stats and progress",
+      "Import your own dictionaries"
+    ],
+    "forTitle": "Who it’s for",
+    "forText": "Beginners and intermediate learners: from first steps with articles to confident, automatic der/die/das choice."
+  },
   "userDictionary": {
     "title": "My Dictionary",
     "noun": "Noun",
