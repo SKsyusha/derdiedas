@@ -25,8 +25,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derdiedas-trainer.de"),
-  title: "DerDieDas Trainer - Learn German Articles der/die/das",
-  description: "Free interactive trainer to master German articles der, die, das. Practice with 1000+ words from official Goethe A1/A2 vocabulary. Track your progress and learn faster!",
+  title: "DerDieDas Trainer - German Article Trainer (der/die/das)",
+  description: "Practice German articles der/die/das with an interactive trainer. 1000+ words from Goethe A1/A2, instant feedback, progress tracking, and custom word lists.",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
@@ -64,10 +64,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://derdiedas-trainer.de",
-    title: "DerDieDas Trainer - Learn German Articles der/die/das",
-    description: "Free interactive trainer to master German articles. Practice with 1000+ words from Goethe A1/A2 vocabulary.",
+    title: "DerDieDas Trainer - German Article Trainer (der/die/das)",
+    description: "Interactive German article trainer with 1000+ Goethe A1/A2 words, instant feedback, and progress tracking.",
     siteName: "DerDieDas Trainer",
     images: [
+      {
+        url: "https://derdiedas-trainer.de/og.png",
+        width: 1200,
+        height: 630,
+        alt: "DerDieDas Trainer",
+      },
       {
         url: "https://derdiedas-trainer.de/og.svg",
         width: 1200,
@@ -78,9 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DerDieDas Trainer - Learn German Articles",
-    description: "Master German articles der/die/das with our free interactive trainer. 1000+ words from Goethe vocabulary.",
-    images: ["https://derdiedas-trainer.de/og.svg"],
+    title: "DerDieDas Trainer - German Article Trainer",
+    description: "Practice der/die/das with 1000+ Goethe A1/A2 words, instant feedback, and progress tracking.",
+    images: ["https://derdiedas-trainer.de/og.png"],
   },
   alternates: {
     canonical: "https://derdiedas-trainer.de",
