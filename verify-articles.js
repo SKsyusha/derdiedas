@@ -158,11 +158,7 @@ async function main() {
   
   // Determine JSON path based on dictionary
   let jsonPath;
-  if (dictArg === 'B1') {
-    jsonPath = path.join(__dirname, 'data/dictionaries/B1.json');
-  } else {
-    jsonPath = path.join(__dirname, `app/data/dictionaries/${dictArg}.json`);
-  }
+  jsonPath = path.join(__dirname, `app/data/dictionaries/${dictArg}.json`);
   
   // Load cache
   const cache = loadCache();
