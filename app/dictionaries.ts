@@ -1,7 +1,7 @@
 import { Word, Level, Case, Article, DeterminerType } from './types';
 import A1Words from './data/dictionaries/A1.json';
 import A2Words from './data/dictionaries/A2.json';
-
+import B1Words from './data/dictionaries/B1.json';
 // =====================================================
 // BUILT-IN DICTIONARIES CONFIGURATION
 // To add a new dictionary:
@@ -25,7 +25,7 @@ export interface BuiltInDictionaryConfig {
 export const BUILT_IN_DICTIONARIES: BuiltInDictionaryConfig[] = [
   { id: 'A1', words: A1Words as Word[], translationKey: 'settings.a1Goethe' },
   { id: 'A2', words: A2Words as Word[], translationKey: 'settings.a2Goethe' },
-  // To add B1: { id: 'B1', words: B1Words as Word[], translationKey: 'settings.b1Goethe' },
+  { id: 'B1', words: B1Words as Word[], translationKey: 'settings.b1Goethe' },
 ];
 
 /**

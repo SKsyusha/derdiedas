@@ -4,7 +4,8 @@ const path = require('path');
 // Find all dictionary files
 const dictionaryPaths = [
   path.join(__dirname, 'app', 'data', 'dictionaries', 'A1.json'),
-  path.join(__dirname, 'data', 'dictionaries', 'B1.json'),
+  path.join(__dirname, 'app', 'data', 'dictionaries', 'A2.json'),
+  path.join(__dirname, 'app', 'data', 'dictionaries', 'B1.json'),
 ];
 
 const topicsSet = new Set();
