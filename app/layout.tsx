@@ -26,8 +26,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derdiedas-trainer.de"),
-  title: "DerDieDas Trainer - German Article Trainer (der/die/das)",
-  description: "Practice German articles der/die/das with an interactive trainer. 1000+ words from Goethe A1/A2, instant feedback, progress tracking, and custom word lists.",
+  title: "Der Die Das Trainer - German Article Trainer (der/ die/ das)",
+  description: "Practice German articles der/ die/ das with an interactive trainer. 1000+ words from Goethe A1/A2, instant feedback, progress tracking, and custom word lists.",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     "German gender",
     "noun gender German",
   ],
-  authors: [{ name: "DerDieDas Trainer" }],
-  creator: "DerDieDas Trainer",
-  publisher: "DerDieDas Trainer",
+  authors: [{ name: "Der Die Das Trainer" }],
+  creator: "Der Die Das Trainer",
+  publisher: "Der Die Das Trainer",
   robots: {
     index: true,
     follow: true,
@@ -65,28 +65,28 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://derdiedas-trainer.de",
-    title: "DerDieDas Trainer - German Article Trainer (der/die/das)",
-    description: "Interactive German article trainer with 1000+ Goethe A1/A2 words, instant feedback, and progress tracking.",
-    siteName: "DerDieDas Trainer",
+    title: "Der Die Das Trainer - German Article Trainer (der/ die/ das)",
+    description: "Interactive German article trainer with 1000+ Goethe A1/ A2 words, instant feedback, and progress tracking.",
+    siteName: "Der Die Das Trainer",
     images: [
       {
         url: "https://derdiedas-trainer.de/og.png",
         width: 1200,
         height: 630,
-        alt: "DerDieDas Trainer",
+        alt: "Der Die Das Trainer",
       },
       {
         url: "https://derdiedas-trainer.de/og.svg",
         width: 1200,
         height: 630,
-        alt: "DerDieDas Trainer",
+        alt: "Der Die Das Trainer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DerDieDas Trainer - German Article Trainer",
-    description: "Practice der/die/das with 1000+ Goethe A1/A2 words, instant feedback, and progress tracking.",
+    title: "Der Die Das Trainer - German Article Trainer",
+    description: "Practice der/ die/ das with 1000+ Goethe A1/A2 words, instant feedback, and progress tracking.",
     images: ["https://derdiedas-trainer.de/og.png"],
   },
   alternates: {
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "DerDieDas Trainer",
+    title: "Der Die Das Trainer",
   },
 };
 
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "DerDieDas Trainer",
+  name: "Der Die Das Trainer",
   description: "Free interactive trainer to master German articles der, die, das. Practice with 1000+ words from official Goethe A1/A2 vocabulary.",
   url: "https://derdiedas-trainer.de",
   applicationCategory: "EducationalApplication",
@@ -152,7 +152,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="DerDieDas Trainer" />
+        <meta name="apple-mobile-web-app-title" content="Der Die Das Trainer" />
         <link rel="apple-touch-icon" href="/Assets.xcassets/AppIcon.appiconset/180.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/Assets.xcassets/AppIcon.appiconset/180.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="/Assets.xcassets/AppIcon.appiconset/152.png" />
