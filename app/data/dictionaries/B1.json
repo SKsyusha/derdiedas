@@ -4928,16 +4928,6 @@
     "audio_url": "https://der-artikel.de/audio/essig.mp3"
   },
   {
-    "noun": "Euro",
-    "article": "der",
-    "translation_en": "euro",
-    "level": "B1",
-    "translation_ru": "евро",
-    "translation_uk": "євро",
-    "topic": "Currencies",
-    "audio_url": "https://der-artikel.de/audio/euro.mp3"
-  },
-  {
     "noun": "Europäer",
     "article": "der",
     "translation_en": "European (man)",
@@ -9599,15 +9589,6 @@
     "audio_url": "https://der-artikel.de/audio/ausbildung.mp3"
   },
   {
-    "noun": "Ausdrucke",
-    "article": "die",
-    "translation_en": "print outs",
-    "level": "B1",
-    "translation_ru": "распечатки",
-    "translation_uk": "друковані матеріали",
-    "topic": "Shopping & Everyday Items"
-  },
-  {
     "noun": "Ausdrücke",
     "article": "die",
     "translation_en": "expressions, terms",
@@ -10319,7 +10300,7 @@
     "noun": "Cola",
     "article": "das",
     "alternative_articles": [
-      "das"
+      "die"
     ],
     "translation_en": "cola",
     "level": "B1",
@@ -11085,15 +11066,6 @@
     "translation_uk": "святкування",
     "topic": "Holidays",
     "audio_url": "https://der-artikel.de/audio/feier.mp3"
-  },
-  {
-    "noun": "Feiertage",
-    "article": "die",
-    "translation_en": "festivals",
-    "level": "B1",
-    "translation_ru": "праздники",
-    "translation_uk": "свята",
-    "topic": "Holidays"
   },
   {
     "noun": "Ferien",
@@ -12283,12 +12255,12 @@
     "audio_url": "https://der-artikel.de/audio/katze.mp3"
   },
   {
-    "noun": "Kenntnisse",
+    "noun": "Kenntnis",
     "article": "die",
     "translation_en": "knowledge",
     "level": "B1",
-    "translation_ru": "знания",
-    "translation_uk": "знання",
+    "translation_ru": "знание",
+    "translation_uk": "знанне",
     "topic": "Abstract Concepts"
   },
   {
@@ -13092,15 +13064,6 @@
     "audio_url": "https://der-artikel.de/audio/meinung.mp3"
   },
   {
-    "noun": "meisten",
-    "article": "die",
-    "translation_en": "most (of them)",
-    "level": "B1",
-    "translation_ru": "большинство (из них)",
-    "translation_uk": "більшість (з них)",
-    "topic": "Abstract Concepts"
-  },
-  {
     "noun": "Meldung",
     "article": "die",
     "translation_en": "(news) report, message, notification",
@@ -13298,15 +13261,6 @@
     "translation_uk": "морква",
     "topic": "Food & Drink",
     "audio_url": "https://der-artikel.de/audio/m%C3%B6hre.mp3"
-  },
-  {
-    "noun": "Monatsnamen",
-    "article": "die",
-    "translation_en": "names of the months",
-    "level": "B1",
-    "translation_ru": "названия месяцев",
-    "translation_uk": "імена місяців",
-    "topic": "Time & Dates"
   },
   {
     "noun": "Mücke",
@@ -13698,7 +13652,7 @@
     "audio_url": "https://der-artikel.de/audio/person.mp3"
   },
   {
-    "noun": "Personalien",
+    "noun": "Personalie",
     "article": "die",
     "translation_en": "personal info, particulars",
     "level": "B1",
@@ -13827,7 +13781,7 @@
     "audio_url": "https://der-artikel.de/audio/polizei.mp3"
   },
   {
-    "noun": "Pommes frites",
+    "noun": "Pommes frites (Pl.)",
     "article": "die",
     "translation_en": "chips, french fries",
     "level": "B1",
@@ -14160,7 +14114,7 @@
     "article": "die",
     "translation_en": "reception (desk)",
     "level": "B1",
-    "translation_ru": "рецепция",
+    "translation_ru": "ресепшн",
     "translation_uk": "рецепція",
     "topic": "Services",
     "audio_url": "https://der-artikel.de/audio/rezeption.mp3"
@@ -14170,7 +14124,7 @@
     "article": "die",
     "translation_en": "reception (desk)",
     "level": "B1",
-    "translation_ru": "рецепция",
+    "translation_ru": "ресепшн",
     "translation_uk": "рецепція",
     "topic": "Services"
   },
@@ -14425,9 +14379,9 @@
     "audio_url": "https://der-artikel.de/audio/schuld.mp3"
   },
   {
-    "noun": "Schulden",
-    "article": "das",
-    "translation_en": "debt (pl)",
+    "noun": "Schuld",
+    "article": "die",
+    "translation_en": "debt",
     "level": "B1",
     "translation_ru": "долги",
     "translation_uk": "борги",
