@@ -2958,7 +2958,9 @@
   {
     "noun": "Tram",
     "article": "die",
-    "alternative_articles": ["der, das"],
+    "alternative_articles": [
+      "der, das"
+    ],
     "translation_en": "tram",
     "level": "B1",
     "translation_ru": "трамвай",
@@ -4120,7 +4122,9 @@
   {
     "noun": "Bekannte",
     "article": "der",
-    "alternative_articles": ["die"],
+    "alternative_articles": [
+      "die"
+    ],
     "translation_en": "acquaintance",
     "level": "B1",
     "translation_ru": "знакомый",
@@ -4583,7 +4587,9 @@
   {
     "noun": "Deutsche",
     "article": "die",
-    "alternative_articles": ["der"],
+    "alternative_articles": [
+      "der"
+    ],
     "translation_en": "German (man)",
     "level": "B1",
     "translation_ru": "немец",
@@ -5834,7 +5840,9 @@
   {
     "noun": "Jugendliche",
     "article": "der",
-    "alternative_articles": ["die"],
+    "alternative_articles": [
+      "die"
+    ],
     "translation_en": "young person, teenager",
     "level": "B1",
     "translation_ru": "подросток",
@@ -8265,7 +8273,9 @@
   {
     "noun": "Studierende",
     "article": "der",
-    "alternative_articles": ["die"],
+    "alternative_articles": [
+      "die"
+    ],
     "translation_en": "student",
     "level": "B1",
     "translation_ru": "студент",
@@ -8500,7 +8510,9 @@
   {
     "noun": "Tote",
     "article": "der",
-    "alternative_articles": ["die"],
+    "alternative_articles": [
+      "die"
+    ],
     "translation_en": "dead man",
     "level": "B1",
     "translation_ru": "труп",
@@ -9513,7 +9525,8 @@
     "level": "B1",
     "translation_ru": "работа",
     "translation_uk": "робота",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/arbeit.mp3"
   },
   {
     "noun": "Arbeitserlaubnis",
@@ -9522,7 +9535,8 @@
     "level": "B1",
     "translation_ru": "разрешение на работу",
     "translation_uk": "дозвіл на роботу",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/arbeitserlaubnis.mp3"
   },
   {
     "noun": "Arbeitslosigkeit",
@@ -9531,7 +9545,8 @@
     "level": "B1",
     "translation_ru": "безработица",
     "translation_uk": "безробіття",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/arbeitslosigkeit.mp3"
   },
   {
     "noun": "Art",
@@ -9540,7 +9555,8 @@
     "level": "B1",
     "translation_ru": "тип",
     "translation_uk": "тип",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/art.mp3"
   },
   {
     "noun": "Aufforderung",
@@ -9549,7 +9565,8 @@
     "level": "B1",
     "translation_ru": "приглашение",
     "translation_uk": "запрошення",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/aufforderung.mp3"
   },
   {
     "noun": "Aufgabe",
@@ -9558,7 +9575,8 @@
     "level": "B1",
     "translation_ru": "задача",
     "translation_uk": "завдання",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/aufgabe.mp3"
   },
   {
     "noun": "Aufnahme",
@@ -9567,7 +9585,8 @@
     "level": "B1",
     "translation_ru": "приём",
     "translation_uk": "прийом",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/aufnahme.mp3"
   },
   {
     "noun": "Ausbildung",
@@ -9576,7 +9595,8 @@
     "level": "B1",
     "translation_ru": "обучение",
     "translation_uk": "освіта",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/ausbildung.mp3"
   },
   {
     "noun": "Ausdrucke",
@@ -9603,7 +9623,8 @@
     "level": "B1",
     "translation_ru": "выезд",
     "translation_uk": "exit",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/ausfahrt.mp3"
   },
   {
     "noun": "Ausgabe",
@@ -9612,7 +9633,8 @@
     "level": "B1",
     "translation_ru": "распределение",
     "translation_uk": "розподіл",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ausgabe.mp3"
   },
   {
     "noun": "Aushilfe",
@@ -9621,7 +9643,8 @@
     "level": "B1",
     "translation_ru": "временный помощник",
     "translation_uk": "тимчасова допомога",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/aushilfe.mp3"
   },
   {
     "noun": "Auskunft",
@@ -9630,7 +9653,8 @@
     "level": "B1",
     "translation_ru": "информация",
     "translation_uk": "інформація",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/auskunft.mp3"
   },
   {
     "noun": "Ausnahme",
@@ -9639,7 +9663,8 @@
     "level": "B1",
     "translation_ru": "исключение",
     "translation_uk": "виключення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ausnahme.mp3"
   },
   {
     "noun": "Aussage",
@@ -9648,7 +9673,8 @@
     "level": "B1",
     "translation_ru": "утверждение",
     "translation_uk": "заява",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/aussage.mp3"
   },
   {
     "noun": "Aussicht",
@@ -9657,7 +9683,8 @@
     "level": "B1",
     "translation_ru": "вид, перспектива",
     "translation_uk": "вид, перспектива",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/aussicht.mp3"
   },
   {
     "noun": "Aussprache",
@@ -9666,7 +9693,8 @@
     "level": "B1",
     "translation_ru": "произношение",
     "translation_uk": "вимова",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/aussprache.mp3"
   },
   {
     "noun": "Ausstellung",
@@ -9675,7 +9703,8 @@
     "level": "B1",
     "translation_ru": "выставка",
     "translation_uk": "виставка",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/ausstellung.mp3"
   },
   {
     "noun": "Auswahl",
@@ -9684,7 +9713,8 @@
     "level": "B1",
     "translation_ru": "выбор",
     "translation_uk": "вибір",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/auswahl.mp3"
   },
   {
     "noun": "Autobahn",
@@ -9693,7 +9723,8 @@
     "level": "B1",
     "translation_ru": "автомагистраль",
     "translation_uk": "автошлях",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/autobahn.mp3"
   },
   {
     "noun": "Autorin",
@@ -9702,7 +9733,8 @@
     "level": "B1",
     "translation_ru": "автор (женщина)",
     "translation_uk": "автор (жінка)",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/autorin.mp3"
   },
   {
     "noun": "Bäckerei",
@@ -9711,7 +9743,8 @@
     "level": "B1",
     "translation_ru": "пекарня",
     "translation_uk": "пекарня",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/b%C3%A4ckerei.mp3"
   },
   {
     "noun": "Badewanne",
@@ -9720,7 +9753,8 @@
     "level": "B1",
     "translation_ru": "ванна",
     "translation_uk": "ванна",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/badewanne.mp3"
   },
   {
     "noun": "Bahn",
@@ -9729,7 +9763,8 @@
     "level": "B1",
     "translation_ru": "поезд",
     "translation_uk": "потяг",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/bahn.mp3"
   },
   {
     "noun": "Banane",
@@ -9738,16 +9773,18 @@
     "level": "B1",
     "translation_ru": "банан",
     "translation_uk": "банан",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/banane.mp3"
   },
   {
     "noun": "Band",
-    "article": "die",
+    "article": "das",
     "translation_en": "band",
     "level": "B1",
     "translation_ru": "группа",
     "translation_uk": "група",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/band.mp3"
   },
   {
     "noun": "Bank",
@@ -9756,7 +9793,8 @@
     "level": "B1",
     "translation_ru": "банк",
     "translation_uk": "банк",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/bank.mp3"
   },
   {
     "noun": "Bankleitzahl",
@@ -9765,7 +9803,8 @@
     "level": "B1",
     "translation_ru": "банковский код",
     "translation_uk": "банківський код",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/bankleitzahl.mp3"
   },
   {
     "noun": "Bar",
@@ -9774,7 +9813,8 @@
     "level": "B1",
     "translation_ru": "бар",
     "translation_uk": "бар",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/bar.mp3"
   },
   {
     "noun": "Batterie",
@@ -9783,7 +9823,8 @@
     "level": "B1",
     "translation_ru": "батарея",
     "translation_uk": "батарея",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/batterie.mp3"
   },
   {
     "noun": "Baustelle",
@@ -9792,7 +9833,8 @@
     "level": "B1",
     "translation_ru": "строительная площадка",
     "translation_uk": "будівельний майданчик",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/baustelle.mp3"
   },
   {
     "noun": "Bedeutung",
@@ -9801,7 +9843,8 @@
     "level": "B1",
     "translation_ru": "значение",
     "translation_uk": "значення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/bedeutung.mp3"
   },
   {
     "noun": "Bedienungsanleitung",
@@ -9810,7 +9853,8 @@
     "level": "B1",
     "translation_ru": "инструкция по эксплуатации",
     "translation_uk": "інструкція з експлуатації",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/bedienungsanleitung.mp3"
   },
   {
     "noun": "Bedingung",
@@ -9819,7 +9863,8 @@
     "level": "B1",
     "translation_ru": "условие",
     "translation_uk": "умова",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/bedingung.mp3"
   },
   {
     "noun": "Begründung",
@@ -9828,7 +9873,8 @@
     "level": "B1",
     "translation_ru": "обоснование",
     "translation_uk": "обґрунтування",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/begr%C3%BCndung.mp3"
   },
   {
     "noun": "Behörde",
@@ -9837,7 +9883,8 @@
     "level": "B1",
     "translation_ru": "орган власти, административный орган",
     "translation_uk": "орган влади, адміністративний орган",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/beh%C3%B6rde.mp3"
   },
   {
     "noun": "Beratung",
@@ -9846,7 +9893,8 @@
     "level": "B1",
     "translation_ru": "консультация",
     "translation_uk": "консультація",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/beratung.mp3"
   },
   {
     "noun": "Berufsschule",
@@ -9855,7 +9903,8 @@
     "level": "B1",
     "translation_ru": "профессиональное училище",
     "translation_uk": "професійна школа",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/berufsschule.mp3"
   },
   {
     "noun": "Beschäftigung",
@@ -9864,7 +9913,8 @@
     "level": "B1",
     "translation_ru": "занятость",
     "translation_uk": "зайнятість",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/besch%C3%A4ftigung.mp3"
   },
   {
     "noun": "Beschreibung",
@@ -9873,7 +9923,8 @@
     "level": "B1",
     "translation_ru": "описание",
     "translation_uk": "опис",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/beschreibung.mp3"
   },
   {
     "noun": "Besprechung",
@@ -9882,7 +9933,8 @@
     "level": "B1",
     "translation_ru": "встреча, обсуждение",
     "translation_uk": "зустріч, обговорення",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/besprechung.mp3"
   },
   {
     "noun": "Besserung",
@@ -9891,7 +9943,8 @@
     "level": "B1",
     "translation_ru": "выздоровление",
     "translation_uk": "одужання",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/besserung.mp3"
   },
   {
     "noun": "Bestätigung",
@@ -9900,7 +9953,8 @@
     "level": "B1",
     "translation_ru": "подтверждение",
     "translation_uk": "підтвердження",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/best%C3%A4tigung.mp3"
   },
   {
     "noun": "Betreuung",
@@ -9909,7 +9963,8 @@
     "level": "B1",
     "translation_ru": "уход",
     "translation_uk": "догляд",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/betreuung.mp3"
   },
   {
     "noun": "Bevölkerung",
@@ -9918,7 +9973,8 @@
     "level": "B1",
     "translation_ru": "население",
     "translation_uk": "населення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/bev%C3%B6lkerung.mp3"
   },
   {
     "noun": "Bewegung",
@@ -9927,7 +9983,8 @@
     "level": "B1",
     "translation_ru": "движение",
     "translation_uk": "рух",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/bewegung.mp3"
   },
   {
     "noun": "Bewerbung",
@@ -9936,7 +9993,8 @@
     "level": "B1",
     "translation_ru": "заявление",
     "translation_uk": "заява",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/bewerbung.mp3"
   },
   {
     "noun": "Beziehung",
@@ -9945,7 +10003,8 @@
     "level": "B1",
     "translation_ru": "отношение",
     "translation_uk": "зв'язок",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/beziehung.mp3"
   },
   {
     "noun": "Bibliothek",
@@ -9954,7 +10013,8 @@
     "level": "B1",
     "translation_ru": "библиотека",
     "translation_uk": "бібліотека",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/bibliothek.mp3"
   },
   {
     "noun": "Biene",
@@ -9963,7 +10023,8 @@
     "level": "B1",
     "translation_ru": "пчела",
     "translation_uk": "бджола",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/biene.mp3"
   },
   {
     "noun": "Bildungseinrichtung",
@@ -9972,7 +10033,8 @@
     "level": "B1",
     "translation_ru": "образовательное учреждение",
     "translation_uk": "освітній заклад",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/bildungseinrichtung.mp3"
   },
   {
     "noun": "Biologie",
@@ -9981,7 +10043,8 @@
     "level": "B1",
     "translation_ru": "биология",
     "translation_uk": "біологія",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/biologie.mp3"
   },
   {
     "noun": "Birne",
@@ -9990,7 +10053,8 @@
     "level": "B1",
     "translation_ru": "груша",
     "translation_uk": "груша",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/birne.mp3"
   },
   {
     "noun": "Bitte",
@@ -9999,7 +10063,8 @@
     "level": "B1",
     "translation_ru": "просьба",
     "translation_uk": "проханння",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/bitte.mp3"
   },
   {
     "noun": "Blume",
@@ -10008,7 +10073,8 @@
     "level": "B1",
     "translation_ru": "цветок",
     "translation_uk": "квітка",
-    "topic": "Nature"
+    "topic": "Nature",
+    "audio_url": "https://der-artikel.de/audio/blume.mp3"
   },
   {
     "noun": "Bluse",
@@ -10017,7 +10083,8 @@
     "level": "B1",
     "translation_ru": "блузка",
     "translation_uk": "блузка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/bluse.mp3"
   },
   {
     "noun": "Bohne",
@@ -10026,7 +10093,8 @@
     "level": "B1",
     "translation_ru": "боб",
     "translation_uk": "шматочок",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/bohne.mp3"
   },
   {
     "noun": "Botschaft",
@@ -10035,7 +10103,8 @@
     "level": "B1",
     "translation_ru": "посольство",
     "translation_uk": "посольство",
-    "topic": "Countries & Nationalities"
+    "topic": "Countries & Nationalities",
+    "audio_url": "https://der-artikel.de/audio/botschaft.mp3"
   },
   {
     "noun": "Breite",
@@ -10044,7 +10113,8 @@
     "level": "B1",
     "translation_ru": "ширина",
     "translation_uk": "ширина",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/breite.mp3"
   },
   {
     "noun": "Bremse",
@@ -10053,7 +10123,8 @@
     "level": "B1",
     "translation_ru": "тормоз",
     "translation_uk": "гальмо",
-    "topic": "Transportation"
+    "topic": "Transportation",
+    "audio_url": "https://der-artikel.de/audio/bremse.mp3"
   },
   {
     "noun": "Briefmarke",
@@ -10062,7 +10133,8 @@
     "level": "B1",
     "translation_ru": "марка",
     "translation_uk": "марка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/briefmarke.mp3"
   },
   {
     "noun": "Brieftasche",
@@ -10071,7 +10143,8 @@
     "level": "B1",
     "translation_ru": "кошелек",
     "translation_uk": "гаманець",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/brieftasche.mp3"
   },
   {
     "noun": "Brille",
@@ -10080,7 +10153,8 @@
     "level": "B1",
     "translation_ru": "очки",
     "translation_uk": "окуляри",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/brille.mp3"
   },
   {
     "noun": "Broschüre",
@@ -10089,7 +10163,8 @@
     "level": "B1",
     "translation_ru": "брошюра",
     "translation_uk": "брошура",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/brosch%C3%BCre.mp3"
   },
   {
     "noun": "Brücke",
@@ -10098,7 +10173,8 @@
     "level": "B1",
     "translation_ru": "мост",
     "translation_uk": "міст",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/br%C3%BCcke.mp3"
   },
   {
     "noun": "Brust",
@@ -10107,7 +10183,8 @@
     "level": "B1",
     "translation_ru": "грудь",
     "translation_uk": "грудь",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/brust.mp3"
   },
   {
     "noun": "Buchhandlung",
@@ -10116,7 +10193,8 @@
     "level": "B1",
     "translation_ru": "книжный магазин",
     "translation_uk": "книгарня",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/buchhandlung.mp3"
   },
   {
     "noun": "Büchse",
@@ -10125,7 +10203,8 @@
     "level": "B1",
     "translation_ru": "консервная банка; ружьё",
     "translation_uk": "консервна банка; рушниця",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/b%C3%BCchse.mp3"
   },
   {
     "noun": "Bühne",
@@ -10134,7 +10213,8 @@
     "level": "B1",
     "translation_ru": "сцена",
     "translation_uk": "сцена",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/b%C3%BChne.mp3"
   },
   {
     "noun": "Burg",
@@ -10143,7 +10223,8 @@
     "level": "B1",
     "translation_ru": "замок",
     "translation_uk": "замок",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/burg.mp3"
   },
   {
     "noun": "Bürgerin",
@@ -10152,7 +10233,8 @@
     "level": "B1",
     "translation_ru": "гражданка",
     "translation_uk": "громадянка",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/b%C3%BCrgerin.mp3"
   },
   {
     "noun": "Bürste",
@@ -10161,7 +10243,8 @@
     "level": "B1",
     "translation_ru": "щётка",
     "translation_uk": "щітка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/b%C3%BCrste.mp3"
   },
   {
     "noun": "Butter",
@@ -10170,7 +10253,8 @@
     "level": "B1",
     "translation_ru": "масло",
     "translation_uk": "масло",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/butter.mp3"
   },
   {
     "noun": "Cafeteria",
@@ -10179,7 +10263,8 @@
     "level": "B1",
     "translation_ru": "кафетерий",
     "translation_uk": "кафетерій",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/cafeteria.mp3"
   },
   {
     "noun": "Castingshow",
@@ -10197,7 +10282,8 @@
     "level": "B1",
     "translation_ru": "шанс",
     "translation_uk": "шанс",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/chance.mp3"
   },
   {
     "noun": "Chemie",
@@ -10206,7 +10292,8 @@
     "level": "B1",
     "translation_ru": "химия",
     "translation_uk": "хімія",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/chemie.mp3"
   },
   {
     "noun": "Chipkarte",
@@ -10215,7 +10302,8 @@
     "level": "B1",
     "translation_ru": "чип-карта",
     "translation_uk": "чип-карта",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/chipkarte.mp3"
   },
   {
     "noun": "City",
@@ -10224,17 +10312,21 @@
     "level": "B1",
     "translation_ru": "город",
     "translation_uk": "місто",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/city.mp3"
   },
   {
     "noun": "Cola",
-    "article": "die",
-    "alternative_articles": ["das"],
+    "article": "das",
+    "alternative_articles": [
+      "das"
+    ],
     "translation_en": "cola",
     "level": "B1",
     "translation_ru": "кола",
     "translation_uk": "кола",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/cola.mp3"
   },
   {
     "noun": "Couch",
@@ -10243,7 +10335,8 @@
     "level": "B1",
     "translation_ru": "диван",
     "translation_uk": "диван",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/couch.mp3"
   },
   {
     "noun": "Creme",
@@ -10252,7 +10345,8 @@
     "level": "B1",
     "translation_ru": "крем",
     "translation_uk": "крем",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/creme.mp3"
   },
   {
     "noun": "Dame",
@@ -10261,7 +10355,8 @@
     "level": "B1",
     "translation_ru": "дама",
     "translation_uk": "лідія",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/dame.mp3"
   },
   {
     "noun": "Darstellung",
@@ -10270,7 +10365,8 @@
     "level": "B1",
     "translation_ru": "представление",
     "translation_uk": "представлення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/darstellung.mp3"
   },
   {
     "noun": "Datei",
@@ -10279,7 +10375,8 @@
     "level": "B1",
     "translation_ru": "файл",
     "translation_uk": "файл",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/datei.mp3"
   },
   {
     "noun": "Daten",
@@ -10288,7 +10385,8 @@
     "level": "B1",
     "translation_ru": "данные",
     "translation_uk": "дані",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/daten.mp3"
   },
   {
     "noun": "Dauer",
@@ -10297,7 +10395,8 @@
     "level": "B1",
     "translation_ru": "продолжительность",
     "translation_uk": "тривалість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/dauer.mp3"
   },
   {
     "noun": "Decke",
@@ -10306,7 +10405,8 @@
     "level": "B1",
     "translation_ru": "потолок; одеяло",
     "translation_uk": "стеля; ковдра",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/decke.mp3"
   },
   {
     "noun": "Demokratie",
@@ -10315,7 +10415,8 @@
     "level": "B1",
     "translation_ru": "демократия",
     "translation_uk": "демократія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/demokratie.mp3"
   },
   {
     "noun": "Deutsche",
@@ -10324,7 +10425,8 @@
     "level": "B1",
     "translation_ru": "немка",
     "translation_uk": "німецька",
-    "topic": "Countries & Nationalities"
+    "topic": "Countries & Nationalities",
+    "audio_url": "https://der-artikel.de/audio/deutsche.mp3"
   },
   {
     "noun": "Diät",
@@ -10333,7 +10435,8 @@
     "level": "B1",
     "translation_ru": "диета",
     "translation_uk": "дієта",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/di%C3%A4t.mp3"
   },
   {
     "noun": "Diskothek",
@@ -10342,7 +10445,8 @@
     "level": "B1",
     "translation_ru": "дискотека",
     "translation_uk": "дискотека",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/diskothek.mp3"
   },
   {
     "noun": "Diskussion",
@@ -10351,7 +10455,8 @@
     "level": "B1",
     "translation_ru": "дискуссия",
     "translation_uk": "дискусія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/diskussion.mp3"
   },
   {
     "noun": "Distanz",
@@ -10360,7 +10465,8 @@
     "level": "B1",
     "translation_ru": "расстояние",
     "translation_uk": "відстань",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/distanz.mp3"
   },
   {
     "noun": "Dose",
@@ -10369,7 +10475,8 @@
     "level": "B1",
     "translation_ru": "жестяная банка",
     "translation_uk": "консервна банка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/dose.mp3"
   },
   {
     "noun": "Droge",
@@ -10378,7 +10485,8 @@
     "level": "B1",
     "translation_ru": "наркотик",
     "translation_uk": "наркотик",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/droge.mp3"
   },
   {
     "noun": "Drogerie",
@@ -10387,7 +10495,8 @@
     "level": "B1",
     "translation_ru": "аптека",
     "translation_uk": "аптека",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/drogerie.mp3"
   },
   {
     "noun": "Durchsage",
@@ -10396,7 +10505,8 @@
     "level": "B1",
     "translation_ru": "сообщение",
     "translation_uk": "оголошення",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/durchsage.mp3"
   },
   {
     "noun": "Dusche",
@@ -10405,7 +10515,8 @@
     "level": "B1",
     "translation_ru": "душ",
     "translation_uk": "душ",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/dusche.mp3"
   },
   {
     "noun": "DVD",
@@ -10414,7 +10525,8 @@
     "level": "B1",
     "translation_ru": "DVD",
     "translation_uk": "DVD",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/dvd.mp3"
   },
   {
     "noun": "E-Mail",
@@ -10423,7 +10535,8 @@
     "level": "B1",
     "translation_ru": "электронное письмо",
     "translation_uk": "електронний лист",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/e-mail.mp3"
   },
   {
     "noun": "EC-Karte",
@@ -10441,7 +10554,8 @@
     "level": "B1",
     "translation_ru": "угол",
     "translation_uk": "кут",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/ecke.mp3"
   },
   {
     "noun": "Ehe",
@@ -10450,7 +10564,8 @@
     "level": "B1",
     "translation_ru": "брак",
     "translation_uk": "шлюб",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ehe.mp3"
   },
   {
     "noun": "Ehefrau",
@@ -10459,7 +10574,8 @@
     "level": "B1",
     "translation_ru": "домохозяйка",
     "translation_uk": "домогосподарка",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/ehefrau.mp3"
   },
   {
     "noun": "Eile",
@@ -10468,7 +10584,8 @@
     "level": "B1",
     "translation_ru": "спешка",
     "translation_uk": "спішка",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/eile.mp3"
   },
   {
     "noun": "Einbahnstraße",
@@ -10477,7 +10594,8 @@
     "level": "B1",
     "translation_ru": "односторонняя улица",
     "translation_uk": "одностороння вулиця",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/einbahnstra%C3%9Fe.mp3"
   },
   {
     "noun": "Einfahrt",
@@ -10486,7 +10604,8 @@
     "level": "B1",
     "translation_ru": "въезд",
     "translation_uk": "entrance",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/einfahrt.mp3"
   },
   {
     "noun": "Einführung",
@@ -10495,7 +10614,8 @@
     "level": "B1",
     "translation_ru": "введение",
     "translation_uk": "введення",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/einf%C3%BChrung.mp3"
   },
   {
     "noun": "Einladung",
@@ -10504,7 +10624,8 @@
     "level": "B1",
     "translation_ru": "приглашение",
     "translation_uk": "запрошення",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/einladung.mp3"
   },
   {
     "noun": "Einleitung",
@@ -10513,7 +10634,8 @@
     "level": "B1",
     "translation_ru": "введение",
     "translation_uk": "вступ",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/einleitung.mp3"
   },
   {
     "noun": "Einnahme",
@@ -10522,7 +10644,8 @@
     "level": "B1",
     "translation_ru": "доход",
     "translation_uk": "дохід",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/einnahme.mp3"
   },
   {
     "noun": "Einrichtung",
@@ -10531,7 +10654,8 @@
     "level": "B1",
     "translation_ru": "обстановка",
     "translation_uk": "обстановка",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/einrichtung.mp3"
   },
   {
     "noun": "Einzahlung",
@@ -10540,7 +10664,8 @@
     "level": "B1",
     "translation_ru": "внесение",
     "translation_uk": "внесення",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/einzahlung.mp3"
   },
   {
     "noun": "Einzelheit",
@@ -10549,7 +10674,8 @@
     "level": "B1",
     "translation_ru": "деталь",
     "translation_uk": "деталь",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/einzelheit.mp3"
   },
   {
     "noun": "Eisenbahn",
@@ -10558,7 +10684,8 @@
     "level": "B1",
     "translation_ru": "железная дорога",
     "translation_uk": "залізниця",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/eisenbahn.mp3"
   },
   {
     "noun": "Eltern",
@@ -10567,7 +10694,8 @@
     "level": "B1",
     "translation_ru": "родители",
     "translation_uk": "батьки",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/eltern.mp3"
   },
   {
     "noun": "Empfehlung",
@@ -10576,7 +10704,8 @@
     "level": "B1",
     "translation_ru": "рекомендация",
     "translation_uk": "рекомендація",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/empfehlung.mp3"
   },
   {
     "noun": "Energie",
@@ -10585,7 +10714,8 @@
     "level": "B1",
     "translation_ru": "энергия",
     "translation_uk": "енергія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/energie.mp3"
   },
   {
     "noun": "Enkelin",
@@ -10594,7 +10724,8 @@
     "level": "B1",
     "translation_ru": "внучка",
     "translation_uk": "онука",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/enkelin.mp3"
   },
   {
     "noun": "Ente",
@@ -10603,7 +10734,8 @@
     "level": "B1",
     "translation_ru": "утка",
     "translation_uk": "качка",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/ente.mp3"
   },
   {
     "noun": "Entfernung",
@@ -10612,7 +10744,8 @@
     "level": "B1",
     "translation_ru": "расстояние",
     "translation_uk": "відстань",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/entfernung.mp3"
   },
   {
     "noun": "Entlassung",
@@ -10621,7 +10754,8 @@
     "level": "B1",
     "translation_ru": "увольнение",
     "translation_uk": "звільнення",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/entlassung.mp3"
   },
   {
     "noun": "Entscheidung",
@@ -10630,7 +10764,8 @@
     "level": "B1",
     "translation_ru": "решение",
     "translation_uk": "рішення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/entscheidung.mp3"
   },
   {
     "noun": "Entschuldigung",
@@ -10639,7 +10774,8 @@
     "level": "B1",
     "translation_ru": "извинение",
     "translation_uk": "вибачення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/entschuldigung.mp3"
   },
   {
     "noun": "Enttäuschung",
@@ -10648,7 +10784,8 @@
     "level": "B1",
     "translation_ru": "разочарование",
     "translation_uk": "розчарування",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/entt%C3%A4uschung.mp3"
   },
   {
     "noun": "Entwicklung",
@@ -10657,7 +10794,8 @@
     "level": "B1",
     "translation_ru": "развитие",
     "translation_uk": "розвиток",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/entwicklung.mp3"
   },
   {
     "noun": "Erde",
@@ -10666,7 +10804,8 @@
     "level": "B1",
     "translation_ru": "земля",
     "translation_uk": "земля",
-    "topic": "Environment"
+    "topic": "Environment",
+    "audio_url": "https://der-artikel.de/audio/erde.mp3"
   },
   {
     "noun": "Erfahrung",
@@ -10675,7 +10814,8 @@
     "level": "B1",
     "translation_ru": "опыт",
     "translation_uk": "досвід",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/erfahrung.mp3"
   },
   {
     "noun": "Erfindung",
@@ -10684,7 +10824,8 @@
     "level": "B1",
     "translation_ru": "изобретение",
     "translation_uk": "винахід",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/erfindung.mp3"
   },
   {
     "noun": "Erhöhung",
@@ -10693,7 +10834,8 @@
     "level": "B1",
     "translation_ru": "увеличение",
     "translation_uk": "збільшення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/erh%C3%B6hung.mp3"
   },
   {
     "noun": "Erholung",
@@ -10702,7 +10844,8 @@
     "level": "B1",
     "translation_ru": "отдых",
     "translation_uk": "відпочинок",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/erholung.mp3"
   },
   {
     "noun": "Erinnerung",
@@ -10711,7 +10854,8 @@
     "level": "B1",
     "translation_ru": "память",
     "translation_uk": "пам'ять",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/erinnerung.mp3"
   },
   {
     "noun": "Erkältung",
@@ -10720,7 +10864,8 @@
     "level": "B1",
     "translation_ru": "простуда",
     "translation_uk": "застуда",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/erk%C3%A4ltung.mp3"
   },
   {
     "noun": "Erklärung",
@@ -10729,7 +10874,8 @@
     "level": "B1",
     "translation_ru": "объяснение",
     "translation_uk": "пояснення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/erkl%C3%A4rung.mp3"
   },
   {
     "noun": "Erlaubnis",
@@ -10738,7 +10884,8 @@
     "level": "B1",
     "translation_ru": "разрешение",
     "translation_uk": "дозвіл",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/erlaubnis.mp3"
   },
   {
     "noun": "Ermäßigung",
@@ -10747,7 +10894,8 @@
     "level": "B1",
     "translation_ru": "скидка",
     "translation_uk": "знижка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/erm%C3%A4%C3%9Figung.mp3"
   },
   {
     "noun": "Ernährung",
@@ -10756,7 +10904,8 @@
     "level": "B1",
     "translation_ru": "питание",
     "translation_uk": "харчування",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/ern%C3%A4hrung.mp3"
   },
   {
     "noun": "Ernte",
@@ -10765,7 +10914,8 @@
     "level": "B1",
     "translation_ru": "урожай",
     "translation_uk": "урожай",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/ernte.mp3"
   },
   {
     "noun": "Eröffnung",
@@ -10774,7 +10924,8 @@
     "level": "B1",
     "translation_ru": "открытие",
     "translation_uk": "відкриття",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/er%C3%B6ffnung.mp3"
   },
   {
     "noun": "Erzählung",
@@ -10783,7 +10934,8 @@
     "level": "B1",
     "translation_ru": "рассказ",
     "translation_uk": "оповідання",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/erz%C3%A4hlung.mp3"
   },
   {
     "noun": "Erziehung",
@@ -10792,7 +10944,8 @@
     "level": "B1",
     "translation_ru": "воспитание",
     "translation_uk": "виховання",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/erziehung.mp3"
   },
   {
     "noun": "Etage",
@@ -10801,7 +10954,8 @@
     "level": "B1",
     "translation_ru": "этаж",
     "translation_uk": "поверх",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/etage.mp3"
   },
   {
     "noun": "Europäische Union",
@@ -10819,7 +10973,8 @@
     "level": "B1",
     "translation_ru": "фабрика",
     "translation_uk": "фабрика",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/fabrik.mp3"
   },
   {
     "noun": "Fachhochschule",
@@ -10828,7 +10983,8 @@
     "level": "B1",
     "translation_ru": "профессиональный колледж высшего образования",
     "translation_uk": "спеціалізований коледж вищої освіти",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/fachhochschule.mp3"
   },
   {
     "noun": "Fachleute",
@@ -10837,7 +10993,8 @@
     "level": "B1",
     "translation_ru": "эксперты",
     "translation_uk": "експерти",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/fachleute.mp3"
   },
   {
     "noun": "Fähigkeit",
@@ -10846,7 +11003,8 @@
     "level": "B1",
     "translation_ru": "способность",
     "translation_uk": "здібність",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/f%C3%A4higkeit.mp3"
   },
   {
     "noun": "Fahrbahn",
@@ -10855,7 +11013,8 @@
     "level": "B1",
     "translation_ru": "покрытие дороги",
     "translation_uk": "проїзна частина",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/fahrbahn.mp3"
   },
   {
     "noun": "Fähre",
@@ -10864,7 +11023,8 @@
     "level": "B1",
     "translation_ru": "паром",
     "translation_uk": "паром",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/f%C3%A4hre.mp3"
   },
   {
     "noun": "Fahrkarte",
@@ -10873,7 +11033,8 @@
     "level": "B1",
     "translation_ru": "билет",
     "translation_uk": "квиток",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/fahrkarte.mp3"
   },
   {
     "noun": "Familie",
@@ -10882,7 +11043,8 @@
     "level": "B1",
     "translation_ru": "семья",
     "translation_uk": "сім'я",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/familie.mp3"
   },
   {
     "noun": "Fantasie",
@@ -10891,7 +11053,8 @@
     "level": "B1",
     "translation_ru": "фантазия",
     "translation_uk": "фантазія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/fantasie.mp3"
   },
   {
     "noun": "Phantasie",
@@ -10900,7 +11063,8 @@
     "level": "B1",
     "translation_ru": "фантазия",
     "translation_uk": "фантазія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/phantasie.mp3"
   },
   {
     "noun": "Farbe",
@@ -10909,7 +11073,8 @@
     "level": "B1",
     "translation_ru": "цвет",
     "translation_uk": "колір",
-    "topic": "Colors"
+    "topic": "Colors",
+    "audio_url": "https://der-artikel.de/audio/farbe.mp3"
   },
   {
     "noun": "Feier",
@@ -10918,7 +11083,8 @@
     "level": "B1",
     "translation_ru": "празднование",
     "translation_uk": "святкування",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/feier.mp3"
   },
   {
     "noun": "Feiertage",
@@ -10936,7 +11102,8 @@
     "level": "B1",
     "translation_ru": "каникулы",
     "translation_uk": "канікули",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/ferien.mp3"
   },
   {
     "noun": "Fernbedienung",
@@ -10945,7 +11112,8 @@
     "level": "B1",
     "translation_ru": "пульт дистанционного управления",
     "translation_uk": "пульт дистанційного керування",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/fernbedienung.mp3"
   },
   {
     "noun": "Festplatte",
@@ -10954,7 +11122,8 @@
     "level": "B1",
     "translation_ru": "жесткий диск",
     "translation_uk": "жорсткий диск",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/festplatte.mp3"
   },
   {
     "noun": "Feuerwehr",
@@ -10963,7 +11132,8 @@
     "level": "B1",
     "translation_ru": "пожарная служба",
     "translation_uk": "пожежна служба",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/feuerwehr.mp3"
   },
   {
     "noun": "Figur",
@@ -10972,7 +11142,8 @@
     "level": "B1",
     "translation_ru": "фигура",
     "translation_uk": "фігура",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/figur.mp3"
   },
   {
     "noun": "Firma",
@@ -10981,7 +11152,8 @@
     "level": "B1",
     "translation_ru": "фирма",
     "translation_uk": "фірма",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/firma.mp3"
   },
   {
     "noun": "Fitness",
@@ -10990,7 +11162,8 @@
     "level": "B1",
     "translation_ru": "фитнес",
     "translation_uk": "фітнес",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/fitness.mp3"
   },
   {
     "noun": "Fläche",
@@ -10999,7 +11172,8 @@
     "level": "B1",
     "translation_ru": "поверхность",
     "translation_uk": "поверхня",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/fl%C3%A4che.mp3"
   },
   {
     "noun": "Flasche",
@@ -11008,7 +11182,8 @@
     "level": "B1",
     "translation_ru": "бутылка",
     "translation_uk": "пляшка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/flasche.mp3"
   },
   {
     "noun": "Fliege",
@@ -11017,7 +11192,8 @@
     "level": "B1",
     "translation_ru": "муха",
     "translation_uk": "муха",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/fliege.mp3"
   },
   {
     "noun": "Flöte",
@@ -11026,7 +11202,8 @@
     "level": "B1",
     "translation_ru": "флейта",
     "translation_uk": "флейта",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/fl%C3%B6te.mp3"
   },
   {
     "noun": "Flucht",
@@ -11035,7 +11212,8 @@
     "level": "B1",
     "translation_ru": "бегство",
     "translation_uk": "втеча",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/flucht.mp3"
   },
   {
     "noun": "Flüssigkeit",
@@ -11044,7 +11222,8 @@
     "level": "B1",
     "translation_ru": "жидкость",
     "translation_uk": "рідина",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/fl%C3%BCssigkeit.mp3"
   },
   {
     "noun": "Folge",
@@ -11053,7 +11232,8 @@
     "level": "B1",
     "translation_ru": "эпизод",
     "translation_uk": "епізод",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/folge.mp3"
   },
   {
     "noun": "Folie",
@@ -11062,7 +11242,8 @@
     "level": "B1",
     "translation_ru": "фольга",
     "translation_uk": "фольга",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/folie.mp3"
   },
   {
     "noun": "Forderung",
@@ -11071,7 +11252,8 @@
     "level": "B1",
     "translation_ru": "потребность",
     "translation_uk": "попит",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/forderung.mp3"
   },
   {
     "noun": "Förderung",
@@ -11080,7 +11262,8 @@
     "level": "B1",
     "translation_ru": "продвижение",
     "translation_uk": "просування",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/f%C3%B6rderung.mp3"
   },
   {
     "noun": "Form",
@@ -11089,7 +11272,8 @@
     "level": "B1",
     "translation_ru": "форма",
     "translation_uk": "форма",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/form.mp3"
   },
   {
     "noun": "Forschung",
@@ -11098,7 +11282,8 @@
     "level": "B1",
     "translation_ru": "исследование",
     "translation_uk": "дослідження",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/forschung.mp3"
   },
   {
     "noun": "Fortbildung",
@@ -11107,7 +11292,8 @@
     "level": "B1",
     "translation_ru": "дополнительное образование",
     "translation_uk": "додаткова освіта",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/fortbildung.mp3"
   },
   {
     "noun": "Fortsetzung",
@@ -11116,7 +11302,8 @@
     "level": "B1",
     "translation_ru": "продолжение",
     "translation_uk": "продовження",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/fortsetzung.mp3"
   },
   {
     "noun": "Fotografie",
@@ -11125,7 +11312,8 @@
     "level": "B1",
     "translation_ru": "фотография",
     "translation_uk": "фотографія",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/fotografie.mp3"
   },
   {
     "noun": "Frage",
@@ -11134,7 +11322,8 @@
     "level": "B1",
     "translation_ru": "вопрос",
     "translation_uk": "питання",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/frage.mp3"
   },
   {
     "noun": "Frau",
@@ -11143,7 +11332,8 @@
     "level": "B1",
     "translation_ru": "женщина",
     "translation_uk": "жінка",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/frau.mp3"
   },
   {
     "noun": "Freiheit",
@@ -11152,7 +11342,8 @@
     "level": "B1",
     "translation_ru": "свобода",
     "translation_uk": "свобода",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/freiheit.mp3"
   },
   {
     "noun": "Freizeit",
@@ -11161,7 +11352,8 @@
     "level": "B1",
     "translation_ru": "свободное время",
     "translation_uk": "вільний час",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/freizeit.mp3"
   },
   {
     "noun": "Fremdsprache",
@@ -11170,7 +11362,8 @@
     "level": "B1",
     "translation_ru": "иностранный язык",
     "translation_uk": "іноземна мова",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/fremdsprache.mp3"
   },
   {
     "noun": "Freude",
@@ -11179,7 +11372,8 @@
     "level": "B1",
     "translation_ru": "удовольствие",
     "translation_uk": "задоволення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/freude.mp3"
   },
   {
     "noun": "Freundschaft",
@@ -11188,7 +11382,8 @@
     "level": "B1",
     "translation_ru": "дружба",
     "translation_uk": "дружба",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/freundschaft.mp3"
   },
   {
     "noun": "Frist",
@@ -11197,7 +11392,8 @@
     "level": "B1",
     "translation_ru": "срок",
     "translation_uk": "термін",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/frist.mp3"
   },
   {
     "noun": "Frisur",
@@ -11206,7 +11402,8 @@
     "level": "B1",
     "translation_ru": "прическа",
     "translation_uk": "стрижка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/frisur.mp3"
   },
   {
     "noun": "Frucht",
@@ -11215,7 +11412,8 @@
     "level": "B1",
     "translation_ru": "фрукт",
     "translation_uk": "фрукти",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/frucht.mp3"
   },
   {
     "noun": "Führung",
@@ -11224,7 +11422,8 @@
     "level": "B1",
     "translation_ru": "гид, экскурсия",
     "translation_uk": "гід, екскурсія",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/f%C3%BChrung.mp3"
   },
   {
     "noun": "Fußgängerzone",
@@ -11233,7 +11432,8 @@
     "level": "B1",
     "translation_ru": "пешеходная зона",
     "translation_uk": "пішохідна зона",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/fu%C3%9Fg%C3%A4ngerzone.mp3"
   },
   {
     "noun": "Gabel",
@@ -11242,7 +11442,8 @@
     "level": "B1",
     "translation_ru": "вилка",
     "translation_uk": "вилка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/gabel.mp3"
   },
   {
     "noun": "Galerie",
@@ -11251,7 +11452,8 @@
     "level": "B1",
     "translation_ru": "галерея",
     "translation_uk": "галерея",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/galerie.mp3"
   },
   {
     "noun": "Garage",
@@ -11260,7 +11462,8 @@
     "level": "B1",
     "translation_ru": "гараж",
     "translation_uk": "гараж",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/garage.mp3"
   },
   {
     "noun": "Garantie",
@@ -11269,7 +11472,8 @@
     "level": "B1",
     "translation_ru": "гарантия",
     "translation_uk": "гарантія",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/garantie.mp3"
   },
   {
     "noun": "Garderobe",
@@ -11278,7 +11482,8 @@
     "level": "B1",
     "translation_ru": "гардероб",
     "translation_uk": "гардероб",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/garderobe.mp3"
   },
   {
     "noun": "Gaststätte",
@@ -11287,7 +11492,8 @@
     "level": "B1",
     "translation_ru": "ресторан",
     "translation_uk": "ресторан",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/gastst%C3%A4tte.mp3"
   },
   {
     "noun": "Gebrauchsanweisung",
@@ -11296,7 +11502,8 @@
     "level": "B1",
     "translation_ru": "инструкция",
     "translation_uk": "інструкція",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/gebrauchsanweisung.mp3"
   },
   {
     "noun": "Gebühr",
@@ -11305,7 +11512,8 @@
     "level": "B1",
     "translation_ru": "плата",
     "translation_uk": "плата",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/geb%C3%BChr.mp3"
   },
   {
     "noun": "Geburt",
@@ -11314,7 +11522,8 @@
     "level": "B1",
     "translation_ru": "рождение",
     "translation_uk": "народження",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/geburt.mp3"
   },
   {
     "noun": "Geduld",
@@ -11323,7 +11532,8 @@
     "level": "B1",
     "translation_ru": "терпение",
     "translation_uk": "терплячість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/geduld.mp3"
   },
   {
     "noun": "Gefahr",
@@ -11332,7 +11542,8 @@
     "level": "B1",
     "translation_ru": "опасность",
     "translation_uk": "небезпека",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gefahr.mp3"
   },
   {
     "noun": "Gegend",
@@ -11341,7 +11552,8 @@
     "level": "B1",
     "translation_ru": "район",
     "translation_uk": "район",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/gegend.mp3"
   },
   {
     "noun": "Gelegenheit",
@@ -11350,7 +11562,8 @@
     "level": "B1",
     "translation_ru": "возможность",
     "translation_uk": "можливість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gelegenheit.mp3"
   },
   {
     "noun": "Gemeinde",
@@ -11359,7 +11572,8 @@
     "level": "B1",
     "translation_ru": "сообщество",
     "translation_uk": "спільнота",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gemeinde.mp3"
   },
   {
     "noun": "Gemeinschaft",
@@ -11368,7 +11582,8 @@
     "level": "B1",
     "translation_ru": "сообщество",
     "translation_uk": "громада",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gemeinschaft.mp3"
   },
   {
     "noun": "Generation",
@@ -11377,7 +11592,8 @@
     "level": "B1",
     "translation_ru": "поколение",
     "translation_uk": "покоління",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/generation.mp3"
   },
   {
     "noun": "Geografie",
@@ -11386,7 +11602,8 @@
     "level": "B1",
     "translation_ru": "география",
     "translation_uk": "географія",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/geografie.mp3"
   },
   {
     "noun": "Gesamtschule",
@@ -11395,7 +11612,8 @@
     "level": "B1",
     "translation_ru": "комплексная школа",
     "translation_uk": "комплексна школа",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/gesamtschule.mp3"
   },
   {
     "noun": "Geschichte",
@@ -11404,7 +11622,8 @@
     "level": "B1",
     "translation_ru": "история",
     "translation_uk": "історія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/geschichte.mp3"
   },
   {
     "noun": "Geschwindigkeit",
@@ -11413,7 +11632,8 @@
     "level": "B1",
     "translation_ru": "скорость",
     "translation_uk": "швидкість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/geschwindigkeit.mp3"
   },
   {
     "noun": "Geschwindigkeitsbeschränkung",
@@ -11426,12 +11646,13 @@
   },
   {
     "noun": "Geschwister",
-    "article": "die",
+    "article": "das",
     "translation_en": "siblings",
     "level": "B1",
     "translation_ru": "братья и сестры",
     "translation_uk": "брати та сестри",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/geschwister.mp3"
   },
   {
     "noun": "Gesellschaft",
@@ -11440,7 +11661,8 @@
     "level": "B1",
     "translation_ru": "общество",
     "translation_uk": "суспільство",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gesellschaft.mp3"
   },
   {
     "noun": "Gesundheit",
@@ -11449,7 +11671,8 @@
     "level": "B1",
     "translation_ru": "здоровье",
     "translation_uk": "здоров'я",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/gesundheit.mp3"
   },
   {
     "noun": "Gewalt",
@@ -11458,7 +11681,8 @@
     "level": "B1",
     "translation_ru": "насилие",
     "translation_uk": "насильство",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gewalt.mp3"
   },
   {
     "noun": "Gewerkschaft",
@@ -11467,7 +11691,8 @@
     "level": "B1",
     "translation_ru": "профсоюз",
     "translation_uk": "профспілка",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/gewerkschaft.mp3"
   },
   {
     "noun": "Gewohnheit",
@@ -11476,7 +11701,8 @@
     "level": "B1",
     "translation_ru": "привычка",
     "translation_uk": "звичка",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gewohnheit.mp3"
   },
   {
     "noun": "Giraffe",
@@ -11485,7 +11711,8 @@
     "level": "B1",
     "translation_ru": "жираф",
     "translation_uk": "жирафа",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/giraffe.mp3"
   },
   {
     "noun": "Gitarre",
@@ -11494,7 +11721,8 @@
     "level": "B1",
     "translation_ru": "гитара",
     "translation_uk": "гітара",
-    "topic": "Music Instruments"
+    "topic": "Music Instruments",
+    "audio_url": "https://der-artikel.de/audio/gitarre.mp3"
   },
   {
     "noun": "Grafik",
@@ -11512,7 +11740,8 @@
     "level": "B1",
     "translation_ru": "поздравление",
     "translation_uk": "привітання",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gratulation.mp3"
   },
   {
     "noun": "Grenze",
@@ -11521,7 +11750,8 @@
     "level": "B1",
     "translation_ru": "граница",
     "translation_uk": "кордон",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/grenze.mp3"
   },
   {
     "noun": "Griechin",
@@ -11530,7 +11760,8 @@
     "level": "B1",
     "translation_ru": "гречанка",
     "translation_uk": "грекиня",
-    "topic": "Countries & Nationalities"
+    "topic": "Countries & Nationalities",
+    "audio_url": "https://der-artikel.de/audio/griechin.mp3"
   },
   {
     "noun": "Grippe",
@@ -11539,7 +11770,8 @@
     "level": "B1",
     "translation_ru": "грипп",
     "translation_uk": "грип",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/grippe.mp3"
   },
   {
     "noun": "Größe",
@@ -11548,7 +11780,8 @@
     "level": "B1",
     "translation_ru": "размер",
     "translation_uk": "розмір",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/gr%C3%B6%C3%9Fe.mp3"
   },
   {
     "noun": "Grundschule",
@@ -11557,7 +11790,8 @@
     "level": "B1",
     "translation_ru": "начальная школа",
     "translation_uk": "початкова школа",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/grundschule.mp3"
   },
   {
     "noun": "Gruppe",
@@ -11566,7 +11800,8 @@
     "level": "B1",
     "translation_ru": "группа",
     "translation_uk": "група",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/gruppe.mp3"
   },
   {
     "noun": "Gymnastik",
@@ -11575,7 +11810,8 @@
     "level": "B1",
     "translation_ru": "гимнастика",
     "translation_uk": "гімнастика",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/gymnastik.mp3"
   },
   {
     "noun": "Halbpension",
@@ -11584,7 +11820,8 @@
     "level": "B1",
     "translation_ru": "полупансион",
     "translation_uk": "полупансіон",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/halbpension.mp3"
   },
   {
     "noun": "Hälfte",
@@ -11593,7 +11830,8 @@
     "level": "B1",
     "translation_ru": "половина",
     "translation_uk": "половина",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/h%C3%A4lfte.mp3"
   },
   {
     "noun": "Halle",
@@ -11602,7 +11840,8 @@
     "level": "B1",
     "translation_ru": "зал",
     "translation_uk": "зал",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/halle.mp3"
   },
   {
     "noun": "Haltestelle",
@@ -11611,7 +11850,8 @@
     "level": "B1",
     "translation_ru": "остановка",
     "translation_uk": "зупинка",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/haltestelle.mp3"
   },
   {
     "noun": "Hand",
@@ -11620,7 +11860,8 @@
     "level": "B1",
     "translation_ru": "рука",
     "translation_uk": "долоня",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/hand.mp3"
   },
   {
     "noun": "Hauptstadt",
@@ -11629,7 +11870,8 @@
     "level": "B1",
     "translation_ru": "столица",
     "translation_uk": "столиця",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/hauptstadt.mp3"
   },
   {
     "noun": "Hausaufgabe",
@@ -11638,7 +11880,8 @@
     "level": "B1",
     "translation_ru": "домашняя работа",
     "translation_uk": "домашнє завдання",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/hausaufgabe.mp3"
   },
   {
     "noun": "Hausfrau",
@@ -11647,7 +11890,8 @@
     "level": "B1",
     "translation_ru": "домохозяйка",
     "translation_uk": "домогосподарка",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/hausfrau.mp3"
   },
   {
     "noun": "Haut",
@@ -11656,7 +11900,8 @@
     "level": "B1",
     "translation_ru": "кожа",
     "translation_uk": "шкіра",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/haut.mp3"
   },
   {
     "noun": "Heimat",
@@ -11665,7 +11910,8 @@
     "level": "B1",
     "translation_ru": "родина",
     "translation_uk": "батьківщина",
-    "topic": "Countries & Nationalities"
+    "topic": "Countries & Nationalities",
+    "audio_url": "https://der-artikel.de/audio/heimat.mp3"
   },
   {
     "noun": "Heizung",
@@ -11674,7 +11920,8 @@
     "level": "B1",
     "translation_ru": "отопление",
     "translation_uk": "опалення",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/heizung.mp3"
   },
   {
     "noun": "Herausforderung",
@@ -11683,7 +11930,8 @@
     "level": "B1",
     "translation_ru": "вызов",
     "translation_uk": "виклик",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/herausforderung.mp3"
   },
   {
     "noun": "Herkunft",
@@ -11692,7 +11940,8 @@
     "level": "B1",
     "translation_ru": "происхождение",
     "translation_uk": "походження",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/herkunft.mp3"
   },
   {
     "noun": "Hilfe",
@@ -11701,7 +11950,8 @@
     "level": "B1",
     "translation_ru": "помощь",
     "translation_uk": "допомога",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/hilfe.mp3"
   },
   {
     "noun": "Himmelsrichtung",
@@ -11710,7 +11960,8 @@
     "level": "B1",
     "translation_ru": "сторона света",
     "translation_uk": "сторона світу",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/himmelsrichtung.mp3"
   },
   {
     "noun": "Hitze",
@@ -11719,7 +11970,8 @@
     "level": "B1",
     "translation_ru": "жара",
     "translation_uk": "спека",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/hitze.mp3"
   },
   {
     "noun": "Hochzeit",
@@ -11728,7 +11980,8 @@
     "level": "B1",
     "translation_ru": "свадьба",
     "translation_uk": "весілля",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/hochzeit.mp3"
   },
   {
     "noun": "Hoffnung",
@@ -11737,7 +11990,8 @@
     "level": "B1",
     "translation_ru": "надежда",
     "translation_uk": "надія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/hoffnung.mp3"
   },
   {
     "noun": "Höhe",
@@ -11746,7 +12000,8 @@
     "level": "B1",
     "translation_ru": "высота",
     "translation_uk": "висота",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/h%C3%B6he.mp3"
   },
   {
     "noun": "Homepage",
@@ -11755,7 +12010,8 @@
     "level": "B1",
     "translation_ru": "домашняя страница",
     "translation_uk": "домашня сторінка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/homepage.mp3"
   },
   {
     "noun": "Hose",
@@ -11764,7 +12020,8 @@
     "level": "B1",
     "translation_ru": "брюки",
     "translation_uk": "штани",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/hose.mp3"
   },
   {
     "noun": "Hütte",
@@ -11773,7 +12030,8 @@
     "level": "B1",
     "translation_ru": "хижина",
     "translation_uk": "хатина",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/h%C3%BCtte.mp3"
   },
   {
     "noun": "Idee",
@@ -11782,7 +12040,8 @@
     "level": "B1",
     "translation_ru": "идея",
     "translation_uk": "ідея",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/idee.mp3"
   },
   {
     "noun": "Industrie",
@@ -11791,7 +12050,8 @@
     "level": "B1",
     "translation_ru": "индустрия",
     "translation_uk": "індустрія",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/industrie.mp3"
   },
   {
     "noun": "Infektion",
@@ -11800,7 +12060,8 @@
     "level": "B1",
     "translation_ru": "инфекция",
     "translation_uk": "інфекція",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/infektion.mp3"
   },
   {
     "noun": "Information",
@@ -11809,7 +12070,8 @@
     "level": "B1",
     "translation_ru": "информация",
     "translation_uk": "інформація",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/information.mp3"
   },
   {
     "noun": "Insel",
@@ -11818,7 +12080,8 @@
     "level": "B1",
     "translation_ru": "остров",
     "translation_uk": "острів",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/insel.mp3"
   },
   {
     "noun": "Integration",
@@ -11827,7 +12090,8 @@
     "level": "B1",
     "translation_ru": "интеграция",
     "translation_uk": "інтеграція",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/integration.mp3"
   },
   {
     "noun": "Intelligenz",
@@ -11836,7 +12100,8 @@
     "level": "B1",
     "translation_ru": "интеллект",
     "translation_uk": "інтелект",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/intelligenz.mp3"
   },
   {
     "noun": "Jacke",
@@ -11845,7 +12110,8 @@
     "level": "B1",
     "translation_ru": "куртка",
     "translation_uk": "піджак",
-    "topic": "Clothing"
+    "topic": "Clothing",
+    "audio_url": "https://der-artikel.de/audio/jacke.mp3"
   },
   {
     "noun": "Jahreszeit",
@@ -11854,7 +12120,8 @@
     "level": "B1",
     "translation_ru": "время года",
     "translation_uk": "пора року",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/jahreszeit.mp3"
   },
   {
     "noun": "Jeans",
@@ -11872,7 +12139,8 @@
     "level": "B1",
     "translation_ru": "молодёжь",
     "translation_uk": "молодь",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/jugend.mp3"
   },
   {
     "noun": "Jugendherberge",
@@ -11881,7 +12149,8 @@
     "level": "B1",
     "translation_ru": "молодёжная гостиница",
     "translation_uk": "молодіжний хостел",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/jugendherberge.mp3"
   },
   {
     "noun": "Kabine",
@@ -11890,7 +12159,8 @@
     "level": "B1",
     "translation_ru": "кабина",
     "translation_uk": "кабіна",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/kabine.mp3"
   },
   {
     "noun": "Kälte",
@@ -11899,7 +12169,8 @@
     "level": "B1",
     "translation_ru": "холод",
     "translation_uk": "холод",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/k%C3%A4lte.mp3"
   },
   {
     "noun": "Kamera",
@@ -11908,7 +12179,8 @@
     "level": "B1",
     "translation_ru": "камера",
     "translation_uk": "камера",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kamera.mp3"
   },
   {
     "noun": "Kanne",
@@ -11917,7 +12189,8 @@
     "level": "B1",
     "translation_ru": "дойка",
     "translation_uk": "гончарна",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kanne.mp3"
   },
   {
     "noun": "Kantine",
@@ -11926,7 +12199,8 @@
     "level": "B1",
     "translation_ru": "столовая",
     "translation_uk": "кантина",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/kantine.mp3"
   },
   {
     "noun": "Karotte",
@@ -11935,7 +12209,8 @@
     "level": "B1",
     "translation_ru": "морковь",
     "translation_uk": "морква",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/karotte.mp3"
   },
   {
     "noun": "Karriere",
@@ -11944,7 +12219,8 @@
     "level": "B1",
     "translation_ru": "карьера",
     "translation_uk": "кар'єра",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/karriere.mp3"
   },
   {
     "noun": "Karte",
@@ -11953,7 +12229,8 @@
     "level": "B1",
     "translation_ru": "карта",
     "translation_uk": "карта",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/karte.mp3"
   },
   {
     "noun": "Kartoffel",
@@ -11962,7 +12239,8 @@
     "level": "B1",
     "translation_ru": "картошка",
     "translation_uk": "картопля",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/kartoffel.mp3"
   },
   {
     "noun": "Kasse",
@@ -11971,7 +12249,8 @@
     "level": "B1",
     "translation_ru": "касса",
     "translation_uk": "каса",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kasse.mp3"
   },
   {
     "noun": "Kassette",
@@ -11980,7 +12259,8 @@
     "level": "B1",
     "translation_ru": "кассета",
     "translation_uk": "касета",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kassette.mp3"
   },
   {
     "noun": "Katastrophe",
@@ -11989,7 +12269,8 @@
     "level": "B1",
     "translation_ru": "катастрофа",
     "translation_uk": "катастрофа",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/katastrophe.mp3"
   },
   {
     "noun": "Katze",
@@ -11998,7 +12279,8 @@
     "level": "B1",
     "translation_ru": "кот",
     "translation_uk": "кіт",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/katze.mp3"
   },
   {
     "noun": "Kenntnisse",
@@ -12016,7 +12298,8 @@
     "level": "B1",
     "translation_ru": "свеча",
     "translation_uk": "свічка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kerze.mp3"
   },
   {
     "noun": "Kette",
@@ -12025,7 +12308,8 @@
     "level": "B1",
     "translation_ru": "цепь",
     "translation_uk": "ланцюг",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kette.mp3"
   },
   {
     "noun": "Kindertagesstätte",
@@ -12034,7 +12318,8 @@
     "level": "B1",
     "translation_ru": "детский сад",
     "translation_uk": "дитячий садок",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/kindertagesst%C3%A4tte.mp3"
   },
   {
     "noun": "Kindheit",
@@ -12043,7 +12328,8 @@
     "level": "B1",
     "translation_ru": "детство",
     "translation_uk": "дитинство",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kindheit.mp3"
   },
   {
     "noun": "Kirche",
@@ -12052,7 +12338,8 @@
     "level": "B1",
     "translation_ru": "церковь",
     "translation_uk": "церква",
-    "topic": "Places of Worship"
+    "topic": "Places of Worship",
+    "audio_url": "https://der-artikel.de/audio/kirche.mp3"
   },
   {
     "noun": "Kiste",
@@ -12061,7 +12348,8 @@
     "level": "B1",
     "translation_ru": "коробка",
     "translation_uk": "ящик",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kiste.mp3"
   },
   {
     "noun": "Klasse",
@@ -12070,7 +12358,8 @@
     "level": "B1",
     "translation_ru": "класс",
     "translation_uk": "клас",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/klasse.mp3"
   },
   {
     "noun": "Klassenarbeit",
@@ -12079,7 +12368,8 @@
     "level": "B1",
     "translation_ru": "контрольная работа",
     "translation_uk": "контрольна робота",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/klassenarbeit.mp3"
   },
   {
     "noun": "Kleidung",
@@ -12088,7 +12378,8 @@
     "level": "B1",
     "translation_ru": "одежда",
     "translation_uk": "одяг",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kleidung.mp3"
   },
   {
     "noun": "Klimaanlage",
@@ -12097,7 +12388,8 @@
     "level": "B1",
     "translation_ru": "кондиционер",
     "translation_uk": "кондиціонер",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/klimaanlage.mp3"
   },
   {
     "noun": "Klingel",
@@ -12106,7 +12398,8 @@
     "level": "B1",
     "translation_ru": "дверной звонок",
     "translation_uk": "дверний дзвоник",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/klingel.mp3"
   },
   {
     "noun": "Klinik",
@@ -12115,7 +12408,8 @@
     "level": "B1",
     "translation_ru": "клиника",
     "translation_uk": "клініка",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/klinik.mp3"
   },
   {
     "noun": "Kneipe",
@@ -12124,7 +12418,8 @@
     "level": "B1",
     "translation_ru": "паб",
     "translation_uk": "паб",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/kneipe.mp3"
   },
   {
     "noun": "Kollegin",
@@ -12133,7 +12428,8 @@
     "level": "B1",
     "translation_ru": "коллега (женщина)",
     "translation_uk": "колега (жінка)",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/kollegin.mp3"
   },
   {
     "noun": "Kommunikation",
@@ -12142,7 +12438,8 @@
     "level": "B1",
     "translation_ru": "коммуникация",
     "translation_uk": "комунікація",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kommunikation.mp3"
   },
   {
     "noun": "Konferenz",
@@ -12151,7 +12448,8 @@
     "level": "B1",
     "translation_ru": "конференция",
     "translation_uk": "конференція",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/konferenz.mp3"
   },
   {
     "noun": "Konkurrenz",
@@ -12160,7 +12458,8 @@
     "level": "B1",
     "translation_ru": "конкуренция",
     "translation_uk": "конкуренція",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/konkurrenz.mp3"
   },
   {
     "noun": "Kontrolle",
@@ -12169,7 +12468,8 @@
     "level": "B1",
     "translation_ru": "инспекция",
     "translation_uk": "інспекція",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/kontrolle.mp3"
   },
   {
     "noun": "Kopie",
@@ -12178,7 +12478,8 @@
     "level": "B1",
     "translation_ru": "копия",
     "translation_uk": "копія",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kopie.mp3"
   },
   {
     "noun": "Kosten",
@@ -12187,7 +12488,8 @@
     "level": "B1",
     "translation_ru": "расходы",
     "translation_uk": "витрати",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kosten.mp3"
   },
   {
     "noun": "Kraft",
@@ -12196,7 +12498,8 @@
     "level": "B1",
     "translation_ru": "сила",
     "translation_uk": "сила",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kraft.mp3"
   },
   {
     "noun": "Krankenkasse",
@@ -12205,7 +12508,8 @@
     "level": "B1",
     "translation_ru": "медицинская страховка",
     "translation_uk": "медична страховка",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/krankenkasse.mp3"
   },
   {
     "noun": "Krankenschwester",
@@ -12214,7 +12518,8 @@
     "level": "B1",
     "translation_ru": "медсестра",
     "translation_uk": "медсестра",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/krankenschwester.mp3"
   },
   {
     "noun": "Krankheit",
@@ -12223,7 +12528,8 @@
     "level": "B1",
     "translation_ru": "болезнь",
     "translation_uk": "хвороба",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/krankheit.mp3"
   },
   {
     "noun": "Kreditkarte",
@@ -12232,7 +12538,8 @@
     "level": "B1",
     "translation_ru": "кредитная карта",
     "translation_uk": "кредитна картка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/kreditkarte.mp3"
   },
   {
     "noun": "Kreuzung",
@@ -12241,7 +12548,8 @@
     "level": "B1",
     "translation_ru": "пересечение",
     "translation_uk": "перехрестя",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/kreuzung.mp3"
   },
   {
     "noun": "Krippe",
@@ -12250,7 +12558,8 @@
     "level": "B1",
     "translation_ru": "детский сад",
     "translation_uk": "дитячий садок",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/krippe.mp3"
   },
   {
     "noun": "Krise",
@@ -12259,7 +12568,8 @@
     "level": "B1",
     "translation_ru": "кризис",
     "translation_uk": "криза",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/krise.mp3"
   },
   {
     "noun": "Kritik",
@@ -12268,7 +12578,8 @@
     "level": "B1",
     "translation_ru": "критика",
     "translation_uk": "критика",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kritik.mp3"
   },
   {
     "noun": "Küche",
@@ -12277,7 +12588,8 @@
     "level": "B1",
     "translation_ru": "кухня",
     "translation_uk": "кухня",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/k%C3%BCche.mp3"
   },
   {
     "noun": "Kuh",
@@ -12286,7 +12598,8 @@
     "level": "B1",
     "translation_ru": "корова",
     "translation_uk": "корова",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/kuh.mp3"
   },
   {
     "noun": "Kultur",
@@ -12295,7 +12608,8 @@
     "level": "B1",
     "translation_ru": "культура",
     "translation_uk": "культура",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kultur.mp3"
   },
   {
     "noun": "Kündigung",
@@ -12304,7 +12618,8 @@
     "level": "B1",
     "translation_ru": "увольнение",
     "translation_uk": "звільнення",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/k%C3%BCndigung.mp3"
   },
   {
     "noun": "Kunst",
@@ -12313,7 +12628,8 @@
     "level": "B1",
     "translation_ru": "искусство",
     "translation_uk": "мистецтво",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kunst.mp3"
   },
   {
     "noun": "Kurve",
@@ -12322,7 +12638,8 @@
     "level": "B1",
     "translation_ru": "кривая",
     "translation_uk": "крива",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/kurve.mp3"
   },
   {
     "noun": "Küste",
@@ -12331,7 +12648,8 @@
     "level": "B1",
     "translation_ru": "берег",
     "translation_uk": "берег",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/k%C3%BCste.mp3"
   },
   {
     "noun": "Lage",
@@ -12340,7 +12658,8 @@
     "level": "B1",
     "translation_ru": "ситуация",
     "translation_uk": "ситуація",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/lage.mp3"
   },
   {
     "noun": "Lampe",
@@ -12349,7 +12668,8 @@
     "level": "B1",
     "translation_ru": "лампа",
     "translation_uk": "лампа",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/lampe.mp3"
   },
   {
     "noun": "Landschaft",
@@ -12358,7 +12678,8 @@
     "level": "B1",
     "translation_ru": "пейзаж",
     "translation_uk": "ландшафт",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/landschaft.mp3"
   },
   {
     "noun": "Landung",
@@ -12367,7 +12688,8 @@
     "level": "B1",
     "translation_ru": "посадка",
     "translation_uk": "посадка",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/landung.mp3"
   },
   {
     "noun": "Landwirtschaft",
@@ -12376,7 +12698,8 @@
     "level": "B1",
     "translation_ru": "сельское хозяйство",
     "translation_uk": "сільське господарство",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/landwirtschaft.mp3"
   },
   {
     "noun": "Länge",
@@ -12385,7 +12708,8 @@
     "level": "B1",
     "translation_ru": "длина",
     "translation_uk": "довжина",
-    "topic": "Measurements"
+    "topic": "Measurements",
+    "audio_url": "https://der-artikel.de/audio/l%C3%A4nge.mp3"
   },
   {
     "noun": "Langeweile",
@@ -12394,7 +12718,8 @@
     "level": "B1",
     "translation_ru": "скука",
     "translation_uk": "нудьга",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/langeweile.mp3"
   },
   {
     "noun": "Laune",
@@ -12403,16 +12728,18 @@
     "level": "B1",
     "translation_ru": "настроение",
     "translation_uk": "настрій",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/laune.mp3"
   },
   {
     "noun": "Lebensmittel",
-    "article": "die",
+    "article": "das",
     "translation_en": "food",
     "level": "B1",
     "translation_ru": "пища",
     "translation_uk": "їжа",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/lebensmittel.mp3"
   },
   {
     "noun": "Lehre",
@@ -12421,7 +12748,8 @@
     "level": "B1",
     "translation_ru": "ученичество",
     "translation_uk": "учнівство",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/lehre.mp3"
   },
   {
     "noun": "Lehrerin",
@@ -12430,7 +12758,8 @@
     "level": "B1",
     "translation_ru": "учительница",
     "translation_uk": "вчителька",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/lehrerin.mp3"
   },
   {
     "noun": "Lehrstelle",
@@ -12439,7 +12768,8 @@
     "level": "B1",
     "translation_ru": "учебное место",
     "translation_uk": "навчальне місце",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/lehrstelle.mp3"
   },
   {
     "noun": "Leistung",
@@ -12448,7 +12778,8 @@
     "level": "B1",
     "translation_ru": "работа, достижение",
     "translation_uk": "перформанс, досягнення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/leistung.mp3"
   },
   {
     "noun": "Leiter",
@@ -12457,7 +12788,8 @@
     "level": "B1",
     "translation_ru": "лестница",
     "translation_uk": "драбина",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/leiter.mp3"
   },
   {
     "noun": "Leitung",
@@ -12466,7 +12798,8 @@
     "level": "B1",
     "translation_ru": "управление",
     "translation_uk": "управління",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/leitung.mp3"
   },
   {
     "noun": "Leute",
@@ -12475,7 +12808,8 @@
     "level": "B1",
     "translation_ru": "люди",
     "translation_uk": "люди",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/leute.mp3"
   },
   {
     "noun": "Liebe",
@@ -12484,7 +12818,8 @@
     "level": "B1",
     "translation_ru": "любовь",
     "translation_uk": "любов",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/liebe.mp3"
   },
   {
     "noun": "Lieferung",
@@ -12493,7 +12828,8 @@
     "level": "B1",
     "translation_ru": "доставка",
     "translation_uk": "доставка",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/lieferung.mp3"
   },
   {
     "noun": "Limonade",
@@ -12502,7 +12838,8 @@
     "level": "B1",
     "translation_ru": "лимонад",
     "translation_uk": "лимонад",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/limonade.mp3"
   },
   {
     "noun": "Linie",
@@ -12511,7 +12848,8 @@
     "level": "B1",
     "translation_ru": "линия",
     "translation_uk": "лінія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/linie.mp3"
   },
   {
     "noun": "Lippe",
@@ -12520,7 +12858,8 @@
     "level": "B1",
     "translation_ru": "губа",
     "translation_uk": "губа",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/lippe.mp3"
   },
   {
     "noun": "Liste",
@@ -12529,7 +12868,8 @@
     "level": "B1",
     "translation_ru": "список",
     "translation_uk": "список",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/liste.mp3"
   },
   {
     "noun": "Literatur",
@@ -12538,7 +12878,8 @@
     "level": "B1",
     "translation_ru": "литература",
     "translation_uk": "література",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/literatur.mp3"
   },
   {
     "noun": "Lösung",
@@ -12547,7 +12888,8 @@
     "level": "B1",
     "translation_ru": "решение",
     "translation_uk": "розв'язок",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/l%C3%B6sung.mp3"
   },
   {
     "noun": "Luft",
@@ -12556,7 +12898,8 @@
     "level": "B1",
     "translation_ru": "воздух",
     "translation_uk": "повітря",
-    "topic": "Environment"
+    "topic": "Environment",
+    "audio_url": "https://der-artikel.de/audio/luft.mp3"
   },
   {
     "noun": "Lüge",
@@ -12565,7 +12908,8 @@
     "level": "B1",
     "translation_ru": "ложь",
     "translation_uk": "брехня",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/l%C3%BCge.mp3"
   },
   {
     "noun": "Lust",
@@ -12574,7 +12918,8 @@
     "level": "B1",
     "translation_ru": "желание",
     "translation_uk": "бажання",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/lust.mp3"
   },
   {
     "noun": "Mahlzeit",
@@ -12583,7 +12928,8 @@
     "level": "B1",
     "translation_ru": "приём пищи",
     "translation_uk": "прийом їжі",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/mahlzeit.mp3"
   },
   {
     "noun": "Mahnung",
@@ -12592,7 +12938,8 @@
     "level": "B1",
     "translation_ru": "уведомление",
     "translation_uk": "нагадування",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/mahnung.mp3"
   },
   {
     "noun": "Mailbox",
@@ -12601,7 +12948,8 @@
     "level": "B1",
     "translation_ru": "почтовый ящик",
     "translation_uk": "поштову скриньку",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/mailbox.mp3"
   },
   {
     "noun": "Mannschaft",
@@ -12610,7 +12958,8 @@
     "level": "B1",
     "translation_ru": "команда",
     "translation_uk": "команда",
-    "topic": "Sports"
+    "topic": "Sports",
+    "audio_url": "https://der-artikel.de/audio/mannschaft.mp3"
   },
   {
     "noun": "Mappe",
@@ -12619,7 +12968,8 @@
     "level": "B1",
     "translation_ru": "папка",
     "translation_uk": "папка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/mappe.mp3"
   },
   {
     "noun": "Margarine",
@@ -12628,7 +12978,8 @@
     "level": "B1",
     "translation_ru": "маргарин",
     "translation_uk": "маргарин",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/margarine.mp3"
   },
   {
     "noun": "Marke",
@@ -12637,7 +12988,8 @@
     "level": "B1",
     "translation_ru": "марка",
     "translation_uk": "марка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/marke.mp3"
   },
   {
     "noun": "Marmelade",
@@ -12646,7 +12998,8 @@
     "level": "B1",
     "translation_ru": "джем",
     "translation_uk": "варення",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/marmelade.mp3"
   },
   {
     "noun": "Maschine",
@@ -12655,7 +13008,8 @@
     "level": "B1",
     "translation_ru": "машина",
     "translation_uk": "машина",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/maschine.mp3"
   },
   {
     "noun": "Mathematik",
@@ -12664,7 +13018,8 @@
     "level": "B1",
     "translation_ru": "математика",
     "translation_uk": "математика",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/mathematik.mp3"
   },
   {
     "noun": "Mauer",
@@ -12673,7 +13028,8 @@
     "level": "B1",
     "translation_ru": "стена",
     "translation_uk": "стіна",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/mauer.mp3"
   },
   {
     "noun": "Maus",
@@ -12682,7 +13038,8 @@
     "level": "B1",
     "translation_ru": "мышь",
     "translation_uk": "мишка",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/maus.mp3"
   },
   {
     "noun": "Medien",
@@ -12691,7 +13048,8 @@
     "level": "B1",
     "translation_ru": "медиа",
     "translation_uk": "медіа",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/medien.mp3"
   },
   {
     "noun": "Medizin",
@@ -12700,7 +13058,8 @@
     "level": "B1",
     "translation_ru": "медицина",
     "translation_uk": "медицина",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/medizin.mp3"
   },
   {
     "noun": "Mehrheit",
@@ -12709,7 +13068,8 @@
     "level": "B1",
     "translation_ru": "большинство",
     "translation_uk": "більшість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/mehrheit.mp3"
   },
   {
     "noun": "Mehrwertsteuer",
@@ -12718,7 +13078,8 @@
     "level": "B1",
     "translation_ru": "налог на добавленную стоимость",
     "translation_uk": "податок на додану вартість",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/mehrwertsteuer.mp3"
   },
   {
     "noun": "Meinung",
@@ -12727,7 +13088,8 @@
     "level": "B1",
     "translation_ru": "мнение",
     "translation_uk": "думка",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/meinung.mp3"
   },
   {
     "noun": "meisten",
@@ -12745,7 +13107,8 @@
     "level": "B1",
     "translation_ru": "сообщение",
     "translation_uk": "повідомлення",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/meldung.mp3"
   },
   {
     "noun": "Menge",
@@ -12754,7 +13117,8 @@
     "level": "B1",
     "translation_ru": "количество",
     "translation_uk": "кількість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/menge.mp3"
   },
   {
     "noun": "Mensa",
@@ -12763,7 +13127,8 @@
     "level": "B1",
     "translation_ru": "столовая",
     "translation_uk": "їдальня",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/mensa.mp3"
   },
   {
     "noun": "Messe",
@@ -12772,7 +13137,8 @@
     "level": "B1",
     "translation_ru": "выставка",
     "translation_uk": "виставка",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/messe.mp3"
   },
   {
     "noun": "Methode",
@@ -12781,7 +13147,8 @@
     "level": "B1",
     "translation_ru": "метод",
     "translation_uk": "метод",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/methode.mp3"
   },
   {
     "noun": "Metropole",
@@ -12790,7 +13157,8 @@
     "level": "B1",
     "translation_ru": "метрополия",
     "translation_uk": "метрополія",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/metropole.mp3"
   },
   {
     "noun": "Miete",
@@ -12799,7 +13167,8 @@
     "level": "B1",
     "translation_ru": "аренда",
     "translation_uk": "оренда",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/miete.mp3"
   },
   {
     "noun": "Migration",
@@ -12808,7 +13177,8 @@
     "level": "B1",
     "translation_ru": "миграция",
     "translation_uk": "міграція",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/migration.mp3"
   },
   {
     "noun": "Milch",
@@ -12817,7 +13187,8 @@
     "level": "B1",
     "translation_ru": "молоко",
     "translation_uk": "молоко",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/milch.mp3"
   },
   {
     "noun": "Minderheit",
@@ -12826,7 +13197,8 @@
     "level": "B1",
     "translation_ru": "меньшинство",
     "translation_uk": "меншість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/minderheit.mp3"
   },
   {
     "noun": "Minute",
@@ -12835,7 +13207,8 @@
     "level": "B1",
     "translation_ru": "минута",
     "translation_uk": "хвилина",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/minute.mp3"
   },
   {
     "noun": "Mitarbeiterin",
@@ -12844,7 +13217,8 @@
     "level": "B1",
     "translation_ru": "сотрудница",
     "translation_uk": "співробітниця",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/mitarbeiterin.mp3"
   },
   {
     "noun": "Mitte",
@@ -12853,7 +13227,8 @@
     "level": "B1",
     "translation_ru": "середина",
     "translation_uk": "середина",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/mitte.mp3"
   },
   {
     "noun": "Mittelschule",
@@ -12862,7 +13237,8 @@
     "level": "B1",
     "translation_ru": "средняя школа",
     "translation_uk": "середня школа",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/mittelschule.mp3"
   },
   {
     "noun": "Mitternacht",
@@ -12871,7 +13247,8 @@
     "level": "B1",
     "translation_ru": "полночь",
     "translation_uk": "північ",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/mitternacht.mp3"
   },
   {
     "noun": "Mobilbox",
@@ -12889,7 +13266,8 @@
     "level": "B1",
     "translation_ru": "мобильность",
     "translation_uk": "мобільність",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/mobilit%C3%A4t.mp3"
   },
   {
     "noun": "Mode",
@@ -12898,7 +13276,8 @@
     "level": "B1",
     "translation_ru": "мода",
     "translation_uk": "мода",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/mode.mp3"
   },
   {
     "noun": "Möglichkeit",
@@ -12907,7 +13286,8 @@
     "level": "B1",
     "translation_ru": "возможность",
     "translation_uk": "можливість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/m%C3%B6glichkeit.mp3"
   },
   {
     "noun": "Möhre",
@@ -12916,7 +13296,8 @@
     "level": "B1",
     "translation_ru": "морковь",
     "translation_uk": "морква",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/m%C3%B6hre.mp3"
   },
   {
     "noun": "Monatsnamen",
@@ -12934,7 +13315,8 @@
     "level": "B1",
     "translation_ru": "комар",
     "translation_uk": "комар",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/m%C3%BCcke.mp3"
   },
   {
     "noun": "Mühe",
@@ -12943,7 +13325,8 @@
     "level": "B1",
     "translation_ru": "усилие",
     "translation_uk": "зусилля",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/m%C3%BChe.mp3"
   },
   {
     "noun": "Müllabfuhr",
@@ -12952,7 +13335,8 @@
     "level": "B1",
     "translation_ru": "вывоз мусора",
     "translation_uk": "вивіз сміття",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/m%C3%BCllabfuhr.mp3"
   },
   {
     "noun": "Mülltonne",
@@ -12961,7 +13345,8 @@
     "level": "B1",
     "translation_ru": "мусорный бак",
     "translation_uk": "сміттєвий бак",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/m%C3%BClltonne.mp3"
   },
   {
     "noun": "Münze",
@@ -12970,7 +13355,8 @@
     "level": "B1",
     "translation_ru": "монета",
     "translation_uk": "монета",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/m%C3%BCnze.mp3"
   },
   {
     "noun": "Musik",
@@ -12979,7 +13365,8 @@
     "level": "B1",
     "translation_ru": "музыка",
     "translation_uk": "музика",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/musik.mp3"
   },
   {
     "noun": "Mutter",
@@ -12988,7 +13375,8 @@
     "level": "B1",
     "translation_ru": "мать",
     "translation_uk": "мати",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/mutter.mp3"
   },
   {
     "noun": "Muttersprache",
@@ -12997,7 +13385,8 @@
     "level": "B1",
     "translation_ru": "родной язык",
     "translation_uk": "рідна мова",
-    "topic": "Languages"
+    "topic": "Languages",
+    "audio_url": "https://der-artikel.de/audio/muttersprache.mp3"
   },
   {
     "noun": "Nachfrage",
@@ -13006,7 +13395,8 @@
     "level": "B1",
     "translation_ru": "спрос",
     "translation_uk": "попит",
-    "topic": "Economics"
+    "topic": "Economics",
+    "audio_url": "https://der-artikel.de/audio/nachfrage.mp3"
   },
   {
     "noun": "Nachhilfe",
@@ -13015,7 +13405,8 @@
     "level": "B1",
     "translation_ru": "репетиторство",
     "translation_uk": "додаткова освіта",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/nachhilfe.mp3"
   },
   {
     "noun": "Nachricht",
@@ -13024,7 +13415,8 @@
     "level": "B1",
     "translation_ru": "новость",
     "translation_uk": "новина",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/nachricht.mp3"
   },
   {
     "noun": "Nachspeise",
@@ -13033,7 +13425,8 @@
     "level": "B1",
     "translation_ru": "десерт",
     "translation_uk": "десерт",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/nachspeise.mp3"
   },
   {
     "noun": "Nacht",
@@ -13042,7 +13435,8 @@
     "level": "B1",
     "translation_ru": "ночь",
     "translation_uk": "ніч",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/nacht.mp3"
   },
   {
     "noun": "Nadel",
@@ -13051,7 +13445,8 @@
     "level": "B1",
     "translation_ru": "игла",
     "translation_uk": "голка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/nadel.mp3"
   },
   {
     "noun": "Nähe",
@@ -13060,7 +13455,8 @@
     "level": "B1",
     "translation_ru": "близость",
     "translation_uk": "близькість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/n%C3%A4he.mp3"
   },
   {
     "noun": "Nase",
@@ -13069,7 +13465,8 @@
     "level": "B1",
     "translation_ru": "нос",
     "translation_uk": "ніс",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/nase.mp3"
   },
   {
     "noun": "Natur",
@@ -13078,7 +13475,8 @@
     "level": "B1",
     "translation_ru": "природа",
     "translation_uk": "природа",
-    "topic": "Environment"
+    "topic": "Environment",
+    "audio_url": "https://der-artikel.de/audio/natur.mp3"
   },
   {
     "noun": "Neuigkeit",
@@ -13087,7 +13485,8 @@
     "level": "B1",
     "translation_ru": "новость",
     "translation_uk": "новина",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/neuigkeit.mp3"
   },
   {
     "noun": "Nichte",
@@ -13096,7 +13495,8 @@
     "level": "B1",
     "translation_ru": "племянница",
     "translation_uk": "племінниця",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/nichte.mp3"
   },
   {
     "noun": "Notaufnahme",
@@ -13105,7 +13505,8 @@
     "level": "B1",
     "translation_ru": "отделение неотложной помощи",
     "translation_uk": "відділення екстреної допомоги",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/notaufnahme.mp3"
   },
   {
     "noun": "Note",
@@ -13114,7 +13515,8 @@
     "level": "B1",
     "translation_ru": "оценка",
     "translation_uk": "оцінка",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/note.mp3"
   },
   {
     "noun": "Notiz",
@@ -13123,7 +13525,8 @@
     "level": "B1",
     "translation_ru": "заметка",
     "translation_uk": "замітка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/notiz.mp3"
   },
   {
     "noun": "Nudel",
@@ -13132,7 +13535,8 @@
     "level": "B1",
     "translation_ru": "лапша",
     "translation_uk": "макарони",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/nudel.mp3"
   },
   {
     "noun": "Nummer",
@@ -13141,7 +13545,8 @@
     "level": "B1",
     "translation_ru": "номер",
     "translation_uk": "номер",
-    "topic": "Numbers"
+    "topic": "Numbers",
+    "audio_url": "https://der-artikel.de/audio/nummer.mp3"
   },
   {
     "noun": "Öffentlichkeit",
@@ -13150,7 +13555,8 @@
     "level": "B1",
     "translation_ru": "общественность",
     "translation_uk": "суспільство",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/%C3%B6ffentlichkeit.mp3"
   },
   {
     "noun": "Oma",
@@ -13159,7 +13565,8 @@
     "level": "B1",
     "translation_ru": "бабушка",
     "translation_uk": "бабуся",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/oma.mp3"
   },
   {
     "noun": "Oper",
@@ -13168,7 +13575,8 @@
     "level": "B1",
     "translation_ru": "опера",
     "translation_uk": "опера",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/oper.mp3"
   },
   {
     "noun": "Operation",
@@ -13177,7 +13585,8 @@
     "level": "B1",
     "translation_ru": "операция",
     "translation_uk": "операція",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/operation.mp3"
   },
   {
     "noun": "Orange",
@@ -13186,7 +13595,8 @@
     "level": "B1",
     "translation_ru": "апельсин",
     "translation_uk": "апельсин",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/orange.mp3"
   },
   {
     "noun": "Ordnung",
@@ -13195,7 +13605,8 @@
     "level": "B1",
     "translation_ru": "порядок",
     "translation_uk": "порядок",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ordnung.mp3"
   },
   {
     "noun": "Organisation",
@@ -13204,7 +13615,8 @@
     "level": "B1",
     "translation_ru": "организация",
     "translation_uk": "організація",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/organisation.mp3"
   },
   {
     "noun": "Österreicherin",
@@ -13222,7 +13634,8 @@
     "level": "B1",
     "translation_ru": "авария",
     "translation_uk": "поломка",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/panne.mp3"
   },
   {
     "noun": "Partei",
@@ -13231,7 +13644,8 @@
     "level": "B1",
     "translation_ru": "партия",
     "translation_uk": "партія",
-    "topic": "Politics"
+    "topic": "Politics",
+    "audio_url": "https://der-artikel.de/audio/partei.mp3"
   },
   {
     "noun": "Party",
@@ -13240,7 +13654,8 @@
     "level": "B1",
     "translation_ru": "вечеринка",
     "translation_uk": "вечірка",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/party.mp3"
   },
   {
     "noun": "Patientin",
@@ -13249,7 +13664,8 @@
     "level": "B1",
     "translation_ru": "пациентка",
     "translation_uk": "пацієнтка",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/patientin.mp3"
   },
   {
     "noun": "Pause",
@@ -13258,7 +13674,8 @@
     "level": "B1",
     "translation_ru": "перерыв",
     "translation_uk": "перерва",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/pause.mp3"
   },
   {
     "noun": "Pension",
@@ -13267,7 +13684,8 @@
     "level": "B1",
     "translation_ru": "гостиница",
     "translation_uk": "пансіон",
-    "topic": "Housing"
+    "topic": "Housing",
+    "audio_url": "https://der-artikel.de/audio/pension.mp3"
   },
   {
     "noun": "Person",
@@ -13276,7 +13694,8 @@
     "level": "B1",
     "translation_ru": "человек",
     "translation_uk": "особа",
-    "topic": "Person"
+    "topic": "Person",
+    "audio_url": "https://der-artikel.de/audio/person.mp3"
   },
   {
     "noun": "Personalien",
@@ -13294,7 +13713,8 @@
     "level": "B1",
     "translation_ru": "сковорода",
     "translation_uk": "сковорода",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/pfanne.mp3"
   },
   {
     "noun": "Pflanze",
@@ -13303,7 +13723,8 @@
     "level": "B1",
     "translation_ru": "растение",
     "translation_uk": "рослина",
-    "topic": "Environment"
+    "topic": "Environment",
+    "audio_url": "https://der-artikel.de/audio/pflanze.mp3"
   },
   {
     "noun": "Pflaume",
@@ -13312,7 +13733,8 @@
     "level": "B1",
     "translation_ru": "слива",
     "translation_uk": "слива",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/pflaume.mp3"
   },
   {
     "noun": "Pflicht",
@@ -13321,7 +13743,8 @@
     "level": "B1",
     "translation_ru": "обязанность",
     "translation_uk": "обов'язок",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/pflicht.mp3"
   },
   {
     "noun": "Philosophie",
@@ -13330,7 +13753,8 @@
     "level": "B1",
     "translation_ru": "философия",
     "translation_uk": "філософія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/philosophie.mp3"
   },
   {
     "noun": "Physik",
@@ -13339,7 +13763,8 @@
     "level": "B1",
     "translation_ru": "физика",
     "translation_uk": "фізика",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/physik.mp3"
   },
   {
     "noun": "Pille",
@@ -13348,7 +13773,8 @@
     "level": "B1",
     "translation_ru": "таблетка",
     "translation_uk": "таблетка",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/pille.mp3"
   },
   {
     "noun": "Pizza",
@@ -13357,7 +13783,8 @@
     "level": "B1",
     "translation_ru": "пицца",
     "translation_uk": "піца",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/pizza.mp3"
   },
   {
     "noun": "Planung",
@@ -13366,7 +13793,8 @@
     "level": "B1",
     "translation_ru": "планирование",
     "translation_uk": "планування",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/planung.mp3"
   },
   {
     "noun": "Plattform",
@@ -13375,7 +13803,8 @@
     "level": "B1",
     "translation_ru": "платформа",
     "translation_uk": "платформа",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/plattform.mp3"
   },
   {
     "noun": "Politik",
@@ -13384,7 +13813,8 @@
     "level": "B1",
     "translation_ru": "политика",
     "translation_uk": "політика",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/politik.mp3"
   },
   {
     "noun": "Polizei",
@@ -13393,7 +13823,8 @@
     "level": "B1",
     "translation_ru": "полиция",
     "translation_uk": "полиція",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/polizei.mp3"
   },
   {
     "noun": "Pommes frites",
@@ -13411,7 +13842,8 @@
     "level": "B1",
     "translation_ru": "порция",
     "translation_uk": "порція",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/portion.mp3"
   },
   {
     "noun": "Post",
@@ -13420,7 +13852,8 @@
     "level": "B1",
     "translation_ru": "почта",
     "translation_uk": "пошта",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/post.mp3"
   },
   {
     "noun": "Postleitzahl",
@@ -13429,7 +13862,8 @@
     "level": "B1",
     "translation_ru": "почтовый индекс",
     "translation_uk": "поштовий індекс",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/postleitzahl.mp3"
   },
   {
     "noun": "Präsentation",
@@ -13438,7 +13872,8 @@
     "level": "B1",
     "translation_ru": "презентация",
     "translation_uk": "презентація",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/pr%C3%A4sentation.mp3"
   },
   {
     "noun": "Praxis",
@@ -13447,7 +13882,8 @@
     "level": "B1",
     "translation_ru": "практика",
     "translation_uk": "практика",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/praxis.mp3"
   },
   {
     "noun": "Presse",
@@ -13456,7 +13892,8 @@
     "level": "B1",
     "translation_ru": "пресса",
     "translation_uk": "преса",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/presse.mp3"
   },
   {
     "noun": "Produktion",
@@ -13465,7 +13902,8 @@
     "level": "B1",
     "translation_ru": "производство",
     "translation_uk": "виробництво",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/produktion.mp3"
   },
   {
     "noun": "Prüfung",
@@ -13474,7 +13912,8 @@
     "level": "B1",
     "translation_ru": "экзамен, тест",
     "translation_uk": "екзамен, тест",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/pr%C3%BCfung.mp3"
   },
   {
     "noun": "Puppe",
@@ -13483,7 +13922,8 @@
     "level": "B1",
     "translation_ru": "кукла",
     "translation_uk": "лялька",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/puppe.mp3"
   },
   {
     "noun": "Qualifikation",
@@ -13492,7 +13932,8 @@
     "level": "B1",
     "translation_ru": "квалификация",
     "translation_uk": "кваліфікація",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/qualifikation.mp3"
   },
   {
     "noun": "Qualität",
@@ -13501,7 +13942,8 @@
     "level": "B1",
     "translation_ru": "качество",
     "translation_uk": "якість",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/qualit%C3%A4t.mp3"
   },
   {
     "noun": "Quittung",
@@ -13510,7 +13952,8 @@
     "level": "B1",
     "translation_ru": "квитанция",
     "translation_uk": "квитанція",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/quittung.mp3"
   },
   {
     "noun": "Reaktion",
@@ -13519,7 +13962,8 @@
     "level": "B1",
     "translation_ru": "реакция",
     "translation_uk": "реакція",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/reaktion.mp3"
   },
   {
     "noun": "Realität",
@@ -13528,7 +13972,8 @@
     "level": "B1",
     "translation_ru": "реальность",
     "translation_uk": "реальність",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/realit%C3%A4t.mp3"
   },
   {
     "noun": "Realschule",
@@ -13537,7 +13982,8 @@
     "level": "B1",
     "translation_ru": "реальная школа",
     "translation_uk": "реальна школа",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/realschule.mp3"
   },
   {
     "noun": "Recherche",
@@ -13546,7 +13992,8 @@
     "level": "B1",
     "translation_ru": "исследование",
     "translation_uk": "дослідження",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/recherche.mp3"
   },
   {
     "noun": "Rechnung",
@@ -13555,7 +14002,8 @@
     "level": "B1",
     "translation_ru": "счет, invoice",
     "translation_uk": "рахунок, invoice",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/rechnung.mp3"
   },
   {
     "noun": "Rede",
@@ -13564,7 +14012,8 @@
     "level": "B1",
     "translation_ru": "речь",
     "translation_uk": "промова",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/rede.mp3"
   },
   {
     "noun": "Reform",
@@ -13573,7 +14022,8 @@
     "level": "B1",
     "translation_ru": "реформа",
     "translation_uk": "реформа",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/reform.mp3"
   },
   {
     "noun": "Regel",
@@ -13582,7 +14032,8 @@
     "level": "B1",
     "translation_ru": "правило",
     "translation_uk": "правило",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/regel.mp3"
   },
   {
     "noun": "Regierung",
@@ -13591,7 +14042,8 @@
     "level": "B1",
     "translation_ru": "правительство",
     "translation_uk": "уряд",
-    "topic": "Politics"
+    "topic": "Politics",
+    "audio_url": "https://der-artikel.de/audio/regierung.mp3"
   },
   {
     "noun": "Region",
@@ -13600,7 +14052,8 @@
     "level": "B1",
     "translation_ru": "регион",
     "translation_uk": "регіон",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/region.mp3"
   },
   {
     "noun": "Reihe",
@@ -13609,7 +14062,8 @@
     "level": "B1",
     "translation_ru": "ряд",
     "translation_uk": "ряд",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/reihe.mp3"
   },
   {
     "noun": "Reihenfolge",
@@ -13618,7 +14072,8 @@
     "level": "B1",
     "translation_ru": "порядок",
     "translation_uk": "порядок",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/reihenfolge.mp3"
   },
   {
     "noun": "Reinigung",
@@ -13627,7 +14082,8 @@
     "level": "B1",
     "translation_ru": "уборка",
     "translation_uk": "прибирання",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/reinigung.mp3"
   },
   {
     "noun": "Reise",
@@ -13636,7 +14092,8 @@
     "level": "B1",
     "translation_ru": "поездка",
     "translation_uk": "подорож",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/reise.mp3"
   },
   {
     "noun": "Reklame",
@@ -13645,7 +14102,8 @@
     "level": "B1",
     "translation_ru": "реклама",
     "translation_uk": "реклама",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/reklame.mp3"
   },
   {
     "noun": "Religion",
@@ -13654,7 +14112,8 @@
     "level": "B1",
     "translation_ru": "религия",
     "translation_uk": "релігія",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/religion.mp3"
   },
   {
     "noun": "Rente",
@@ -13663,7 +14122,8 @@
     "level": "B1",
     "translation_ru": "пенсия",
     "translation_uk": "пенсія",
-    "topic": "Work & Career"
+    "topic": "Work & Career",
+    "audio_url": "https://der-artikel.de/audio/rente.mp3"
   },
   {
     "noun": "Reparatur",
@@ -13672,7 +14132,8 @@
     "level": "B1",
     "translation_ru": "ремонт",
     "translation_uk": "ремонт",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/reparatur.mp3"
   },
   {
     "noun": "Reportage",
@@ -13681,7 +14142,8 @@
     "level": "B1",
     "translation_ru": "репортаж",
     "translation_uk": "репортаж",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/reportage.mp3"
   },
   {
     "noun": "Reservierung",
@@ -13690,7 +14152,8 @@
     "level": "B1",
     "translation_ru": "резервирование",
     "translation_uk": "резервування",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/reservierung.mp3"
   },
   {
     "noun": "Rezeption",
@@ -13699,7 +14162,8 @@
     "level": "B1",
     "translation_ru": "рецепция",
     "translation_uk": "рецепція",
-    "topic": "Services"
+    "topic": "Services",
+    "audio_url": "https://der-artikel.de/audio/rezeption.mp3"
   },
   {
     "noun": "Reception",
@@ -13717,7 +14181,8 @@
     "level": "B1",
     "translation_ru": "направление",
     "translation_uk": "спрямування",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/richtung.mp3"
   },
   {
     "noun": "Rolle",
@@ -13726,7 +14191,8 @@
     "level": "B1",
     "translation_ru": "роль",
     "translation_uk": "роль",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/rolle.mp3"
   },
   {
     "noun": "Rose",
@@ -13735,7 +14201,8 @@
     "level": "B1",
     "translation_ru": "роза",
     "translation_uk": "роза",
-    "topic": "Flowers"
+    "topic": "Flowers",
+    "audio_url": "https://der-artikel.de/audio/rose.mp3"
   },
   {
     "noun": "Rückfahrt",
@@ -13744,7 +14211,8 @@
     "level": "B1",
     "translation_ru": "обратный путь",
     "translation_uk": "повернення",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/r%C3%BCckfahrt.mp3"
   },
   {
     "noun": "Rückkehr",
@@ -13753,7 +14221,8 @@
     "level": "B1",
     "translation_ru": "возврат",
     "translation_uk": "повернення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/r%C3%BCckkehr.mp3"
   },
   {
     "noun": "Rückmeldung",
@@ -13762,7 +14231,8 @@
     "level": "B1",
     "translation_ru": "обратная связь",
     "translation_uk": "відгук",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/r%C3%BCckmeldung.mp3"
   },
   {
     "noun": "Rücksicht",
@@ -13771,7 +14241,8 @@
     "level": "B1",
     "translation_ru": "внимание",
     "translation_uk": "увага",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/r%C3%BCcksicht.mp3"
   },
   {
     "noun": "Rufnummer",
@@ -13780,7 +14251,8 @@
     "level": "B1",
     "translation_ru": "номер телефона",
     "translation_uk": "номер телефону",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/rufnummer.mp3"
   },
   {
     "noun": "Ruhe",
@@ -13789,7 +14261,8 @@
     "level": "B1",
     "translation_ru": "тишина",
     "translation_uk": "тиша",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/ruhe.mp3"
   },
   {
     "noun": "Runde",
@@ -13798,7 +14271,8 @@
     "level": "B1",
     "translation_ru": "круг",
     "translation_uk": "круг",
-    "topic": "Shapes"
+    "topic": "Shapes",
+    "audio_url": "https://der-artikel.de/audio/runde.mp3"
   },
   {
     "noun": "Rundfahrt",
@@ -13807,7 +14281,8 @@
     "level": "B1",
     "translation_ru": "круговая поездка",
     "translation_uk": "кругова подорож",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/rundfahrt.mp3"
   },
   {
     "noun": "S-Bahn",
@@ -13816,7 +14291,8 @@
     "level": "B1",
     "translation_ru": "городская электричка",
     "translation_uk": "міська електричка",
-    "topic": "Travel & Transport"
+    "topic": "Travel & Transport",
+    "audio_url": "https://der-artikel.de/audio/s-bahn.mp3"
   },
   {
     "noun": "Sache",
@@ -13825,7 +14301,8 @@
     "level": "B1",
     "translation_ru": "вещь, дело",
     "translation_uk": "річ, справа",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/sache.mp3"
   },
   {
     "noun": "Sahne",
@@ -13834,7 +14311,8 @@
     "level": "B1",
     "translation_ru": "сливки",
     "translation_uk": "вершки",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/sahne.mp3"
   },
   {
     "noun": "Saison",
@@ -13843,7 +14321,8 @@
     "level": "B1",
     "translation_ru": "сезон",
     "translation_uk": "сезон",
-    "topic": "Time & Dates"
+    "topic": "Time & Dates",
+    "audio_url": "https://der-artikel.de/audio/saison.mp3"
   },
   {
     "noun": "Salbe",
@@ -13852,7 +14331,8 @@
     "level": "B1",
     "translation_ru": "мазь",
     "translation_uk": "мазь",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/salbe.mp3"
   },
   {
     "noun": "Schachtel",
@@ -13861,7 +14341,8 @@
     "level": "B1",
     "translation_ru": "коробка",
     "translation_uk": "коробка",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/schachtel.mp3"
   },
   {
     "noun": "Scheibe",
@@ -13870,7 +14351,8 @@
     "level": "B1",
     "translation_ru": "ломтик",
     "translation_uk": "слайс",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/scheibe.mp3"
   },
   {
     "noun": "Scheidung",
@@ -13879,7 +14361,8 @@
     "level": "B1",
     "translation_ru": "развод",
     "translation_uk": "розлучення",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/scheidung.mp3"
   },
   {
     "noun": "Schere",
@@ -13888,7 +14371,8 @@
     "level": "B1",
     "translation_ru": "ножницы",
     "translation_uk": "scissors",
-    "topic": "Shopping & Everyday Items"
+    "topic": "Shopping & Everyday Items",
+    "audio_url": "https://der-artikel.de/audio/schere.mp3"
   },
   {
     "noun": "Schildkröte",
@@ -13897,7 +14381,8 @@
     "level": "B1",
     "translation_ru": "черепаха",
     "translation_uk": "черепаха",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/schildkr%C3%B6te.mp3"
   },
   {
     "noun": "Schlange",
@@ -13906,7 +14391,8 @@
     "level": "B1",
     "translation_ru": "змея",
     "translation_uk": "змія",
-    "topic": "Animals"
+    "topic": "Animals",
+    "audio_url": "https://der-artikel.de/audio/schlange.mp3"
   },
   {
     "noun": "Schokolade",
@@ -13915,7 +14401,8 @@
     "level": "B1",
     "translation_ru": "шоколад",
     "translation_uk": "шоколад",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/schokolade.mp3"
   },
   {
     "noun": "Schrift",
@@ -13924,7 +14411,8 @@
     "level": "B1",
     "translation_ru": "почерк",
     "translation_uk": "почерк",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/schrift.mp3"
   },
   {
     "noun": "Schuld",
@@ -13933,16 +14421,18 @@
     "level": "B1",
     "translation_ru": "вина",
     "translation_uk": "провина",
-    "topic": "Abstract Concepts"
+    "topic": "Abstract Concepts",
+    "audio_url": "https://der-artikel.de/audio/schuld.mp3"
   },
   {
     "noun": "Schulden",
-    "article": "die",
+    "article": "das",
     "translation_en": "debt (pl)",
     "level": "B1",
     "translation_ru": "долги",
     "translation_uk": "борги",
-    "topic": "Finance"
+    "topic": "Finance",
+    "audio_url": "https://der-artikel.de/audio/schulden.mp3"
   },
   {
     "noun": "Schule",
@@ -13951,7 +14441,8 @@
     "level": "B1",
     "translation_ru": "школа",
     "translation_uk": "школа",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/schule.mp3"
   },
   {
     "noun": "Schülerin",
@@ -13960,7 +14451,8 @@
     "level": "B1",
     "translation_ru": "ученица",
     "translation_uk": "учениця",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BClerin.mp3"
   },
   {
     "noun": "Schulnote",
@@ -13969,7 +14461,8 @@
     "level": "B1",
     "translation_ru": "школьная оценка",
     "translation_uk": "шкільна оцінка",
-    "topic": "Education & Learning"
+    "topic": "Education & Learning",
+    "audio_url": "https://der-artikel.de/audio/schulnote.mp3"
   },
   {
     "noun": "Schulter",
@@ -13978,7 +14471,8 @@
     "level": "B1",
     "translation_ru": "плечо",
     "translation_uk": "плече",
-    "topic": "Body Parts"
+    "topic": "Body Parts",
+    "audio_url": "https://der-artikel.de/audio/schulter.mp3"
   },
   {
     "noun": "Schüssel",
@@ -13987,7 +14481,8 @@
     "level": "B1",
     "translation_ru": "миска",
     "translation_uk": "bowl",
-    "topic": "Food & Drink"
+    "topic": "Food & Drink",
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BCssel.mp3"
   },
   {
     "noun": "Schwangerschaft",
@@ -13996,7 +14491,8 @@
     "level": "B1",
     "translation_ru": "беременность",
     "translation_uk": "вагітність",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/schwangerschaft.mp3"
   },
   {
     "noun": "Schweiz",
@@ -14005,7 +14501,8 @@
     "level": "B1",
     "translation_ru": "Швейцария",
     "translation_uk": "Швейцарія",
-    "topic": "Countries & Nationalities"
+    "topic": "Countries & Nationalities",
+    "audio_url": "https://der-artikel.de/audio/schweiz.mp3"
   },
   {
     "noun": "Schwester",
