@@ -22,16 +22,16 @@ const geistMono = Geist_Mono({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
+  ],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derdiedas-trainer.de"),
   title: "Der Die Das Trainer - German Article Trainer (der/ die/ das)",
   description: "Practice German articles der/ die/ das with an interactive trainer. 1000+ words from Goethe A1/A2, instant feedback, progress tracking, and custom word lists.",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
-  ],
   keywords: [
     "German articles",
     "der die das",

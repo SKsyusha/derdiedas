@@ -1,6 +1,6 @@
 'use client';
 
-import { ConfigProvider, theme as antTheme } from 'antd';
+import { App, ConfigProvider, theme as antTheme } from 'antd';
 import { useTheme } from './ThemeProvider';
 import { ReactNode } from 'react';
 
@@ -80,7 +80,7 @@ export default function AntConfigProvider({ children }: AntConfigProviderProps) 
         },
       }}
     >
-      {children}
+      <App>{children}</App>
     </ConfigProvider>
   );
 }
