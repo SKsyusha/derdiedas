@@ -85,7 +85,7 @@ export function generateSentences(
       }
 
       // Replace placeholders in template
-      let sentence = template.template
+      const sentence = template.template
         .replace('{DET}', determinerForm)
         .replace('{WORD}', nounForm);
 

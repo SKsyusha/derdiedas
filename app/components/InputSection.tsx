@@ -1,11 +1,11 @@
 'use client';
 
-import { Input, Button } from 'antd';
+import { Input, Button, type InputRef } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 
 interface InputSectionProps {
-  inputRef: React.RefObject<any>;
+  inputRef: React.RefObject<InputRef | null>;
   userInput: string;
   onInputChange: (value: string) => void;
   onCheck: (source?: 'enter' | 'click') => void;
@@ -31,7 +31,7 @@ export default function InputSection({
   // Trigger shake animation when invalid input
   useEffect(() => {
     if (feedback === 'invalid') {
-      setShouldShake(true);
+      queueMicrotask(() => setShouldShake(true));
       const timer = setTimeout(() => {
         setShouldShake(false);
       }, 500);
@@ -98,10 +98,7 @@ export default function InputSection({
               const shouldRestoreFocus = (() => {
                 if (typeof document === 'undefined') return false;
                 const activeEl = document.activeElement;
-                const inputEl =
-                  inputRef.current?.input ??
-                  inputRef.current?.resizableTextArea?.textArea ??
-                  null;
+                const inputEl = inputRef.current?.input ?? null;
                 return Boolean(activeEl && inputEl && activeEl === inputEl);
               })();
 

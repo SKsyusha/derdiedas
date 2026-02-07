@@ -15,7 +15,8 @@ import InputSection from './InputSection';
 import StatsCard from './StatsCard';
 import ProgressBar from './ProgressBar';
 import { useWordTraining } from '../hooks/useWordTraining';
-import { getCookie, setCookie } from '../utils/cookies';
+import { getCookie, setCookie, removeCookie } from '../utils/cookies';
+import { getDictionary } from '../services/userDictionaryService';
 import SeoEmptyState from './SeoEmptyState';
 
 const SETTINGS_COOKIE_NAME = 'training_settings';
@@ -204,56 +205,78 @@ export default function Trainer() {
     };
   }, [settings.topics, learnedWords, getAllWordsInTopics, getEnabledWords]);
 
-  // Load user dictionaries from localStorage on mount
+  // Load user dictionaries: from DB if we have id in cookie, else from localStorage
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    
-    try {
-      const savedDictionaries = localStorage.getItem('userDictionaries');
-      if (savedDictionaries) {
-        const parsed = JSON.parse(savedDictionaries);
-        setUserDictionaries(parsed);
-      }
-    } catch (error) {
-      console.error('Failed to load user dictionaries from localStorage:', error);
+
+    const dbId = getCookie('userDictionaryId');
+    if (dbId) {
+      getDictionary(dbId)
+        .then((data) => {
+          setUserDictionaries([
+            { id: data.id, name: data.name, words: data.words, enabled: true },
+          ]);
+        })
+        .catch(() => {
+          removeCookie('userDictionaryId'); // stale id — dictionary not in DB
+          try {
+            const saved = localStorage.getItem('userDictionaries');
+            if (saved) setUserDictionaries(JSON.parse(saved));
+          } catch {}
+        })
+        .finally(() => setIsMounted(true));
+    } else {
+      queueMicrotask(() => {
+        try {
+          const savedDictionaries = localStorage.getItem('userDictionaries');
+          if (savedDictionaries) {
+            setUserDictionaries(JSON.parse(savedDictionaries));
+          }
+        } catch (error) {
+          console.error('Failed to load user dictionaries from localStorage:', error);
+        }
+        setIsMounted(true);
+      });
     }
-    
-    setIsMounted(true);
-    settingsLoadedFromCookieRef.current = true; // Settings already loaded in getInitialSettings
+    settingsLoadedFromCookieRef.current = true;
   }, []);
 
   // Load learned progress when filters change or on mount
   useEffect(() => {
     if (!isMounted || typeof window === 'undefined') return;
-    try {
-      const saved = localStorage.getItem(progressKey);
-      if (saved) {
-        const parsed = JSON.parse(saved) as string[];
-        setLearnedWords(new Set(parsed));
-      } else {
+    queueMicrotask(() => {
+      try {
+        const saved = localStorage.getItem(progressKey);
+        if (saved) {
+          const parsed = JSON.parse(saved) as string[];
+          setLearnedWords(new Set(parsed));
+        } else {
+          setLearnedWords(new Set());
+        }
+      } catch (error) {
+        console.error('Failed to load training progress:', error);
         setLearnedWords(new Set());
       }
-    } catch (error) {
-      console.error('Failed to load training progress:', error);
-      setLearnedWords(new Set());
-    }
+    });
   }, [isMounted, progressKey]);
 
   // Load session stats when filters change or on mount
   useEffect(() => {
     if (!isMounted || typeof window === 'undefined') return;
-    try {
-      const saved = localStorage.getItem(statsKey);
-      if (saved) {
-        const parsed = JSON.parse(saved) as SessionStats;
-        setStats(parsed);
-      } else {
+    queueMicrotask(() => {
+      try {
+        const saved = localStorage.getItem(statsKey);
+        if (saved) {
+          const parsed = JSON.parse(saved) as SessionStats;
+          setStats(parsed);
+        } else {
+          setStats({ total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 });
+        }
+      } catch (error) {
+        console.error('Failed to load session stats:', error);
         setStats({ total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 });
       }
-    } catch (error) {
-      console.error('Failed to load session stats:', error);
-      setStats({ total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 });
-    }
+    });
   }, [isMounted, statsKey]);
 
   // Detect mobile device
@@ -262,7 +285,7 @@ export default function Trainer() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640);
     };
-    checkMobile();
+    queueMicrotask(checkMobile);
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, [isMounted]);
@@ -271,11 +294,13 @@ export default function Trainer() {
   useEffect(() => {
     if (!isMounted) return;
     const translationLanguage: Language = i18n.language === 'ru' ? 'Russian' : 'English';
-    setSettings((prev) => {
-      if (prev.language !== translationLanguage) {
-        return { ...prev, language: translationLanguage };
-      }
-      return prev;
+    queueMicrotask(() => {
+      setSettings((prev) => {
+        if (prev.language !== translationLanguage) {
+          return { ...prev, language: translationLanguage };
+        }
+        return prev;
+      });
     });
   }, [isMounted]);
 

@@ -51,8 +51,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   useEffect(() => {
     const storedTheme = getStoredTheme();
     const initialTheme = storedTheme || getSystemTheme();
-    setThemeState(initialTheme);
-    setMounted(true);
+    queueMicrotask(() => {
+      setThemeState(initialTheme);
+      setMounted(true);
+    });
   }, []);
 
   useEffect(() => {
