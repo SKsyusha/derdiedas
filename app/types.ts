@@ -22,6 +22,8 @@ export type Topic = string;
 export interface Word {
   noun: string;
   article: Article;
+  /** Optional list of alternative articles, e.g. ["der, das"] — comma-separated in each string */
+  alternative_articles?: string[];
   translation?: string; // для обратной совместимости
   translation_ru?: string;
   translation_en?: string;

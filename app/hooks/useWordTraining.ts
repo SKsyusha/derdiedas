@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { Word, TrainingSettings, Case, DeterminerType } from '../types';
-import { generateSentence, getAcceptedDeterminersByCase, getDeterminerByCase } from '../dictionaries';
+import { generateSentence, getAllAcceptedDeterminersForWord } from '../dictionaries';
 
 // Valid determiners list (for input validation) — артикли + (опционально) местоимения-детерминативы
 const BASE_VALID_DETERMINERS = [
@@ -466,14 +466,8 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
       return;
     }
 
-    const correctAnswer = getDeterminerByCase(
-      currentWord.article,
-      currentCase,
-      settings.determinerType
-    );
-
-    const acceptedAnswers = getAcceptedDeterminersByCase(
-      currentWord.article,
+    const acceptedAnswers = getAllAcceptedDeterminersForWord(
+      currentWord,
       currentCase,
       settings.determinerType
     );

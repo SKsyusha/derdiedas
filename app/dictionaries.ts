@@ -179,6 +179,43 @@ export function getDeterminerByCase(
   return getArticleByCase(article, case_, determinerType);
 }
 
+const VALID_ARTICLES: Article[] = ['der', 'die', 'das'];
+
+function parseAlternativeArticles(alt: string[]): Article[] {
+  const articles: Article[] = [];
+  for (const s of alt) {
+    for (const part of s.split(',')) {
+      const a = part.trim().toLowerCase() as Article;
+      if (VALID_ARTICLES.includes(a)) articles.push(a);
+    }
+  }
+  return articles;
+}
+
+/**
+ * Returns all accepted determiner forms for a word (main article + alternative_articles).
+ * Used for answer checking and for displaying correct answers (e.g. "der / das").
+ */
+export function getAllAcceptedDeterminersForWord(
+  word: Word,
+  case_: Case,
+  determinerType: DeterminerType
+): string[] {
+  const seen = new Set<string>();
+  const add = (article: Article) => {
+    for (const form of getAcceptedDeterminersByCase(article, case_, determinerType)) {
+      seen.add(form);
+    }
+  };
+  add(word.article);
+  if (word.alternative_articles?.length) {
+    for (const a of parseAlternativeArticles(word.alternative_articles)) {
+      add(a);
+    }
+  }
+  return Array.from(seen);
+}
+
 // Generate sentence templates
 export function generateSentence(
   word: Word,
