@@ -104,10 +104,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     const shouldRestoreFocus = (() => {
       if (typeof document === 'undefined') return false;
       const activeEl = document.activeElement;
-      const inputEl =
-        inputRef.current?.input ??
-        inputRef.current?.resizableTextArea?.textArea ??
-        null;
+      const inputEl = inputRef.current?.input ?? null;
       return Boolean(activeEl && inputEl && activeEl === inputEl);
     })();
 
@@ -315,10 +312,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     const shouldRestoreFocus = (() => {
       if (typeof document === 'undefined') return false;
       const activeEl = document.activeElement;
-      const inputEl =
-        inputRef.current?.input ??
-        inputRef.current?.resizableTextArea?.textArea ??
-        null;
+      const inputEl = inputRef.current?.input ?? null;
       return Boolean(activeEl && inputEl && activeEl === inputEl);
     })();
 

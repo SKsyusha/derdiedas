@@ -31,7 +31,6 @@ export interface Word {
   exampleSentence?: string;
   level?: Level;
   topic?: Topic;
-  alternative_articles?: string[];
   audio_url?: string;
 }
 
