@@ -1,0 +1,222 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "id": "5d7522c3-8188-4a31-9eda-081decec14f4",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "name": "user_dictionaries",
+      "entityType": "tables"
+    },
+    {
+      "name": "user_dictionary_words",
+      "entityType": "tables"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "user_dictionaries"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "user_dictionaries"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "public",
+      "entityType": "columns",
+      "table": "user_dictionaries"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "table": "user_dictionaries"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "dictionary_id",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "noun",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "article",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "alternative_articles",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "translation",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "translation_ru",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "translation_en",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "translation_uk",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "example_sentence",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "level",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "topic",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "audio_url",
+      "entityType": "columns",
+      "table": "user_dictionary_words"
+    },
+    {
+      "columns": [
+        "dictionary_id"
+      ],
+      "tableTo": "user_dictionaries",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "CASCADE",
+      "nameExplicit": false,
+      "name": "fk_user_dictionary_words_dictionary_id_user_dictionaries_id_fk",
+      "entityType": "fks",
+      "table": "user_dictionary_words"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "user_dictionaries_pk",
+      "table": "user_dictionaries",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "user_dictionary_words_pk",
+      "table": "user_dictionary_words",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
