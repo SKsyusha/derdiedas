@@ -9,6 +9,8 @@ export type UserDictionaryState = {
 
 const IMPORT_ARTICLES: Article[] = ['der', 'die', 'das'];
 const IMPORT_SEPARATOR_REGEX = /(?:\s+[-–—]\s+|->|:|=)/;
+/** Strip leading bullet (e.g. "- ", "• ", "* ") so "article + noun — translation" can be parsed. */
+const LEADING_BULLET_REGEX = /^[-*•·]\s+/;
 
 /**
  * Parses multi-line import text into Word[].
@@ -16,13 +18,16 @@ const IMPORT_SEPARATOR_REGEX = /(?:\s+[-–—]\s+|->|:|=)/;
  * Supported line formats:
  * - "der Hund собака"
  * - "der Hund - собака" / "der Hund — собака" / "der Hund: собака" / "der Hund -> собака"
+ * - Bullet list: "- die Banane — банан", "• der Apfel — яблоко"
  */
 export function parseUserDictionaryImportText(text: string): Word[] {
   const lines = text.split(/\r?\n/);
   const result: Word[] = [];
 
   for (const raw of lines) {
-    const line = raw.replace(/\t+/g, ' ').trim();
+    let line = raw.replace(/\t+/g, ' ').trim();
+    if (!line) continue;
+    line = line.replace(LEADING_BULLET_REGEX, '');
     if (!line) continue;
 
     const [left, ...right] = line.split(IMPORT_SEPARATOR_REGEX);

@@ -143,7 +143,6 @@ export default function UserDictionaryDrawer({
             <Button
               type="primary"
               onClick={importUserWords}
-              disabled={parsedImportWords.length === 0}
               className="w-full sm:w-auto"
               style={{
                 backgroundColor: '#8b5cf6',
