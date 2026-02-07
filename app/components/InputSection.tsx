@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 
 interface InputSectionProps {
-  inputRef: React.RefObject<any>;
+  inputRef: React.RefObject<HTMLInputElement | null>;
   userInput: string;
   onInputChange: (value: string) => void;
   onCheck: (source?: 'enter' | 'click') => void;
@@ -31,7 +31,7 @@ export default function InputSection({
   // Trigger shake animation when invalid input
   useEffect(() => {
     if (feedback === 'invalid') {
-      setShouldShake(true);
+      queueMicrotask(() => setShouldShake(true));
       const timer = setTimeout(() => {
         setShouldShake(false);
       }, 500);

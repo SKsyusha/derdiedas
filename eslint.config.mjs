@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Root scripts (Node, CommonJS)
+    "convert-jsonl-to-json.js",
+    "count-unique-words.js",
+    "download-audio.js",
+    "extract-topics.js",
+    "verify-articles.js",
   ]),
 ]);
 

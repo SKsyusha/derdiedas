@@ -9,7 +9,7 @@ import {
   UserDictionaryState,
 } from '../utils/userDictionaryImport';
 import type { Word } from '../types';
-import { getCookie, setCookie } from '../utils/cookies';
+import { setCookie } from '../utils/cookies';
 import {
   createDictionary,
   updateDictionary,
@@ -57,7 +57,7 @@ export default function UserDictionaryDrawer({
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640);
     };
-    checkMobile();
+    queueMicrotask(checkMobile);
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);

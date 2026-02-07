@@ -24,36 +24,6 @@ function wordToRow(dictionaryId: string, word: Word) {
   };
 }
 
-function rowToWord(row: {
-  noun: string;
-  article: string;
-  alternative_articles: string | null;
-  translation: string | null;
-  translation_ru: string | null;
-  translation_en: string | null;
-  translation_uk: string | null;
-  example_sentence: string | null;
-  level: string | null;
-  topic: string | null;
-  audio_url: string | null;
-}): Word {
-  return {
-    noun: row.noun,
-    article: row.article as Word["article"],
-    ...(row.translation && { translation: row.translation }),
-    ...(row.translation_ru && { translation_ru: row.translation_ru }),
-    ...(row.translation_en && { translation_en: row.translation_en }),
-    ...(row.translation_uk && { translation_uk: row.translation_uk }),
-    ...(row.example_sentence && { exampleSentence: row.example_sentence }),
-    ...(row.level && { level: row.level as Word["level"] }),
-    ...(row.topic && { topic: row.topic }),
-    ...(row.alternative_articles && {
-      alternative_articles: JSON.parse(row.alternative_articles) as string[],
-    }),
-    ...(row.audio_url && { audio_url: row.audio_url }),
-  };
-}
-
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as { name: string; words: Word[] };
