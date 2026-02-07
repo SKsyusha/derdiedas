@@ -1,11 +1,11 @@
 'use client';
 
-import { Input, Button } from 'antd';
+import { Input, Button, type InputRef } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 
 interface InputSectionProps {
-  inputRef: React.RefObject<HTMLInputElement | null>;
+  inputRef: React.RefObject<InputRef | null>;
   userInput: string;
   onInputChange: (value: string) => void;
   onCheck: (source?: 'enter' | 'click') => void;

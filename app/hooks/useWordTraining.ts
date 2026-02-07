@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
+import type { InputRef } from 'antd';
 import { Word, TrainingSettings, Case, DeterminerType } from '../types';
 import { generateSentence, getAllAcceptedDeterminersForWord } from '../dictionaries';
 
@@ -83,7 +84,7 @@ export function useWordTraining({ settings, getEnabledWords, isMobile = false }:
     })}`;
   }, [settings.mode, settings.cases, settings.enabledDictionaries, settings.topics, settings.determinerType]);
   
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const inputRef = useRef<InputRef | null>(null);
   const isProcessingRef = useRef<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const timeoutPurposeRef = useRef<'afterCorrect' | 'afterIncorrect' | 'clearFeedback' | null>(null);
