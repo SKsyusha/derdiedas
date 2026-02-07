@@ -1,15 +1,24 @@
 'use client';
 
 import { useMemo, useState, useEffect, useCallback } from 'react';
-import { Drawer, Input, Button, Typography, Empty, Popconfirm } from 'antd';
+import { Drawer, Input, Button, Typography, Empty, Popconfirm, App } from 'antd';
 import { useTranslation } from 'react-i18next';
 import {
   mergeImportedWordsIntoUserDictionaries,
   parseUserDictionaryImportText,
   UserDictionaryState,
 } from '../utils/userDictionaryImport';
+import type { Word } from '../types';
+import { getCookie, setCookie } from '../utils/cookies';
+import {
+  createDictionary,
+  updateDictionary,
+  isPersistedDictionaryId,
+} from '../services/userDictionaryService';
 
 const { Text } = Typography;
+
+const USER_DICTIONARY_ID_COOKIE = 'userDictionaryId';
 
 type UserDictionary = UserDictionaryState;
 
@@ -31,8 +40,10 @@ export default function UserDictionaryDrawer({
   onAfterImport,
 }: UserDictionaryDrawerProps) {
   const { t } = useTranslation();
+  const { message } = App.useApp();
   const [isMobile, setIsMobile] = useState(false);
   const [importText, setImportText] = useState('');
+  const [importing, setImporting] = useState(false);
 
   const scrollDrawerToTop = useCallback(() => {
     if (typeof document === 'undefined') return;
@@ -65,7 +76,7 @@ export default function UserDictionaryDrawer({
   const parsedImportWords = useMemo(() => parseUserDictionaryImportText(importText), [importText]);
   const hasAnyWords = useMemo(() => userDictionaries.some((d) => d.words.length > 0), [userDictionaries]);
 
-  const importUserWords = () => {
+  const importUserWords = useCallback(async () => {
     const { next, createdDictionaryId } = mergeImportedWordsIntoUserDictionaries(
       userDictionaries,
       parsedImportWords,
@@ -73,16 +84,79 @@ export default function UserDictionaryDrawer({
     );
     if (next === userDictionaries) return;
 
-    setUserDictionaries(next);
-    if (createdDictionaryId && onDictionaryCreated) onDictionaryCreated(createdDictionaryId);
-    if (onAfterImport) onAfterImport(next);
+    const first = next[0];
+    setImporting(true);
+    try {
+      const createAndSave = async () => {
+        const { id } = await createDictionary(first.name, first.words);
+        setCookie(USER_DICTIONARY_ID_COOKIE, id);
+        const nextWithId = next.map((d, i) => (i === 0 ? { ...d, id } : d));
+        setUserDictionaries(nextWithId);
+        onDictionaryCreated?.(id);
+        onAfterImport?.(nextWithId);
+        setImportText('');
+      };
 
-    setImportText('');
-  };
+      if (isPersistedDictionaryId(first.id)) {
+        try {
+          await updateDictionary(first.id, { words: first.words });
+          setUserDictionaries(next);
+          if (createdDictionaryId && onDictionaryCreated) onDictionaryCreated(createdDictionaryId);
+          if (onAfterImport) onAfterImport(next);
+          setImportText('');
+        } catch {
+          // 404 or other error: dictionary missing in DB (e.g. stale cookie) — create new one
+          await createAndSave();
+        }
+      } else {
+        await createAndSave();
+      }
+    } catch (e) {
+      message.error(e instanceof Error ? e.message : 'Import failed');
+    } finally {
+      setImporting(false);
+    }
+  }, [
+    userDictionaries,
+    parsedImportWords,
+    t,
+    setUserDictionaries,
+    onDictionaryCreated,
+    onAfterImport,
+    message,
+  ]);
 
-  const clearAllUserDictionaryWords = () => {
+  const syncWordsToDb = useCallback(
+    async (dictId: string, words: Word[]) => {
+      if (!isPersistedDictionaryId(dictId)) return;
+      try {
+        await updateDictionary(dictId, { words });
+      } catch {
+        message.error('Failed to sync with server');
+      }
+    },
+    [message]
+  );
+
+  const clearAllUserDictionaryWords = useCallback(() => {
+    const toSync = userDictionaries.filter((d) => isPersistedDictionaryId(d.id));
     setUserDictionaries((prev) => prev.map((d) => ({ ...d, words: [] })));
-  };
+    toSync.forEach((d) => syncWordsToDb(d.id, []));
+  }, [userDictionaries, setUserDictionaries, syncWordsToDb]);
+
+  const removeWord = useCallback(
+    (dictId: string, wordIndex: number) => {
+      setUserDictionaries((prev) =>
+        prev.map((d) => {
+          if (d.id !== dictId) return d;
+          const newWords = d.words.filter((_, i) => i !== wordIndex);
+          if (isPersistedDictionaryId(dictId)) syncWordsToDb(dictId, newWords);
+          return { ...d, words: newWords };
+        })
+      );
+    },
+    [setUserDictionaries, syncWordsToDb]
+  );
 
   return (
     <Drawer
@@ -143,6 +217,8 @@ export default function UserDictionaryDrawer({
             <Button
               type="primary"
               onClick={importUserWords}
+              loading={importing}
+              disabled={importing}
               className="w-full sm:w-auto"
               style={{
                 backgroundColor: '#8b5cf6',
@@ -193,15 +269,7 @@ export default function UserDictionaryDrawer({
                         type="text"
                         danger
                         size="small"
-                        onClick={() => {
-                          setUserDictionaries((prev) =>
-                            prev.map((d) =>
-                              d.id === dict.id
-                                ? { ...d, words: d.words.filter((_, i) => i !== idx) }
-                                : d
-                            )
-                          );
-                        }}
+                        onClick={() => removeWord(dict.id, idx)}
                       >
                         {t('userDictionary.delete')}
                       </Button>

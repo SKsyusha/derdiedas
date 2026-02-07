@@ -3,7 +3,7 @@ import { db } from "@/app/db";
 import { userDictionaries, userDictionaryWords } from "@/app/db/schema";
 import type { Word } from "@/app/types";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 function wordToRow(dictionaryId: string, word: Word) {
   return {

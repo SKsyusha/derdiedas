@@ -15,7 +15,8 @@ import InputSection from './InputSection';
 import StatsCard from './StatsCard';
 import ProgressBar from './ProgressBar';
 import { useWordTraining } from '../hooks/useWordTraining';
-import { getCookie, setCookie } from '../utils/cookies';
+import { getCookie, setCookie, removeCookie } from '../utils/cookies';
+import { getDictionary } from '../services/userDictionaryService';
 import SeoEmptyState from './SeoEmptyState';
 
 const SETTINGS_COOKIE_NAME = 'training_settings';
@@ -204,22 +205,38 @@ export default function Trainer() {
     };
   }, [settings.topics, learnedWords, getAllWordsInTopics, getEnabledWords]);
 
-  // Load user dictionaries from localStorage on mount
+  // Load user dictionaries: from DB if we have id in cookie, else from localStorage
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    
-    try {
-      const savedDictionaries = localStorage.getItem('userDictionaries');
-      if (savedDictionaries) {
-        const parsed = JSON.parse(savedDictionaries);
-        setUserDictionaries(parsed);
+
+    const dbId = getCookie('userDictionaryId');
+    if (dbId) {
+      getDictionary(dbId)
+        .then((data) => {
+          setUserDictionaries([
+            { id: data.id, name: data.name, words: data.words, enabled: true },
+          ]);
+        })
+        .catch(() => {
+          removeCookie('userDictionaryId'); // stale id — dictionary not in DB
+          try {
+            const saved = localStorage.getItem('userDictionaries');
+            if (saved) setUserDictionaries(JSON.parse(saved));
+          } catch {}
+        })
+        .finally(() => setIsMounted(true));
+    } else {
+      try {
+        const savedDictionaries = localStorage.getItem('userDictionaries');
+        if (savedDictionaries) {
+          setUserDictionaries(JSON.parse(savedDictionaries));
+        }
+      } catch (error) {
+        console.error('Failed to load user dictionaries from localStorage:', error);
       }
-    } catch (error) {
-      console.error('Failed to load user dictionaries from localStorage:', error);
+      setIsMounted(true);
     }
-    
-    setIsMounted(true);
-    settingsLoadedFromCookieRef.current = true; // Settings already loaded in getInitialSettings
+    settingsLoadedFromCookieRef.current = true;
   }, []);
 
   // Load learned progress when filters change or on mount
