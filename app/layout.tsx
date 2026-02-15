@@ -98,11 +98,11 @@ export const metadata: Metadata = {
   category: "Education",
   icons: {
     icon: [
-      { url: "/favicon.ico?v=2" },
+      { url: "/favicon.ico?v=3" },
       { url: "/android/mipmap-xxxhdpi/ic_launcher.png", sizes: "192x192", type: "image/png" },
       { url: "/Assets.xcassets/AppIcon.appiconset/1024.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: [{ url: "/favicon.ico?v=2" }],
+    shortcut: [{ url: "/favicon.ico?v=3" }],
     apple: [
       { url: "/Assets.xcassets/AppIcon.appiconset/180.png", sizes: "180x180", type: "image/png" },
     ],
@@ -208,7 +208,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico?v=3" sizes="any" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Der Die Das Trainer" />
