@@ -11,6 +11,7 @@ interface WordDisplayProps {
   userAnswer?: string;
   feedback: 'correct' | 'incorrect' | null;
   showTranslation: boolean;
+  playSound: boolean;
   translation?: string;
 }
 
@@ -22,6 +23,7 @@ export default function WordDisplay({
   userAnswer,
   feedback,
   showTranslation,
+  playSound,
   translation,
 }: WordDisplayProps) {
   const displayAnswer =
@@ -29,6 +31,7 @@ export default function WordDisplay({
 
   const hadFeedbackRef = useRef(false);
   useEffect(() => {
+    if (!playSound) return;
     if (feedback === 'correct' || feedback === 'incorrect') {
       if (word.audio_url && !hadFeedbackRef.current) {
         const audio = new Audio(word.audio_url);
@@ -38,7 +41,7 @@ export default function WordDisplay({
     } else {
       hadFeedbackRef.current = false;
     }
-  }, [feedback, word.audio_url]);
+  }, [playSound, feedback, word.audio_url]);
 
   const playAudio = useCallback(() => {
     if (word.audio_url) {
@@ -47,7 +50,7 @@ export default function WordDisplay({
     }
   }, [word.audio_url]);
 
-  const soundButton = word.audio_url ? (
+  const soundButton = playSound && word.audio_url ? (
     <button
       type="button"
       onClick={playAudio}

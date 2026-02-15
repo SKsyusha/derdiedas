@@ -227,6 +227,15 @@ export default function SettingsDrawer({
           </Checkbox>
         </div>
 
+        <div>
+          <Checkbox
+            checked={settings.playSound}
+            onChange={(e) => setSettings({ ...settings, playSound: e.target.checked })}
+          >
+            {t('settings.playSound')}
+          </Checkbox>
+        </div>
+
         <Divider style={{ margin: '4px 0' }} />
 
         {/* Topics Section */}

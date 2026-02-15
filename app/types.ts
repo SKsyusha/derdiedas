@@ -49,6 +49,7 @@ export interface TrainingSettings {
   topics: Topic[];
   determinerType: DeterminerType;
   showTranslation: boolean;
+  playSound: boolean;
 }
 
 export interface SessionStats {

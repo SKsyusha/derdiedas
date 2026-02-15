@@ -29,6 +29,7 @@ const defaultSettings: TrainingSettings = {
   topics: [],
   determinerType: 'definite',
   showTranslation: true,
+  playSound: true,
 };
 
 function getInitialSettings(): TrainingSettings {
@@ -534,6 +535,7 @@ export default function Trainer() {
                       userAnswer={userInput}
                       feedback={feedback === 'invalid' ? null : feedback}
                       showTranslation={settings.showTranslation}
+                      playSound={settings.playSound}
                       translation={currentTranslation}
                     />
 
