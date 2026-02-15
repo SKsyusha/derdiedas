@@ -141,6 +141,62 @@ const jsonLd = {
   teaches: "German grammar - noun genders and articles",
 };
 
+// FAQ schema for SEO and AI agents (Google, assistants, etc.)
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is Der Die Das Trainer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Der Die Das Trainer is a free interactive web app to practice German articles (der, die, das). You get instant feedback, progress tracking, and 1000+ words from official Goethe A1/A2 vocabulary, plus support for your own word lists.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I practice German articles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Choose at least one dictionary in Settings (e.g. A1/A2 Goethe), then you'll see a noun and type or select the correct article (der, die, or das). You get immediate feedback and can track accuracy and streaks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Der Die Das Trainer free?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The app is free to use, with no account required. It runs in the browser and supports multiple training modes, progress tracking, and custom dictionaries.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What vocabulary is included?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The app includes 1000+ words from official Goethe A1 and A2 vocabulary, and an optional B1 list. You can also add your own words or import custom dictionaries.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I add my own words?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. In Settings you can enable 'My Dictionary' and add or import your own nouns with optional translations. You can paste lists in the format 'der Hund — dog' and import them for practice.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What languages does the trainer support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The interface and translations are available in English, Russian, and Ukrainian. The word base is German with optional translations in these languages.",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -162,6 +218,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         {/* Prevent flash of wrong theme */}
         <script

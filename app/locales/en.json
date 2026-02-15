@@ -68,7 +68,16 @@
       "Import your own dictionaries"
     ],
     "forTitle": "Who it’s for",
-    "forText": "Beginners and intermediate learners: from first steps with articles to confident, automatic der/die/das choice."
+    "forText": "Beginners and intermediate learners: from first steps with articles to confident, automatic der/die/das choice.",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      { "question": "What is Der Die Das Trainer?", "answer": "Der Die Das Trainer is a free interactive web app to practice German articles (der, die, das). You get instant feedback, progress tracking, and 1000+ words from official Goethe A1/A2 vocabulary, plus support for your own word lists." },
+      { "question": "How do I practice German articles?", "answer": "Choose at least one dictionary in Settings (e.g. A1/A2 Goethe), then you'll see a noun and type or select the correct article (der, die, or das). You get immediate feedback and can track accuracy and streaks." },
+      { "question": "Is Der Die Das Trainer free?", "answer": "Yes. The app is free to use, with no account required. It runs in the browser and supports multiple training modes, progress tracking, and custom dictionaries." },
+      { "question": "What vocabulary is included?", "answer": "The app includes 1000+ words from official Goethe A1 and A2 vocabulary, and an optional B1 list. You can also add your own words or import custom dictionaries." },
+      { "question": "Can I add my own words?", "answer": "Yes. In Settings you can enable 'My Dictionary' and add or import your own nouns with optional translations. You can paste lists in the format 'der Hund — dog' and import them for practice." },
+      { "question": "What languages does the trainer support?", "answer": "The interface and translations are available in English, Russian, and Ukrainian. The word base is German with optional translations in these languages." }
+    ]
   },
   "userDictionary": {
     "title": "My Dictionary",

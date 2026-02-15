@@ -54,6 +54,27 @@ export default function SeoEmptyState() {
             {t('landing.forText')}
           </p>
         </div>
+
+        <section className="mt-6" aria-labelledby="faq-heading">
+          <h2 id="faq-heading" className="text-center text-xl sm:text-2xl font-semibold text-[color:var(--foreground)]">
+            {t('landing.faqTitle')}
+          </h2>
+          <dl className="mt-4 space-y-3">
+            {(t('landing.faq', { returnObjects: true }) as { question: string; answer: string }[]).map((item, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-[color:var(--card-border)] bg-[color:var(--card-bg)] p-4 shadow-sm"
+              >
+                <dt className="text-sm font-semibold text-[color:var(--foreground)]">
+                  {item.question}
+                </dt>
+                <dd className="mt-2 text-sm text-[color:var(--gray-text)]">
+                  {item.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       </div>
     </section>
   );
