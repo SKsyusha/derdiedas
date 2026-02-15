@@ -48,10 +48,12 @@ export default function TrainerHeader({
               { key: 'ru', label: t('trainer.russian') },
               { key: 'en', label: t('trainer.english') },
               { key: 'uk', label: t('trainer.ukrainian') },
+              { key: 'de', label: t('trainer.german') },
             ] as MenuProps['items'],
             onClick: ({ key }) => {
               i18n.changeLanguage(key);
-              const translationLanguage: Language = key === 'ru' ? 'Russian' : key === 'uk' ? 'Ukrainian' : 'English';
+              const translationLanguage: Language =
+                key === 'ru' ? 'Russian' : key === 'uk' ? 'Ukrainian' : key === 'de' ? 'German' : 'English';
               onLanguageChange(translationLanguage);
             },
             selectedKeys: [i18n.language],
@@ -63,7 +65,7 @@ export default function TrainerHeader({
             style={isMobile ? { width: 40, height: 40, padding: 0 } : undefined}
           >
             <span className="hidden sm:inline">
-              {i18n.language === 'ru' ? t('trainer.russian') : i18n.language === 'uk' ? t('trainer.ukrainian') : t('trainer.english')}
+              {i18n.language === 'ru' ? t('trainer.russian') : i18n.language === 'uk' ? t('trainer.ukrainian') : i18n.language === 'de' ? t('trainer.german') : t('trainer.english')}
             </span>
           </Button>
         </Dropdown>

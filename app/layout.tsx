@@ -194,7 +194,7 @@ const faqJsonLd = {
       name: "What languages does the trainer support?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The interface and translations are available in English, Russian, and Ukrainian. The word base is German with optional translations in these languages.",
+        text: "The interface and translations are available in German, English, Russian, and Ukrainian. The word base is German with optional translations in these languages.",
       },
     },
   ],

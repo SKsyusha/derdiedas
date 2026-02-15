@@ -15,7 +15,7 @@ export type TrainingMode = 'noun-only' | 'sentence';
 // One merged group: articles + determiners (pronoun-like)
 export type DeterminerType = 'definite' | 'indefinite' | 'possessive' | 'demonstrative';
 
-export type Language = 'Russian' | 'English' | 'Ukrainian';
+export type Language = 'Russian' | 'English' | 'Ukrainian' | 'German';
 
 export type Topic = string;
 
@@ -28,6 +28,7 @@ export interface Word {
   translation_ru?: string;
   translation_en?: string;
   translation_uk?: string;
+  translation_de?: string;
   exampleSentence?: string;
   level?: Level;
   topic?: Topic;

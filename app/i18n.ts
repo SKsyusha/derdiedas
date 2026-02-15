@@ -7,6 +7,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import ruTranslations from './locales/ru.json';
 import enTranslations from './locales/en.json';
 import ukTranslations from './locales/uk.json';
+import deTranslations from './locales/de.json';
 
 if (!i18n.isInitialized) {
   i18n
@@ -22,6 +23,9 @@ if (!i18n.isInitialized) {
         },
         uk: {
           translation: ukTranslations,
+        },
+        de: {
+          translation: deTranslations,
         },
       },
       fallbackLng: 'ru',

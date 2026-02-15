@@ -294,11 +294,16 @@ export default function Trainer() {
   // Sync translation language with UI language on mount
   useEffect(() => {
     if (!isMounted) return;
-    const translationLanguage: Language = i18n.language === 'ru' ? 'Russian' : 'English';
+    const translationLanguage: Language =
+      i18n.language === 'ru' ? 'Russian' : i18n.language === 'uk' ? 'Ukrainian' : i18n.language === 'de' ? 'German' : 'English';
     queueMicrotask(() => {
       setSettings((prev) => {
         if (prev.language !== translationLanguage) {
-          return { ...prev, language: translationLanguage };
+          const next = { ...prev, language: translationLanguage };
+          if (translationLanguage === 'German') {
+            next.showTranslation = false;
+          }
+          return next;
         }
         return prev;
       });
@@ -408,6 +413,8 @@ export default function Trainer() {
       return word.translation_en || word.translation;
     } else if (settings.language === 'Ukrainian') {
       return word.translation_uk || word.translation;
+    } else if (settings.language === 'German') {
+      return word.translation_de || word.translation_en || word.translation;
     } else {
       return word.translation_ru || word.translation;
     }
@@ -488,7 +495,13 @@ export default function Trainer() {
           isMobile={isMobile}
           onSettingsClick={() => setShowSettings(!showSettings)}
           onDictionaryClick={() => setShowUserDict(true)}
-          onLanguageChange={(language) => setSettings((prev) => ({ ...prev, language }))}
+          onLanguageChange={(language) =>
+            setSettings((prev) => ({
+              ...prev,
+              language,
+              ...(language === 'German' ? { showTranslation: false } : {}),
+            }))
+          }
         />
 
         <div>
