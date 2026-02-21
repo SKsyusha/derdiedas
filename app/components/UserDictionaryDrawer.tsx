@@ -211,6 +211,8 @@ export default function UserDictionaryDrawer({
               backgroundColor: 'var(--input-bg)',
               borderColor: 'var(--input-border)',
               color: 'var(--foreground)',
+              // 16px prevents iOS from zooming the page when focusing this field
+              fontSize: '16px',
             }}
           />
           <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center sm:justify-end">
