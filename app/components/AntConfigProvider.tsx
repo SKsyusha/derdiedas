@@ -55,6 +55,7 @@ export default function AntConfigProvider({ children }: AntConfigProviderProps) 
           Select: {
             borderRadius: 8,
             controlHeight: 40,
+            fontSize: 16, // prevents iOS zoom when tapping the trigger
             colorBgContainer: isDark ? '#1f1f1f' : '#ffffff',
             algorithm: true,
           },

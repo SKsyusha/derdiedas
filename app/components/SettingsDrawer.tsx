@@ -244,7 +244,7 @@ export default function SettingsDrawer({
           <Select
             key={`topic-select-${settings.topics.join(',')}`}
             placeholder={t('settings.selectTopic')}
-            style={{ width: '100%' }}
+            style={{ width: '100%', fontSize: '16px' }}
             size="middle"
             value={null as unknown as string}
             onChange={(value) => {
