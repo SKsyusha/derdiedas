@@ -96,20 +96,20 @@ export default function WordDisplay({
   return (
     <div className="text-xl sm:text-3xl mb-4 sm:mb-6 px-4 sm:px-2" style={{ color: 'var(--foreground)' }}>
       {feedback === 'correct' ? (
-        <div style={{ color: 'var(--success)' }} className="inline-flex flex-wrap items-baseline gap-0">
+        <div style={{ color: 'var(--success)' }} className="inline-flex flex-wrap items-baseline gap-0 justify-center sm:justify-start">
           {displayAnswer} {word.noun}
           {showTranslation && translation && (
-            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline" style={{ color: 'var(--gray-text)' }}>
+            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline w-full sm:w-auto mt-1 sm:mt-0" style={{ color: 'var(--gray-text)' }}>
               <span className="sm:hidden">{translation}</span>
               <span className="hidden sm:inline">({translation})</span>
             </span>
           )}
         </div>
       ) : feedback === 'incorrect' ? (
-        <div style={{ color: 'var(--error)' }} className="inline-flex flex-wrap items-baseline gap-0">
+        <div style={{ color: 'var(--error)' }} className="inline-flex flex-wrap items-baseline gap-0 justify-center sm:justify-start">
           {correctAnswer} {word.noun}
           {showTranslation && translation && (
-            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline" style={{ color: 'var(--gray-text)' }}>
+            <span className="text-base sm:text-2xl ml-1 sm:ml-2 block sm:inline w-full sm:w-auto mt-1 sm:mt-0" style={{ color: 'var(--gray-text)' }}>
               <span className="sm:hidden">{translation}</span>
               <span className="hidden sm:inline">({translation})</span>
             </span>
