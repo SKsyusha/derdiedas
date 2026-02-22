@@ -6726,5 +6726,63 @@
   "schwangerschaft": {
     "article": "die",
     "audio_url": "https://der-artikel.de/audio/schwangerschaft.mp3"
+  },
+  "hamster": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/hamster.mp3"
+  },
+  "huhn": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/huhn.mp3"
+  },
+  "papagei": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/papagei.mp3"
+  },
+  "tiger": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/tiger.mp3"
+  },
+  "gramm": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/gramm.mp3"
+  },
+  "kilogramm": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/kilogramm.mp3"
+  },
+  "liter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/liter.mp3"
+  },
+  "meter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/meter.mp3"
+  },
+  "pfund": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/pfund.mp3"
+  },
+  "prozent": {
+    "article": "das",
+    "audio_url": "https://der-artikel.de/audio/prozent.mp3"
+  },
+  "quadratmeter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/quadratmeter.mp3"
+  },
+  "zentimeter": {
+    "article": "der",
+    "audio_url": "https://der-artikel.de/audio/zentimeter.mp3"
+  },
+  "sandalen": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
+  },
+  "turnschuhe": {
+    "article": null,
+    "audio_url": null,
+    "notFound": true
   }
 }

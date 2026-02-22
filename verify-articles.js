@@ -146,34 +146,45 @@ async function main() {
     console.log('  1-10   Words 1 to 10');
     console.log('  200-   From 200 to end');
     console.log('  -50    From 1 to 50');
+    console.log('  missing  Only entries without audio_url');
     console.log('\nExamples:');
     console.log('  node verify-articles.js 1-10');
     console.log('  node verify-articles.js 200- A2');
-    console.log('  node verify-articles.js 1-100 B1');
+    console.log('  node verify-articles.js missing A1_new');
     console.log('\nDefault dictionary: A1');
     process.exit(1);
   }
-  
-  const { start, end } = parseRange(rangeArg);
-  
+
   // Determine JSON path based on dictionary
-  let jsonPath;
-  jsonPath = path.join(__dirname, `app/data/dictionaries/${dictArg}.json`);
-  
+  const jsonPath = path.join(__dirname, `app/data/dictionaries/${dictArg}.json`);
+
   // Load cache
   const cache = loadCache();
   const cacheSize = Object.keys(cache).length;
   console.log(`\nLoaded cache with ${cacheSize} words`);
-  
+
   // Read the JSON file
   console.log(`Reading ${jsonPath}...`);
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-  
+
   const totalWords = data.length;
-  const actualEnd = Math.min(end, totalWords - 1);
-  
-  console.log(`Total words in dictionary: ${totalWords}`);
-  console.log(`Processing range: ${start + 1}-${actualEnd + 1} (${actualEnd - start + 1} words)\n`);
+
+  // Build list of indices to process
+  let indices;
+  if (rangeArg === 'missing') {
+    indices = data
+      .map((entry, i) => (entry.audio_url ? -1 : i))
+      .filter((i) => i >= 0);
+    console.log(`Total words in dictionary: ${totalWords}`);
+    console.log(`Processing ${indices.length} entries without audio_url\n`);
+  } else {
+    const { start, end } = parseRange(rangeArg);
+    const actualEnd = Math.min(end, totalWords - 1);
+    indices = [];
+    for (let i = start; i <= actualEnd; i++) indices.push(i);
+    console.log(`Total words in dictionary: ${totalWords}`);
+    console.log(`Processing range: ${start + 1}-${actualEnd + 1} (${indices.length} words)\n`);
+  }
   
   let updated = 0;
   let notFound = 0;
@@ -184,11 +195,12 @@ async function main() {
   const correctedWords = [];  // { noun, oldArticle, newArticle }
   const notFoundWords = [];   // list of nouns
   
-  for (let i = start; i <= actualEnd; i++) {
+  for (let idx = 0; idx < indices.length; idx++) {
+    const i = indices[idx];
     const entry = data[i];
     const { noun, article: currentArticle } = entry;
-    
-    console.log(`[${i + 1}/${actualEnd + 1}] Checking "${noun}" (current: ${currentArticle})...`);
+
+    console.log(`[${idx + 1}/${indices.length}] #${i + 1} Checking "${noun}" (current: ${currentArticle})...`);
     
     // Check cache first
     const cacheKey = noun.toLowerCase();
@@ -252,9 +264,11 @@ async function main() {
       }
     }
     
-    const delay = randomDelay();
-    console.log(`  ⏳ Waiting ${(delay / 1000).toFixed(1)}s...`);
-    await sleep(delay);
+    if (idx < indices.length - 1) {
+      const delay = randomDelay();
+      console.log(`  ⏳ Waiting ${(delay / 1000).toFixed(1)}s...`);
+      await sleep(delay);
+    }
   }
   
   // Save cache
@@ -267,9 +281,9 @@ async function main() {
   
   // Summary
   console.log('\n========== Summary ==========');
-  console.log(`Total processed: ${actualEnd - start + 1}`);
+  console.log(`Total processed: ${indices.length}`);
   console.log(`From cache: ${fromCache}`);
-  console.log(`Fetched from web: ${actualEnd - start + 1 - fromCache}`);
+  console.log(`Fetched from web: ${indices.length - fromCache}`);
   console.log(`Updated articles: ${updated}`);
   console.log(`Unchanged: ${unchanged}`);
   console.log(`Not found on website: ${notFound}`);

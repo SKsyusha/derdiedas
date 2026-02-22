@@ -15,7 +15,7 @@ const path = require('path');
 const https = require('https');
 
 const CACHE_PATH = path.join(__dirname, '.article-cache.json');
-const DEFAULT_OUTPUT_DIR = path.join(__dirname, 'public', 'audio');
+const DEFAULT_OUTPUT_DIR = path.join(__dirname, 'audio');
 
 // Delay between downloads to be polite to the server (random 500-1500ms)
 function randomDelay() {
