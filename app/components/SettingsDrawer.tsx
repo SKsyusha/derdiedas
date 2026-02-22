@@ -1,9 +1,9 @@
 'use client';
 
 import { useMemo, useState, useEffect, useRef } from 'react';
-import { Drawer, Radio, Checkbox, Select, Flex, Divider, Typography, Tag } from 'antd';
+import { Drawer, Checkbox, Flex, Divider, Typography, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { TrainingSettings, Case, Topic, DeterminerType, Word } from '../types';
+import { TrainingSettings, Topic, Word } from '../types';
 import { getAllTopics, getTopicWordCount, hasCustomDictionaryEnabled, filterTopicsWithWords } from '../utils/dataset';
 import { BUILT_IN_DICTIONARIES, isBuiltInDictionary, DEFAULT_DICTIONARY_ID } from '../dictionaries';
 
@@ -176,48 +176,49 @@ export default function SettingsDrawer({
 
         <Divider style={{ margin: '4px 0' }} />
 
+        {/* Topics Section - list with multi-select */}
         <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.trainingMode')}</Title>
-          <Radio.Group
-            value={settings.mode}
-            onChange={(e) => setSettings({ ...settings, mode: e.target.value })}
+          <div className="flex justify-between items-center" style={{ marginBottom: '6px' }}>
+            <Title level={5} style={{ marginBottom: 0, fontSize: '14px', marginTop: 0 }}>{t('settings.topic')}</Title>
+            <Button
+              type="text"
+              size="small"
+              disabled={settings.topics.length === 0}
+              onClick={() => setSettings({ ...settings, topics: [] })}
+              style={{ color: 'var(--purple-primary)', padding: '0 4px' }}
+            >
+              {t('settings.clearTopics')}
+            </Button>
+          </div>
+          <Checkbox.Group
+            value={settings.topics}
+            onChange={(checkedValues) => {
+              setSettings({
+                ...settings,
+                topics: checkedValues as Topic[],
+              });
+            }}
             style={{ width: '100%' }}
           >
-            <Flex orientation="vertical" gap="small">
-            <Radio value="noun-only">{t('settings.nounOnly')}</Radio>
-              <Radio value="sentence">{t('settings.inSentence')}</Radio>
-            </Flex>
-          </Radio.Group>
-        </div>
-
-        {settings.mode === 'sentence' && (
-          <>
-            <Divider style={{ margin: '4px 0' }} />
-            <div>
-              <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.cases')}</Title>
-              <Checkbox.Group
-                value={settings.cases}
-                onChange={(checkedValues) => {
-                  setSettings({
-                    ...settings,
-                    cases: checkedValues as Case[],
-                  });
-                }}
-              >
-                <Flex orientation="vertical" gap="small">
-                  {(['nominativ', 'akkusativ', 'dativ', 'genitiv'] as Case[]).map((case_) => (
-                    <Checkbox key={case_} value={case_}>
-                      {t(`cases.${case_}`)}
+            <Flex vertical gap="small">
+              {allTopics
+                .filter((topic) => getTopicCount(topic) > 0)
+                .map((topic) => {
+                  const count = getTopicCount(topic);
+                  const topicLabel = t(`topics.${topic}`);
+                  return (
+                    <Checkbox key={topic} value={topic}>
+                      {topicLabel} ({count})
                     </Checkbox>
-                  ))}
-                </Flex>
-              </Checkbox.Group>
-            </div>
-          </>
-        )}
+                  );
+                })}
+            </Flex>
+          </Checkbox.Group>
+        </div>
 
         <Divider style={{ margin: '4px 0' }} />
 
+        {/* Show translation & Autoplay at the bottom */}
         <div>
           <Checkbox
             checked={settings.showTranslation}
@@ -234,141 +235,6 @@ export default function SettingsDrawer({
           >
             {t('settings.playSound')}
           </Checkbox>
-        </div>
-
-        <Divider style={{ margin: '4px 0' }} />
-
-        {/* Topics Section */}
-        <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.topic')}</Title>
-          <Select
-            key={`topic-select-${settings.topics.join(',')}`}
-            placeholder={t('settings.selectTopic')}
-            style={{ width: '100%', fontSize: '16px' }}
-            size="middle"
-            value={null as unknown as string}
-            onChange={(value) => {
-              const topic = value as Topic;
-              if (topic) {
-                if (settings.topics.includes(topic)) {
-                  // Убираем топик если он уже выбран
-                  setSettings({ ...settings, topics: settings.topics.filter(t => t !== topic) });
-                } else {
-                  // Добавляем топик если он не выбран
-                  setSettings({ ...settings, topics: [...settings.topics, topic] });
-                }
-              }
-            }}
-            options={allTopics
-              .filter((topic) => getTopicCount(topic) > 0)
-              .map((topic) => {
-                const count = getTopicCount(topic);
-                const topicLabel = t(`topics.${topic}`);
-                const isSelected = settings.topics.includes(topic);
-                return { 
-                  label: (
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span>{topicLabel} ({count})</span>
-                      {isSelected && <span style={{ color: '#8b5cf6', fontWeight: 'bold' }}>✓</span>}
-                    </div>
-                  ), 
-                  value: topic 
-                };
-              })}
-          />
-          
-          {/* Selected Topics */}
-          {settings.topics.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {settings.topics.map((topic) => {
-                const count = getTopicCount(topic);
-                const topicLabel = t(`topics.${topic}`);
-                return (
-                  <Tag
-                    key={topic}
-                    closable
-                    onClose={() => {
-                      setSettings({
-                        ...settings,
-                        topics: settings.topics.filter((t) => t !== topic),
-                      });
-                    }}
-                    color="purple"
-                    style={{ 
-                      margin: 0,
-                      fontSize: '11px',
-                      padding: '2px 6px',
-                      lineHeight: '1.4'
-                    }}
-                  >
-                    {topicLabel} {count > 0 && `(${count})`}
-                  </Tag>
-                );
-              })}
-            </div>
-          )}
-        </div>
-
-        <Divider style={{ margin: '4px 0' }} />
-
-        {/* Determiner Type (merged: articles + pronouns) */}
-        <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.determiner')}</Title>
-          <Radio.Group
-            value={settings.determinerType}
-            onChange={(e) => setSettings({ ...settings, determinerType: e.target.value as DeterminerType })}
-            style={{ width: '100%' }}
-          >
-            <Flex orientation="vertical" gap="small">
-              <Radio value="definite">{t('settings.definite')}</Radio>
-              <Radio value="indefinite">{t('settings.indefinite')}</Radio>
-              <Radio value="possessive">{t('settings.possessive')}</Radio>
-              <Radio value="demonstrative">{t('settings.demonstrative')}</Radio>
-            </Flex>
-          </Radio.Group>
-        </div>
-
-        <Divider style={{ margin: '4px 0' }} />
-
-        {/* Cases */}
-        <div>
-          <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.cases')}</Title>
-          {settings.mode === 'noun-only' ? (
-            <Radio.Group
-              value={settings.cases[0] || 'nominativ'}
-              onChange={(e) => {
-                setSettings({
-                  ...settings,
-                  cases: [e.target.value as Case],
-                });
-              }}
-              style={{ width: '100%' }}
-            >
-              <Flex orientation="vertical" gap="small">
-                <Radio value="nominativ">{t('cases.nominativ')}</Radio>
-                <Radio value="akkusativ">{t('cases.akkusativ')}</Radio>
-                <Radio value="dativ">{t('cases.dativ')}</Radio>
-                <Radio value="genitiv">{t('cases.genitiv')}</Radio>
-              </Flex>
-            </Radio.Group>
-          ) : (
-            <Checkbox.Group
-              value={settings.cases}
-              onChange={(checkedValues) => {
-                setSettings({
-                  ...settings,
-                  cases: checkedValues as Case[],
-                });
-              }}
-            >
-              <Flex orientation="vertical" gap="small">
-                <Checkbox value="nominativ">{t('cases.nominativ')}</Checkbox>
-                <Checkbox value="akkusativ">{t('cases.akkusativ')}</Checkbox>
-                <Checkbox value="dativ">{t('cases.dativ')}</Checkbox>
-                <Checkbox value="genitiv">{t('cases.genitiv')}</Checkbox>
-              </Flex>
-            </Checkbox.Group>
-          )}
         </div>
 
       </div>

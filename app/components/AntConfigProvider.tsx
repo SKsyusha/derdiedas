@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { App, ConfigProvider, theme as antTheme } from 'antd';
 import { useTheme } from './ThemeProvider';
 import { ReactNode } from 'react';
@@ -10,7 +11,14 @@ interface AntConfigProviderProps {
 
 export default function AntConfigProvider({ children }: AntConfigProviderProps) {
   const { theme } = useTheme();
-  const isDark = theme === 'dark';
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Use a fixed theme until after mount so server and initial client render match (avoids hydration mismatch)
+  const isDark = mounted ? theme === 'dark' : false;
 
   return (
     <ConfigProvider
