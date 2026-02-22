@@ -6774,15 +6774,5 @@
   "zentimeter": {
     "article": "der",
     "audio_url": "https://der-artikel.de/audio/zentimeter.mp3"
-  },
-  "sandalen": {
-    "article": null,
-    "audio_url": null,
-    "notFound": true
-  },
-  "turnschuhe": {
-    "article": null,
-    "audio_url": null,
-    "notFound": true
   }
 }
