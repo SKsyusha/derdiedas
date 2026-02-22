@@ -48,6 +48,14 @@ export default function SettingsDrawer({
   const hasCustomDictEnabled = useMemo(() => {
     return hasCustomDictionaryEnabled(settings.enabledDictionaries);
   }, [settings.enabledDictionaries]);
+
+  // Only "My Dictionary" is selected (no built-in dictionaries) → hide Topics block
+  const onlyCustomDictionarySelected = useMemo(() => {
+    return (
+      settings.enabledDictionaries.length > 0 &&
+      settings.enabledDictionaries.every((id) => !isBuiltInDictionary(id))
+    );
+  }, [settings.enabledDictionaries]);
   
   // Check if user dictionaries are empty (no dictionaries or all dictionaries have no words)
   const areUserDictionariesEmpty = useMemo(() => {
@@ -114,6 +122,27 @@ export default function SettingsDrawer({
       size={isMobile ? 'default' : drawerSize}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        {/* Show translation & Autoplay at the top */}
+        <div>
+          <Checkbox
+            checked={settings.showTranslation}
+            onChange={(e) => setSettings({ ...settings, showTranslation: e.target.checked })}
+          >
+            {t('settings.showTranslation')}
+          </Checkbox>
+        </div>
+
+        <div>
+          <Checkbox
+            checked={settings.playSound}
+            onChange={(e) => setSettings({ ...settings, playSound: e.target.checked })}
+          >
+            {t('settings.playSound')}
+          </Checkbox>
+        </div>
+
+        <Divider style={{ margin: '4px 0' }} />
+
         {/* Dictionaries Section - Multi-select */}
         <div>
           <Title level={5} style={{ marginBottom: '6px', fontSize: '14px', marginTop: 0 }}>{t('settings.dictionaries')}</Title>
@@ -174,68 +203,51 @@ export default function SettingsDrawer({
           </Checkbox.Group>
         </div>
 
-        <Divider style={{ margin: '4px 0' }} />
+        {!onlyCustomDictionarySelected && (
+          <>
+            <Divider style={{ margin: '4px 0' }} />
 
-        {/* Topics Section - list with multi-select */}
-        <div>
-          <div className="flex justify-between items-center" style={{ marginBottom: '6px' }}>
-            <Title level={5} style={{ marginBottom: 0, fontSize: '14px', marginTop: 0 }}>{t('settings.topic')}</Title>
-            <Button
-              type="text"
-              size="small"
-              disabled={settings.topics.length === 0}
-              onClick={() => setSettings({ ...settings, topics: [] })}
-              style={{ color: 'var(--purple-primary)', padding: '0 4px' }}
-            >
-              {t('settings.clearTopics')}
-            </Button>
-          </div>
-          <Checkbox.Group
-            value={settings.topics}
-            onChange={(checkedValues) => {
-              setSettings({
-                ...settings,
-                topics: checkedValues as Topic[],
-              });
-            }}
-            style={{ width: '100%' }}
-          >
-            <Flex vertical gap="small">
-              {allTopics
-                .filter((topic) => getTopicCount(topic) > 0)
-                .map((topic) => {
-                  const count = getTopicCount(topic);
-                  const topicLabel = t(`topics.${topic}`);
-                  return (
-                    <Checkbox key={topic} value={topic}>
-                      {topicLabel} ({count})
-                    </Checkbox>
-                  );
-                })}
-            </Flex>
-          </Checkbox.Group>
-        </div>
-
-        <Divider style={{ margin: '4px 0' }} />
-
-        {/* Show translation & Autoplay at the bottom */}
-        <div>
-          <Checkbox
-            checked={settings.showTranslation}
-            onChange={(e) => setSettings({ ...settings, showTranslation: e.target.checked })}
-          >
-            {t('settings.showTranslation')}
-          </Checkbox>
-        </div>
-
-        <div>
-          <Checkbox
-            checked={settings.playSound}
-            onChange={(e) => setSettings({ ...settings, playSound: e.target.checked })}
-          >
-            {t('settings.playSound')}
-          </Checkbox>
-        </div>
+            {/* Topics Section - list with multi-select */}
+            <div>
+              <div className="flex justify-between items-center" style={{ marginBottom: '6px' }}>
+                <Title level={5} style={{ marginBottom: 0, fontSize: '14px', marginTop: 0 }}>{t('settings.topic')}</Title>
+                <Button
+                  type="text"
+                  size="small"
+                  disabled={settings.topics.length === 0}
+                  onClick={() => setSettings({ ...settings, topics: [] })}
+                  style={{ color: 'var(--purple-primary)', padding: '0 4px' }}
+                >
+                  {t('settings.clearTopics')}
+                </Button>
+              </div>
+              <Checkbox.Group
+                value={settings.topics}
+                onChange={(checkedValues) => {
+                  setSettings({
+                    ...settings,
+                    topics: checkedValues as Topic[],
+                  });
+                }}
+                style={{ width: '100%' }}
+              >
+                <Flex vertical gap="small">
+                  {allTopics
+                    .filter((topic) => getTopicCount(topic) > 0)
+                    .map((topic) => {
+                      const count = getTopicCount(topic);
+                      const topicLabel = t(`topics.${topic}`);
+                      return (
+                        <Checkbox key={topic} value={topic}>
+                          {topicLabel} ({count})
+                        </Checkbox>
+                      );
+                    })}
+                </Flex>
+              </Checkbox.Group>
+            </div>
+          </>
+        )}
 
       </div>
     </Drawer>
