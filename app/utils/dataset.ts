@@ -14,8 +14,13 @@ export interface DatasetOptions {
   userDictionaries?: UserDictionary[];
 }
 
+/** Unique key per dictionary entry (noun + article + topic) so same noun in different topics or articles counts once each */
+function entryKey(w: Word): string {
+  return `${w.noun}\t${w.article}\t${w.topic ?? ''}`;
+}
+
 /**
- * Get all enabled words with deduplication using Set (by noun)
+ * Get all enabled words. Deduplication by entry (noun+article+topic) so total matches dictionary size.
  */
 export function getEnabledWords(options: DatasetOptions): Word[] {
   const { enabledDictionaries, topics = [], userDictionaries = [] } = options;
@@ -26,8 +31,9 @@ export function getEnabledWords(options: DatasetOptions): Word[] {
     if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((w: Word) => {
         const topicMatch = !topics.length || (w.topic && topics.includes(w.topic));
-        if (topicMatch && !wordsMap.has(w.noun)) {
-          wordsMap.set(w.noun, w);
+        if (topicMatch) {
+          const key = entryKey(w);
+          if (!wordsMap.has(key)) wordsMap.set(key, w);
         }
       });
     }
@@ -38,8 +44,9 @@ export function getEnabledWords(options: DatasetOptions): Word[] {
     if (enabledDictionaries.includes(dict.id)) {
       dict.words.forEach((w) => {
         const topicMatch = !topics.length || (w.topic && topics.includes(w.topic));
-        if (topicMatch && !wordsMap.has(w.noun)) {
-          wordsMap.set(w.noun, w);
+        if (topicMatch) {
+          const key = entryKey(w);
+          if (!wordsMap.has(key)) wordsMap.set(key, w);
         }
       });
     }
@@ -49,7 +56,7 @@ export function getEnabledWords(options: DatasetOptions): Word[] {
 }
 
 /**
- * Get words from specific topics with deduplication
+ * Get words from specific topics. Deduplication by entry (noun+article+topic).
  */
 export function getWordsInTopics(options: DatasetOptions): Word[] {
   const { enabledDictionaries, topics = [], userDictionaries = [] } = options;
@@ -59,8 +66,9 @@ export function getWordsInTopics(options: DatasetOptions): Word[] {
   BUILT_IN_DICTIONARY_IDS.forEach((level) => {
     if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((w: Word) => {
-        if (w.topic && topics.includes(w.topic) && !wordsMap.has(w.noun)) {
-          wordsMap.set(w.noun, w);
+        if (w.topic && topics.includes(w.topic)) {
+          const key = entryKey(w);
+          if (!wordsMap.has(key)) wordsMap.set(key, w);
         }
       });
     }
@@ -70,8 +78,9 @@ export function getWordsInTopics(options: DatasetOptions): Word[] {
   userDictionaries.forEach((dict) => {
     if (enabledDictionaries.includes(dict.id)) {
       dict.words.forEach((w) => {
-        if (w.topic && topics.includes(w.topic) && !wordsMap.has(w.noun)) {
-          wordsMap.set(w.noun, w);
+        if (w.topic && topics.includes(w.topic)) {
+          const key = entryKey(w);
+          if (!wordsMap.has(key)) wordsMap.set(key, w);
         }
       });
     }
@@ -81,38 +90,32 @@ export function getWordsInTopics(options: DatasetOptions): Word[] {
 }
 
 /**
- * Get word count for a specific topic with deduplication
+ * Get word count for a specific topic (by entry: noun+article+topic)
  */
 export function getTopicWordCount(
   topic: Topic,
   enabledDictionaries: string[],
   userDictionaries: UserDictionary[] = []
 ): number {
-  const seenNouns = new Set<string>();
+  const seen = new Set<string>();
 
-  // Count from built-in dictionaries
   BUILT_IN_DICTIONARY_IDS.forEach((level) => {
     if (enabledDictionaries.includes(level) && builtInDictionaries[level]) {
       builtInDictionaries[level].forEach((w: Word) => {
-        if (w.topic === topic && !seenNouns.has(w.noun)) {
-          seenNouns.add(w.noun);
-        }
+        if (w.topic === topic) seen.add(entryKey(w));
       });
     }
   });
 
-  // Count from user dictionaries
   userDictionaries.forEach((dict) => {
     if (enabledDictionaries.includes(dict.id)) {
       dict.words.forEach((w) => {
-        if (w.topic === topic && !seenNouns.has(w.noun)) {
-          seenNouns.add(w.noun);
-        }
+        if (w.topic === topic) seen.add(entryKey(w));
       });
     }
   });
 
-  return seenNouns.size;
+  return seen.size;
 }
 
 /**

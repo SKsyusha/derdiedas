@@ -193,9 +193,8 @@ export default function Trainer() {
     const totalWords = wordsToCheck.length;
     if (totalWords === 0) return null;
 
-    const learnedCount = wordsToCheck.filter(w => 
-      learnedWords.has(`${w.topic || 'all'}-${w.noun}`)
-    ).length;
+    const learnedEntryKey = (w: Word) => `${w.topic || 'all'}-${w.noun}-${w.article}`;
+    const learnedCount = wordsToCheck.filter(w => learnedWords.has(learnedEntryKey(w))).length;
 
     const percentage = Math.round((learnedCount / totalWords) * 100);
     
@@ -401,8 +400,8 @@ export default function Trainer() {
     // Отслеживаем изученные слова для прогресс-бара
     if (isCorrect && currentWord) {
       const key = currentWord.topic 
-        ? `${currentWord.topic}-${currentWord.noun}` 
-        : `all-${currentWord.noun}`;
+        ? `${currentWord.topic}-${currentWord.noun}-${currentWord.article}`
+        : `all-${currentWord.noun}-${currentWord.article}`;
       setLearnedWords((prev) => new Set([...prev, key]));
     }
   };
