@@ -111,6 +111,9 @@
     "Body Parts": "Частини тіла",
     "Clothing": "Одяг",
     "Colors": "Кольори",
+    "Compass Directions": "Сторони світу",
+    "Currencies & Measurements": "Валюти та міри",
+    "Days & Months": "Дні та місяці",
     "Communication": "Спілкування",
     "Cooking Utensils": "Кухонне начиння",
     "Countries & Nationalities": "Країни та національності",
@@ -152,11 +155,13 @@
     "Sports & Competition": "Спорт та змагання",
     "Technology": "Технології",
     "Time & Dates": "Час та дати",
+    "Times of Day": "Час доби",
     "Tools": "Інструменти",
     "Traffic Regulations": "Правила дорожнього руху",
     "Transport": "Транспорт",
     "Transportation": "Транспортування",
     "Travel & Transport": "Подорожі та транспорт",
+    "Units of Time": "Одиниці часу",
     "Weather": "Погода",
     "Work & Career": "Робота та кар'єра"
   }

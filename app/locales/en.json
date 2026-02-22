@@ -111,6 +111,9 @@
     "Body Parts": "Body Parts",
     "Clothing": "Clothing",
     "Colors": "Colors",
+    "Compass Directions": "Compass Directions",
+    "Currencies & Measurements": "Currencies & Measurements",
+    "Days & Months": "Days & Months",
     "Communication": "Communication",
     "Cooking Utensils": "Cooking Utensils",
     "Countries & Nationalities": "Countries & Nationalities",
@@ -152,11 +155,13 @@
     "Sports & Competition": "Sports & Competition",
     "Technology": "Technology",
     "Time & Dates": "Time & Dates",
+    "Times of Day": "Times of Day",
     "Tools": "Tools",
     "Traffic Regulations": "Traffic Regulations",
     "Transport": "Transport",
     "Transportation": "Transportation",
     "Travel & Transport": "Travel & Transport",
+    "Units of Time": "Units of Time",
     "Weather": "Weather",
     "Work & Career": "Work & Career"
   }
