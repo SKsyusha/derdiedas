@@ -6133,6 +6133,15 @@
     "topic": "Holidays"
   },
   {
+    "noun": "Virus",
+    "article": "der",
+    "translation_en": "virus",
+    "level": "B1",
+    "translation_ru": "вирус",
+    "translation_uk": "вірус",
+    "topic": "Health"
+  },
+  {
     "noun": "Hochzeit",
     "article": "die",
     "translation_ru": "свадьба",
