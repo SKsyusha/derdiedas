@@ -454,7 +454,8 @@
     "translation_en": "grandparents",
     "translation_uk": "дідусь і бабуся",
     "level": "A2",
-    "topic": "Family Members"
+    "topic": "Family Members",
+    "audio_url": "https://der-artikel.de/audio/gro%C3%9Feltern.mp3"
   },
   {
     "noun": "Großmutter",
@@ -860,7 +861,8 @@
     "translation_en": "doctor",
     "translation_uk": "докторка",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/doktorin.mp3"
   },
   {
     "noun": "Fahrer",
@@ -929,7 +931,8 @@
     "translation_en": "craftswoman",
     "translation_uk": "ремісниця",
     "level": "A2",
-    "topic": "Professions"
+    "topic": "Professions",
+    "audio_url": "https://der-artikel.de/audio/handwerkerin.mp3"
   },
   {
     "noun": "Hausfrau",
@@ -1369,7 +1372,7 @@
     "translation_uk": "застуда",
     "level": "A2",
     "topic": "Health",
-    "audio_url": "https://der-artikel.de/audio/erkaeltung.mp3"
+    "audio_url": "https://der-artikel.de/audio/erk%C3%A4ltung.mp3"
   },
   {
     "noun": "Bauchschmerz",
@@ -1837,7 +1840,8 @@
     "translation_en": "goodbye (on the phone)",
     "translation_uk": "до побачення (по телефону)",
     "level": "A2",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/wiederh%C3%B6ren.mp3"
   },
   {
     "noun": "Wiedersehen",
@@ -2087,7 +2091,7 @@
     "translation_uk": "миска",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/schuessel.mp3"
+    "audio_url": "https://der-artikel.de/audio/sch%C3%BCssel.mp3"
   },
   {
     "noun": "Becher",
@@ -2157,7 +2161,7 @@
     "translation_uk": "посудомийна машина",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/spuelmaschine.mp3"
+    "audio_url": "https://der-artikel.de/audio/sp%C3%BClmaschine.mp3"
   },
   {
     "noun": "Mikrowelle",
@@ -2257,7 +2261,7 @@
     "translation_uk": "ополоник",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/schoepfloeffel.mp3"
+    "audio_url": "https://der-artikel.de/audio/sch%C3%B6pfl%C3%B6ffel.mp3"
   },
   {
     "noun": "Korkenzieher",
@@ -2277,7 +2281,7 @@
     "translation_uk": "відкривачка для консервів",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/dosenoeffner.mp3"
+    "audio_url": "https://der-artikel.de/audio/dosen%C3%B6ffner.mp3"
   },
   {
     "noun": "Messbecher",
@@ -2307,7 +2311,7 @@
     "translation_uk": "миска для змішування",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/ruehrschuessel.mp3"
+    "audio_url": "https://der-artikel.de/audio/r%C3%BChrsch%C3%BCssel.mp3"
   },
   {
     "noun": "Rührgerät",
@@ -2317,7 +2321,7 @@
     "translation_uk": "міксер",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/ruehrgeraet.mp3"
+    "audio_url": "https://der-artikel.de/audio/r%C3%BChrger%C3%A4t.mp3"
   },
   {
     "noun": "Mixer",
@@ -2367,7 +2371,7 @@
     "translation_uk": "мийка",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/spuele.mp3"
+    "audio_url": "https://der-artikel.de/audio/sp%C3%BCle.mp3"
   },
   {
     "noun": "Mülleimer",
@@ -2377,7 +2381,7 @@
     "translation_uk": "смітник",
     "level": "A2",
     "topic": "Kitchen",
-    "audio_url": "https://der-artikel.de/audio/muelleimer.mp3"
+    "audio_url": "https://der-artikel.de/audio/m%C3%BClleimer.mp3"
   },
   {
     "noun": "Keller",
@@ -2734,7 +2738,8 @@
     "translation_en": "mineral",
     "translation_uk": "мінерал",
     "level": "A2",
-    "topic": "Environment"
+    "topic": "Environment",
+    "audio_url": "https://der-artikel.de/audio/mineral.mp3"
   },
   {
     "noun": "Müll",
@@ -3002,7 +3007,8 @@
     "translation_en": "stream street",
     "translation_uk": "вулиця Баха",
     "level": "A2",
-    "topic": "Geography"
+    "topic": "Geography",
+    "audio_url": "https://der-artikel.de/audio/bachstra%C3%9Fe.mp3"
   },
   {
     "noun": "Bahnhofstraße",
@@ -5856,7 +5862,8 @@
     "translation_en": "ski",
     "translation_uk": "лижa",
     "level": "A2",
-    "topic": "Leisure & Entertainment"
+    "topic": "Leisure & Entertainment",
+    "audio_url": "https://der-artikel.de/audio/ski.mp3"
   },
   {
     "noun": "Spaziergang",
@@ -6094,7 +6101,8 @@
     "translation_en": "Christmas",
     "translation_uk": "Різдво",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/weihnachten.mp3"
   },
   {
     "noun": "Ostern",
@@ -6103,16 +6111,18 @@
     "translation_en": "Easter",
     "translation_uk": "Великдень",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/ostern.mp3"
   },
   {
     "noun": "Silvester",
-    "article": "das",
+    "article": "der",
     "translation_ru": "Новый год (канун)",
     "translation_en": "New Year's Eve",
     "translation_uk": "Новий рік (переддень)",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/silvester.mp3"
   },
   {
     "noun": "Neujahr",
@@ -6121,7 +6131,8 @@
     "translation_en": "New Year",
     "translation_uk": "Новий рік",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/neujahr.mp3"
   },
   {
     "noun": "Geburtstag",
@@ -6130,16 +6141,18 @@
     "translation_en": "birthday",
     "translation_uk": "день народження",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/geburtstag.mp3"
   },
   {
     "noun": "Virus",
-    "article": "der",
+    "article": "das",
     "translation_en": "virus",
     "level": "B1",
     "translation_ru": "вирус",
     "translation_uk": "вірус",
-    "topic": "Health"
+    "topic": "Health",
+    "audio_url": "https://der-artikel.de/audio/virus.mp3"
   },
   {
     "noun": "Hochzeit",
@@ -6148,7 +6161,8 @@
     "translation_en": "wedding",
     "translation_uk": "весілля",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/hochzeit.mp3"
   },
   {
     "noun": "Muttertag",
@@ -6157,7 +6171,8 @@
     "translation_en": "Mother's Day",
     "translation_uk": "День матері",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/muttertag.mp3"
   },
   {
     "noun": "Vatertag",
@@ -6166,7 +6181,8 @@
     "translation_en": "Father's Day",
     "translation_uk": "День батька",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/vatertag.mp3"
   },
   {
     "noun": "Karneval",
@@ -6175,7 +6191,8 @@
     "translation_en": "carnival",
     "translation_uk": "карнавал",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/karneval.mp3"
   },
   {
     "noun": "Fasching",
@@ -6184,7 +6201,8 @@
     "translation_en": "carnival",
     "translation_uk": "карнавал",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/fasching.mp3"
   },
   {
     "noun": "Halloween",
@@ -6193,7 +6211,8 @@
     "translation_en": "Halloween",
     "translation_uk": "Геловін",
     "level": "A2",
-    "topic": "Holidays"
+    "topic": "Holidays",
+    "audio_url": "https://der-artikel.de/audio/halloween.mp3"
   },
   {
     "noun": "Tag der Deutschen Einheit",

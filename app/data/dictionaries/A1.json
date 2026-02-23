@@ -54,7 +54,7 @@
   },
   {
     "noun": "Erwachsene",
-    "article": "der",
+    "article": "die",
     "alternative_articles": [
       "die"
     ],
@@ -137,7 +137,7 @@
   },
   {
     "noun": "Jugendliche",
-    "article": "der",
+    "article": "die",
     "alternative_articles": [
       "die"
     ],
@@ -3983,7 +3983,8 @@
     "translation_en": "sandal",
     "translation_uk": "босоножка",
     "level": "A1",
-    "topic": "Clothing"
+    "topic": "Clothing",
+    "audio_url": "https://der-artikel.de/audio/sandale.mp3"
   },
   {
     "noun": "Schuh",
@@ -4042,7 +4043,8 @@
     "translation_en": "sneaker / sports shoe",
     "translation_uk": "кросівка / спортивне взуття",
     "level": "A1",
-    "topic": "Clothing"
+    "topic": "Clothing",
+    "audio_url": "https://der-artikel.de/audio/turnschuh.mp3"
   },
   {
     "noun": "Wochentag",
