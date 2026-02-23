@@ -1588,7 +1588,7 @@
     "translation_en": "fashion",
     "translation_uk": "мода",
     "level": "A2",
-    "topic": "Abstract Concepts",
+    "topic": "Clothing",
     "audio_url": "https://der-artikel.de/audio/mode.mp3"
   },
   {
@@ -1598,7 +1598,7 @@
     "translation_en": "message",
     "translation_uk": "повідомлення",
     "level": "A2",
-    "topic": "Education & Learning",
+    "topic": "Leisure & Entertainment",
     "audio_url": "https://der-artikel.de/audio/nachricht.mp3"
   },
   {
@@ -1608,7 +1608,7 @@
     "translation_en": "news",
     "translation_uk": "новини",
     "level": "A2",
-    "topic": "Abstract Concepts"
+    "topic": "Leisure & Entertainment"
   },
   {
     "noun": "Notiz",
@@ -1617,7 +1617,7 @@
     "translation_en": "note",
     "translation_uk": "нотатка",
     "level": "A2",
-    "topic": "Abstract Concepts",
+    "topic": "Education & Learning",
     "audio_url": "https://der-artikel.de/audio/notiz.mp3"
   },
   {
@@ -6250,7 +6250,7 @@
     "translation_en": "beginning",
     "translation_uk": "початок",
     "level": "A2",
-    "topic": "Abstract Concepts",
+    "topic": "Time & Dates",
     "audio_url": "https://der-artikel.de/audio/anfang.mp3"
   },
   {
@@ -6260,7 +6260,7 @@
     "translation_en": "end",
     "translation_uk": "кінець",
     "level": "A2",
-    "topic": "Abstract Concepts",
+    "topic": "Time & Dates",
     "audio_url": "https://der-artikel.de/audio/ende.mp3"
   },
   {
