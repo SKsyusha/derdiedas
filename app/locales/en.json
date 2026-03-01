@@ -102,8 +102,11 @@
   "support": {
     "title": "Support",
     "breadcrumbHome": "Home",
-    "appDescription": "Der Die Das Trainer is a mobile-friendly web app for learning German articles (der, die, das). Practice with 1000+ words from the official Goethe A1/A2/B1 vocabulary, track your progress by topic, and add your own word lists. The app works in the browser on any device—no install required.",
-    "screenshotsTitle": "App screenshots"
+    "appDescription": "Der Die Das Trainer is a mobile-friendly web app for learning German articles (der, die, das). Practice with 1000+ words from the official Goethe A1/A2/B1 vocabulary: choose the correct article, train in sentence context or noun-only mode, and track your progress by topic. The interface is available in English, German, Russian, and Ukrainian. The app works in the browser on any device—no install or account required.",
+    "screenshotsTitle": "App screenshots",
+    "downloadTitle": "Download now",
+    "downloadSubtitle": "Free to use in the browser — no install required.",
+    "downloadCta": "Start training"
   },
   "footer": {
     "contactAndLegal": "Contact & Legal",
