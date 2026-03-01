@@ -99,6 +99,21 @@
     "delete": "Delete",
     "myDictionaryName": "My Dictionary"
   },
+  "support": {
+    "title": "Support",
+    "breadcrumbHome": "Home",
+    "appDescription": "Der Die Das Trainer is a mobile-friendly web app for learning German articles (der, die, das). Practice with 1000+ words from the official Goethe A1/A2/B1 vocabulary, track your progress by topic, and add your own word lists. The app works in the browser on any device—no install required.",
+    "screenshotsTitle": "App screenshots"
+  },
+  "footer": {
+    "contactAndLegal": "Contact & Legal",
+    "support": "Support",
+    "supportDesc": "Questions or issues? Send us an email.",
+    "privacyPolicy": "Privacy Policy",
+    "privacyDesc": "Information on collection and use of your data.",
+    "termsOfUse": "Terms of Use",
+    "termsDesc": "Terms and conditions of the app."
+  },
   "cases": {
     "nominativ": "Nominativ",
     "akkusativ": "Akkusativ",

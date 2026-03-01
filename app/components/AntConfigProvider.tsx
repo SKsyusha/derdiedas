@@ -20,6 +20,13 @@ export default function AntConfigProvider({ children }: AntConfigProviderProps) 
   // Use a fixed theme until after mount so server and initial client render match (avoids hydration mismatch)
   const isDark = mounted ? theme === 'dark' : false;
 
+  // Ant Design's App injects a div with a non-deterministic className (css-var-_R_*_) that
+  // differs between server and client, causing hydration errors. Only render ConfigProvider+App
+  // after mount so server and initial client both output the same placeholder.
+  if (!mounted) {
+    return <div className="ant-app">{children}</div>;
+  }
+
   return (
     <ConfigProvider
       theme={{

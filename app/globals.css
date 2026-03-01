@@ -15,6 +15,7 @@
   --input-border: #d9d9d9;
   --success: #16a34a;
   --error: #dc2626;
+  --screenshot-bg: #f4f4f5;
 }
 
 html[data-theme="dark"] {
@@ -32,6 +33,7 @@ html[data-theme="dark"] {
   --input-border: #3f3f46;
   --success: #22c55e;
   --error: #ef4444;
+  --screenshot-bg: #27272a;
 }
 
 html,

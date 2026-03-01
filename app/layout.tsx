@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -94,6 +95,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://derdiedas-trainer.de",
+    languages: {
+      "x-default": "https://derdiedas-trainer.de",
+      en: "https://derdiedas-trainer.de",
+      de: "https://derdiedas-trainer.de",
+      ru: "https://derdiedas-trainer.de",
+      uk: "https://derdiedas-trainer.de",
+    },
   },
   category: "Education",
   manifest: "/manifest.json",
@@ -131,6 +139,20 @@ const jsonLd = {
   educationalLevel: "Beginner to Intermediate",
   learningResourceType: "Interactive exercise",
   teaches: "German grammar - noun genders and articles",
+};
+
+// BreadcrumbList for homepage (subpages add their own via layout)
+const breadcrumbListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://derdiedas-trainer.de",
+    },
+  ],
 };
 
 // FAQ schema for SEO and AI agents (Google, assistants, etc.)
@@ -189,11 +211,30 @@ const faqJsonLd = {
   ],
 };
 
-export default function RootLayout({
+async function getInitialLanguageFromCookie(): Promise<string | undefined> {
+  try {
+    const cookieStore = await cookies();
+    const raw = cookieStore.get("training_settings")?.value;
+    if (!raw) return undefined;
+    const parsed = JSON.parse(raw) as { language?: string };
+    const lang = parsed.language;
+    if (lang === "Russian") return "ru";
+    if (lang === "English") return "en";
+    if (lang === "Ukrainian") return "uk";
+    if (lang === "German") return "de";
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialLanguage = await getInitialLanguageFromCookie();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -209,6 +250,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbListJsonLd) }}
         />
         <script
           type="application/ld+json"
@@ -256,7 +301,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <AntConfigProvider>
-            <I18nProvider>
+            <I18nProvider initialLanguage={initialLanguage}>
               {children}
             </I18nProvider>
           </AntConfigProvider>
